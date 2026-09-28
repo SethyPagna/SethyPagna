@@ -2,6 +2,7 @@
   Profile of Sethy Pagna UNG (Pagna).
   Every graphic in assets/ is drawn in code by scripts/build_assets.py; see scripts/README.md to rebuild them.
   The activity card and contribution skyline are rebuilt daily by .github/workflows/profile-assets.yml.
+  The portfolio website (sethy-pagna-portfolio.vercel.app) is the static site in portfolio/; see portfolio/README.md.
 -->
 
 <a href="https://sethy-pagna-portfolio.vercel.app"><img src="assets/hero.svg" width="100%" alt="A rainy neon night skyline running from Angkor Wat, sugar palms and stilt houses in Cambodia to Hong Kong's harbour towers, neon signs and searchlights, with a plane flying between KH and HK. Greeting in Khmer, Chinese and English: សួស្តី, 你好, Hello. Sethy Pagna UNG. Computer Science at PolyU. Full-stack and AI apps. Unreal Engine prototypes."></a>

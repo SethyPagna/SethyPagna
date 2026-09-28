@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#142622">
+  <title>Living Kingdom · The First Hearth</title>
+  <link rel="stylesheet" href="src/style.css">
+</head>
+<body>
+  <div id="app"><p class="loading">Opening the first chronicle…</p></div>
+  <div id="status" role="status" aria-live="polite"></div>
+  <dialog id="new-game">
+    <form id="new-form">
+      <p class="eyebrow">A small beginning</p><h2>Your first hearth</h2>
+      <p>You are a five-star hero with a small, protected Origin Space. Over eighteen decisions, decide who to trust and how to prepare a region for the approaching tide.</p>
+      <label>Your name<input name="name" maxlength="40" value="Alex Vale" required></label>
+      <label>How your space accompanies you<select name="mode"><option value="fixed">Fixed anchor · +8 regional preparation</option><option value="mobile">Carried anchor · +2 food per supply cache</option></select></label>
+      <p class="muted">Both keep your Core protected. These are prototype bonuses; movement and portal logistics are future engine work. Starting again replaces the current chronicle; export first to keep it.</p>
+      <div class="dialog-actions"><button type="button" id="cancel-new" class="secondary">Cancel</button><button type="submit">Begin chronicle</button></div>
+    </form>
+  </dialog>
+  <input id="import-save" type="file" accept=".json,application/json" hidden>
+  <script type="module" src="src/app.mjs"></script>
+</body>
+</html>
