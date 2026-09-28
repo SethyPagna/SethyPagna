@@ -1,0 +1,9 @@
+Sandline · Browser edition
+A three.js / TypeScript port of the Sandline UE5 build (v0.2.x is the reference build).
+Source: sandline repository, web/ folder.
+
+Third-party code and fonts bundled here:
+- three.js (MIT) - Copyright 2010-2024 Three.js Authors
+- Roboto, Roboto Condensed, Roboto Mono via @fontsource (SIL Open Font License 1.1 / Apache 2.0)
+
+Models, textures, UI renders and audio come from the Sandline Blender and audio pipelines.

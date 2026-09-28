@@ -476,56 +476,56 @@ export const SHOTS = {
    "sm": "img/shots/sandline/01-sm.webp",
    "w": 900,
    "h": 315,
-   "caption": "Unreal Engine 5: Sirocco, buy phase.",
+   "caption": "Unreal Engine 5 (the reference build): Sirocco, buy phase.",
    "kind": "wide"
   },
   {
    "src": "img/shots/sandline/02.webp",
    "sm": "img/shots/sandline/02-sm.webp",
-   "w": 1280,
-   "h": 720,
-   "caption": "Web arena: domination with A/B/C zones.",
+   "w": 1440,
+   "h": 900,
+   "caption": "Firefight on Sirocco, browser edition: first-person arms with IK, muzzle flash, hit marker, radar and kill feed.",
    "kind": "screen"
   },
   {
    "src": "img/shots/sandline/03.webp",
    "sm": "img/shots/sandline/03-sm.webp",
-   "w": 1280,
-   "h": 720,
-   "caption": "Web arena: mode select and controls.",
+   "w": 1440,
+   "h": 900,
+   "caption": "Old Town at golden hour in Domination, with the A/B/C capture points on the HUD and radar.",
    "kind": "screen"
   },
   {
    "src": "img/shots/sandline/04.webp",
    "sm": "img/shots/sandline/04-sm.webp",
-   "w": 1280,
-   "h": 720,
-   "caption": "Web arena: firefight in the container yard.",
+   "w": 1440,
+   "h": 900,
+   "caption": "Buy menu: the full arsenal priced from the UE weapon table, with a stat card for the hovered gun.",
    "kind": "screen"
   },
   {
    "src": "img/shots/sandline/05.webp",
    "sm": "img/shots/sandline/05-sm.webp",
-   "w": 1024,
-   "h": 1024,
-   "caption": "Agent: Enforcer (Blender preview).",
-   "kind": "render"
+   "w": 1440,
+   "h": 900,
+   "caption": "Play screen: mode families, the six maps and match options (bots, skill, side, match length).",
+   "kind": "screen"
   },
   {
    "src": "img/shots/sandline/06.webp",
    "sm": "img/shots/sandline/06-sm.webp",
-   "w": 1024,
-   "h": 1024,
-   "caption": "Agent: Urban Tactical (Blender preview).",
-   "kind": "render"
+   "w": 1440,
+   "h": 900,
+   "caption": "Agent select: the five Blender-built agents, chosen per side.",
+   "kind": "screen"
   },
   {
    "src": "img/shots/sandline/07.webp",
    "sm": "img/shots/sandline/07-sm.webp",
-   "w": 1024,
-   "h": 1024,
-   "caption": "Agent: Maritime Unit (Blender preview).",
-   "kind": "render"
+   "w": 1440,
+   "h": 900,
+   "caption": "Match summary: 7:3 win, leaderboard, MVP and XP rewards carried into the career profile.",
+   "kind": "screen"
   },
   {
    "src": "img/shots/sandline/08.webp",
@@ -533,14 +533,6 @@ export const SHOTS = {
    "w": 1024,
    "h": 1024,
    "caption": "Battle royale island, generated in Python.",
-   "kind": "render"
-  },
-  {
-   "src": "img/shots/sandline/09.webp",
-   "sm": "img/shots/sandline/09-sm.webp",
-   "w": 512,
-   "h": 512,
-   "caption": "Sirocco map layout, generated in Python.",
    "kind": "render"
   }
  ],

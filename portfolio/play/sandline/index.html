@@ -1,190 +1,24 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-<meta charset="utf-8" />
-<meta name="viewport" content="width=device-width,initial-scale=1" />
-<title>SANDLINE — Tactical Arena Shooter</title>
-<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='6' fill='%2305070a'/><text x='16' y='24' font-size='21' text-anchor='middle' fill='%23ffb347' font-family='monospace' font-weight='bold'>S</text></svg>" />
-<style>
-  :root{
-    --ink:#05070a;
-    --panel:rgba(11,14,19,.86);
-    --line:rgba(255,255,255,.13);
-    --hi:#ffb347;
-    --blue:#4ea1ff;
-    --red:#ff5c5c;
-    --txt:#e9eef5;
-    --dim:#8895a5;
-  }
-  *{box-sizing:border-box;margin:0;padding:0}
-  html,body{height:100%;overflow:hidden;background:var(--ink);color:var(--txt);
-    font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,"Liberation Mono",monospace;
-    -webkit-font-smoothing:antialiased}
-  #app{position:fixed;inset:0}
-  #app canvas{display:block}
-  #hud{position:absolute;inset:0;pointer-events:none;z-index:5}
-
-  .veil{position:absolute;inset:0;z-index:20;display:flex;align-items:center;justify-content:center;
-    background:radial-gradient(1100px 680px at 50% 38%,rgba(15,21,29,.88),rgba(3,5,8,.97));
-    backdrop-filter:blur(4px)}
-  .veil.hide{display:none}
-
-  .card{width:min(900px,93vw);max-height:92vh;overflow:auto;border:1px solid var(--line);
-    background:var(--panel);border-radius:14px;padding:30px 36px 26px;
-    box-shadow:0 34px 100px rgba(0,0,0,.7)}
-
-  .brand{display:flex;align-items:baseline;gap:14px;flex-wrap:wrap}
-  .brand h1{font-size:40px;letter-spacing:.22em;font-weight:700;line-height:1}
-  .brand h1 span{color:var(--hi)}
-  .brand .tag{font-size:11px;letter-spacing:.2em;color:var(--dim);text-transform:uppercase}
-
-  .rule{height:1px;background:linear-gradient(90deg,var(--hi),rgba(255,179,71,0));margin:16px 0 18px}
-
-  .lede{font-size:13px;line-height:1.65;color:#c3ccd8;max-width:70ch}
-  .lede b{color:var(--txt)}
-
-  .cols{display:grid;grid-template-columns:1fr 1fr;gap:26px;margin-top:20px}
-  @media (max-width:720px){.cols{grid-template-columns:1fr}}
-
-  h2.sect{font-size:10.5px;letter-spacing:.24em;color:var(--hi);text-transform:uppercase;
-    margin-bottom:10px;font-weight:600}
-
-  .keys{display:grid;grid-template-columns:auto 1fr;gap:6px 14px;font-size:12px;align-items:center}
-  .keys kbd{display:inline-block;min-width:26px;text-align:center;padding:2px 7px;border-radius:5px;
-    border:1px solid var(--line);background:rgba(255,255,255,.06);font-size:11px;color:#dfe6ef}
-  .keys em{font-style:normal;color:var(--dim)}
-
-  .modes{display:grid;gap:8px;font-size:12px}
-  .mode{display:flex;justify-content:space-between;gap:12px;padding:8px 11px;border-radius:8px;
-    border:1px solid var(--line);background:rgba(255,255,255,.03)}
-  .mode .nm{color:var(--txt)}
-  .mode .st{color:var(--dim);font-size:10.5px;letter-spacing:.08em}
-  .mode.live{border-color:rgba(255,179,71,.45);background:rgba(255,179,71,.07)}
-  .mode.live .st{color:var(--hi)}
-
-  /* Selectable modes. The rows are generated from S.MODES so the menu cannot
-     drift out of step with what the simulation actually supports. */
-  .mode.pick{cursor:pointer;transition:.14s}
-  .mode.pick:hover{border-color:rgba(255,179,71,.55);background:rgba(255,179,71,.10)}
-  .mode.sel{border-color:var(--hi);background:rgba(255,179,71,.18)}
-  .mode.sel .nm{color:var(--hi);font-weight:700}
-  .mode.dead{opacity:.42;cursor:not-allowed}
-
-  .actions{display:flex;gap:14px;align-items:center;margin-top:24px;flex-wrap:wrap}
-  .btn{appearance:none;cursor:pointer;border:1px solid var(--hi);background:var(--hi);color:#100b03;
-    font:inherit;font-size:12.5px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;
-    padding:13px 26px;border-radius:9px;transition:.16s}
-  .btn:hover{filter:brightness(1.1);transform:translateY(-1px)}
-  .btn.ghost{background:transparent;color:var(--txt);border-color:var(--line)}
-  .btn.ghost:hover{border-color:var(--txt)}
-  .hintline{font-size:11px;color:var(--dim);letter-spacing:.06em}
-
-  .foot{margin-top:20px;padding-top:14px;border-top:1px solid var(--line);
-    font-size:10.5px;color:#5d6a7a;line-height:1.7}
-
-  #boot{position:fixed;inset:0;z-index:40;display:flex;align-items:center;justify-content:center;
-    background:var(--ink);font-size:12px;letter-spacing:.2em;color:var(--dim)}
-  #boot.hide{display:none}
-
-  /* Shown only when pointer lock was refused, so a player whose mouse does
-     nothing is told why instead of assuming the game is broken. */
-  #lookHint{position:fixed;left:50%;transform:translateX(-50%);top:14px;z-index:30;
-    width:min(760px,94vw);padding:11px 16px;border-radius:10px;
-    border:1px solid rgba(255,179,71,.5);background:rgba(24,18,6,.94);
-    font-size:11.5px;line-height:1.6;color:#f0dcb8;box-shadow:0 12px 40px rgba(0,0,0,.55)}
-  #lookHint.hide{display:none}
-  #lookHint b{color:var(--hi);letter-spacing:.06em}
-  #lookHint u{text-decoration:none;border-bottom:1px solid rgba(255,179,71,.55)}
-</style>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <title>Sandline</title>
+  <meta name="description" content="Sandline browser edition: a tactical shooter ported from the UE5 build to three.js." />
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cpath d='M4 4h20l4 4v20H8l-4-4z' fill='%23FF6B3D'/%3E%3C/svg%3E" />
+  <style>
+    html, body { margin: 0; height: 100%; background: #07090d; overflow: hidden; overscroll-behavior: none; }
+    body { color: #f3f5f8; font-family: Roboto, system-ui, sans-serif; -webkit-user-select: none; user-select: none; touch-action: none; }
+    #app { position: fixed; inset: 0; }
+    #app canvas { position: absolute; inset: 0; width: 100%; height: 100%; display: block; }
+    #ui { z-index: 2; }
+    #boot { position: absolute; inset: 0; display: flex; align-items: center; justify-content: center; z-index: 5; font: 600 14px/1.4 Roboto, system-ui, sans-serif; letter-spacing: .18em; color: #6b7584; }
+  </style>
+  <script type="module" crossorigin src="./assets/index-C4lkvaRS.js"></script>
+  <link rel="modulepreload" crossorigin href="./assets/three-BAGjWgAh.js">
+  <link rel="stylesheet" crossorigin href="./assets/index-Bx9GK5Ds.css">
 </head>
 <body>
-  <div id="app"><canvas id="hud"></canvas></div>
-
-  <div class="veil" id="menu">
-    <div class="card">
-      <div class="brand">
-        <h1>SAND<span>LINE</span></h1>
-        <div class="tag">Tactical Arena Shooter &nbsp;/&nbsp; WebGL build</div>
-      </div>
-      <div class="rule"></div>
-
-      <p class="lede">
-        Ten operators, one <b>80&nbsp;×&nbsp;80&nbsp;metre</b> container yard: a two-storey centre
-        building, six shipping-container stacks, elevated firing decks and a climbable roof.
-        Every AI operator runs the same vision, reaction and recoil model as you —
-        <b>no wallhacks, no aim assist, no hitscan forgiveness</b>: if you cannot see it, you
-        cannot shoot it. Pick a mode on the right, then deploy.
-      </p>
-
-      <div class="cols">
-        <div>
-          <h2 class="sect">Controls</h2>
-          <div class="keys">
-            <kbd>W A S D</kbd><em>Move</em>
-            <kbd>Mouse</kbd><em>Look</em>
-            <kbd>LMB</kbd><em>Fire</em>
-            <kbd>RMB</kbd><em>Aim down sights</em>
-            <kbd>R</kbd><em>Reload</em>
-            <kbd>Shift</kbd><em>Sprint</em>
-            <kbd>Ctrl</kbd><em>Crouch</em>
-            <kbd>Space</kbd><em>Jump</em>
-            <kbd>1 – 4</kbd><em>Select weapon</em>
-            <kbd>Tab</kbd><em>Scoreboard (hold)</em>
-            <kbd>Esc</kbd><em>Pause / release mouse</em>
-          </div>
-        </div>
-        <div>
-          <h2 class="sect">Game mode</h2>
-          <!-- Populated from S.MODES in game.js, so the menu can never claim a
-               mode the simulation does not actually implement. -->
-          <div class="modes" id="modeList"></div>
-        </div>
-      </div>
-
-      <p class="lede" id="modeBlurb"
-         style="margin-top:18px;padding-top:14px;border-top:1px solid var(--line);font-size:12px"></p>
-
-      <div class="actions">
-        <button class="btn" id="btnPlay">Click to deploy</button>
-        <span class="hintline" id="hintline">Pointer lock will engage — press Esc to get your cursor back.
-          If it is refused, fallback mouse look takes over and says so on screen.</span>
-      </div>
-
-      <div class="foot">
-        Weapon tables, arena geometry, damage falloff, hit-zone multipliers and bot behaviour parameters
-        are shared verbatim with the Unreal Engine 5.8 project <b>SandlineUE/</b> in this folder.
-        All geometry, textures and audio in this build are generated procedurally at runtime — no external assets.
-      </div>
-    </div>
-  </div>
-
-  <div class="veil hide" id="pause">
-    <div class="card" style="width:min(560px,92vw)">
-      <div class="brand"><h1 style="font-size:26px">PAUSED</h1></div>
-      <div class="rule"></div>
-      <p class="lede" id="pauseBody">Match suspended.</p>
-      <div class="actions">
-        <button class="btn" id="btnResume">Resume</button>
-        <button class="btn ghost" id="btnRestart">Restart match</button>
-      </div>
-    </div>
-  </div>
-
-  <div id="boot">INITIALISING SANDLINE…</div>
-
-  <div id="lookHint" class="hide">
-    <b>FALLBACK MOUSE LOOK ACTIVE.</b>
-    This page could not take pointer lock, which usually means it is running inside a preview
-    frame rather than its own tab. <u>Move the cursor away from the centre of the screen to turn</u> —
-    the further from centre, the faster it turns. Left and right buttons still fire and aim.
-    For normal mouse look, open <u>http://127.0.0.1:8117/</u> in a browser tab.
-  </div>
-
-  <script src="lib/three.min.js"></script>
-  <script src="js/data.js"></script>
-  <script src="js/materials.js"></script>
-  <script src="js/arena.js"></script>
-  <script src="js/sim.js"></script>
-  <script src="js/game.js"></script>
+  <div id="app"><div id="boot">LOADING SANDLINE</div></div>
 </body>
 </html>
