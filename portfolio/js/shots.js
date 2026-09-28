@@ -686,7 +686,7 @@ export const SHOTS = {
    "sm": "img/shots/cargo-twin/01-sm.webp",
    "w": 1440,
    "h": 900,
-   "caption": "Eight packages stacked in an AKE container.",
+   "caption": "A 96-in PMC pallet packed from seven air waybills, with dangerous-goods labels and the ULD's centre of gravity.",
    "kind": "screen"
   },
   {
@@ -694,7 +694,47 @@ export const SHOTS = {
    "sm": "img/shots/cargo-twin/02-sm.webp",
    "w": 1440,
    "h": 900,
-   "caption": "Freighter hold with centre of gravity.",
+   "caption": "Physics stress test: cartons that tipped or shifted are flagged and the ULD is marked for restacking.",
+   "kind": "screen"
+  },
+  {
+   "src": "img/shots/cargo-twin/03.webp",
+   "sm": "img/shots/cargo-twin/03-sm.webp",
+   "w": 1440,
+   "h": 900,
+   "caption": "777F load plan after auto-optimisation: 32 ULDs, deck plan and the CG envelope (representative data).",
+   "kind": "screen"
+  },
+  {
+   "src": "img/shots/cargo-twin/04.webp",
+   "sm": "img/shots/cargo-twin/04-sm.webp",
+   "w": 1440,
+   "h": 900,
+   "caption": "Strategy comparison on a 589-piece manifest: the genetic refinement wins with 36 ULDs.",
+   "kind": "screen"
+  },
+  {
+   "src": "img/shots/cargo-twin/05.webp",
+   "sm": "img/shots/cargo-twin/05-sm.webp",
+   "w": 1440,
+   "h": 900,
+   "caption": "Stress test running: loose cartons lean into the void under a 1.5 g lateral load.",
+   "kind": "screen"
+  },
+  {
+   "src": "img/shots/cargo-twin/06.webp",
+   "sm": "img/shots/cargo-twin/06-sm.webp",
+   "w": 1440,
+   "h": 900,
+   "caption": "Equipment library: ULD contours drawn to scale with weights and aircraft compatibility.",
+   "kind": "screen"
+  },
+  {
+   "src": "img/shots/cargo-twin/07.webp",
+   "sm": "img/shots/cargo-twin/07-sm.webp",
+   "w": 1440,
+   "h": 900,
+   "caption": "Version 1 (hackathon, Nov 2025): the original pseudo-3D packing view.",
    "kind": "screen"
   }
  ],

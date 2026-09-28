@@ -317,6 +317,7 @@ function openDossier(id, { push = true } = {}) {
     if (live) {
       stageMain.innerHTML = `<div class="frame-wrap"><iframe src="${cabUrl}" title="${esc(cab.title)}" allow="fullscreen; gamepad; autoplay; clipboard-write" allowfullscreen></iframe></div>
         <div class="frame-note"><span>${esc(cab.title)} · ${esc(cab.controls)}</span><a href="${cabUrl}" target="_blank" rel="noopener">Open full screen ↗</a></div>`;
+      fitFrame($('iframe', stageMain), $('.frame-wrap', stageMain), cab.vw);
       $('#caption', dossier).textContent = cab.live ? 'Live app: if it stays blank, the host may be asleep. Use “Open full screen”.' : 'Running in this page. For more room, use “Open full screen” or the arcade.';
     } else showShot(0);
   }));
@@ -432,7 +433,26 @@ function startGame(g) {
     <div class="booting"><span>LOADING ${esc(g.title.toUpperCase())}…</span></div>`;
   const frame = $('iframe', screen);
   frame.addEventListener('load', () => $('.booting', screen)?.remove(), { once: true });
+  fitFrame(frame, screen, g.vw);
   setTimeout(() => frame.focus(), 400);
+}
+
+// Desktop-only apps get a virtual width (g.vw): the iframe renders at that width
+// and is scaled down to the cabinet, so they keep their full layout.
+let fitObserver = null;
+function fitFrame(frame, box, vw) {
+  fitObserver?.disconnect();
+  if (!vw) return;
+  const fit = () => {
+    if (document.fullscreenElement === box) { frame.style.cssText = ''; return; }
+    const k = Math.min(1, box.clientWidth / vw);
+    frame.style.cssText = k < 1
+      ? `width:${vw}px;height:${box.clientHeight / k}px;transform:scale(${k});transform-origin:0 0`
+      : '';
+  };
+  fitObserver = new ResizeObserver(fit);
+  fitObserver.observe(box);
+  fit();
 }
 
 // ------------------------------------------------------------ build loop

@@ -136,8 +136,13 @@ SHOTS: dict[str, list[tuple[Path, str, str]]] = {
         (CLONES / "secretary-jarvis/desktop/assets/icon.png", "App icon.", "art"),
     ],
     "cargo-twin": [
-        (RAW / "cargo/cargo-packed.png", "Eight packages stacked in an AKE container.", "screen"),
-        (RAW / "cargo/cargo-aircraft-opt.png", "Freighter hold with centre of gravity.", "screen"),
+        (RAW / "cargo-twin-v2/01-buildup-pallet.png", "A 96-in PMC pallet packed from seven air waybills, with dangerous-goods labels and the ULD's centre of gravity.", "screen"),
+        (RAW / "cargo-twin-v2/03-stress-test-result.png", "Physics stress test: cartons that tipped or shifted are flagged and the ULD is marked for restacking.", "screen"),
+        (RAW / "cargo-twin-v2/04-aircraft-weight-balance.png", "777F load plan after auto-optimisation: 32 ULDs, deck plan and the CG envelope (representative data).", "screen"),
+        (RAW / "cargo-twin-v2/05-strategy-comparison.png", "Strategy comparison on a 589-piece manifest: the genetic refinement wins with 36 ULDs.", "screen"),
+        (RAW / "cargo-twin-v2/02-stress-test-live.png", "Stress test running: loose cartons lean into the void under a 1.5 g lateral load.", "screen"),
+        (RAW / "cargo-twin-v2/06-equipment-library.png", "Equipment library: ULD contours drawn to scale with weights and aircraft compatibility.", "screen"),
+        (RAW / "cargo/cargo-packed.png", "Version 1 (hackathon, Nov 2025): the original pseudo-3D packing view.", "screen"),
     ],
     "ai-summary": [
         (RAW / "ai-summary-v2/02-brief-cited-answer.png", "One click on a sample: TL;DR, key phrases and a suggested question answered with page citations, the source highlighted.", "screen"),

@@ -709,3 +709,6 @@ body.glitch-mode main { animation: hue 3s linear infinite; }
   .dossier-head h2 { font-size: 16px; }
   .info { padding: 18px 16px 30px; }
 }
+/* scaled desktop-only apps (see fitFrame in main.js) */
+.frame-wrap, .screen { overflow: hidden; }
+.frame-wrap iframe[style*="scale"], .screen iframe[style*="scale"] { position: absolute; left: 0; top: 0; max-width: none; transition: none; }
