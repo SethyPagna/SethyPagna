@@ -256,7 +256,8 @@ function openDossier(id, { push = true } = {}) {
   const idx = order.indexOf(id);
   const prev = byId[order[(idx - 1 + order.length) % order.length]];
   const next = byId[order[(idx + 1) % order.length]];
-  const cab = ARCADE.find(a => a.project === id && a.live);
+  const cab = ARCADE.find(a => a.project === id);
+  const cabUrl = cab && (cab.src || cab.live);
   dossier.style.setProperty('--c', color(p.color));
   dossier.innerHTML = `
     <header class="dossier-head">
@@ -269,7 +270,7 @@ function openDossier(id, { push = true } = {}) {
       <div class="stage">
         <div class="stage-tabs">
           <button class="btn sm" type="button" data-stage="shots" aria-pressed="true">Screens <span class="count">${shots.length}</span></button>
-          ${cab ? `<button class="btn sm ghost" type="button" data-stage="live" aria-pressed="false">${icon('play')}Live preview</button>` : ''}
+          ${cab ? `<button class="btn sm ghost" type="button" data-stage="live" aria-pressed="false">${icon('play')}Play here</button>` : ''}
           <span class="spacer"></span>
           ${p.private ? '<span class="tag" style="--c:var(--dim)">Private source</span>' : ''}
         </div>
@@ -314,9 +315,9 @@ function openDossier(id, { push = true } = {}) {
     const live = b.dataset.stage === 'live';
     $('#thumbs', dossier).hidden = live;
     if (live) {
-      stageMain.innerHTML = `<div class="frame-wrap"><iframe src="${cab.live}" title="${esc(p.name)} live preview" allow="fullscreen" loading="lazy"></iframe></div>
-        <div class="frame-note"><span>Live app from ${esc(new URL(cab.live).host)}</span><a href="${cab.live}" target="_blank" rel="noopener">Open in a new tab ↗</a></div>`;
-      $('#caption', dossier).textContent = 'If the embed stays blank, the host may be asleep: use “Open in a new tab”.';
+      stageMain.innerHTML = `<div class="frame-wrap"><iframe src="${cabUrl}" title="${esc(cab.title)}" allow="fullscreen; gamepad; autoplay; clipboard-write" allowfullscreen></iframe></div>
+        <div class="frame-note"><span>${esc(cab.title)} · ${esc(cab.controls)}</span><a href="${cabUrl}" target="_blank" rel="noopener">Open full screen ↗</a></div>`;
+      $('#caption', dossier).textContent = cab.live ? 'Live app: if it stays blank, the host may be asleep. Use “Open full screen”.' : 'Running in this page. For more room, use “Open full screen” or the arcade.';
     } else showShot(0);
   }));
   $$('[data-nav]', dossier).forEach(b => b.addEventListener('click', () => openDossier(b.dataset.nav)));

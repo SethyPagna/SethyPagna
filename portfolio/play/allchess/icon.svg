@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" role="img" aria-labelledby="title desc">
+  <title id="title">AllChess</title>
+  <desc id="desc">A bold green AllChess favicon with a black chess crown.</desc>
+  <rect width="512" height="512" rx="104" fill="#8EE0AA"/>
+  <path
+    fill="#07110D"
+    d="M105 341h302v42c0 22-18 40-40 40H145c-22 0-40-18-40-40v-42Zm34-39 16-139 74 70 27-109 27 109 74-70 16 139H139Zm117-214c22 0 40 18 40 40s-18 40-40 40-40-18-40-40 18-40 40-40ZM126 129c21 0 38 17 38 38s-17 38-38 38-38-17-38-38 17-38 38-38Zm260 0c21 0 38 17 38 38s-17 38-38 38-38-17-38-38 17-38 38-38Z"
+  />
+  <path fill="#8EE0AA" d="M170 366h172v24H170z"/>
+</svg>

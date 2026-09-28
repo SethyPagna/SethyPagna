@@ -138,7 +138,7 @@ export const SHOTS = {
    "sm": "img/shots/allchess/01-sm.webp",
    "w": 1440,
    "h": 900,
-   "caption": "Home: play first, learn as you go.",
+   "caption": "Classic chess against the Stockfish bot on the 3D marble tabletop.",
    "kind": "screen"
   },
   {
@@ -146,7 +146,7 @@ export const SHOTS = {
    "sm": "img/shots/allchess/02-sm.webp",
    "w": 1440,
    "h": 900,
-   "caption": "Classic chess with match setup and chat.",
+   "caption": "Xiangqi with the Celadon collection: glazed ceramic discs on a wood 3D board.",
    "kind": "screen"
   },
   {
@@ -154,7 +154,7 @@ export const SHOTS = {
    "sm": "img/shots/allchess/03-sm.webp",
    "w": 1440,
    "h": 900,
-   "caption": "Xiangqi (Chinese chess) on its own board.",
+   "caption": "Shogi with the carved collection, lacquered glyphs and hand stands.",
    "kind": "screen"
   },
   {
@@ -162,7 +162,7 @@ export const SHOTS = {
    "sm": "img/shots/allchess/04-sm.webp",
    "w": 1440,
    "h": 900,
-   "caption": "Shogi with hands for dropped pieces.",
+   "caption": "Ouk Chaktrang (Khmer chess) with the Courtyard sandstone and charcoal set.",
    "kind": "screen"
   },
   {
@@ -170,7 +170,7 @@ export const SHOTS = {
    "sm": "img/shots/allchess/05-sm.webp",
    "w": 1440,
    "h": 900,
-   "caption": "Games & rules catalogue with native-script names.",
+   "caption": "Game studio home: a visual library with bot, local, friend, quick match and watch modes.",
    "kind": "screen"
   },
   {
@@ -178,7 +178,7 @@ export const SHOTS = {
    "sm": "img/shots/allchess/06-sm.webp",
    "w": 1440,
    "h": 900,
-   "caption": "Lobby: play now, bot training and game families.",
+   "caption": "English draughts with the Club ivory and oxblood counters.",
    "kind": "screen"
   },
   {
@@ -186,15 +186,31 @@ export const SHOTS = {
    "sm": "img/shots/allchess/07-sm.webp",
    "w": 1440,
    "h": 900,
-   "caption": "Chaturanga, the ancestor of chess.",
+   "caption": "Board style picker: piece collection, 2D style and board colours per game.",
    "kind": "screen"
   },
   {
    "src": "img/shots/allchess/08.webp",
    "sm": "img/shots/allchess/08-sm.webp",
-   "w": 390,
-   "h": 844,
-   "caption": "Xiangqi on a phone.",
+   "w": 1440,
+   "h": 900,
+   "caption": "All 21 games, each with its own artwork.",
+   "kind": "screen"
+  },
+  {
+   "src": "img/shots/allchess/09.webp",
+   "sm": "img/shots/allchess/09-sm.webp",
+   "w": 1440,
+   "h": 900,
+   "caption": "Move review with factual notation and playback.",
+   "kind": "screen"
+  },
+  {
+   "src": "img/shots/allchess/10.webp",
+   "sm": "img/shots/allchess/10-sm.webp",
+   "w": 780,
+   "h": 1688,
+   "caption": "Celadon Xiangqi on a phone.",
    "kind": "phone"
   }
  ],
