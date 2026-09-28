@@ -305,21 +305,25 @@ export const PROJECTS = [
   },
   {
     id: 'ai-summary', code: 'AIS', no: '14', name: 'AI Summary', color: 'orange',
-    cats: ['ai'], kicker: 'AI · Earlier project', year: '2026',
-    status: { label: 'Earlier project', color: 'orange' },
-    tagline: 'Ask questions of your documents.',
-    summary: 'Summaries and Q&A for PDF, Word, slides and text files, with projects, history and chat on Supabase.',
-    about: 'A course project that became my first full AI app: text is extracted in the browser, summarised by a model of your choice through OpenRouter, and saved with a chat history per document.',
+    cats: ['ai'], kicker: 'AI · Document intelligence', year: '2026', play: 'ai-summary',
+    status: { label: 'Rebuilt · v2', color: 'orange' },
+    tagline: 'Read less. Understand more.',
+    summary: 'Turns PDFs, Word files, slides and notes into a brief you can check: summaries, key phrases, answers and study cards, each linked to the exact passage it came from. Runs entirely in your browser.',
+    about: 'Version 2 is a rebuild of my earlier Supabase app. Everything now runs on your device: documents are parsed in background workers, summarised with graph ranking, and questions are answered by retrieving the best passages, with a citation on every sentence. Claude is an optional upgrade with your own key: abstractive summaries and chat that still cite the source.',
     features: [
-      'In-browser text extraction for PDF, DOCX, PPTX and TXT',
-      'Six selectable models through OpenRouter',
-      'Document chat with saved history and suggested follow-up questions',
-      'Supabase auth (email, Google, magic link), storage and projects',
-      'Readability settings and dark mode',
+      'Import PDF, DOCX, PPTX (with speaker notes), TXT, Markdown, HTML or pasted text; every passage keeps its page, slide or section',
+      'Local summaries (TL;DR, short, detailed, per section) with TextRank and MMR, key phrases, names, dates and figures',
+      'Q&A by BM25 retrieval: cited sentences, a short answer for dates and numbers, and an honest "not in the text"',
+      'Study tools: flashcards with spaced review, a scored quiz, key terms, a mind map and a two-document comparison',
+      'Optional Claude with your own key: streamed summaries, chat, "explain like I\'m new" and study guides, with citations back to the passage',
+      'Library in IndexedDB: projects, search, highlights, Markdown export, delete everything',
     ],
-    stack: ['React', 'Vite', 'Supabase', 'pdf.js', 'OpenRouter'],
-    note: 'Its hosted version is offline; the source is public.',
-    links: [{ label: 'Source', href: gh('ai-summary-app'), kind: 'code' }],
+    stack: ['React 19', 'TypeScript', 'Vite', 'pdf.js', 'Claude API', 'IndexedDB'],
+    note: 'No account and no server: files stay in your browser. Version 1 (Feb 2026, Supabase + OpenRouter) is kept in the repository.',
+    links: [
+      { label: 'Play here', href: '#arcade/ai-summary', kind: 'play' },
+      { label: 'Source', href: gh('ai-summary-app'), kind: 'code' },
+    ],
   },
 ];
 
@@ -361,6 +365,12 @@ export const ARCADE = [
     blurb: 'The latest AllChess, running in the page: pick any of 21 games, play the bot or pass-and-play, and switch to the 3D tabletop.',
     controls: 'Click or drag pieces · 3D view: drag to orbit, scroll to zoom',
     src: 'play/allchess/', aspect: '16 / 10', cover: 'Classic chess', size: '3D sets load per game',
+  },
+  {
+    id: 'ai-summary', project: 'ai-summary', title: 'AI Summary v2', kind: 'Tool · local AI',
+    blurb: 'Drop in a PDF, Word file or slide deck, or try a sample: get a summary, cited answers, flashcards and a mind map, all computed in your browser.',
+    controls: 'Try a sample or drop your own files · Claude is optional with your own key',
+    src: 'play/ai-summary/', aspect: '16 / 10',
   },
 ];
 

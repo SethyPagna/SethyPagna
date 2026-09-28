@@ -140,7 +140,13 @@ SHOTS: dict[str, list[tuple[Path, str, str]]] = {
         (RAW / "cargo/cargo-aircraft-opt.png", "Freighter hold with centre of gravity.", "screen"),
     ],
     "ai-summary": [
-        (RAW / "ai-summary/ai-summary-login.png", "Sign-in screen.", "screen"),
+        (RAW / "ai-summary-v2/02-brief-cited-answer.png", "One click on a sample: TL;DR, key phrases and a suggested question answered with page citations, the source highlighted.", "screen"),
+        (RAW / "ai-summary-v2/01-home.png", "Home: no account, no server, your files stay in the browser.", "screen"),
+        (RAW / "ai-summary-v2/03-ask-dark.png", "Local Q&A in dark mode: cited sentences, and a plain answer when the text can't say.", "screen"),
+        (RAW / "ai-summary-v2/04-study-quiz.png", "Study mode: a quiz generated from the document, with a citation for each answer.", "screen"),
+        (RAW / "ai-summary-v2/05-mind-map.png", "Mind map from section headings and each section's key phrases.", "screen"),
+        (RAW / "ai-summary-v2/06-claude-mocked.png", "Optional Claude mode: a streamed summary with citations (mocked response for this screenshot).", "screen"),
+        (RAW / "ai-summary/ai-summary-login.png", "Version 1 (Feb 2026): Supabase sign-in.", "screen"),
     ],
 }
 

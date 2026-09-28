@@ -704,7 +704,55 @@ export const SHOTS = {
    "sm": "img/shots/ai-summary/01-sm.webp",
    "w": 1440,
    "h": 900,
-   "caption": "Sign-in screen.",
+   "caption": "One click on a sample: TL;DR, key phrases and a suggested question answered with page citations, the source highlighted.",
+   "kind": "screen"
+  },
+  {
+   "src": "img/shots/ai-summary/02.webp",
+   "sm": "img/shots/ai-summary/02-sm.webp",
+   "w": 1440,
+   "h": 900,
+   "caption": "Home: no account, no server, your files stay in the browser.",
+   "kind": "screen"
+  },
+  {
+   "src": "img/shots/ai-summary/03.webp",
+   "sm": "img/shots/ai-summary/03-sm.webp",
+   "w": 1440,
+   "h": 900,
+   "caption": "Local Q&A in dark mode: cited sentences, and a plain answer when the text can't say.",
+   "kind": "screen"
+  },
+  {
+   "src": "img/shots/ai-summary/04.webp",
+   "sm": "img/shots/ai-summary/04-sm.webp",
+   "w": 1440,
+   "h": 900,
+   "caption": "Study mode: a quiz generated from the document, with a citation for each answer.",
+   "kind": "screen"
+  },
+  {
+   "src": "img/shots/ai-summary/05.webp",
+   "sm": "img/shots/ai-summary/05-sm.webp",
+   "w": 1440,
+   "h": 900,
+   "caption": "Mind map from section headings and each section's key phrases.",
+   "kind": "screen"
+  },
+  {
+   "src": "img/shots/ai-summary/06.webp",
+   "sm": "img/shots/ai-summary/06-sm.webp",
+   "w": 1440,
+   "h": 900,
+   "caption": "Optional Claude mode: a streamed summary with citations (mocked response for this screenshot).",
+   "kind": "screen"
+  },
+  {
+   "src": "img/shots/ai-summary/07.webp",
+   "sm": "img/shots/ai-summary/07-sm.webp",
+   "w": 1440,
+   "h": 900,
+   "caption": "Version 1 (Feb 2026): Supabase sign-in.",
    "kind": "screen"
   }
  ]
