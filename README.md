@@ -53,7 +53,7 @@ I'm **Pagna** (Sethy Pagna UNG, or James), a Computer Science student at The Hon
   <a href="https://sethy-pagna-portfolio.vercel.app/#arcade/ai-summary">AI Summary</a>
   <br>
   CodeAge, UrCut + UrVoice, Living Kingdom, Sandline, OmniDrama and KhShop are private repositories: the portfolio has screenshots of each.
-  UrCut is built on <a href="https://github.com/OpenCut-app/OpenCut">OpenCut</a> (MIT).
+  UrCut is built on <a href="https://github.com/OpenCut-app/opencut-classic">OpenCut classic</a> (MIT).
 </sub></p>
 
 <h3><img src="assets/section-quests.svg" width="100%" alt="04 · Side quests"></h3>
@@ -62,9 +62,9 @@ I'm **Pagna** (Sethy Pagna UNG, or James), a Computer Science student at The Hon
   <a href="https://sethy-pagna-portfolio.vercel.app/#project/omnidrama"><img src="assets/quest-omnidrama.svg" width="49%" alt="OmniDrama, new and private: your shows in one local library. A Windows video library: searchable catalogue, episode player with saved progress, and a studio that converts uploads with FFmpeg."></a>
   <a href="https://sethy-pagna-portfolio.vercel.app/#project/khshop"><img src="assets/quest-khshop.svg" width="49%" alt="KhShop, a pilot with test data: shopping designed around Khmer. Khmer-first marketplace pilot: local discovery, USD and KHR prices, offers and viewing appointments."></a>
   <a href="https://github.com/SethyPagna/Secretary-Jarvis"><img src="assets/quest-jarvis.svg" width="49%" alt="Secretary Jarvis, prototype: a desktop home for an AI assistant. Electron interface with a Python backend: chat, voice, terminal and local-model helpers."></a>
-  <a href="https://github.com/SethyPagna/ai-summary-app"><img src="assets/quest-ai-summary.svg" width="49%" alt="AI Summary, an earlier project: ask questions of your documents. An earlier learning project: summaries and Q&A for PDF, Word, slides and text files, on Supabase."></a>
+  <a href="https://github.com/SethyPagna/ai-summary-app"><img src="assets/quest-ai-summary.svg" width="49%" alt="AI Summary, rebuilt as v2: ask questions of your documents. Rebuilt in 2026: summaries, cited answers and study cards for PDF, Word and slides, worked out in your browser."></a>
   <a href="https://github.com/SethyPagna/wreckabulary"><img src="assets/quest-wreckabulary.svg" width="49%" alt="Wreckabulary, a team project for COMP4122: wreck the room, build the word! A 2 to 4 player couch party game in Unity 6: smash furniture into letters, then spell new things."></a>
-  <a href="https://github.com/SethyPagna/Ainnovator_Prototype"><img src="assets/quest-cargo-twin.svg" width="49%" alt="Cathay Cargo Twin, a team hackathon project from November 2025: planning air cargo in 3D. AInnovator hackathon prototype: add packages with temperature and fragility needs, then see them placed in 3D ULD containers."></a>
+  <a href="https://github.com/SethyPagna/Ainnovator_Prototype"><img src="assets/quest-cargo-twin.svg" width="49%" alt="Cathay Cargo Twin v2, which started as a team hackathon project in November 2025: planning air cargo in 3D. ULD build-up against real contours, a physics stress test and 777F weight and balance."></a>
 </p>
 
 <details>

@@ -65,13 +65,13 @@ Only changes inside `portfolio/` need a redeploy; you can tick "Skip deployments
 
 ## Playable builds in `play/`
 
-Each folder is the static build of a project, copied in as-is. They all use relative paths, so they work from a sub-folder and inside the arcade iframe.
+Each folder is the static build of a project, copied in as-is. They all use relative paths, so they work from a sub-folder and inside the arcade iframe. Third-party licences ship with each build (`NOTICES.txt`, `THIRD-PARTY-NOTICES.txt` or the licence files next to the assets); the site's own fonts are covered by `fonts/OFL.txt`.
 
 | Folder | Source | Notes |
 |---|---|---|
 | `play/sandline/` | `sandline/web` (browser edition of the UE5 v0.2.x build) | Vite + TypeScript + three.js; desktop only (WebGL 2, keyboard and mouse). Notices in `NOTICES.txt` |
-| `play/living-kingdom/` | `livingkingdom/web` (browser edition of the UE5 playtest) | Vite + TypeScript + three.js + Rapier; font and sound licences sit next to the files in `assets/` |
-| `play/allchess/` | `allchess`, branch `codex/compact-game-studio` | Static export of the latest game studio (bots and pass-and-play); 3D set models are compressed with gltf-transform |
+| `play/living-kingdom/` | `livingkingdom/web` (browser edition of the UE5 playtest) | Vite + TypeScript + three.js + Rapier; the font, sound and Rapier licences sit next to the files in `assets/` |
+| `play/allchess/` | `allchess`, branch `claude/arcade-export` (`codex/compact-game-studio` plus a static arcade shell; `npm run build:arcade`) | Static export of the latest game studio (bots and pass-and-play); 3D set models are compressed with gltf-transform. Stockfish (GPLv3) ships with its licence and source links in `engines/stockfish/` |
 | `play/cargo-twin/` | `ainnovator_prototype/cargo-twin` (v2) | React + three.js + cannon-es; the cabinet renders it at 1280 px wide and scales it to fit |
 | `play/ai-summary/` | `ai-summary-app/web` (v2) | Runs in the browser; Claude features use the visitor's own API key, kept in their browser and sent only to the Claude API |
 
@@ -79,7 +79,7 @@ Online AllChess matches, rooms and accounts are in the live app at allchess.lear
 
 ## Credits
 
-- UrCut is built on [OpenCut classic](https://github.com/opencut-app/opencut-classic) (MIT).
+- UrCut is built on [OpenCut classic](https://github.com/OpenCut-app/opencut-classic) (MIT).
 - Secretary Jarvis is built on [Hermes Agent](https://github.com/NousResearch/hermes-agent) by Nous Research (MIT).
 - Cathay Cargo Twin and Wreckabulary are team projects.
 - Fonts: [Unbounded](https://github.com/googlefonts/unbounded), [Sora](https://github.com/sora-xor/sora-font), [Chakra Petch](https://github.com/cadsondemak/Chakra-Petch), [Kantumruy Pro](https://github.com/google/fonts/tree/main/ofl/kantumruypro) and [Noto Sans SC](https://github.com/google/fonts/tree/main/ofl/notosanssc), all under the SIL Open Font License.

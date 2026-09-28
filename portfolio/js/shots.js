@@ -500,7 +500,7 @@ export const SHOTS = {
    "sm": "img/shots/sandline/05-sm.webp",
    "w": 1440,
    "h": 900,
-   "caption": "Play screen: mode families, the six maps and match options (bots, skill, side, match length).",
+   "caption": "Play screen: mode families, the maps for the chosen mode and match options (bots, skill, side, match length).",
    "kind": "screen"
   },
   {

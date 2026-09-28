@@ -74,8 +74,8 @@ export const PROJECTS = [
     cats: ['games', 'software'], kicker: 'Games · Web', year: '2026', play: 'allchess',
     status: { label: 'Playable · latest build', color: 'acid' },
     tagline: 'Discover how the world plays chess.',
-    summary: 'A game studio for 21 chess-family games, from Xiangqi and Shogi to Ouk Chaktrang (Khmer chess), on physical 3D tabletops with bots that run in the browser.',
-    about: 'Play first, learn as you go. The latest build turns AllChess into a game studio: a visual library of 21 board games, each with a physical 3D tabletop and hand-made piece collections. Its own rules engine covers every game, and the bots run in your browser: Stockfish 18 for chess, a custom search for everything else.',
+    summary: 'A game studio for 21 board games, from Xiangqi, Shogi and Ouk Chaktrang (Khmer chess) to draughts and Jungle, on physical 3D tabletops with bots that run in the browser.',
+    about: 'Play first, learn as you go. The latest build turns AllChess into a game studio: a visual library of 21 board games, each with a physical 3D tabletop and its own custom piece collections. Its own rules engine covers every game, and the bots run in your browser: Stockfish 18 for chess, a custom search for everything else.',
     features: [
       'Game studio: a visual library of 21 games with search by native names, favourites and launch modes (bot, local, friend, quick match, watch)',
       'Physical 3D tabletops for every family: Western, Khmer, Shogi with hand stands and 3D drops, Xiangqi, Janggi, Makruk, draughts with stacked kings, Konane, Jungle…',
@@ -110,7 +110,7 @@ export const PROJECTS = [
     ],
     stack: ['Next.js', 'TypeScript', 'Rust/WASM (wgpu)', 'Python', 'faster-whisper', 'ONNX'],
     note: 'Built on OpenCut classic (MIT): the compositor, effects and timeline core come from OpenCut. Private source.',
-    credit: { label: 'OpenCut classic (MIT)', href: 'https://github.com/OpenCut-app/OpenCut' },
+    credit: { label: 'OpenCut classic (MIT)', href: 'https://github.com/OpenCut-app/opencut-classic' },
     links: [],
     route: 'Local-first video editor + voice', gate: 'NEXT + PY',
   },
@@ -187,7 +187,7 @@ export const PROJECTS = [
     about: 'Sandline is built in Unreal Engine 5 and played offline against bots; online multiplayer is not built yet. The browser edition is a TypeScript port of the UE C++ gameplay: the same six maps parsed from the generated map data, the full weapon table and economy, the four bot skill tiers, and the real Blender agents, guns and props with the synthesised audio. The UE5 v0.2.x build stays the reference.',
     features: [
       '19 modes: competitive defusal, wingman, deathmatch, arms race, war, domination, hardpoint, retakes and a battle royale',
-      'Six maps designed in Python and built at runtime, from Sirocco to a 128×128 island, each with its own time of day',
+      'Six maps designed in Python and built at runtime, from Sirocco to a 128×128 island, lit at noon, overcast, golden hour or sunset',
       'Bots with a vision cone, line of sight, reaction delay, aim drift, team buy plans and A* navigation',
       '34 guns, knives and six grenade types with spray patterns, penetration, armour and a CS-style money economy',
       'Blender-generated agents, first-person arms with two-bone IK, guns and props; Python-synthesised audio',
@@ -296,9 +296,9 @@ export const PROJECTS = [
     stack: ['React 19', 'TypeScript', 'three.js', 'cannon-es', 'Web Workers', 'Vite'],
     note: 'Aircraft stations, limits and envelopes are representative, not operational data. Not affiliated with any airline.',
     links: [
-      { label: 'Play here', href: '#arcade/cargo-twin', kind: 'play' },
+      { label: 'Play in the arcade', href: '#arcade/cargo-twin', kind: 'play' },
       { label: 'Source', href: gh('Ainnovator_Prototype'), kind: 'code' },
-      { label: 'v1 (hackathon)', href: 'https://ainnovator-cathay-cargotwin.figma.site', kind: 'live' },
+      { label: 'v1 (hackathon)', href: 'https://ainnovator-cathay-cargotwin.figma.site', kind: 'archive' },
     ],
   },
   {
@@ -319,7 +319,7 @@ export const PROJECTS = [
     stack: ['React 19', 'TypeScript', 'Vite', 'pdf.js', 'Claude API', 'IndexedDB'],
     note: 'No account and no server: files stay in your browser. Version 1 (Feb 2026, Supabase + OpenRouter) is kept in the repository.',
     links: [
-      { label: 'Play here', href: '#arcade/ai-summary', kind: 'play' },
+      { label: 'Play in the arcade', href: '#arcade/ai-summary', kind: 'play' },
       { label: 'Source', href: gh('ai-summary-app'), kind: 'code' },
     ],
   },
@@ -337,7 +337,7 @@ export const ARCADE = [
   {
     id: 'sandline', project: 'sandline', title: 'Sandline · Browser edition', kind: 'FPS · UE5 port',
     blurb: 'Pick a mode and one of six maps, buy your loadout and play rounds against bots. It uses the same rules, weapons and agents as the UE5 build.',
-    controls: 'Click to aim · WASD move · Shift walk · Ctrl crouch · Space jump · LMB fire · RMB scope · R reload · E use/defuse · B buy · Tab scores · Esc pause',
+    controls: 'Click to aim · WASD move · Shift walk · C crouch · Space jump · LMB fire · RMB scope · R reload · E use/defuse · B buy · Tab scores · Esc pause',
     src: 'play/sandline/', aspect: '16 / 9', desktop: true, cover: 'Firefight', size: '21 MB',
   },
   {
@@ -349,14 +349,14 @@ export const ARCADE = [
   {
     id: 'cargo-twin', project: 'cargo-twin', title: 'Cathay Cargo Twin v2', kind: 'Sim · load planning',
     blurb: 'Press "Try a sample flight": watch a manifest become packed containers, shake them in a physics stress test, then balance a 777F.',
-    controls: 'Drag to orbit · scroll to zoom · keys 1–5 switch steps · best on a wide screen',
+    controls: 'S runs a sample flight · drag to orbit · scroll to zoom · 1–3 switch Build-up / Aircraft / Compare · ? lists shortcuts',
     src: 'play/cargo-twin/', aspect: '16 / 10', desktop: true, vw: 1280,
   },
   {
     id: 'allchess', project: 'allchess', title: 'AllChess · Game studio', kind: 'Board · 3D tabletops',
     blurb: 'The latest AllChess, running in the page: pick any of 21 games, play the bot or pass-and-play, and switch to the 3D tabletop.',
     controls: 'Click or drag pieces · 3D view: drag to orbit, scroll to zoom',
-    src: 'play/allchess/', aspect: '16 / 10', cover: 'Classic chess', size: '3D sets load per game',
+    src: 'play/allchess/', aspect: '16 / 10', vw: 1280, cover: 'Classic chess', size: '3D sets load per game',
   },
   {
     id: 'ai-summary', project: 'ai-summary', title: 'AI Summary v2', kind: 'Tool · local AI',
@@ -402,11 +402,13 @@ export const TOOL_USES = {
   'Local TTS': ['urcut', 'jarvis'],
   Ollama: ['codeage', 'jarvis'],
   Claude: ['ai-summary'],
+  Supabase: ['ai-summary'],
+  OpenRouter: ['ai-summary'],
   'Unreal Engine 5': ['living-kingdom', 'sandline'],
   Blueprints: ['living-kingdom', 'sandline'],
   'Unity 6': ['wreckabulary'],
   Blender: ['living-kingdom', 'sandline'],
-  WebGL: ['living-kingdom', 'sandline'],
+  WebGL: ['living-kingdom', 'sandline', 'allchess', 'cargo-twin', 'jarvis', 'codeage'],
   Playwright: ['business-os', 'allchess'],
 };
 

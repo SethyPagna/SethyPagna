@@ -19,5 +19,5 @@ for path in FILES:
     chars.update(re.findall(r"[⺀-鿿豈-﫿　-〿＀-￯]", path.read_text(encoding="utf-8")))
 text = "".join(sorted(chars))
 print(f"{len(chars)} characters: {text}")
-subprocess.run(["pyftsubset", sys.argv[1], f"--text={text}", "--flavor=woff2", "--layout-features=*",
+subprocess.run(["pyftsubset", sys.argv[1], f"--text={text}", "--flavor=woff2", "--layout-features=*", "--name-IDs=*",
                 f"--output-file={ROOT / 'fonts' / 'han.woff2'}"], check=True)

@@ -104,7 +104,7 @@ SHOTS: dict[str, list[tuple[Path, str, str]]] = {
         (RAW / "sandline-web/04-firefight.png", "Firefight on Sirocco, browser edition: first-person arms with IK, muzzle flash, hit marker, radar and kill feed.", "screen"),
         (RAW / "sandline-web/06-oldtown-domination.png", "Old Town at golden hour in Domination, with the A/B/C capture points on the HUD and radar.", "screen"),
         (RAW / "sandline-web/03-sirocco-buy.png", "Buy menu: the full arsenal priced from the UE weapon table, with a stat card for the hovered gun.", "screen"),
-        (RAW / "sandline-web/01-home.png", "Play screen: mode families, the six maps and match options (bots, skill, side, match length).", "screen"),
+        (RAW / "sandline-web/01-home.png", "Play screen: mode families, the maps for the chosen mode and match options (bots, skill, side, match length).", "screen"),
         (RAW / "sandline-web/02-agents.png", "Agent select: the five Blender-built agents, chosen per side.", "screen"),
         (RAW / "sandline-web/05-summary.png", "Match summary: 7:3 win, leaderboard, MVP and XP rewards carried into the career profile.", "screen"),
         (SL / "SandlineUE/Tools/maps/out/island.png", "Battle royale island, generated in Python.", "render"),

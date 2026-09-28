@@ -23,7 +23,14 @@ function toast(text) {
 // ------------------------------------------------------------ hero
 
 const sky = mountSkyline($('#sky'), { reduced });
-if (matchMedia('(pointer: coarse)').matches) $('.hero-hint').textContent = 'Tap the sky for fireworks';
+// touch screens: swap mouse and keyboard hints for tap ones (CSS hides the key hints via .touch)
+const coarse = matchMedia('(pointer: coarse)').matches;
+if (coarse) {
+  document.documentElement.classList.add('touch');
+  $('.hero-hint').textContent = 'Tap the sky for fireworks';
+  $('#projects .sec-title .alt').textContent = 'Tap a title to open';
+  $('#copy-email small').textContent = 'Email · tap to copy';
+}
 $('#sky').addEventListener('click', e => {
   const r = e.currentTarget.getBoundingClientRect();
   sky.launch(e.clientX - r.left, e.clientY - r.top);
@@ -66,7 +73,9 @@ $('#menu-btn').addEventListener('click', () => {
   const open = topbar.classList.toggle('open');
   $('#menu-btn').setAttribute('aria-expanded', open);
 });
-$$('#nav a').forEach(a => a.addEventListener('click', () => { topbar.classList.remove('open'); $('#menu-btn').setAttribute('aria-expanded', 'false'); }));
+function closeMenu() { topbar.classList.remove('open'); $('#menu-btn').setAttribute('aria-expanded', 'false'); }
+$$('#nav a').forEach(a => a.addEventListener('click', closeMenu));
+document.addEventListener('pointerdown', e => { if (topbar.classList.contains('open') && !topbar.contains(e.target)) closeMenu(); });
 
 const navLinks = Object.fromEntries($$('#nav a').map(a => [a.hash.slice(1), a]));
 const sectionSpy = new IntersectionObserver(entries => {
@@ -98,7 +107,7 @@ function renderBoard() {
   const rows = FLIGHTS.map(id => byId[id]);
   $('#board-rows').innerHTML = rows.map((p, r) => `
     <tr tabindex="0" data-open="${p.id}" aria-label="${esc(p.name)}: ${esc(p.route)}. ${esc(p.status.label)}">
-      <td class="flight"><span class="flaps" data-flap="${p.code} ${String(r + 1).padStart(2, '0')}" data-width="6"></span></td>
+      <td class="flight"><span class="flaps" data-flap="${p.code} ${p.no}" data-width="6"></span></td>
       <td class="dest"><span class="flaps" data-flap="${esc(p.name.replace(' + ', '+').replace(/[^A-Za-z0-9+ ]/g, ' '))}" data-width="14"></span></td>
       <td class="route-cell">${esc(p.route)}</td>
       <td class="gate">${esc(p.gate)}</td>
@@ -170,6 +179,8 @@ function renderProjects() {
     $$('#filters button').forEach(x => x.setAttribute('aria-pressed', String(x === b)));
     const f = b.dataset.filter;
     $$('.card').forEach(card => { card.hidden = f !== 'all' && !card.dataset.cats.split(' ').includes(f); });
+    // "More projects" only reads right under a visible featured row
+    $('#projects .subhead').hidden = !$$('#cards-featured .card').some(c => !c.hidden);
     $('#course').closest('details').open = f === 'team';
   }));
   $('#course').innerHTML = COURSE.map(c => `<li>${c.href ? `<a href="${c.href}" target="_blank" rel="noopener">${esc(c.name)} ${icon('out', 12)}</a>` : `<b>${esc(c.name)}</b>`}<span>${esc(c.what)}</span></li>`).join('');
@@ -270,7 +281,8 @@ function openDossier(id, { push = true } = {}) {
       <div class="stage">
         <div class="stage-tabs">
           <button class="btn sm" type="button" data-stage="shots" aria-pressed="true">Screens <span class="count">${shots.length}</span></button>
-          ${cab ? `<button class="btn sm ghost" type="button" data-stage="live" aria-pressed="false">${icon('play')}Play here</button>` : ''}
+          ${cab ? `<button class="btn sm ghost" type="button" data-stage="live" aria-pressed="false">${icon('play')}Play here</button>
+          <a class="btn sm ghost" id="open-full" href="${cabUrl}" target="_blank" rel="noopener" style="--c:var(--muted)" hidden>Open full screen${icon('out')}</a>` : ''}
           <span class="spacer"></span>
           ${p.private ? '<span class="tag" style="--c:var(--dim)">Private source</span>' : ''}
         </div>
@@ -308,19 +320,30 @@ function openDossier(id, { push = true } = {}) {
     $('#caption', dossier).textContent = `${k + 1} / ${shots.length} · ${s.caption}`;
     $$('#thumbs button', dossier).forEach((b, j) => b.setAttribute('aria-current', String(j === k)));
   };
-  showShot(0);
-  $$('#thumbs button', dossier).forEach(b => b.addEventListener('click', () => showShot(+b.dataset.shot)));
-  $$('[data-stage]', dossier).forEach(b => b.addEventListener('click', () => {
-    $$('[data-stage]', dossier).forEach(x => { x.setAttribute('aria-pressed', String(x === b)); x.classList.toggle('ghost', x !== b); });
-    const live = b.dataset.stage === 'live';
+  // Screens / Play here tabs; the controls go in the caption so nothing sits on top of the running app
+  const setStage = stage => {
+    $$('[data-stage]', dossier).forEach(x => { const on = x.dataset.stage === stage; x.setAttribute('aria-pressed', String(on)); x.classList.toggle('ghost', !on); });
+    const live = stage === 'live';
     $('#thumbs', dossier).hidden = live;
-    if (live) {
-      stageMain.innerHTML = `<div class="frame-wrap"><iframe src="${cabUrl}" title="${esc(cab.title)}" allow="fullscreen; gamepad; autoplay; clipboard-write" allowfullscreen></iframe></div>
-        <div class="frame-note"><span>${esc(cab.title)} · ${esc(cab.controls)}</span><a href="${cabUrl}" target="_blank" rel="noopener">Open full screen ↗</a></div>`;
+    if (cab) $('#open-full', dossier).hidden = !live;
+    if (!live) return showShot(0);
+    const load = () => {
+      stageMain.innerHTML = `<div class="frame-wrap"><iframe src="${cabUrl}" title="${esc(cab.title)}" allow="fullscreen; gamepad; autoplay; clipboard-write" allowfullscreen></iframe></div>`;
       fitFrame($('iframe', stageMain), $('.frame-wrap', stageMain), cab.vw);
-      $('#caption', dossier).textContent = cab.live ? 'Live app: if it stays blank, the host may be asleep. Use “Open full screen”.' : 'Running in this page. For more room, use “Open full screen” or the arcade.';
-    } else showShot(0);
-  }));
+      $('#caption', dossier).textContent = cab.live
+        ? 'Live app: if it stays blank, the host may be asleep. Use “Open full screen”.'
+        : `${cab.controls}. For more room, use “Open full screen” or the arcade.`;
+    };
+    if (cab.desktop && coarse) {
+      stageMain.innerHTML = `<div class="desk-only"><p>${esc(cab.title)} needs a keyboard and mouse. Open this page on a computer to play it.</p>
+        <button class="btn sm ghost" type="button" style="--c:var(--muted)">Load anyway${cab.size ? ` · ${esc(cab.size)}` : ''}</button></div>`;
+      $('button', stageMain).addEventListener('click', load);
+      $('#caption', dossier).textContent = 'Desktop only.';
+    } else load();
+  };
+  showShot(0);
+  $$('#thumbs button', dossier).forEach(b => b.addEventListener('click', () => { setStage('shots'); showShot(+b.dataset.shot); }));
+  $$('[data-stage]', dossier).forEach(b => b.addEventListener('click', () => setStage(b.dataset.stage)));
   $$('[data-nav]', dossier).forEach(b => b.addEventListener('click', () => openDossier(b.dataset.nav)));
   $$('[data-close]', overlay).forEach(b => b.addEventListener('click', closeDossier));
   $$('[data-close-then]', dossier).forEach(a => a.addEventListener('click', () => closeDossier({ restore: false })));
@@ -387,16 +410,21 @@ function renderArcade() {
 function gameCover(g) {
   const p = byId[g.project];
   const bg = coverOf(g)?.src || '';
-  const touch = matchMedia('(pointer: coarse)').matches;
+  const size = g.size ? ` · ${esc(g.size)}` : '';
+  // desktop-only games on a touch screen: say so plainly, and only load them on request
+  const start = blockedOnTouch(g)
+    ? `<p class="warn">Desktop only: it needs a keyboard and mouse. Open this page on a computer to play.</p>
+       <button class="btn sm ghost" type="button" id="start-game" style="--c:var(--muted)">Load anyway${size}</button>`
+    : `<button class="btn" type="button" id="start-game" style="--c:${color(p.color)}">${icon('play')}Press start${size}</button>`;
   return `<div class="screen-cover" style="background-image:url('${bg}')"><div>
     <span class="tag solid" style="--c:${color(p.color)}">${esc(g.kind)}</span>
     <h3>${esc(g.title)}</h3>
     <p>${esc(g.blurb)}</p>
-    ${g.desktop && touch ? '<p class="warn">Made for keyboard and mouse: it may not respond to touch.</p>' : ''}
-    <button class="btn" type="button" id="start-game" style="--c:${color(p.color)}">${icon('play')}Press start${g.size ? ` · ${g.size}` : ''}</button>
+    ${start}
     <p class="insert">INSERT COIN</p>
   </div></div>`;
 }
+const blockedOnTouch = g => g.desktop && coarse;
 
 // Cabinets that were merged into another, so old #arcade/<id> links still land somewhere.
 const CABINET_ALIASES = { 'worlds-within': 'living-kingdom', 'first-hearth': 'living-kingdom' };
@@ -418,20 +446,27 @@ function selectGame(id, { scroll = true, start = false } = {}) {
     <button class="btn sm ghost" type="button" id="game-full" style="--c:var(--cyan)">${icon('expand')}Fullscreen</button>
     <a class="btn sm ghost" href="${url}" target="_blank" rel="noopener" style="--c:var(--volt)">New tab${icon('out')}</a>
     <button class="btn sm ghost" type="button" data-open="${p.id}" style="--c:${color(p.color)}">About ${esc(p.name)}</button>`;
-  $('#start-game').addEventListener('click', () => startGame(g));
-  $('#game-reload').addEventListener('click', () => startGame(g));
+  // on a touch screen a desktop-only game loads only from its own "Load anyway" button
+  const waiting = () => blockedOnTouch(g) && !$('#screen iframe');
+  $('#start-game').addEventListener('click', () => startGame(g, { full: coarse && !g.desktop }));
+  $('#game-reload').addEventListener('click', () => waiting() ? $('#start-game')?.focus() : startGame(g));
   $('#game-full').addEventListener('click', () => {
+    if (waiting()) return $('#start-game')?.focus();
     if (!$('#screen iframe')) startGame(g);
-    const el = $('#screen');
-    (el.requestFullscreen || el.webkitRequestFullscreen)?.call(el);
+    goFullscreen($('#screen'));
   });
   $('[data-open]', $('#screen-tools')).addEventListener('click', () => openDossier(p.id));
   if (scroll) $('#arcade').scrollIntoView({ behavior: reduced ? 'auto' : 'smooth' });
   if (start) startGame(g);
 }
 
-function startGame(g) {
+const goFullscreen = el => { try { (el.requestFullscreen || el.webkitRequestFullscreen)?.call(el)?.catch?.(() => {}); } catch {} };
+
+// full: on phones a cabinet is a few centimetres tall, so starting one also asks for fullscreen
+// (a no-op where the browser doesn't allow it, e.g. iPhone Safari)
+function startGame(g, { full = false } = {}) {
   const screen = $('#screen');
+  if (full && innerWidth < 700) goFullscreen(screen);
   const url = g.src || g.live;
   screen.innerHTML = `<iframe src="${url}" title="${esc(g.title)}" allow="fullscreen; gamepad; autoplay; clipboard-write" allowfullscreen></iframe>
     <div class="booting"><span>LOADING ${esc(g.title.toUpperCase())}…</span></div>`;
@@ -441,14 +476,15 @@ function startGame(g) {
   setTimeout(() => frame.focus(), 400);
 }
 
-// Desktop-only apps get a virtual width (g.vw): the iframe renders at that width
-// and is scaled down to the cabinet, so they keep their full layout.
+// Apps with a wide desktop layout get a virtual width (g.vw): in a desktop-sized cabinet the
+// iframe renders at that width and is scaled down, so they keep their full layout. Phone-sized
+// boxes and fullscreen get the app's own responsive layout instead.
 let fitObserver = null;
 function fitFrame(frame, box, vw) {
   fitObserver?.disconnect();
   if (!vw) return;
   const fit = () => {
-    if (document.fullscreenElement === box) { frame.style.cssText = ''; return; }
+    if (document.fullscreenElement === box || box.clientWidth < 600) { frame.style.cssText = ''; return; }
     const k = Math.min(1, box.clientWidth / vw);
     frame.style.cssText = k < 1
       ? `width:${vw}px;height:${box.clientHeight / k}px;transform:scale(${k});transform-origin:0 0`
@@ -548,8 +584,8 @@ let items = [], sel = 0;
 
 function paletteItems() {
   const sections = $$('#nav a').map(a => ({ label: `Go to ${a.textContent}`, k: 'section', c: 'dim', run: () => $(a.hash).scrollIntoView({ behavior: 'smooth' }) }));
-  const projects = PROJECTS.map(p => ({ label: `${p.name}: ${p.tagline}`, k: 'project', c: p.color, run: () => openDossier(p.id) }));
-  const games = ARCADE.map(g => ({ label: `Play ${g.title}`, k: 'arcade', c: byId[g.project].color, run: () => selectGame(g.id, { start: true }) }));
+  const projects = PROJECTS.map(p => ({ label: `${p.name}: ${p.tagline}`, search: [p.kicker, ...p.cats, ...p.stack].join(' '), k: 'project', c: p.color, run: () => openDossier(p.id) }));
+  const games = ARCADE.map(g => ({ label: `Play ${g.title}`, search: g.kind, k: 'arcade', c: byId[g.project].color, run: () => selectGame(g.id, { start: true }) }));
   const actions = [
     { label: 'Copy email address', k: 'action', c: 'volt', run: () => $('#copy-email').click() },
     { label: 'Open GitHub profile', k: 'link', c: 'magenta', run: () => open(PROFILE.github, '_blank', 'noopener') },
@@ -562,7 +598,14 @@ function paletteItems() {
 
 function renderPalette() {
   const q = input.value.trim().toLowerCase();
-  items = paletteItems().filter(it => !q || q.split(/\s+/).every(w => it.label.toLowerCase().includes(w) || it.k.includes(w)));
+  // every word must start a word somewhere (so "chess" finds "chess-family" but not "retail" for "ai");
+  // one- and two-letter words must match a whole word, so "ai" doesn't find "air"
+  const escapeRe = w => w.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+  const words = q ? q.split(/\s+/).map(w => new RegExp('(^|[^a-z0-9])' + escapeRe(w) + (w.length < 3 ? '($|[^a-z0-9])' : ''))) : [];
+  items = paletteItems().filter(it => {
+    const hay = `${it.label} ${it.search || ''} ${it.k}`.toLowerCase();
+    return words.every(r => r.test(hay));
+  });
   sel = Math.min(sel, Math.max(0, items.length - 1));
   listEl.innerHTML = items.length
     ? items.slice(0, 40).map((it, i) => `<li role="option" id="pal-${i}" aria-selected="${i === sel}" data-i="${i}" style="--c:${color(it.c)}"><i></i>${esc(it.label)}<span class="k">${it.k}</span></li>`).join('')
@@ -601,6 +644,7 @@ addEventListener('keydown', e => {
   if ((e.key === 'k' && (e.metaKey || e.ctrlKey)) || (e.key === '/' && !typing && !current)) { e.preventDefault(); palette.hidden ? openPalette() : closePalette(); return; }
   if (e.key === 'Escape') {
     if (!palette.hidden) return closePalette();
+    if (topbar.classList.contains('open')) { closeMenu(); $('#menu-btn').focus(); return; }
     if (!lightbox.hidden) { lightbox.click(); return; }
     if (current) return closeDossier();
   }
