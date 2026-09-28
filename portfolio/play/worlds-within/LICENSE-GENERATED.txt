@@ -1,0 +1,19 @@
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of the generated software and generated asset source in this Living Kingdom
+starter kit (the "Materials"), to deal in the Materials without restriction,
+including without limitation the rights to use, copy, modify, merge, publish,
+distribute, sublicense, and/or sell copies of the Materials, and to permit
+persons to whom the Materials are furnished to do so, subject to the following
+conditions:
+
+This permission notice shall be included in copies or substantial portions
+of the generated software/source. Third-party data and third-party notices
+are excluded from this grant and retain their original terms. Reference
+artwork is identified separately in docs/PROVENANCE.md. This notice does not
+assert exclusive copyright in AI-generated output.
+
+THE MATERIALS ARE PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO MERCHANTABILITY, FITNESS FOR A PARTICULAR
+PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR PROVIDERS BE
+LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, ARISING FROM, OUT OF OR IN
+CONNECTION WITH THE MATERIALS OR THEIR USE.

@@ -1,0 +1,35 @@
+[
+  {
+    "id": "convoy_sources",
+    "title": "Three accounts, one missing interval",
+    "location": "greyford",
+    "condition": {"all": [{"flag": "testimony"}, {"flag": "ledger"}, {"flag": "inquiry"}]},
+    "summary": "Fixed observation: a witness account, courier ledger and inquiry deposition disagree about when the road closed. All three place civilian wagons on it during the disputed interval. None establishes who knowingly ordered the delay, or what happened to Arin's brother. Your next step is an interpretation and a public commitment, not a newly proven fact.",
+    "choices": [
+      {"id": "publish_gaps", "label": "Publish the discrepancies without naming a culprit", "detail": "Record uncertainty publicly. Families gain a basis for a compensation claim, while the cause of the delay remains open. Council +4; Arin trust +3. This does not prove a conspiracy.", "cost": {}, "flag": "convoy_open_record", "relationship": {"id": "arin", "delta": 3}, "favor": {"id": "council", "delta": 4}, "memory": {"hero": "arin", "text": "You showed me where the accounts failed to agree without filling the gap with the enemy I wanted."}},
+      {"id": "verify_chain", "label": "Fund a careful check of the courier chain", "detail": "Spend 3 silver to preserve copies and record the hypothesis that someone changed the timetable. Mara trust +4; Compact favor -2. Suspicion is recorded as a hypothesis, with no culprit confirmed.", "cost": {"silver": 3}, "flag": "convoy_tampering_hypothesis", "relationship": {"id": "mara", "delta": 4}, "favor": {"id": "compact", "delta": -2}, "memory": {"hero": "mara", "text": "You called the altered timetable a possibility and protected the couriers who might disprove it."}}
+    ]
+  },
+  {
+    "id": "medicine_records",
+    "title": "The treatment that cannot answer for itself",
+    "location": "archive",
+    "condition": {"all": [{"flag": "samples"}, {"flag": "survivors"}, {"any": [{"flag": "evidence"}, {"favor": {"id": "academy", "min": 5}}]}]},
+    "summary": "Fixed observation: preserved clinic samples and survivors' recollections describe overlapping preparation methods. Several treatment entries omit patient follow-up. Similarity does not establish that Tessa's family collaborated with the restoration order, nor that the treatment works. Survivors may decline further participation.",
+    "choices": [
+      {"id": "consent_review", "label": "Offer a survivor-led review with the right to refuse", "detail": "Spend 3 food on a voluntary review. Seren trust +4; Academy favor +3. Record the missing follow-up as a research limit; nobody is enrolled in a trial.", "cost": {"food": 3}, "flag": "medicine_consent_review", "relationship": {"id": "seren", "delta": 4}, "favor": {"id": "academy", "delta": 3}, "memory": {"hero": "seren", "text": "You let people decide whether their past became somebody else's research."}},
+      {"id": "pause_claims", "label": "Pause efficacy claims and preserve the material", "detail": "Publish the absence of reliable follow-up without asserting guilt or destroying the samples. Tessa trust +3; Council favor +2. Record uncertainty instead of declaring either a cure or a fraud.", "cost": {}, "flag": "medicine_claims_paused", "relationship": {"id": "tessa", "delta": 3}, "favor": {"id": "council", "delta": 2}, "memory": {"hero": "tessa", "text": "You allowed our clinic to admit what it did not know without turning uncertainty into a verdict."}}
+    ]
+  },
+  {
+    "id": "charter_margins",
+    "title": "What the charter's margins actually govern",
+    "location": "capital",
+    "condition": {"all": [{"flag": "inquiry"}, {"any": [{"flag": "charter"}, {"flag": "restricted_charter"}]}, {"flag": "evidence"}]},
+    "summary": "Fixed observation: the technical archive and a witnessed charter copy use different wording for duties at public passage anchors. Neither grants a hereditary right over a person's protected Origin Core. The disputed wording concerns exterior responsibilities. Whether the change came from emergency compromise or deliberate centralization remains an interpretation.",
+    "choices": [
+      {"id": "public_annotation", "label": "Publish an annotated civic reading", "detail": "Explain the changed duties without publishing unsafe spatial procedures. Evelyn trust +4; Council favor +3. Record your preference for voluntary public responsibility; the Core's protection remains unchanged.", "cost": {}, "flag": "charter_civic_reading", "relationship": {"id": "evelyn", "delta": 4}, "favor": {"id": "council", "delta": 3}, "memory": {"hero": "evelyn", "text": "You questioned inherited authority without making ordinary homes the price of the argument."}},
+      {"id": "separate_records", "label": "Separate technical custody from civic authority", "detail": "Spend 3 silver to keep distinct public and technical records. Mira trust +4; Academy favor +3. Record an institutional proposal, not proof of the original editor's motive.", "cost": {"silver": 3}, "flag": "charter_separate_custody", "relationship": {"id": "mira", "delta": 4}, "favor": {"id": "academy", "delta": 3}, "memory": {"hero": "mira", "text": "You made the limits of our custody explicit instead of asking everyone to trust the people holding the key."}}
+    ]
+  }
+]

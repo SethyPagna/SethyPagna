@@ -1,0 +1,182 @@
+#!/usr/bin/env python3
+"""Turn raw screenshots and art into the site's WebP images and js/shots.js.
+
+    python tools/images.py <raw-dir>
+
+<raw-dir> holds captures made with Playwright against local builds of each project
+(<raw-dir>/<project>/*.png); art from the project repositories is read from their clones
+under CLONES (default /home/user). Missing sources are skipped with a warning, so the
+script can be re-run as captures arrive. Needs Pillow.
+"""
+from __future__ import annotations
+
+import json
+import os
+import sys
+from pathlib import Path
+
+from PIL import Image
+
+ROOT = Path(__file__).resolve().parent.parent
+OUT = ROOT / "img" / "shots"
+CLONES = Path(os.environ.get("CLONES", "/home/user"))
+RAW = Path(sys.argv[1]) if len(sys.argv) > 1 else ROOT / "raw"
+
+LK = CLONES / "livingkingdom"
+KIT = LK / "Living-Kingdom-Unreal-Starter-Kit/Living-Kingdom-Playable-Kit"
+SL = CLONES / "sandline"
+PROFILE = ROOT.parent / "assets" / "shots"  # the profile artwork's cropped screenshots
+
+# project -> [(source, caption, kind)]; kind: screen | phone | art | render | wide
+SHOTS: dict[str, list[tuple[Path, str, str]]] = {
+    "business-os": [
+        (RAW / "business-os/bos-pos.png", "Point of sale: three lines in the cart, totals in USD and riel (test fixture data).", "screen"),
+        (RAW / "business-os/bos-pos-km.png", "The same till in Khmer, from the app's language switch.", "screen"),
+        (RAW / "business-os/bos-storefront-home.png", "Customer storefront, About tab.", "screen"),
+        (RAW / "business-os/bos-catalog-preview.png", "Storefront editor with live preview (test fixture data).", "screen"),
+        (RAW / "business-os/bos-products.png", "Products with cost, price, margin and stock.", "screen"),
+        (RAW / "business-os/bos-receipt-settings.png", "Receipt settings beside a live 80 mm receipt preview.", "screen"),
+        (PROFILE / "business-os.jpg", "The live Leang Beauty storefront, September 2026.", "wide"),
+        (RAW / "business-os/bos-storefront-phone-home.png", "Storefront on a phone.", "phone"),
+    ],
+    "learn": [
+        (RAW / "learn/learn-hero.png", "Landing page: capture what you learn, turn it into practice.", "screen"),
+        (CLONES / "learn/public/intro/workflow-studio.png", "Studio: projects, templates and recent work.", "screen"),
+        (RAW / "learn/learn-practice.png", "Algorithms practice quiz, two of six answered (demo account).", "screen"),
+        (CLONES / "learn/public/intro/workflow-dashboard.png", "Dashboard with AI suggestions, review queue and calendar.", "screen"),
+        (CLONES / "learn/public/intro/workflow-ai.png", "AI tutor workspace.", "screen"),
+        (RAW / "learn/learn-studio.png", "Studio with the demo account's seeded notes.", "screen"),
+        (RAW / "learn/learn-showcase-1-dashboard.png", "Product tour: the dashboard slide.", "screen"),
+        (RAW / "learn/learn-login-phone.png", "Sign-in on a phone, with demo-account shortcuts.", "phone"),
+    ],
+    "allchess": [
+        (RAW / "allchess/home.png", "Home: play first, learn as you go.", "screen"),
+        (RAW / "allchess/play.png", "Classic chess with match setup and chat.", "screen"),
+        (RAW / "allchess/xiangqi.png", "Xiangqi (Chinese chess) on its own board.", "screen"),
+        (RAW / "allchess/shogi.png", "Shogi with hands for dropped pieces.", "screen"),
+        (RAW / "allchess/variants.png", "Games & rules catalogue with native-script names.", "screen"),
+        (RAW / "allchess/lobby.png", "Lobby: play now, bot training and game families.", "screen"),
+        (RAW / "allchess/chaturanga.png", "Chaturanga, the ancestor of chess.", "screen"),
+        (RAW / "allchess/xiangqi-phone.png", "Xiangqi on a phone.", "phone"),
+    ],
+    "urcut": [
+        (RAW / "urcut/editor-text.png", "Khmer and Chinese text on a 9:16 video, both clips on the timeline.", "screen"),
+        (RAW / "urcut/voice.png", "AI voice panel with a Khmer script (voice list mocked here; UrVoice runs on your machine).", "screen"),
+        (RAW / "urcut/captions.png", "Imported English and Khmer captions on the timeline (sample subtitle file).", "screen"),
+        (RAW / "urcut/editor.png", "Editor: media, preview, transform properties and timeline.", "screen"),
+        (RAW / "urcut/voice-zh.png", "Chinese voice gallery (mocked voice list).", "screen"),
+        (RAW / "urcut/projects.png", "Projects dashboard with aspect-ratio tiles.", "screen"),
+        (RAW / "urcut/projects-916.png", "A 9:16 poster project in the light theme.", "screen"),
+    ],
+    "codeage": [
+        (RAW / "codeage/codeage-chat.png", "Chat panels beside a real terminal (no model connected, drafts only).", "screen"),
+        (RAW / "codeage/codeage-code.png", "Code view: file tree, editor and terminal.", "screen"),
+        (RAW / "codeage/codeage-agents.png", "Built-in agents: builder, code reviewer, researcher, debugger, planner.", "screen"),
+        (RAW / "codeage/codeage-jarvis.png", "Jarvis, the voice assistant, with its 3D presence.", "screen"),
+        (RAW / "codeage/codeage-settings-connect.png", "Connect a model: Ollama, OpenAI-compatible or Anthropic.", "screen"),
+        (RAW / "codeage/codeage-library.png", "Library of imported project assets.", "screen"),
+        (PROFILE / "codeage.jpg", "Chat and side panel, September 2026 capture.", "wide"),
+    ],
+    "edsync": [
+        (CLONES / "edsync/public/showcase/teacher-create-dark.png", "Teacher: create a lesson with AI, from a draft or blank.", "screen"),
+        (CLONES / "edsync/public/showcase/admin-dashboard-dark.png", "Admin command center.", "screen"),
+        (CLONES / "edsync/public/showcase/student-dashboard-dark.png", "Student home.", "screen"),
+        (CLONES / "edsync/public/showcase/login-organization-dark.png", "Organisation sign-in.", "screen"),
+        (CLONES / "edsync/public/showcase/student-dashboard.jpg", "Student home, light theme.", "screen"),
+        (CLONES / "edsync/public/showcase/teacher-work-dark.png", "Teacher work builder.", "screen"),
+    ],
+    "living-kingdom": [
+        (PROFILE / "living-kingdom.jpg", "Unreal Engine 5: the Founder at the Origin shrine.", "wide"),
+        (KIT / "tests/walk.png", "Worlds Within: walking Jadewater on the First Light quest.", "screen"),
+        (KIT / "tests/valley.png", "Worlds Within: Jadewater valley from above.", "screen"),
+        (KIT / "tests/earth.png", "Worlds Within: the living world.", "screen"),
+        (KIT / "tests/inner.png", "Worlds Within: inner realms.", "screen"),
+        (RAW / "arcade/first-hearth.png", "The First Hearth: an 18-decision lab for the kingdom's story.", "screen"),
+        (LK / "Development/assets/characters/Founder_R2/render-three-quarter.png", "Founder character render.", "render"),
+        (LK / "Development/assets/characters/Founder_R3/customization/dye-v2/ember-front.png", "Founder colour customisation (ember).", "render"),
+        (LK / "Development/assets/environment/R1/Stonebrook/stonebrook_r1_kit_layout.png", "Stonebrook village kit layout.", "screen"),
+        (LK / "Development/assets/blockout/blockout-preview.png", "Blender blockout of the Origin Space.", "screen"),
+        (LK / "Development/assets/concepts/higgsfield/origin-shrine-concept-01.png", "Origin shrine concept (AI-generated reference art).", "art"),
+    ],
+    "sandline": [
+        (PROFILE / "sandline.jpg", "Unreal Engine 5: Sirocco, buy phase.", "wide"),
+        (SL / "sandline_web/shot_browser_domination.png", "Web arena: domination with A/B/C zones.", "screen"),
+        (SL / "sandline_web/shot_browser_menu.png", "Web arena: mode select and controls.", "screen"),
+        (SL / "sandline_web/look_operator_34.png", "Web arena: firefight in the container yard.", "screen"),
+        (SL / "SandlineUE/Tools/blender/out/agents/previews/t_enforcer_34.png", "Agent: Enforcer (Blender preview).", "render"),
+        (SL / "SandlineUE/Tools/blender/out/agents/previews/ct_operator_34.png", "Agent: Urban Tactical (Blender preview).", "render"),
+        (SL / "SandlineUE/Tools/blender/out/agents/previews/ct_frogman_34.png", "Agent: Maritime Unit (Blender preview).", "render"),
+        (SL / "SandlineUE/Tools/maps/out/island.png", "Battle royale island, generated in Python.", "render"),
+        (SL / "SandlineUE/Tools/maps/out/sirocco.png", "Sirocco map layout, generated in Python.", "render"),
+    ],
+    "wreckabulary": [
+        (CLONES / "wreckabulary/docs/art/key_art.jpg", "Key art (team concept).", "screen"),
+        (CLONES / "wreckabulary/docs/art/gameplay_mockup.jpg", "Gameplay mock-up: versus round (team concept).", "screen"),
+        (CLONES / "wreckabulary/docs/art/sketch_room.png", "Early room sketch.", "art"),
+        (CLONES / "wreckabulary/docs/art/sketch_logo.png", "Logo sketch.", "art"),
+    ],
+    "omnidrama": [
+        (CLONES / "omnidrama/artifacts/omni-drama-vibrant-desktop.png", "Discover: featured series and your collection.", "screen"),
+        (CLONES / "omnidrama/artifacts/omni-drama-desktop-sidebar.png", "Episodes with filters and watch state.", "screen"),
+        (CLONES / "omnidrama/artifacts/omni-drama-bottom-navigation.png", "Episodes on a phone.", "phone"),
+    ],
+    "khshop": [
+        (PROFILE / "khshop.jpg", "Home with sample listings, September 2026 capture (fictional shops).", "wide"),
+        (PROFILE / "thumb-khshop.jpg", "A sample listing card.", "art"),
+    ],
+    "jarvis": [
+        (RAW / "jarvis/jarvis-home-cyberpunk.png", "Home in the cyberpunk theme: orb, live stats and terminal.", "screen"),
+        (RAW / "jarvis/jarvis-home.png", "Home in the default theme.", "screen"),
+        (RAW / "jarvis/jarvis-models.png", "Models: local runtimes and model settings.", "screen"),
+        (RAW / "jarvis/jarvis-souls.png", "Souls: swappable identity and voice profiles.", "screen"),
+        (RAW / "jarvis/jarvis-skills.png", "Skills hub.", "screen"),
+        (RAW / "jarvis/jarvis-settings-cyberpunk.png", "Settings with theme presets.", "screen"),
+        (CLONES / "secretary-jarvis/desktop/assets/icon.png", "App icon.", "art"),
+    ],
+    "cargo-twin": [
+        (RAW / "cargo/cargo-packed.png", "Eight packages stacked in an AKE container.", "screen"),
+        (RAW / "cargo/cargo-aircraft-opt.png", "Freighter hold with centre of gravity.", "screen"),
+    ],
+    "ai-summary": [
+        (RAW / "ai-summary/ai-summary-login.png", "Sign-in screen.", "screen"),
+    ],
+}
+
+SIZES = {"lg": 1600, "sm": 720}
+
+
+def save(image: Image.Image, target: Path, width: int, quality: int) -> tuple[int, int]:
+    img = image.copy()
+    if img.width > width:
+        img = img.resize((width, round(img.height * width / img.width)), Image.LANCZOS)
+    target.parent.mkdir(parents=True, exist_ok=True)
+    img.save(target, "WEBP", quality=quality, method=6)
+    return img.size
+
+
+def main() -> None:
+    manifest: dict[str, list[dict]] = {}
+    for project, items in SHOTS.items():
+        out, index = [], 0
+        for src, caption, kind in items:
+            if not src.exists():
+                print(f"skip  {project}: {src}")
+                continue
+            image = Image.open(src)
+            image = image.convert("RGBA" if image.mode in ("RGBA", "LA", "P") and kind in ("render", "art") else "RGB")
+            index += 1
+            name = f"{index:02d}"
+            limit = 900 if kind == "phone" else SIZES["lg"]
+            w, h = save(image, OUT / project / f"{name}.webp", limit, 80)
+            save(image, OUT / project / f"{name}-sm.webp", 420 if kind == "phone" else SIZES["sm"], 72)
+            out.append({"src": f"img/shots/{project}/{name}.webp", "sm": f"img/shots/{project}/{name}-sm.webp",
+                        "w": w, "h": h, "caption": caption, "kind": kind})
+        manifest[project] = out
+        print(f"ok    {project}: {len(out)} images")
+    js = ("// Generated by tools/images.py: screenshots per project.\n"
+          f"export const SHOTS = {json.dumps(manifest, indent=1, ensure_ascii=False)};\n")
+    (ROOT / "js" / "shots.js").write_text(js, encoding="utf-8")
+
+
+if __name__ == "__main__":
+    main()
