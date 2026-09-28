@@ -11,9 +11,9 @@ Live at **https://sethy-pagna-portfolio.vercel.app** (once this folder is connec
 | Hero | Canvas skyline (Angkor Wat → Hong Kong harbour) with rain, reflections, a KH→HK flight and fireworks when you click the sky |
 | About | A boarding pass: passenger photo, studies, languages, next stop |
 | Now building | Split-flap departures board; each flight opens that project's dossier |
-| Projects | Cards that preview their screenshots on hover; each opens a dossier (gallery, features, stack, links; AllChess has a live preview) |
+| Projects | Cards that preview their screenshots on hover; each opens a dossier (gallery, features, stack, links). Projects with a cabinet can be played from the dossier too |
 | Game dev lab | Living Kingdom (UE5), Sandline (UE5) and Wreckabulary (Unity 6) |
-| Arcade | Sandline web arena, Living Kingdom *Worlds Within* and *The First Hearth*, Cathay Cargo Twin and the live AllChess app, in the page |
+| Arcade | Browser editions of Sandline and Living Kingdom (ported from the UE5 builds), AllChess, Cathay Cargo Twin v2 and AI Summary v2, in the page |
 | Build · Toolbox · Road · Activity · Contact | The AI-assisted build loop, tools cross-linked to projects, a timeline, the daily GitHub activity cards and contact links |
 
 Extras: <kbd>Ctrl</kbd>/<kbd>⌘</kbd>+<kbd>K</kbd> (or <kbd>/</kbd>) opens a command palette, deep links such as `#project/allchess` or `#arcade/sandline` work, and the Konami code does something.
@@ -65,14 +65,17 @@ Only changes inside `portfolio/` need a redeploy; you can tick "Skip deployments
 
 ## Playable builds in `play/`
 
+Each folder is the static build of a project, copied in as-is. They all use relative paths, so they work from a sub-folder and inside the arcade iframe.
+
 | Folder | Source | Notes |
 |---|---|---|
-| `play/sandline/` | `sandline/sandline_web` (v1 prototype) | three.js r157 (MIT) vendored in `lib/`; arena, models and audio are generated at runtime |
-| `play/worlds-within/` | `LivingKingdom/…/Living-Kingdom-Play.html` | Single-file WebGL app (17 MB). Licence and data notices sit next to it |
-| `play/first-hearth/` | `LivingKingdom/Development` | Static ES-module decisions lab |
-| `play/cargo-twin/` | `Ainnovator_Prototype` | `vite build --base=./`, with Tailwind v4 recompiled from source |
+| `play/sandline/` | `sandline/web` (browser edition of the UE5 v0.2.x build) | Vite + TypeScript + three.js; desktop only (WebGL 2, keyboard and mouse). Notices in `NOTICES.txt` |
+| `play/living-kingdom/` | `livingkingdom/web` (browser edition of the UE5 playtest) | Vite + TypeScript + three.js + Rapier; font and sound licences sit next to the files in `assets/` |
+| `play/allchess/` | `allchess`, branch `codex/compact-game-studio` | Static export of the latest game studio (bots and pass-and-play); 3D set models are compressed with gltf-transform |
+| `play/cargo-twin/` | `ainnovator_prototype/cargo-twin` (v2) | React + three.js + cannon-es; the cabinet renders it at 1280 px wide and scales it to fit |
+| `play/ai-summary/` | `ai-summary-app/web` (v2) | Runs in the browser; Claude features use the visitor's own API key, kept in their browser and sent only to the Claude API |
 
-The AllChess cabinet embeds the live app at allchess.learn-app.workers.dev.
+Online AllChess matches, rooms and accounts are in the live app at allchess.learn-app.workers.dev, which still runs an older build.
 
 ## Credits
 
