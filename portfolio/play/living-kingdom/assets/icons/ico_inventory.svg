@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="34" height="34" viewBox="0 0 34 34">
+<!-- Living Kingdom ico_inventory: traced from the reference boards (Development/tools/ui/vector_icons.py). White shapes are tinted by the game. -->
+<path d="M7.6 11.7 L26.8 11.7 A1.6 1.6 0 0 1 28.4 13.3 L28.4 27.9 A1.6 1.6 0 0 1 26.8 29.5 L7.6 29.5 A1.6 1.6 0 0 1 6 27.9 L6 13.3 A1.6 1.6 0 0 1 7.6 11.7 Z" fill="none" stroke="#FFFFFF" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M13.3 11.7 L13.3 7.6 A2.1 2.1 0 0 1 15.4 5.5 L19.5 5.5 A2.1 2.1 0 0 1 21.6 7.6 L21.6 11.7" fill="none" stroke="#FFFFFF" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M13.25 15.4 A0.85 0.85 0 0 1 11.55 15.4 A0.85 0.85 0 0 1 13.25 15.4 Z" fill="#FFFFFF" fill-rule="evenodd"/>
+<path d="M23.45 15.4 A0.85 0.85 0 0 1 21.75 15.4 A0.85 0.85 0 0 1 23.45 15.4 Z" fill="#FFFFFF" fill-rule="evenodd"/>
+<path d="M17.35 16.9 L18.75 19.35 L17.35 21.8 L15.95 19.35 Z" fill="#FFFFFF" fill-rule="evenodd" opacity="0.9"/>
+</svg>

@@ -46,10 +46,11 @@ I'm **Pagna** (Sethy Pagna UNG, or James), a Computer Science student at The Hon
   <a href="https://edsync-two.vercel.app">EdSync</a>
   <br>
   <b>Play in your browser:</b>
-  <a href="https://sethy-pagna-portfolio.vercel.app/#arcade/sandline">Sandline web arena</a> ·
-  <a href="https://sethy-pagna-portfolio.vercel.app/#arcade/worlds-within">Living Kingdom: Worlds Within</a> ·
-  <a href="https://sethy-pagna-portfolio.vercel.app/#arcade/first-hearth">The First Hearth</a> ·
-  <a href="https://sethy-pagna-portfolio.vercel.app/#arcade/cargo-twin">Cathay Cargo Twin</a>
+  <a href="https://sethy-pagna-portfolio.vercel.app/#arcade/sandline">Sandline</a> ·
+  <a href="https://sethy-pagna-portfolio.vercel.app/#arcade/living-kingdom">Living Kingdom</a> ·
+  <a href="https://sethy-pagna-portfolio.vercel.app/#arcade/allchess">AllChess</a> ·
+  <a href="https://sethy-pagna-portfolio.vercel.app/#arcade/cargo-twin">Cathay Cargo Twin</a> ·
+  <a href="https://sethy-pagna-portfolio.vercel.app/#arcade/ai-summary">AI Summary</a>
   <br>
   CodeAge, UrCut + UrVoice, Living Kingdom, Sandline, OmniDrama and KhShop are private repositories: the portfolio has screenshots of each.
   UrCut is built on <a href="https://github.com/OpenCut-app/OpenCut">OpenCut</a> (MIT).

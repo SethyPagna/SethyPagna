@@ -386,7 +386,7 @@ export const SHOTS = {
    "sm": "img/shots/living-kingdom/01-sm.webp",
    "w": 900,
    "h": 315,
-   "caption": "Unreal Engine 5: the Founder at the Origin shrine.",
+   "caption": "Unreal Engine 5 (the reference build): the Founder at the Origin shrine.",
    "kind": "wide"
   },
   {
@@ -394,7 +394,7 @@ export const SHOTS = {
    "sm": "img/shots/living-kingdom/02-sm.webp",
    "w": 1440,
    "h": 900,
-   "caption": "Worlds Within: walking Jadewater on the First Light quest.",
+   "caption": "The Origin at golden hour, browser edition: sun and fog from the UE time-of-day keys, with the objective tracker, minimap and vitals.",
    "kind": "screen"
   },
   {
@@ -402,7 +402,7 @@ export const SHOTS = {
    "sm": "img/shots/living-kingdom/03-sm.webp",
    "w": 1440,
    "h": 900,
-   "caption": "Worlds Within: Jadewater valley from above.",
+   "caption": "Stonebrook, the second map: the village pump you repair, kit-built houses and the villagers Tobin and Elias.",
    "kind": "screen"
   },
   {
@@ -410,7 +410,7 @@ export const SHOTS = {
    "sm": "img/shots/living-kingdom/04-sm.webp",
    "w": 1440,
    "h": 900,
-   "caption": "Worlds Within: the living world.",
+   "caption": "Veil shades in the outer meadow, locked on mid-swing; the warden waits up the slope.",
    "kind": "screen"
   },
   {
@@ -418,7 +418,7 @@ export const SHOTS = {
    "sm": "img/shots/living-kingdom/05-sm.webp",
    "w": 1440,
    "h": 900,
-   "caption": "Worlds Within: inner realms.",
+   "caption": "Felling a jacaranda: three swings, then it splits into logs you can carry.",
    "kind": "screen"
   },
   {
@@ -426,48 +426,40 @@ export const SHOTS = {
    "sm": "img/shots/living-kingdom/06-sm.webp",
    "w": 1440,
    "h": 900,
-   "caption": "The First Hearth: an 18-decision lab for the kingdom's story.",
+   "caption": "Carrying a log to the stash; each one stowed adds timber to the journey ledger.",
    "kind": "screen"
   },
   {
    "src": "img/shots/living-kingdom/07.webp",
    "sm": "img/shots/living-kingdom/07-sm.webp",
-   "w": 700,
-   "h": 1000,
-   "caption": "Founder character render.",
-   "kind": "render"
+   "w": 1440,
+   "h": 900,
+   "caption": "The Tab hub: ten sections, live journey data, the local map and the current quest.",
+   "kind": "screen"
   },
   {
    "src": "img/shots/living-kingdom/08.webp",
    "sm": "img/shots/living-kingdom/08-sm.webp",
-   "w": 1000,
-   "h": 1000,
-   "caption": "Founder colour customisation (ember).",
-   "kind": "render"
+   "w": 1440,
+   "h": 900,
+   "caption": "Founder page: a live turntable with coat and hair dyes, vitals and the journal.",
+   "kind": "screen"
   },
   {
    "src": "img/shots/living-kingdom/09.webp",
    "sm": "img/shots/living-kingdom/09-sm.webp",
-   "w": 1600,
+   "w": 1440,
    "h": 900,
-   "caption": "Stonebrook village kit layout.",
+   "caption": "Title screen over the floating Origin at dusk.",
    "kind": "screen"
   },
   {
    "src": "img/shots/living-kingdom/10.webp",
    "sm": "img/shots/living-kingdom/10-sm.webp",
-   "w": 1200,
-   "h": 800,
-   "caption": "Blender blockout of the Origin Space.",
-   "kind": "screen"
-  },
-  {
-   "src": "img/shots/living-kingdom/11.webp",
-   "sm": "img/shots/living-kingdom/11-sm.webp",
-   "w": 1600,
-   "h": 906,
-   "caption": "Origin shrine concept (AI-generated reference art).",
-   "kind": "art"
+   "w": 700,
+   "h": 1000,
+   "caption": "Founder character render.",
+   "kind": "render"
   }
  ],
  "sandline": [

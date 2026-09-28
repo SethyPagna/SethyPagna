@@ -398,7 +398,11 @@ function gameCover(g) {
   </div></div>`;
 }
 
+// Cabinets that were merged into another, so old #arcade/<id> links still land somewhere.
+const CABINET_ALIASES = { 'worlds-within': 'living-kingdom', 'first-hearth': 'living-kingdom' };
+
 function selectGame(id, { scroll = true, start = false } = {}) {
+  id = CABINET_ALIASES[id] || id;
   const g = ARCADE.find(x => x.id === id);
   if (!g) return;
   cabinet = g;
