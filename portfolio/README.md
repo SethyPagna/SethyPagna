@@ -2,7 +2,7 @@
 
 The personal site of **Sethy Pagna UNG (Pagna)**: a neon night-city terminal that flies from Angkor Wat to Hong Kong, with every project's screenshots, working links, and five builds you can play inside the page.
 
-Live at **https://sethy-pagna-portfolio.vercel.app** (once this folder is connected to the Vercel project; see below). It lives in the `portfolio/` folder of the GitHub profile repository, next to the profile artwork it borrows its look from.
+Production address: **https://sethy-pagna.vercel.app**. Vercel is connected to the `portfolio/` folder of this GitHub profile repository. Preview deployments follow pull requests; production follows `main`.
 
 ## What's on the page
 
@@ -47,7 +47,7 @@ Open http://localhost:8080. The page must be served over HTTP (not `file://`) be
 
 ## Deploy on Vercel
 
-In the existing `sethy-pagna-portfolio` project (or a new one):
+The existing `sethy-pagna` project already uses this configuration. To reproduce it:
 
 1. **Settings → Git → Connect** the `SethyPagna/SethyPagna` repository.
 2. **Settings → Build and Deployment → Root Directory**: `portfolio`.
@@ -71,11 +71,13 @@ Each folder is the static build of a project, copied in as-is. They all use rela
 |---|---|---|
 | `play/sandline/` | `sandline/web` (browser edition of the UE5 v0.2.x build) | Vite + TypeScript + three.js; desktop only (WebGL 2, keyboard and mouse). Notices in `NOTICES.txt` |
 | `play/living-kingdom/` | `livingkingdom/web` (browser edition of the UE5 playtest) | Vite + TypeScript + three.js + Rapier; the font, sound and Rapier licences sit next to the files in `assets/` |
-| `play/allchess/` | `allchess`, branch `claude/arcade-export` (`codex/compact-game-studio` plus a static arcade shell; `npm run build:arcade`) | Static export of the latest game studio (bots and pass-and-play); 3D set models are compressed with gltf-transform. Stockfish (GPLv3) ships with its licence and source links in `engines/stockfish/` |
+| `play/allchess/` | `AllChess` commit `cbe87cb460d3dd68e7cbddb1236a933db62b3619` (`claude/arcade-export`; `npm run build:arcade`) | 28 September 2026 game-studio export (bots and pass-and-play); 3D set models are compressed with gltf-transform. Stockfish (GPLv3) ships with its licence and source links in `engines/stockfish/` |
 | `play/cargo-twin/` | `ainnovator_prototype/cargo-twin` (v2) | React + three.js + cannon-es; the cabinet renders it at 1280 px wide and scales it to fit |
 | `play/ai-summary/` | `ai-summary-app/web` (v2) | Runs in the browser; Claude features use the visitor's own API key, kept in their browser and sent only to the Claude API |
 
 Online AllChess matches, rooms and accounts are in the live app at allchess.learn-app.workers.dev, which still runs an older build.
+
+Newer AllChess source work is in progress separately. Update the arcade only from a completed, verified export; do not copy a working tree's unfinished changes into `play/`. The source links for AI Summary v2 and Cargo Twin v2 point to their exact commits because their repository default branches still contain v1.
 
 ## Credits
 

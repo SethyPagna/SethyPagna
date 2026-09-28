@@ -433,6 +433,7 @@ function selectGame(id, { scroll = true, start = false } = {}) {
   id = CABINET_ALIASES[id] || id;
   const g = ARCADE.find(x => x.id === id);
   if (!g) return;
+  closeDossier({ restore: false });
   cabinet = g;
   const p = byId[g.project];
   $$('[data-game]').forEach(b => b.setAttribute('aria-pressed', String(b.dataset.game === id)));
@@ -457,7 +458,7 @@ function selectGame(id, { scroll = true, start = false } = {}) {
   });
   $('[data-open]', $('#screen-tools')).addEventListener('click', () => openDossier(p.id));
   if (scroll) $('#arcade').scrollIntoView({ behavior: reduced ? 'auto' : 'smooth' });
-  if (start) startGame(g);
+  if (start && !blockedOnTouch(g)) startGame(g, { full: coarse && !g.desktop });
 }
 
 const goFullscreen = el => { try { (el.requestFullscreen || el.webkitRequestFullscreen)?.call(el)?.catch?.(() => {}); } catch {} };

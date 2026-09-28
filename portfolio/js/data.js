@@ -72,10 +72,10 @@ export const PROJECTS = [
   {
     id: 'allchess', code: 'ACH', no: '03', name: 'AllChess', color: 'acid', featured: true,
     cats: ['games', 'software'], kicker: 'Games · Web', year: '2026', play: 'allchess',
-    status: { label: 'Playable · latest build', color: 'acid' },
+    status: { label: 'Playable · Sep 2026', color: 'acid' },
     tagline: 'Discover how the world plays chess.',
     summary: 'A game studio for 21 board games, from Xiangqi, Shogi and Ouk Chaktrang (Khmer chess) to draughts and Jungle, on physical 3D tabletops with bots that run in the browser.',
-    about: 'Play first, learn as you go. The latest build turns AllChess into a game studio: a visual library of 21 board games, each with a physical 3D tabletop and its own custom piece collections. Its own rules engine covers every game, and the bots run in your browser: Stockfish 18 for chess, a custom search for everything else.',
+    about: 'Play first, learn as you go. The September 2026 arcade build turns AllChess into a game studio: a visual library of 21 board games, each with a physical 3D tabletop and its own custom piece collections. Its own rules engine covers every game, and the bots run in your browser: Stockfish 18 for chess, a custom search for everything else.',
     features: [
       'Game studio: a visual library of 21 games with search by native names, favourites and launch modes (bot, local, friend, quick match, watch)',
       'Physical 3D tabletops for every family: Western, Khmer, Shogi with hand stands and 3D drops, Xiangqi, Janggi, Makruk, draughts with stacked kings, Konane, Jungle…',
@@ -85,11 +85,11 @@ export const PROJECTS = [
       'Factual move review, undo/redo, local saves with import/export, 19 languages',
     ],
     stack: ['Next.js 16', 'React 19', 'TypeScript', 'three.js', 'Stockfish WASM', 'Cloudflare D1 · DO'],
-    note: 'The arcade runs the latest build (Sep 2026) entirely in your browser: bot and pass-and-play for all 21 games. Online matches, rooms and accounts are in the online app, which still runs an older build.',
+    note: 'The arcade runs the 28 September 2026 export entirely in your browser: bot and pass-and-play for all 21 games. Newer game-studio work is still in development. Online matches, rooms and accounts are in the online app, which runs an older build.',
     links: [
       { label: 'Play in the arcade', href: '#arcade/allchess', kind: 'play' },
       { label: 'Online app (older build)', href: 'https://allchess.learn-app.workers.dev', kind: 'live' },
-      { label: 'Source', href: 'https://github.com/SethyPagna/AllChess/tree/codex/compact-game-studio', kind: 'code' },
+      { label: 'Arcade source', href: 'https://github.com/SethyPagna/AllChess/tree/cbe87cb460d3dd68e7cbddb1236a933db62b3619', kind: 'code' },
     ],
     route: 'Chess variants of the world', gate: 'NEXT + D1',
   },
@@ -153,7 +153,6 @@ export const PROJECTS = [
     note: 'Public preview; classroom content is still being built.',
     links: [
       { label: 'Open app', href: 'https://edsync-two.vercel.app', kind: 'live' },
-      { label: 'Cloudflare mirror', href: 'https://edsync.learn-app.workers.dev', kind: 'live' },
       { label: 'Source', href: gh('EdSync'), kind: 'code' },
     ],
     route: 'Classes for students & teachers', gate: 'NEXT.JS',
@@ -297,7 +296,7 @@ export const PROJECTS = [
     note: 'Aircraft stations, limits and envelopes are representative, not operational data. Not affiliated with any airline.',
     links: [
       { label: 'Play in the arcade', href: '#arcade/cargo-twin', kind: 'play' },
-      { label: 'Source', href: gh('Ainnovator_Prototype'), kind: 'code' },
+      { label: 'v2 source', href: gh('Ainnovator_Prototype/tree/0def6dc6553b007f9377fe097abe80302109551b/cargo-twin'), kind: 'code' },
       { label: 'v1 (hackathon)', href: 'https://ainnovator-cathay-cargotwin.figma.site', kind: 'archive' },
     ],
   },
@@ -320,7 +319,7 @@ export const PROJECTS = [
     note: 'No account and no server: files stay in your browser. Version 1 (Feb 2026, Supabase + OpenRouter) is kept in the repository.',
     links: [
       { label: 'Play in the arcade', href: '#arcade/ai-summary', kind: 'play' },
-      { label: 'Source', href: gh('ai-summary-app'), kind: 'code' },
+      { label: 'v2 source', href: gh('ai-summary-app/tree/81046bd2b29b27eb314b30ab0623515d206ae7a3/web'), kind: 'code' },
     ],
   },
 ];
@@ -354,7 +353,7 @@ export const ARCADE = [
   },
   {
     id: 'allchess', project: 'allchess', title: 'AllChess · Game studio', kind: 'Board · 3D tabletops',
-    blurb: 'The latest AllChess, running in the page: pick any of 21 games, play the bot or pass-and-play, and switch to the 3D tabletop.',
+    blurb: 'The September 2026 AllChess arcade build: pick any of 21 games, play the bot or pass-and-play, and switch to the 3D tabletop.',
     controls: 'Click or drag pieces · 3D view: drag to orbit, scroll to zoom',
     src: 'play/allchess/', aspect: '16 / 10', vw: 1280, cover: 'Classic chess', size: '3D sets load per game',
   },
