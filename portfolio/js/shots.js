@@ -138,7 +138,7 @@ export const SHOTS = {
    "sm": "img/shots/allchess/01-sm.webp",
    "w": 1440,
    "h": 900,
-   "caption": "Classic chess against the Stockfish bot on the 3D marble tabletop.",
+   "caption": "Classic chess in the 29 September arcade build: bot replies and a played suggestion on the 3D tabletop.",
    "kind": "screen"
   },
   {

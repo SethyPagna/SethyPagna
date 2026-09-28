@@ -71,13 +71,13 @@ Each folder is the static build of a project, copied in as-is. They all use rela
 |---|---|---|
 | `play/sandline/` | `sandline/web` (browser edition of the UE5 v0.2.x build) | Vite + TypeScript + three.js; desktop only (WebGL 2, keyboard and mouse). Notices in `NOTICES.txt` |
 | `play/living-kingdom/` | `livingkingdom/web` (browser edition of the UE5 playtest) | Vite + TypeScript + three.js + Rapier; the font, sound and Rapier licences sit next to the files in `assets/` |
-| `play/allchess/` | `AllChess` commit `cbe87cb460d3dd68e7cbddb1236a933db62b3619` (`claude/arcade-export`; `npm run build:arcade`) | 28 September 2026 game-studio export (bots and pass-and-play); 3D set models are compressed with gltf-transform. Stockfish (GPLv3) ships with its licence and source links in `engines/stockfish/` |
+| `play/allchess/` | `AllChess` commit `444b0c0b910b3a6a58ce30fd2f67122045cc2fc3` (`codex/portfolio-arcade-20260929`; `npm run build:arcade`) | 29 September 2026 game-studio export (bots and pass-and-play); 3D set models are compressed with gltf-transform. Stockfish (GPLv3) ships with its licence and source links in `engines/stockfish/` |
 | `play/cargo-twin/` | `ainnovator_prototype/cargo-twin` (v2) | React + three.js + cannon-es; the cabinet renders it at 1280 px wide and scales it to fit |
 | `play/ai-summary/` | `ai-summary-app/web` (v2) | Runs in the browser; Claude features use the visitor's own API key, kept in their browser and sent only to the Claude API |
 
 Online AllChess matches, rooms and accounts are in the live app at allchess.learn-app.workers.dev, which still runs an older build.
 
-Newer AllChess source work is in progress separately. Update the arcade only from a completed, verified export; do not copy a working tree's unfinished changes into `play/`. The source links for AI Summary v2 and Cargo Twin v2 point to their exact commits because their repository default branches still contain v1.
+This AllChess export includes the committed game-studio source through `418f8bd`; further source work continues separately. Update the arcade only from a completed, verified export; do not copy a working tree's unfinished changes into `play/`. The source links for AI Summary v2 and Cargo Twin v2 point to their exact commits because their repository default branches still contain v1.
 
 ## Credits
 

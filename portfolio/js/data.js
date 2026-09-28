@@ -85,11 +85,11 @@ export const PROJECTS = [
       'Factual move review, undo/redo, local saves with import/export, 19 languages',
     ],
     stack: ['Next.js 16', 'React 19', 'TypeScript', 'three.js', 'Stockfish WASM', 'Cloudflare D1 · DO'],
-    note: 'The arcade runs the 28 September 2026 export entirely in your browser: bot and pass-and-play for all 21 games. Newer game-studio work is still in development. Online matches, rooms and accounts are in the online app, which runs an older build.',
+    note: 'The arcade runs the 29 September 2026 export entirely in your browser: bot and pass-and-play for all 21 games. This snapshot includes the committed rules, playable hints and compact controls; further work continues separately. Online matches, rooms and accounts are in the online app, which runs an older build.',
     links: [
       { label: 'Play in the arcade', href: '#arcade/allchess', kind: 'play' },
       { label: 'Online app (older build)', href: 'https://allchess.learn-app.workers.dev', kind: 'live' },
-      { label: 'Arcade source', href: 'https://github.com/SethyPagna/AllChess/tree/cbe87cb460d3dd68e7cbddb1236a933db62b3619', kind: 'code' },
+      { label: 'Arcade source', href: 'https://github.com/SethyPagna/AllChess/tree/444b0c0b910b3a6a58ce30fd2f67122045cc2fc3', kind: 'code' },
     ],
     route: 'Chess variants of the world', gate: 'NEXT + D1',
   },
