@@ -13,7 +13,7 @@ Production address: **https://sethy-pagna.vercel.app**. Vercel is connected to t
 | Now building | Split-flap departures board; each flight opens that project's dossier |
 | Projects | Cards that preview their screenshots on hover; each opens a dossier (gallery, features, stack, links). Projects with a cabinet can be played from the dossier too |
 | Game dev lab | Living Kingdom (UE5), Sandline (UE5) and Wreckabulary (Unity 6) |
-| Arcade | Browser editions of Sandline and Living Kingdom (ported from the UE5 builds), AllChess, Cathay Cargo Twin v2 and AI Summary v2, in the page |
+| Arcade | Browser editions of Sandline and Living Kingdom (ported from the UE5 builds), AllChess, Cargo Twin v3 and AI Summary v2, in the page |
 | Build · Toolbox · Road · Activity · Contact | The AI-assisted build loop, tools cross-linked to projects, a timeline, the daily GitHub activity cards and contact links |
 
 Extras: <kbd>Ctrl</kbd>/<kbd>⌘</kbd>+<kbd>K</kbd> (or <kbd>/</kbd>) opens a command palette, deep links such as `#project/allchess` or `#arcade/sandline` work, and the Konami code does something.
@@ -72,16 +72,16 @@ Each folder is the static build of a project, copied in as-is. They all use rela
 | `play/sandline/` | `sandline/web` (browser edition of the UE5 v0.2.x build) | Vite + TypeScript + three.js; desktop only (WebGL 2, keyboard and mouse). Notices in `NOTICES.txt` |
 | `play/living-kingdom/` | `livingkingdom/web` (browser edition of the UE5 playtest) | Vite + TypeScript + three.js + Rapier; the font, sound and Rapier licences sit next to the files in `assets/` |
 | `play/allchess/` | `AllChess` commit `8940655e558c8834cd8c8f0f37f7d493222d4d8f` (`codex/portfolio-arcade-shore-20260929`; `npm run build:arcade`) | 29 September 2026 Shore checkpoint from game source `aab74a1` (bots and pass-and-play), including Shore assets and studio HDR lighting. Unchanged 3D set models retain their gltf-transform compression. Stockfish (GPLv3) ships with its licence and source links in `engines/stockfish/`; HDR derivation/licence is in `assets/materials/studio-room-SOURCE.md` |
-| `play/cargo-twin/` | `ainnovator_prototype/cargo-twin` (v2) | React + three.js + cannon-es; the cabinet renders it at 1280 px wide and scales it to fit |
+| `play/cargo-twin/` | `cargo-twin/cargo-twin` (v3) | Responsive cargo studio with custom spaces and constrained 3D packing; earlier aircraft workspace retained |
 | `play/ai-summary/` | `ai-summary-app/web` (v2) | Runs in the browser; Claude features use the visitor's own API key, kept in their browser and sent only to the Claude API |
 
 Online AllChess matches, rooms and accounts are in the live app at allchess.learn-app.workers.dev, which still runs an older build.
 
-This AllChess export includes the committed game-studio source through `418f8bd`; further source work continues separately. Update the arcade only from a completed, verified export; do not copy a working tree's unfinished changes into `play/`. The source links for AI Summary v2 and Cargo Twin v2 point to their exact commits because their repository default branches still contain v1.
+Update the arcade only from a completed, verified export; do not copy a working tree's unfinished changes into `play/`. Source links pin the revisions used for the packaged browser builds. Cargo Twin v3 opens its responsive transport studio by default and retains the aircraft workspace through its navigation.
 
 ## Credits
 
 - UrCut is built on [OpenCut classic](https://github.com/OpenCut-app/opencut-classic) (MIT).
 - Secretary Jarvis is built on [Hermes Agent](https://github.com/NousResearch/hermes-agent) by Nous Research (MIT).
-- Cathay Cargo Twin and Wreckabulary are team projects.
+- Cargo Twin originated as the team's Cathay Cargo Twin hackathon project; its current studio and aircraft workspace retain that attribution. Wreckabulary is a team project.
 - Fonts: [Unbounded](https://github.com/googlefonts/unbounded), [Sora](https://github.com/sora-xor/sora-font), [Chakra Petch](https://github.com/cadsondemak/Chakra-Petch), [Kantumruy Pro](https://github.com/google/fonts/tree/main/ofl/kantumruypro) and [Noto Sans SC](https://github.com/google/fonts/tree/main/ofl/notosanssc), all under the SIL Open Font License.
