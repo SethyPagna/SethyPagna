@@ -320,7 +320,8 @@ export const PROJECTS = [
     note: 'No account and no server: files stay in your browser. Version 1 (Feb 2026, Supabase + OpenRouter) is kept in the repository.',
     links: [
       { label: 'Play in the arcade', href: '#arcade/ai-summary', kind: 'play' },
-      { label: 'v2 source', href: gh('ai-summary-app/tree/81046bd2b29b27eb314b30ab0623515d206ae7a3/web'), kind: 'code' },
+      { label: 'Open AI Summary v2', href: 'https://ai-summary.ungsethypagna.workers.dev', kind: 'live' },
+      { label: 'v2 source', href: gh('ai-summary-app/tree/8a77f09c6d13e0a2e5fb0dd836e6c88f61f18c2f/web'), kind: 'code' },
     ],
   },
 ];

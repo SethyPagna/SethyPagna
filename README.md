@@ -43,7 +43,8 @@ I'm **Pagna** (Sethy Pagna UNG, or James), a Computer Science student at The Hon
   <a href="https://leangbeauty.com">Business OS</a> ·
   <a href="https://learn-ten-pearl.vercel.app">LEARN</a> ·
   <a href="https://allchess.learn-app.workers.dev">AllChess</a> ·
-  <a href="https://edsync.learn-app.workers.dev">EdSync</a>
+  <a href="https://edsync.learn-app.workers.dev">EdSync</a> ·
+  <a href="https://ai-summary.ungsethypagna.workers.dev">AI Summary v2</a>
   <br>
   <b>Play in your browser:</b>
   <a href="https://sethy-pagna.vercel.app/#arcade/sandline">Sandline</a> ·
