@@ -142,6 +142,14 @@ export const SHOTS = {
    "kind": "screen"
   },
   {
+   "src": "img/shots/allchess/shore-desktop.webp",
+   "sm": "img/shots/allchess/shore-desktop-sm.webp",
+   "w": 1440,
+   "h": 900,
+   "caption": "Shore Konane in the latest 29 September arcade: stone board and counters under studio lighting.",
+   "kind": "screen"
+  },
+  {
    "src": "img/shots/allchess/02.webp",
    "sm": "img/shots/allchess/02-sm.webp",
    "w": 1440,

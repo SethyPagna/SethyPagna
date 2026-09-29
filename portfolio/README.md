@@ -71,7 +71,7 @@ Each folder is the static build of a project, copied in as-is. They all use rela
 |---|---|---|
 | `play/sandline/` | `sandline/web` (browser edition of the UE5 v0.2.x build) | Vite + TypeScript + three.js; desktop only (WebGL 2, keyboard and mouse). Notices in `NOTICES.txt` |
 | `play/living-kingdom/` | `livingkingdom/web` (browser edition of the UE5 playtest) | Vite + TypeScript + three.js + Rapier; the font, sound and Rapier licences sit next to the files in `assets/` |
-| `play/allchess/` | `AllChess` commit `444b0c0b910b3a6a58ce30fd2f67122045cc2fc3` (`codex/portfolio-arcade-20260929`; `npm run build:arcade`) | 29 September 2026 game-studio export (bots and pass-and-play); 3D set models are compressed with gltf-transform. Stockfish (GPLv3) ships with its licence and source links in `engines/stockfish/` |
+| `play/allchess/` | `AllChess` commit `8940655e558c8834cd8c8f0f37f7d493222d4d8f` (`codex/portfolio-arcade-shore-20260929`; `npm run build:arcade`) | 29 September 2026 Shore checkpoint from game source `aab74a1` (bots and pass-and-play), including Shore assets and studio HDR lighting. Unchanged 3D set models retain their gltf-transform compression. Stockfish (GPLv3) ships with its licence and source links in `engines/stockfish/`; HDR derivation/licence is in `assets/materials/studio-room-SOURCE.md` |
 | `play/cargo-twin/` | `ainnovator_prototype/cargo-twin` (v2) | React + three.js + cannon-es; the cabinet renders it at 1280 px wide and scales it to fit |
 | `play/ai-summary/` | `ai-summary-app/web` (v2) | Runs in the browser; Claude features use the visitor's own API key, kept in their browser and sent only to the Claude API |
 

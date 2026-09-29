@@ -136,6 +136,7 @@ function domainFor(p) {
   const live = p.links.find(l => l.kind === 'live');
   if (live) return new URL(live.href).host;
   if (p.play) return `arcade · playable build`;
+  if (p.availability) return p.availability;
   if (p.private) return 'private build · local';
   return 'github.com/SethyPagna';
 }
