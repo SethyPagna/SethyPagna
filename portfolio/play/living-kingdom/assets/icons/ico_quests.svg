@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="34" height="34" viewBox="0 0 34 34">
+<!-- Living Kingdom ico_quests: traced from the reference boards (Development/tools/ui/vector_icons.py). White shapes are tinted by the game. -->
+<path d="M10.05 11.7 L8.4 11.7 A1.55 1.55 0 0 1 6.85 10.15 L6.85 8.35 A1.55 1.55 0 0 1 8.4 6.8 L26 6.8 A1.5 1.5 0 0 1 26 9.8 L24.1 9.8" fill="none" stroke="#FFFFFF" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M10.05 8 L10.05 25.4" fill="none" stroke="#FFFFFF" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M24.1 6.8 L24.1 26.8 A1.5 1.5 0 0 1 22.6 28.3 L8.3 28.3 A1.5 1.5 0 0 1 6.8 26.8 L6.8 26.9 A1.5 1.5 0 0 1 8.3 25.4 L10.05 25.4" fill="none" stroke="#FFFFFF" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M12.9 12.5 L21.2 12.5" fill="none" stroke="#FFFFFF" stroke-width="1.1" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M12.9 15.6 L20.2 15.6" fill="none" stroke="#FFFFFF" stroke-width="1.1" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M12.9 18.4 L20.2 18.4" fill="none" stroke="#FFFFFF" stroke-width="1.1" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M12.9 21.6 L20.9 21.6" fill="none" stroke="#FFFFFF" stroke-width="1.1" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>

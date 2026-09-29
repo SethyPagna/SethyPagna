@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18">
+<!-- Living Kingdom quest_main: traced from the reference boards (Development/tools/ui/vector_icons.py). White shapes are tinted by the game. -->
+<path d="M9.5 1.35 L17.65 9.5 L9.5 17.65 L1.35 9.5 Z" fill="none" stroke="#FFFFFF" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M9.5 5.75 L13.25 9.5 L9.5 13.25 L5.75 9.5 Z" fill="#FFFFFF" fill-rule="evenodd"/>
+</svg>

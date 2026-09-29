@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 64 64">
+<!-- Living Kingdom logo_emblem: traced from the reference boards (Development/tools/ui/vector_icons.py). White shapes are tinted by the game. -->
+<path d="M52.9 32.2 A20.2 20.2 0 0 1 12.5 32.2 A20.2 20.2 0 0 1 52.9 32.2 Z" fill="none" stroke="#B8A47E" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M35.88 35.38 L37.42 41.16 L44.72 44.22 L41.66 36.92 Z" fill="none" stroke="#AE9C7A" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" opacity="0.85"/>
+<path d="M29.52 35.38 L23.74 36.92 L20.68 44.22 L27.98 41.16 Z" fill="none" stroke="#AE9C7A" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" opacity="0.85"/>
+<path d="M29.52 29.02 L27.98 23.24 L20.68 20.18 L23.74 27.48 Z" fill="none" stroke="#AE9C7A" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" opacity="0.85"/>
+<path d="M35.88 29.02 L41.66 27.48 L44.72 20.18 L37.42 23.24 Z" fill="none" stroke="#AE9C7A" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" opacity="0.85"/>
+<path d="M32.7 32.2 L34.4 32.2 L32.7 2 Z" fill="#F3E2BC" fill-rule="evenodd"/>
+<path d="M32.7 32.2 L31 32.2 L32.7 2 Z" fill="#9C835A" fill-rule="evenodd"/>
+<path d="M30.3 7.6 L35.1 7.6" fill="none" stroke="#F3E2BC" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M32.7 32.2 L32.7 30.5 L62.9 32.2 Z" fill="#F3E2BC" fill-rule="evenodd"/>
+<path d="M32.7 32.2 L32.7 33.9 L62.9 32.2 Z" fill="#9C835A" fill-rule="evenodd"/>
+<path d="M57.3 29.8 L57.3 34.6" fill="none" stroke="#F3E2BC" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M32.7 32.2 L31 32.2 L32.7 62.4 Z" fill="#F3E2BC" fill-rule="evenodd"/>
+<path d="M32.7 32.2 L34.4 32.2 L32.7 62.4 Z" fill="#9C835A" fill-rule="evenodd"/>
+<path d="M35.1 56.8 L30.3 56.8" fill="none" stroke="#F3E2BC" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M32.7 32.2 L32.7 33.9 L2.5 32.2 Z" fill="#F3E2BC" fill-rule="evenodd"/>
+<path d="M32.7 32.2 L32.7 30.5 L2.5 32.2 Z" fill="#9C835A" fill-rule="evenodd"/>
+<path d="M8.1 34.6 L8.1 29.8" fill="none" stroke="#F3E2BC" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>

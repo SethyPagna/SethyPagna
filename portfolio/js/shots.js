@@ -138,7 +138,7 @@ export const SHOTS = {
    "sm": "img/shots/allchess/01-sm.webp",
    "w": 1440,
    "h": 900,
-   "caption": "Home: play first, learn as you go.",
+   "caption": "Classic chess in the 29 September arcade build: bot replies and a played suggestion on the 3D tabletop.",
    "kind": "screen"
   },
   {
@@ -146,7 +146,7 @@ export const SHOTS = {
    "sm": "img/shots/allchess/02-sm.webp",
    "w": 1440,
    "h": 900,
-   "caption": "Classic chess with match setup and chat.",
+   "caption": "Xiangqi with the Celadon collection: glazed ceramic discs on a wood 3D board.",
    "kind": "screen"
   },
   {
@@ -154,7 +154,7 @@ export const SHOTS = {
    "sm": "img/shots/allchess/03-sm.webp",
    "w": 1440,
    "h": 900,
-   "caption": "Xiangqi (Chinese chess) on its own board.",
+   "caption": "Shogi with the carved collection, lacquered glyphs and hand stands.",
    "kind": "screen"
   },
   {
@@ -162,7 +162,7 @@ export const SHOTS = {
    "sm": "img/shots/allchess/04-sm.webp",
    "w": 1440,
    "h": 900,
-   "caption": "Shogi with hands for dropped pieces.",
+   "caption": "Ouk Chaktrang (Khmer chess) with the Courtyard sandstone and charcoal set.",
    "kind": "screen"
   },
   {
@@ -170,7 +170,7 @@ export const SHOTS = {
    "sm": "img/shots/allchess/05-sm.webp",
    "w": 1440,
    "h": 900,
-   "caption": "Games & rules catalogue with native-script names.",
+   "caption": "Game studio home: a visual library with bot, local, friend, quick match and watch modes.",
    "kind": "screen"
   },
   {
@@ -178,7 +178,7 @@ export const SHOTS = {
    "sm": "img/shots/allchess/06-sm.webp",
    "w": 1440,
    "h": 900,
-   "caption": "Lobby: play now, bot training and game families.",
+   "caption": "English draughts with the Club ivory and oxblood counters.",
    "kind": "screen"
   },
   {
@@ -186,15 +186,31 @@ export const SHOTS = {
    "sm": "img/shots/allchess/07-sm.webp",
    "w": 1440,
    "h": 900,
-   "caption": "Chaturanga, the ancestor of chess.",
+   "caption": "Board style picker: piece collection, 2D style and board colours per game.",
    "kind": "screen"
   },
   {
    "src": "img/shots/allchess/08.webp",
    "sm": "img/shots/allchess/08-sm.webp",
-   "w": 390,
-   "h": 844,
-   "caption": "Xiangqi on a phone.",
+   "w": 1440,
+   "h": 900,
+   "caption": "All 21 games, each with its own artwork.",
+   "kind": "screen"
+  },
+  {
+   "src": "img/shots/allchess/09.webp",
+   "sm": "img/shots/allchess/09-sm.webp",
+   "w": 1440,
+   "h": 900,
+   "caption": "Move review with factual notation and playback.",
+   "kind": "screen"
+  },
+  {
+   "src": "img/shots/allchess/10.webp",
+   "sm": "img/shots/allchess/10-sm.webp",
+   "w": 780,
+   "h": 1688,
+   "caption": "Celadon Xiangqi on a phone.",
    "kind": "phone"
   }
  ],
@@ -370,7 +386,7 @@ export const SHOTS = {
    "sm": "img/shots/living-kingdom/01-sm.webp",
    "w": 900,
    "h": 315,
-   "caption": "Unreal Engine 5: the Founder at the Origin shrine.",
+   "caption": "Unreal Engine 5 (the reference build): the Founder at the Origin shrine.",
    "kind": "wide"
   },
   {
@@ -378,7 +394,7 @@ export const SHOTS = {
    "sm": "img/shots/living-kingdom/02-sm.webp",
    "w": 1440,
    "h": 900,
-   "caption": "Worlds Within: walking Jadewater on the First Light quest.",
+   "caption": "The Origin at golden hour, browser edition: sun and fog from the UE time-of-day keys, with the objective tracker, minimap and vitals.",
    "kind": "screen"
   },
   {
@@ -386,7 +402,7 @@ export const SHOTS = {
    "sm": "img/shots/living-kingdom/03-sm.webp",
    "w": 1440,
    "h": 900,
-   "caption": "Worlds Within: Jadewater valley from above.",
+   "caption": "Stonebrook, the second map: the village pump you repair, kit-built houses and the villagers Tobin and Elias.",
    "kind": "screen"
   },
   {
@@ -394,7 +410,7 @@ export const SHOTS = {
    "sm": "img/shots/living-kingdom/04-sm.webp",
    "w": 1440,
    "h": 900,
-   "caption": "Worlds Within: the living world.",
+   "caption": "Veil shades in the outer meadow, locked on mid-swing; the warden waits up the slope.",
    "kind": "screen"
   },
   {
@@ -402,7 +418,7 @@ export const SHOTS = {
    "sm": "img/shots/living-kingdom/05-sm.webp",
    "w": 1440,
    "h": 900,
-   "caption": "Worlds Within: inner realms.",
+   "caption": "Felling a jacaranda: three swings, then it splits into logs you can carry.",
    "kind": "screen"
   },
   {
@@ -410,48 +426,40 @@ export const SHOTS = {
    "sm": "img/shots/living-kingdom/06-sm.webp",
    "w": 1440,
    "h": 900,
-   "caption": "The First Hearth: an 18-decision lab for the kingdom's story.",
+   "caption": "Carrying a log to the stash; each one stowed adds timber to the journey ledger.",
    "kind": "screen"
   },
   {
    "src": "img/shots/living-kingdom/07.webp",
    "sm": "img/shots/living-kingdom/07-sm.webp",
-   "w": 700,
-   "h": 1000,
-   "caption": "Founder character render.",
-   "kind": "render"
+   "w": 1440,
+   "h": 900,
+   "caption": "The Tab hub: ten sections, live journey data, the local map and the current quest.",
+   "kind": "screen"
   },
   {
    "src": "img/shots/living-kingdom/08.webp",
    "sm": "img/shots/living-kingdom/08-sm.webp",
-   "w": 1000,
-   "h": 1000,
-   "caption": "Founder colour customisation (ember).",
-   "kind": "render"
+   "w": 1440,
+   "h": 900,
+   "caption": "Founder page: a live turntable with coat and hair dyes, vitals and the journal.",
+   "kind": "screen"
   },
   {
    "src": "img/shots/living-kingdom/09.webp",
    "sm": "img/shots/living-kingdom/09-sm.webp",
-   "w": 1600,
+   "w": 1440,
    "h": 900,
-   "caption": "Stonebrook village kit layout.",
+   "caption": "Title screen over the floating Origin at dusk.",
    "kind": "screen"
   },
   {
    "src": "img/shots/living-kingdom/10.webp",
    "sm": "img/shots/living-kingdom/10-sm.webp",
-   "w": 1200,
-   "h": 800,
-   "caption": "Blender blockout of the Origin Space.",
-   "kind": "screen"
-  },
-  {
-   "src": "img/shots/living-kingdom/11.webp",
-   "sm": "img/shots/living-kingdom/11-sm.webp",
-   "w": 1600,
-   "h": 906,
-   "caption": "Origin shrine concept (AI-generated reference art).",
-   "kind": "art"
+   "w": 700,
+   "h": 1000,
+   "caption": "Founder character render.",
+   "kind": "render"
   }
  ],
  "sandline": [
@@ -460,56 +468,56 @@ export const SHOTS = {
    "sm": "img/shots/sandline/01-sm.webp",
    "w": 900,
    "h": 315,
-   "caption": "Unreal Engine 5: Sirocco, buy phase.",
+   "caption": "Unreal Engine 5 (the reference build): Sirocco, buy phase.",
    "kind": "wide"
   },
   {
    "src": "img/shots/sandline/02.webp",
    "sm": "img/shots/sandline/02-sm.webp",
-   "w": 1280,
-   "h": 720,
-   "caption": "Web arena: domination with A/B/C zones.",
+   "w": 1440,
+   "h": 900,
+   "caption": "Firefight on Sirocco, browser edition: first-person arms with IK, muzzle flash, hit marker, radar and kill feed.",
    "kind": "screen"
   },
   {
    "src": "img/shots/sandline/03.webp",
    "sm": "img/shots/sandline/03-sm.webp",
-   "w": 1280,
-   "h": 720,
-   "caption": "Web arena: mode select and controls.",
+   "w": 1440,
+   "h": 900,
+   "caption": "Old Town at golden hour in Domination, with the A/B/C capture points on the HUD and radar.",
    "kind": "screen"
   },
   {
    "src": "img/shots/sandline/04.webp",
    "sm": "img/shots/sandline/04-sm.webp",
-   "w": 1280,
-   "h": 720,
-   "caption": "Web arena: firefight in the container yard.",
+   "w": 1440,
+   "h": 900,
+   "caption": "Buy menu: the full arsenal priced from the UE weapon table, with a stat card for the hovered gun.",
    "kind": "screen"
   },
   {
    "src": "img/shots/sandline/05.webp",
    "sm": "img/shots/sandline/05-sm.webp",
-   "w": 1024,
-   "h": 1024,
-   "caption": "Agent: Enforcer (Blender preview).",
-   "kind": "render"
+   "w": 1440,
+   "h": 900,
+   "caption": "Play screen: mode families, the maps for the chosen mode and match options (bots, skill, side, match length).",
+   "kind": "screen"
   },
   {
    "src": "img/shots/sandline/06.webp",
    "sm": "img/shots/sandline/06-sm.webp",
-   "w": 1024,
-   "h": 1024,
-   "caption": "Agent: Urban Tactical (Blender preview).",
-   "kind": "render"
+   "w": 1440,
+   "h": 900,
+   "caption": "Agent select: the five Blender-built agents, chosen per side.",
+   "kind": "screen"
   },
   {
    "src": "img/shots/sandline/07.webp",
    "sm": "img/shots/sandline/07-sm.webp",
-   "w": 1024,
-   "h": 1024,
-   "caption": "Agent: Maritime Unit (Blender preview).",
-   "kind": "render"
+   "w": 1440,
+   "h": 900,
+   "caption": "Match summary: 7:3 win, leaderboard, MVP and XP rewards carried into the career profile.",
+   "kind": "screen"
   },
   {
    "src": "img/shots/sandline/08.webp",
@@ -517,14 +525,6 @@ export const SHOTS = {
    "w": 1024,
    "h": 1024,
    "caption": "Battle royale island, generated in Python.",
-   "kind": "render"
-  },
-  {
-   "src": "img/shots/sandline/09.webp",
-   "sm": "img/shots/sandline/09-sm.webp",
-   "w": 512,
-   "h": 512,
-   "caption": "Sirocco map layout, generated in Python.",
    "kind": "render"
   }
  ],
@@ -670,7 +670,7 @@ export const SHOTS = {
    "sm": "img/shots/cargo-twin/01-sm.webp",
    "w": 1440,
    "h": 900,
-   "caption": "Eight packages stacked in an AKE container.",
+   "caption": "A 96-in PMC pallet packed from seven air waybills, with dangerous-goods labels and the ULD's centre of gravity.",
    "kind": "screen"
   },
   {
@@ -678,7 +678,47 @@ export const SHOTS = {
    "sm": "img/shots/cargo-twin/02-sm.webp",
    "w": 1440,
    "h": 900,
-   "caption": "Freighter hold with centre of gravity.",
+   "caption": "Physics stress test: cartons that tipped or shifted are flagged and the ULD is marked for restacking.",
+   "kind": "screen"
+  },
+  {
+   "src": "img/shots/cargo-twin/03.webp",
+   "sm": "img/shots/cargo-twin/03-sm.webp",
+   "w": 1440,
+   "h": 900,
+   "caption": "777F load plan after auto-optimisation: 32 ULDs, deck plan and the CG envelope (representative data).",
+   "kind": "screen"
+  },
+  {
+   "src": "img/shots/cargo-twin/04.webp",
+   "sm": "img/shots/cargo-twin/04-sm.webp",
+   "w": 1440,
+   "h": 900,
+   "caption": "Strategy comparison on a 589-piece manifest: the genetic refinement wins with 36 ULDs.",
+   "kind": "screen"
+  },
+  {
+   "src": "img/shots/cargo-twin/05.webp",
+   "sm": "img/shots/cargo-twin/05-sm.webp",
+   "w": 1440,
+   "h": 900,
+   "caption": "Stress test running: loose cartons lean into the void under a 1.5 g lateral load.",
+   "kind": "screen"
+  },
+  {
+   "src": "img/shots/cargo-twin/06.webp",
+   "sm": "img/shots/cargo-twin/06-sm.webp",
+   "w": 1440,
+   "h": 900,
+   "caption": "Equipment library: ULD contours drawn to scale with weights and aircraft compatibility.",
+   "kind": "screen"
+  },
+  {
+   "src": "img/shots/cargo-twin/07.webp",
+   "sm": "img/shots/cargo-twin/07-sm.webp",
+   "w": 1440,
+   "h": 900,
+   "caption": "Version 1 (hackathon, Nov 2025): the original pseudo-3D packing view.",
    "kind": "screen"
   }
  ],
@@ -688,7 +728,55 @@ export const SHOTS = {
    "sm": "img/shots/ai-summary/01-sm.webp",
    "w": 1440,
    "h": 900,
-   "caption": "Sign-in screen.",
+   "caption": "One click on a sample: TL;DR, key phrases and a suggested question answered with page citations, the source highlighted.",
+   "kind": "screen"
+  },
+  {
+   "src": "img/shots/ai-summary/02.webp",
+   "sm": "img/shots/ai-summary/02-sm.webp",
+   "w": 1440,
+   "h": 900,
+   "caption": "Home: no account, no server, your files stay in the browser.",
+   "kind": "screen"
+  },
+  {
+   "src": "img/shots/ai-summary/03.webp",
+   "sm": "img/shots/ai-summary/03-sm.webp",
+   "w": 1440,
+   "h": 900,
+   "caption": "Local Q&A in dark mode: cited sentences, and a plain answer when the text can't say.",
+   "kind": "screen"
+  },
+  {
+   "src": "img/shots/ai-summary/04.webp",
+   "sm": "img/shots/ai-summary/04-sm.webp",
+   "w": 1440,
+   "h": 900,
+   "caption": "Study mode: a quiz generated from the document, with a citation for each answer.",
+   "kind": "screen"
+  },
+  {
+   "src": "img/shots/ai-summary/05.webp",
+   "sm": "img/shots/ai-summary/05-sm.webp",
+   "w": 1440,
+   "h": 900,
+   "caption": "Mind map from section headings and each section's key phrases.",
+   "kind": "screen"
+  },
+  {
+   "src": "img/shots/ai-summary/06.webp",
+   "sm": "img/shots/ai-summary/06-sm.webp",
+   "w": 1440,
+   "h": 900,
+   "caption": "Optional Claude mode: a streamed summary with citations (mocked response for this screenshot).",
+   "kind": "screen"
+  },
+  {
+   "src": "img/shots/ai-summary/07.webp",
+   "sm": "img/shots/ai-summary/07-sm.webp",
+   "w": 1440,
+   "h": 900,
+   "caption": "Version 1 (Feb 2026): Supabase sign-in.",
    "kind": "screen"
   }
  ]

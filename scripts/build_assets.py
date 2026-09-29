@@ -880,14 +880,14 @@ SIDE_QUESTS = [
               "Electron interface with a Python backend: chat, voice, terminal and local-model helpers.",
               "PROTOTYPE", CYAN, "AI · DESKTOP", "thumb-jarvis"),
     SideQuest("ai-summary", "AI Summary", "Ask questions of your documents",
-              "An earlier learning project: summaries and Q&A for PDF, Word, slides and text files, on Supabase.",
-              "EARLIER PROJECT", ORANGE, "AI", None),
+              "Rebuilt in 2026: summaries, cited answers and study cards for PDF, Word and slides, worked out in your browser.",
+              "REBUILT · V2", ORANGE, "AI · LOCAL", None),
     SideQuest("wreckabulary", "Wreckabulary", "Wreck the room, build the word!",
               "A 2–4 player couch party game in Unity 6: smash furniture into letters, then spell new things.",
               "TEAM · COMP4122", VIOLET, "GAME · TEAM", "thumb-wreckabulary"),
     SideQuest("cargo-twin", "Cathay Cargo Twin", "Planning air cargo in 3D",
-              "AInnovator hackathon prototype: add packages with temperature and fragility needs, then see them placed in 3D ULD containers.",
-              "TEAM · NOV 2025", ACID, "HACKATHON · TEAM", None, "cargo"),
+              "v2 of our AInnovator hackathon prototype: ULD build-up against real contours, a physics stress test and 777F weight and balance.",
+              "V2 · TEAM ORIGIN", ACID, "SIMULATION · 3D", None, "cargo"),
 ]
 
 # name -> ((gradient from, gradient to), white icon drawn inside the 156px tile at x/y 24..180)

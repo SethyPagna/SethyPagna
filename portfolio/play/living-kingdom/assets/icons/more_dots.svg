@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+<!-- Living Kingdom more_dots: traced from the reference boards (Development/tools/ui/vector_icons.py). White shapes are tinted by the game. -->
+<path d="M5.9 12 A1.9 1.9 0 0 1 2.1 12 A1.9 1.9 0 0 1 5.9 12 Z" fill="#FFFFFF" fill-rule="evenodd"/>
+<path d="M14.4 12 A1.9 1.9 0 0 1 10.6 12 A1.9 1.9 0 0 1 14.4 12 Z" fill="#FFFFFF" fill-rule="evenodd"/>
+<path d="M22.9 12 A1.9 1.9 0 0 1 19.1 12 A1.9 1.9 0 0 1 22.9 12 Z" fill="#FFFFFF" fill-rule="evenodd"/>
+</svg>

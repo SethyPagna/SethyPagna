@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
+<!-- Living Kingdom hub_caret: traced from the reference boards (Development/tools/ui/vector_icons.py). White shapes are tinted by the game. -->
+<path d="M4.75 1.75 L10.75 8 L4.75 14.25 Z" fill="#1A1712" fill-rule="evenodd" stroke="#1A1712" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M4.75 1.75 L10.75 8 L4.75 14.25 Z" fill="none" stroke="#FFF9DB" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>

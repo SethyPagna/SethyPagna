@@ -1,0 +1,3171 @@
+{
+ "anims": {
+  "idle": "anims/idle.json",
+  "jog": "anims/jog.json"
+ },
+ "icons": {
+  "p_striker": "ui/icon_p_striker.webp",
+  "p_warden": "ui/icon_p_warden.webp",
+  "p_sentry": "ui/icon_p_sentry.webp",
+  "p_twins": "ui/icon_p_twins.webp",
+  "p_viper": "ui/icon_p_viper.webp",
+  "p_scorpion": "ui/icon_p_scorpion.webp",
+  "p_needle": "ui/icon_p_needle.webp",
+  "p_hornet": "ui/icon_p_hornet.webp",
+  "p_judge": "ui/icon_p_judge.webp",
+  "p_colossus": "ui/icon_p_colossus.webp",
+  "s_mako": "ui/icon_s_mako.webp",
+  "s_stinger": "ui/icon_s_stinger.webp",
+  "s_raptor": "ui/icon_s_raptor.webp",
+  "s_wisp": "ui/icon_s_wisp.webp",
+  "s_bulldog": "ui/icon_s_bulldog.webp",
+  "s_hive": "ui/icon_s_hive.webp",
+  "s_bison": "ui/icon_s_bison.webp",
+  "r_jackal": "ui/icon_r_jackal.webp",
+  "r_clarion": "ui/icon_r_clarion.webp",
+  "r_krait": "ui/icon_r_krait.webp",
+  "r_sentinel": "ui/icon_r_sentinel.webp",
+  "r_silhouette": "ui/icon_r_silhouette.webp",
+  "r_kestrel": "ui/icon_r_kestrel.webp",
+  "r_osprey": "ui/icon_r_osprey.webp",
+  "n_swift": "ui/icon_n_swift.webp",
+  "n_warlord": "ui/icon_n_warlord.webp",
+  "n_reaper": "ui/icon_n_reaper.webp",
+  "n_tempest": "ui/icon_n_tempest.webp",
+  "h_nova": "ui/icon_h_nova.webp",
+  "h_rampart": "ui/icon_h_rampart.webp",
+  "h_reaver": "ui/icon_h_reaver.webp",
+  "h_brick": "ui/icon_h_brick.webp",
+  "h_titan": "ui/icon_h_titan.webp",
+  "h_onslaught": "ui/icon_h_onslaught.webp",
+  "k_default_t": "ui/icon_k_default_t.webp",
+  "k_default_ct": "ui/icon_k_default_ct.webp",
+  "k_bayonet": "ui/icon_k_bayonet.webp",
+  "k_karambit": "ui/icon_k_karambit.webp",
+  "k_butterfly": "ui/icon_k_butterfly.webp",
+  "k_bowie": "ui/icon_k_bowie.webp",
+  "k_talon": "ui/icon_k_talon.webp",
+  "k_flip": "ui/icon_k_flip.webp",
+  "k_huntsman": "ui/icon_k_huntsman.webp",
+  "k_kukri": "ui/icon_k_kukri.webp"
+ },
+ "cards": {
+  "p_striker": "ui/card_p_striker.webp",
+  "p_warden": "ui/card_p_warden.webp",
+  "p_sentry": "ui/card_p_sentry.webp",
+  "p_twins": "ui/card_p_twins.webp",
+  "p_viper": "ui/card_p_viper.webp",
+  "p_scorpion": "ui/card_p_scorpion.webp",
+  "p_needle": "ui/card_p_needle.webp",
+  "p_hornet": "ui/card_p_hornet.webp",
+  "p_judge": "ui/card_p_judge.webp",
+  "p_colossus": "ui/card_p_colossus.webp",
+  "s_mako": "ui/card_s_mako.webp",
+  "s_stinger": "ui/card_s_stinger.webp",
+  "s_raptor": "ui/card_s_raptor.webp",
+  "s_wisp": "ui/card_s_wisp.webp",
+  "s_bulldog": "ui/card_s_bulldog.webp",
+  "s_hive": "ui/card_s_hive.webp",
+  "s_bison": "ui/card_s_bison.webp",
+  "r_jackal": "ui/card_r_jackal.webp",
+  "r_clarion": "ui/card_r_clarion.webp",
+  "r_krait": "ui/card_r_krait.webp",
+  "r_sentinel": "ui/card_r_sentinel.webp",
+  "r_silhouette": "ui/card_r_silhouette.webp",
+  "r_kestrel": "ui/card_r_kestrel.webp",
+  "r_osprey": "ui/card_r_osprey.webp",
+  "n_swift": "ui/card_n_swift.webp",
+  "n_warlord": "ui/card_n_warlord.webp",
+  "n_reaper": "ui/card_n_reaper.webp",
+  "n_tempest": "ui/card_n_tempest.webp",
+  "h_nova": "ui/card_h_nova.webp",
+  "h_rampart": "ui/card_h_rampart.webp",
+  "h_reaver": "ui/card_h_reaver.webp",
+  "h_brick": "ui/card_h_brick.webp",
+  "h_titan": "ui/card_h_titan.webp",
+  "h_onslaught": "ui/card_h_onslaught.webp",
+  "k_default_t": "ui/card_k_default_t.webp",
+  "k_default_ct": "ui/card_k_default_ct.webp",
+  "k_bayonet": "ui/card_k_bayonet.webp",
+  "k_karambit": "ui/card_k_karambit.webp",
+  "k_butterfly": "ui/card_k_butterfly.webp",
+  "k_bowie": "ui/card_k_bowie.webp",
+  "k_talon": "ui/card_k_talon.webp",
+  "k_flip": "ui/card_k_flip.webp",
+  "k_huntsman": "ui/card_k_huntsman.webp",
+  "k_kukri": "ui/card_k_kukri.webp"
+ },
+ "portraits": {
+  "ct_frogman": {
+   "34": "ui/agent_ct_frogman_34.webp",
+   "front": "ui/agent_ct_frogman_front.webp"
+  },
+  "ct_operator": {
+   "34": "ui/agent_ct_operator_34.webp",
+   "front": "ui/agent_ct_operator_front.webp"
+  },
+  "ct_swat": {
+   "34": "ui/agent_ct_swat_34.webp",
+   "front": "ui/agent_ct_swat_front.webp"
+  },
+  "t_enforcer": {
+   "34": "ui/agent_t_enforcer_34.webp",
+   "front": "ui/agent_t_enforcer_front.webp"
+  },
+  "t_merc": {
+   "34": "ui/agent_t_merc_34.webp",
+   "front": "ui/agent_t_merc_front.webp"
+  }
+ },
+ "agents": {
+  "t_merc": {
+   "id": "t_merc",
+   "name": "Contractor",
+   "side": "T",
+   "height": 1.8249,
+   "body": "agents/t_merc.glb",
+   "arms": "agents/t_merc_arms.glb",
+   "d": "tex/agent_t_merc_d.webp",
+   "n": "tex/agent_t_merc_n.webp",
+   "orm": "tex/agent_t_merc_orm.webp"
+  },
+  "ct_operator": {
+   "id": "ct_operator",
+   "name": "Sentinel Operator",
+   "side": "CT",
+   "height": 1.8227,
+   "body": "agents/ct_operator.glb",
+   "arms": "agents/ct_operator_arms.glb",
+   "d": "tex/agent_ct_operator_d.webp",
+   "n": "tex/agent_ct_operator_n.webp",
+   "orm": "tex/agent_ct_operator_orm.webp"
+  },
+  "ct_swat": {
+   "id": "ct_swat",
+   "name": "Urban Tactical",
+   "side": "CT",
+   "height": 1.8229,
+   "body": "agents/ct_swat.glb",
+   "arms": "agents/ct_swat_arms.glb",
+   "d": "tex/agent_ct_swat_d.webp",
+   "n": "tex/agent_ct_swat_n.webp",
+   "orm": "tex/agent_ct_swat_orm.webp"
+  },
+  "t_enforcer": {
+   "id": "t_enforcer",
+   "name": "Enforcer",
+   "side": "T",
+   "height": 1.8023,
+   "body": "agents/t_enforcer.glb",
+   "arms": "agents/t_enforcer_arms.glb",
+   "d": "tex/agent_t_enforcer_d.webp",
+   "n": "tex/agent_t_enforcer_n.webp",
+   "orm": "tex/agent_t_enforcer_orm.webp"
+  },
+  "ct_frogman": {
+   "id": "ct_frogman",
+   "name": "Maritime Unit",
+   "side": "CT",
+   "height": 1.8187,
+   "body": "agents/ct_frogman.glb",
+   "arms": "agents/ct_frogman_arms.glb",
+   "d": "tex/agent_ct_frogman_d.webp",
+   "n": "tex/agent_ct_frogman_n.webp",
+   "orm": "tex/agent_ct_frogman_orm.webp"
+  }
+ },
+ "tiles": {
+  "sand_ground": {
+   "d": "tex/tile_sand_ground_d.webp",
+   "n": "tex/tile_sand_ground_n.webp",
+   "size": 4
+  },
+  "floor_tiles": {
+   "d": "tex/tile_floor_tiles_d.webp",
+   "n": "tex/tile_floor_tiles_n.webp",
+   "size": 2
+  },
+  "sandstone_blocks": {
+   "d": "tex/tile_sandstone_blocks_d.webp",
+   "n": "tex/tile_sandstone_blocks_n.webp",
+   "size": 3
+  },
+  "plaster_warm": {
+   "d": "tex/tile_plaster_warm_d.webp",
+   "n": "tex/tile_plaster_warm_n.webp",
+   "size": 4
+  },
+  "wood_planks": {
+   "d": "tex/tile_wood_planks_d.webp",
+   "n": "tex/tile_wood_planks_n.webp",
+   "size": 2
+  },
+  "painted_metal_container": {
+   "d": "tex/tile_painted_metal_container_d.webp",
+   "n": "tex/tile_painted_metal_container_n.webp",
+   "size": 2.5
+  },
+  "metal_corrugated": {
+   "d": "tex/tile_metal_corrugated_d.webp",
+   "n": "tex/tile_metal_corrugated_n.webp",
+   "size": 2
+  },
+  "asphalt": {
+   "d": "tex/tile_asphalt_d.webp",
+   "n": "tex/tile_asphalt_n.webp",
+   "size": 4
+  },
+  "concrete_poured": {
+   "d": "tex/tile_concrete_poured_d.webp",
+   "n": "tex/tile_concrete_poured_n.webp",
+   "size": 2.4
+  },
+  "concrete_smooth": {
+   "d": "tex/tile_concrete_smooth_d.webp",
+   "n": "tex/tile_concrete_smooth_n.webp",
+   "size": 4
+  },
+  "metal_diamond_plate": {
+   "d": "tex/tile_metal_diamond_plate_d.webp",
+   "n": "tex/tile_metal_diamond_plate_n.webp",
+   "size": 1
+  },
+  "brick_red": {
+   "d": "tex/tile_brick_red_d.webp",
+   "n": "tex/tile_brick_red_n.webp",
+   "size": 1.8
+  },
+  "cobblestone": {
+   "d": "tex/tile_cobblestone_d.webp",
+   "n": "tex/tile_cobblestone_n.webp",
+   "size": 2
+  },
+  "plaster_white": {
+   "d": "tex/tile_plaster_white_d.webp",
+   "n": "tex/tile_plaster_white_n.webp",
+   "size": 4
+  },
+  "dirt_gravel": {
+   "d": "tex/tile_dirt_gravel_d.webp",
+   "n": "tex/tile_dirt_gravel_n.webp",
+   "size": 3
+  }
+ },
+ "props": {
+  "crate_wood_120": {
+   "glb": "props/crate_wood_120.glb",
+   "dims": [
+    120.8,
+    120.8,
+    120.8
+   ],
+   "tris": 4384,
+   "d": "tex/prop_crate_wood_120_d.webp",
+   "n": "tex/prop_crate_wood_120_n.webp"
+  },
+  "barrel_explosive_red": {
+   "glb": "props/barrel_explosive_red.glb",
+   "dims": [
+    58.9,
+    58.9,
+    88.2
+   ],
+   "tris": 3476,
+   "d": "tex/prop_barrel_explosive_red_d.webp",
+   "n": "tex/prop_barrel_explosive_red_n.webp"
+  },
+  "oil_drum": {
+   "glb": "props/oil_drum.glb",
+   "dims": [
+    58.9,
+    58.9,
+    88.2
+   ],
+   "tris": 3476,
+   "d": "tex/prop_oil_drum_d.webp",
+   "n": "tex/prop_oil_drum_n.webp"
+  },
+  "sandbag_wall_2m": {
+   "glb": "props/sandbag_wall_2m.glb",
+   "dims": [
+    215.4,
+    64.7,
+    103.1
+   ],
+   "tris": 9648,
+   "d": "tex/prop_sandbag_wall_2m_d.webp",
+   "n": "tex/prop_sandbag_wall_2m_n.webp"
+  },
+  "bombsite_sign_a": {
+   "glb": "props/bombsite_sign_a.glb",
+   "dims": [
+    200,
+    4.4,
+    200
+   ],
+   "tris": 1748,
+   "d": "tex/prop_bombsite_sign_a_d.webp",
+   "n": "tex/prop_bombsite_sign_a_n.webp"
+  },
+  "bombsite_sign_b": {
+   "glb": "props/bombsite_sign_b.glb",
+   "dims": [
+    200,
+    4.4,
+    200
+   ],
+   "tris": 1748,
+   "d": "tex/prop_bombsite_sign_b_d.webp",
+   "n": "tex/prop_bombsite_sign_b_n.webp"
+  },
+  "pot_clay": {
+   "glb": "props/pot_clay.glb",
+   "dims": [
+    52.1,
+    52.1,
+    60.5
+   ],
+   "tris": 3456,
+   "d": "tex/prop_pot_clay_d.webp",
+   "n": "tex/prop_pot_clay_n.webp"
+  },
+  "amphora_clay": {
+   "glb": "props/amphora_clay.glb",
+   "dims": [
+    39.8,
+    39.8,
+    77.9
+   ],
+   "tris": 4320,
+   "d": "tex/prop_amphora_clay_d.webp",
+   "n": "tex/prop_amphora_clay_n.webp"
+  },
+  "basket_woven": {
+   "glb": "props/basket_woven.glb",
+   "dims": [
+    48.5,
+    48.5,
+    40.4
+   ],
+   "tris": 4328,
+   "d": "tex/prop_basket_woven_d.webp",
+   "n": "tex/prop_basket_woven_n.webp"
+  },
+  "bollard_street": {
+   "glb": "props/bollard_street.glb",
+   "dims": [
+    30,
+    30,
+    93.2
+   ],
+   "tris": 3246,
+   "d": "tex/prop_bollard_street_d.webp",
+   "n": "tex/prop_bollard_street_n.webp"
+  },
+  "pallet_stack_wrapped": {
+   "glb": "props/pallet_stack_wrapped.glb",
+   "dims": [
+    123.2,
+    84.5,
+    136.1
+   ],
+   "tris": 6424,
+   "d": "tex/prop_pallet_stack_wrapped_d.webp",
+   "n": "tex/prop_pallet_stack_wrapped_n.webp"
+  },
+  "pallet_wood": {
+   "glb": "props/pallet_wood.glb",
+   "dims": [
+    120.2,
+    80.1,
+    14.7
+   ],
+   "tris": 1360,
+   "d": "tex/prop_pallet_wood_d.webp",
+   "n": "tex/prop_pallet_wood_n.webp"
+  },
+  "container_20ft": {
+   "glb": "props/container_20ft.glb",
+   "dims": [
+    605.8,
+    243.8,
+    259.1
+   ],
+   "tris": 13530,
+   "d": "tex/prop_container_20ft_d.webp",
+   "n": "tex/prop_container_20ft_n.webp",
+   "variants": {
+    "blue": "tex/prop_container_20ft_blue_d.webp",
+    "green": "tex/prop_container_20ft_green_d.webp"
+   }
+  },
+  "jersey_barrier": {
+   "glb": "props/jersey_barrier.glb",
+   "dims": [
+    314.2,
+    61,
+    87.9
+   ],
+   "tris": 1388,
+   "d": "tex/prop_jersey_barrier_d.webp",
+   "n": "tex/prop_jersey_barrier_n.webp"
+  },
+  "car_hatchback": {
+   "glb": "props/car_hatchback.glb",
+   "dims": [
+    195,
+    400.7,
+    147.4
+   ],
+   "tris": 14936,
+   "d": "tex/prop_car_hatchback_d.webp",
+   "n": "tex/prop_car_hatchback_n.webp",
+   "variants": {
+    "blue": "tex/prop_car_hatchback_blue_d.webp",
+    "red": "tex/prop_car_hatchback_red_d.webp",
+    "silver": "tex/prop_car_hatchback_silver_d.webp"
+   }
+  },
+  "window_shutters": {
+   "glb": "props/window_shutters.glb",
+   "dims": [
+    166.3,
+    72,
+    125.4
+   ],
+   "tris": 6736,
+   "d": "tex/prop_window_shutters_d.webp",
+   "n": "tex/prop_window_shutters_n.webp"
+  },
+  "doorframe_stone": {
+   "glb": "props/doorframe_stone.glb",
+   "dims": [
+    186.5,
+    37.1,
+    258
+   ],
+   "tris": 12864,
+   "d": "tex/prop_doorframe_stone_d.webp",
+   "n": "tex/prop_doorframe_stone_n.webp"
+  },
+  "door_wood": {
+   "glb": "props/door_wood.glb",
+   "dims": [
+    102,
+    16.1,
+    210
+   ],
+   "tris": 9708,
+   "d": "tex/prop_door_wood_d.webp",
+   "n": "tex/prop_door_wood_n.webp"
+  },
+  "generator": {
+   "glb": "props/generator.glb",
+   "dims": [
+    254.5,
+    115.5,
+    161.2
+   ],
+   "tris": 7888,
+   "d": "tex/prop_generator_d.webp",
+   "n": "tex/prop_generator_n.webp"
+  }
+ },
+ "weapons": {
+  "p_striker": {
+   "glb": "weapons/p_striker.glb",
+   "tris": 7764,
+   "sockets": {
+    "Muzzle": [
+     0,
+     14.52,
+     5.4
+    ],
+    "LeftHand": [
+     0,
+     6.6,
+     0.9
+    ],
+    "Eject": [
+     -1.47,
+     5.275,
+     6.2
+    ],
+    "Sight": [
+     0,
+     -11.8,
+     6.9
+    ],
+    "Mag": [
+     0,
+     -2.098,
+     -5.192
+    ]
+   },
+   "dims": [
+    3.11,
+    19.08,
+    13.38
+   ],
+   "materials": [
+    "Metal",
+    "Polymer",
+    "Emissive"
+   ],
+   "n": "tex/w_p_striker_n.webp",
+   "m": "tex/w_p_striker_m.webp"
+  },
+  "p_warden": {
+   "glb": "weapons/p_warden.glb",
+   "tris": 9948,
+   "sockets": {
+    "Muzzle": [
+     0,
+     31.32,
+     5.8
+    ],
+    "LeftHand": [
+     0,
+     7.7,
+     1
+    ],
+    "Eject": [
+     -1.55,
+     5.55,
+     6.7
+    ],
+    "Sight": [
+     0,
+     -12.5,
+     7.8
+    ],
+    "Mag": [
+     0,
+     -1.953,
+     -5.673
+    ]
+   },
+   "dims": [
+    3.5,
+    35.77,
+    14.65
+   ],
+   "materials": [
+    "Metal",
+    "Alloy",
+    "Polymer",
+    "Emissive"
+   ],
+   "n": "tex/w_p_warden_n.webp",
+   "m": "tex/w_p_warden_m.webp"
+  },
+  "p_sentry": {
+   "glb": "weapons/p_sentry.glb",
+   "tris": 8888,
+   "sockets": {
+    "Muzzle": [
+     0,
+     13.52,
+     5.75
+    ],
+    "LeftHand": [
+     0,
+     7.3,
+     1
+    ],
+    "Eject": [
+     -1.575,
+     4.85,
+     6.6
+    ],
+    "Sight": [
+     0,
+     -12.4,
+     7.3
+    ],
+    "Mag": [
+     0,
+     -1.698,
+     -5.074
+    ]
+   },
+   "dims": [
+    3.22,
+    17.66,
+    13.48
+   ],
+   "materials": [
+    "Metal",
+    "Polymer",
+    "Emissive"
+   ],
+   "n": "tex/w_p_sentry_n.webp",
+   "m": "tex/w_p_sentry_m.webp"
+  },
+  "p_twins": {
+   "glb": "weapons/p_twins.glb",
+   "tris": 9680,
+   "sockets": {
+    "Muzzle": [
+     0,
+     17.52,
+     5.85
+    ],
+    "LeftHand": [
+     0,
+     7.75,
+     1.3
+    ],
+    "Eject": [
+     -1.45,
+     4,
+     6.55
+    ],
+    "Sight": [
+     0,
+     -12.45,
+     7.2
+    ],
+    "Mag": [
+     0,
+     -1.737,
+     -6.056
+    ]
+   },
+   "dims": [
+    3.54,
+    21.76,
+    14.25
+   ],
+   "materials": [
+    "Metal",
+    "Alloy",
+    "Polymer",
+    "Wood",
+    "Emissive"
+   ],
+   "n": "tex/w_p_twins_n.webp",
+   "m": "tex/w_p_twins_m.webp"
+  },
+  "p_viper": {
+   "glb": "weapons/p_viper.glb",
+   "tris": 6768,
+   "sockets": {
+    "Muzzle": [
+     0,
+     14.02,
+     5.8
+    ],
+    "LeftHand": [
+     0,
+     8.3,
+     0.9
+    ],
+    "Eject": [
+     -1.5,
+     4.95,
+     6.65
+    ],
+    "Sight": [
+     0,
+     -12.35,
+     7.38
+    ],
+    "Mag": [
+     0,
+     -1.622,
+     -4.993
+    ]
+   },
+   "dims": [
+    3.08,
+    18.13,
+    13.45
+   ],
+   "materials": [
+    "Metal",
+    "Polymer",
+    "Emissive"
+   ],
+   "n": "tex/w_p_viper_n.webp",
+   "m": "tex/w_p_viper_m.webp"
+  },
+  "p_scorpion": {
+   "glb": "weapons/p_scorpion.glb",
+   "tris": 8032,
+   "sockets": {
+    "Muzzle": [
+     0,
+     22.82,
+     4.75
+    ],
+    "LeftHand": [
+     0,
+     6.95,
+     0.3
+    ],
+    "Eject": [
+     -1.7,
+     7.35,
+     5.3
+    ],
+    "Sight": [
+     0,
+     -16.75,
+     6.85
+    ],
+    "Mag": [
+     0,
+     8.97,
+     -1.3
+    ]
+   },
+   "dims": [
+    4.55,
+    32.07,
+    17.97
+   ],
+   "materials": [
+    "Metal",
+    "Polymer"
+   ],
+   "n": "tex/w_p_scorpion_n.webp",
+   "m": "tex/w_p_scorpion_m.webp"
+  },
+  "p_needle": {
+   "glb": "weapons/p_needle.glb",
+   "tris": 6752,
+   "sockets": {
+    "Muzzle": [
+     0,
+     16.42,
+     5.15
+    ],
+    "LeftHand": [
+     0,
+     9.2,
+     0.3
+    ],
+    "Eject": [
+     -1.6,
+     5.7,
+     6.05
+    ],
+    "Sight": [
+     0,
+     -12.4,
+     6.72
+    ],
+    "Mag": [
+     0,
+     -1.819,
+     -6.344
+    ]
+   },
+   "dims": [
+    3.04,
+    21.04,
+    14.17
+   ],
+   "materials": [
+    "Metal",
+    "Polymer",
+    "Emissive"
+   ],
+   "n": "tex/w_p_needle_n.webp",
+   "m": "tex/w_p_needle_m.webp"
+  },
+  "p_hornet": {
+   "glb": "weapons/p_hornet.glb",
+   "tris": 8644,
+   "sockets": {
+    "Muzzle": [
+     0,
+     18.62,
+     5.5
+    ],
+    "LeftHand": [
+     0,
+     8.7,
+     0.75
+    ],
+    "Eject": [
+     -1.35,
+     4.95,
+     6.25
+    ],
+    "Sight": [
+     0,
+     -12.15,
+     6.95
+    ],
+    "Mag": [
+     0,
+     -1.55,
+     -5.068
+    ]
+   },
+   "dims": [
+    3.02,
+    22.93,
+    17.56
+   ],
+   "materials": [
+    "Metal",
+    "Alloy",
+    "Polymer",
+    "Rubber",
+    "Emissive"
+   ],
+   "n": "tex/w_p_hornet_n.webp",
+   "m": "tex/w_p_hornet_m.webp"
+  },
+  "p_judge": {
+   "glb": "weapons/p_judge.glb",
+   "tris": 7912,
+   "sockets": {
+    "Muzzle": [
+     0,
+     22.62,
+     5.85
+    ],
+    "LeftHand": [
+     0,
+     10.1,
+     0.5
+    ],
+    "Eject": [
+     -1.8,
+     6.1,
+     7.1
+    ],
+    "Sight": [
+     0,
+     -12.6,
+     7.95
+    ],
+    "Mag": [
+     0,
+     -1.74,
+     -5.69
+    ]
+   },
+   "dims": [
+    3.88,
+    27.16,
+    14.68
+   ],
+   "materials": [
+    "Metal",
+    "Alloy",
+    "Rubber",
+    "Emissive"
+   ],
+   "n": "tex/w_p_judge_n.webp",
+   "m": "tex/w_p_judge_m.webp"
+  },
+  "p_colossus": {
+   "glb": "weapons/p_colossus.glb",
+   "tris": 9298,
+   "sockets": {
+    "Muzzle": [
+     0,
+     24.8,
+     5.9
+    ],
+    "LeftHand": [
+     0,
+     6.45,
+     0.5
+    ],
+    "Eject": [
+     -2.3,
+     5.7,
+     5.35
+    ],
+    "Sight": [
+     0,
+     -8.4,
+     8
+    ],
+    "Mag": [
+     0,
+     5.7,
+     4.45
+    ]
+   },
+   "dims": [
+    4.4,
+    29.85,
+    16.01
+   ],
+   "materials": [
+    "Metal",
+    "Alloy",
+    "Rubber",
+    "Emissive"
+   ],
+   "n": "tex/w_p_colossus_n.webp",
+   "m": "tex/w_p_colossus_m.webp"
+  },
+  "s_mako": {
+   "glb": "weapons/s_mako.glb",
+   "tris": 9852,
+   "sockets": {
+    "Muzzle": [
+     0,
+     18.25,
+     7.2
+    ],
+    "LeftHand": [
+     0,
+     15.2,
+     -0.8
+    ],
+    "Eject": [
+     -2.3,
+     7.6,
+     7.2
+    ],
+    "Sight": [
+     0,
+     -19.8,
+     10.55
+    ],
+    "Mag": [
+     0,
+     -1.012,
+     -8.238
+    ]
+   },
+   "dims": [
+    5.05,
+    30.7,
+    28.48
+   ],
+   "materials": [
+    "Metal",
+    "Polymer"
+   ],
+   "n": "tex/w_s_mako_n.webp",
+   "m": "tex/w_s_mako_m.webp"
+  },
+  "s_stinger": {
+   "glb": "weapons/s_stinger.glb",
+   "tris": 9568,
+   "sockets": {
+    "Muzzle": [
+     0,
+     19.35,
+     7
+    ],
+    "LeftHand": [
+     0,
+     14,
+     0
+    ],
+    "Eject": [
+     -2,
+     6,
+     7.45
+    ],
+    "Sight": [
+     0,
+     -13.2,
+     12.8
+    ],
+    "Mag": [
+     0,
+     -1.497,
+     -7.043
+    ]
+   },
+   "dims": [
+    4.7,
+    52.05,
+    31.11
+   ],
+   "materials": [
+    "Metal",
+    "Alloy",
+    "Polymer",
+    "Rubber",
+    "Glass",
+    "Emissive"
+   ],
+   "n": "tex/w_s_stinger_n.webp",
+   "m": "tex/w_s_stinger_m.webp"
+  },
+  "s_raptor": {
+   "glb": "weapons/s_raptor.glb",
+   "tris": 10860,
+   "sockets": {
+    "Muzzle": [
+     0,
+     22.9,
+     7.4
+    ],
+    "LeftHand": [
+     0,
+     15.9,
+     2.3
+    ],
+    "Eject": [
+     -2.1,
+     6.4,
+     8.2
+    ],
+    "Sight": [
+     0,
+     -19,
+     13.65
+    ],
+    "Mag": [
+     0,
+     -1.929,
+     -6.729
+    ]
+   },
+   "dims": [
+    5.9,
+    60,
+    29.82
+   ],
+   "materials": [
+    "Metal",
+    "Alloy",
+    "Polymer",
+    "Rubber",
+    "Glass",
+    "Emissive"
+   ],
+   "n": "tex/w_s_raptor_n.webp",
+   "m": "tex/w_s_raptor_m.webp"
+  },
+  "s_wisp": {
+   "glb": "weapons/s_wisp.glb",
+   "tris": 13312,
+   "sockets": {
+    "Muzzle": [
+     0,
+     54.8,
+     6.9
+    ],
+    "LeftHand": [
+     0,
+     22,
+     4.5
+    ],
+    "Eject": [
+     -2.15,
+     6.8,
+     7
+    ],
+    "Sight": [
+     0,
+     -15.6,
+     11.85
+    ],
+    "Mag": [
+     0,
+     12,
+     2.4
+    ]
+   },
+   "dims": [
+    5.62,
+    68.55,
+    29.77
+   ],
+   "materials": [
+    "Metal",
+    "Polymer",
+    "Rubber"
+   ],
+   "n": "tex/w_s_wisp_n.webp",
+   "m": "tex/w_s_wisp_m.webp"
+  },
+  "s_bulldog": {
+   "glb": "weapons/s_bulldog.glb",
+   "tris": 8800,
+   "sockets": {
+    "Muzzle": [
+     0,
+     33,
+     8
+    ],
+    "LeftHand": [
+     0,
+     22.5,
+     3.6
+    ],
+    "Eject": [
+     -2.25,
+     5.7,
+     8.25
+    ],
+    "Sight": [
+     0,
+     -19.2,
+     13.65
+    ],
+    "Mag": [
+     0,
+     11.65,
+     -0.4
+    ]
+   },
+   "dims": [
+    7.82,
+    69,
+    28.15
+   ],
+   "materials": [
+    "Metal",
+    "Alloy",
+    "Polymer",
+    "Rubber"
+   ],
+   "n": "tex/w_s_bulldog_n.webp",
+   "m": "tex/w_s_bulldog_m.webp"
+  },
+  "s_hive": {
+   "glb": "weapons/s_hive.glb",
+   "tris": 9524,
+   "sockets": {
+    "Muzzle": [
+     0,
+     23.2,
+     6.2
+    ],
+    "LeftHand": [
+     0,
+     14.2,
+     -0.5
+    ],
+    "Eject": [
+     0,
+     -0.1,
+     -6.1
+    ],
+    "Sight": [
+     0,
+     -4.1,
+     12.6
+    ],
+    "Mag": [
+     0,
+     -9.3,
+     10.3
+    ]
+   },
+   "dims": [
+    6.09,
+    50.55,
+    20.99
+   ],
+   "materials": [
+    "Metal",
+    "Polymer",
+    "Rubber",
+    "Glass",
+    "Emissive"
+   ],
+   "n": "tex/w_s_hive_n.webp",
+   "m": "tex/w_s_hive_m.webp"
+  },
+  "s_bison": {
+   "glb": "weapons/s_bison.glb",
+   "tris": 13064,
+   "sockets": {
+    "Muzzle": [
+     0,
+     37.1,
+     6
+    ],
+    "LeftHand": [
+     0,
+     22.5,
+     -2.87
+    ],
+    "Eject": [
+     -1.5,
+     10,
+     6.6
+    ],
+    "Sight": [
+     0,
+     5.8,
+     8.7
+    ],
+    "Mag": [
+     0,
+     20.5,
+     -0.25
+    ]
+   },
+   "dims": [
+    6.31,
+    66.9,
+    16.7
+   ],
+   "materials": [
+    "Metal",
+    "Polymer"
+   ],
+   "n": "tex/w_s_bison_n.webp",
+   "m": "tex/w_s_bison_m.webp"
+  },
+  "r_jackal": {
+   "glb": "weapons/r_jackal.glb",
+   "tris": 15344,
+   "sockets": {
+    "Muzzle": [
+     0,
+     66.4,
+     6
+    ],
+    "LeftHand": [
+     0,
+     29,
+     2.6
+    ],
+    "Eject": [
+     -1.55,
+     10.4,
+     6.6
+    ],
+    "Sight": [
+     0,
+     -14.7,
+     9.85
+    ],
+    "Mag": [
+     0,
+     13.4,
+     2.2
+    ]
+   },
+   "dims": [
+    7.15,
+    97.7,
+    28.84
+   ],
+   "materials": [
+    "Metal",
+    "Polymer",
+    "Wood",
+    "Rubber"
+   ],
+   "n": "tex/w_r_jackal_n.webp",
+   "m": "tex/w_r_jackal_m.webp"
+  },
+  "r_clarion": {
+   "glb": "weapons/r_clarion.glb",
+   "tris": 10078,
+   "sockets": {
+    "Muzzle": [
+     0,
+     43.5,
+     6.6
+    ],
+    "LeftHand": [
+     0,
+     16,
+     3.3
+    ],
+    "Eject": [
+     -2.8,
+     -11.5,
+     6.6
+    ],
+    "Sight": [
+     0,
+     -29.3,
+     11.9
+    ],
+    "Mag": [
+     0,
+     -10,
+     1.4
+    ]
+   },
+   "dims": [
+    6.12,
+    76,
+    26.48
+   ],
+   "materials": [
+    "Metal",
+    "Polymer",
+    "Rubber"
+   ],
+   "n": "tex/w_r_clarion_n.webp",
+   "m": "tex/w_r_clarion_m.webp"
+  },
+  "r_krait": {
+   "glb": "weapons/r_krait.glb",
+   "tris": 16196,
+   "sockets": {
+    "Muzzle": [
+     0,
+     56.5,
+     6
+    ],
+    "LeftHand": [
+     0,
+     28.5,
+     3
+    ],
+    "Eject": [
+     -1.5,
+     10,
+     6.6
+    ],
+    "Sight": [
+     0,
+     5.6,
+     8.55
+    ],
+    "Mag": [
+     0,
+     12.85,
+     2.4
+    ]
+   },
+   "dims": [
+    6.07,
+    88.22,
+    25.34
+   ],
+   "materials": [
+    "Metal",
+    "Wood"
+   ],
+   "n": "tex/w_r_krait_n.webp",
+   "m": "tex/w_r_krait_m.webp"
+  },
+  "r_sentinel": {
+   "glb": "weapons/r_sentinel.glb",
+   "tris": 21180,
+   "sockets": {
+    "Muzzle": [
+     0,
+     56.4,
+     7.1
+    ],
+    "LeftHand": [
+     0,
+     26,
+     4.1
+    ],
+    "Eject": [
+     -1.65,
+     9,
+     7.1
+    ],
+    "Sight": [
+     0,
+     -11,
+     13.65
+    ],
+    "Mag": [
+     0,
+     11.8,
+     -0.75
+    ]
+   },
+   "dims": [
+    5.65,
+    84.6,
+    29.08
+   ],
+   "materials": [
+    "Metal",
+    "Alloy",
+    "Polymer",
+    "Rubber"
+   ],
+   "n": "tex/w_r_sentinel_n.webp",
+   "m": "tex/w_r_sentinel_m.webp"
+  },
+  "r_silhouette": {
+   "glb": "weapons/r_silhouette.glb",
+   "tris": 20132,
+   "sockets": {
+    "Muzzle": [
+     0,
+     72.2,
+     7.1
+    ],
+    "LeftHand": [
+     0,
+     27,
+     4.9
+    ],
+    "Eject": [
+     -1.65,
+     9,
+     7.1
+    ],
+    "Sight": [
+     0,
+     -11,
+     13.65
+    ],
+    "Mag": [
+     0,
+     11.8,
+     -0.75
+    ]
+   },
+   "dims": [
+    4.85,
+    100.4,
+    29.08
+   ],
+   "materials": [
+    "Metal",
+    "Alloy",
+    "Polymer",
+    "Rubber"
+   ],
+   "n": "tex/w_r_silhouette_n.webp",
+   "m": "tex/w_r_silhouette_m.webp"
+  },
+  "r_kestrel": {
+   "glb": "weapons/r_kestrel.glb",
+   "tris": 18526,
+   "sockets": {
+    "Muzzle": [
+     0,
+     62.5,
+     6.6
+    ],
+    "LeftHand": [
+     0,
+     29,
+     3.2
+    ],
+    "Eject": [
+     -1.7,
+     9.8,
+     6.6
+    ],
+    "Sight": [
+     0,
+     -15.8,
+     12.7
+    ],
+    "Mag": [
+     0,
+     12.95,
+     0.4
+    ]
+   },
+   "dims": [
+    5.85,
+    88.8,
+    29.39
+   ],
+   "materials": [
+    "Metal",
+    "Alloy",
+    "Polymer",
+    "Rubber",
+    "Glass"
+   ],
+   "n": "tex/w_r_kestrel_n.webp",
+   "m": "tex/w_r_kestrel_m.webp"
+  },
+  "r_osprey": {
+   "glb": "weapons/r_osprey.glb",
+   "tris": 11496,
+   "sockets": {
+    "Muzzle": [
+     0,
+     44.6,
+     7
+    ],
+    "LeftHand": [
+     0,
+     21.5,
+     0
+    ],
+    "Eject": [
+     -3,
+     -15.6,
+     6.4
+    ],
+    "Sight": [
+     0,
+     -21,
+     14.6
+    ],
+    "Mag": [
+     0,
+     -7.8,
+     1.6
+    ]
+   },
+   "dims": [
+    6.52,
+    80,
+    29.57
+   ],
+   "materials": [
+    "Metal",
+    "Alloy",
+    "Polymer",
+    "Rubber",
+    "Glass"
+   ],
+   "n": "tex/w_r_osprey_n.webp",
+   "m": "tex/w_r_osprey_m.webp"
+  },
+  "n_swift": {
+   "glb": "weapons/n_swift.glb",
+   "tris": 19402,
+   "sockets": {
+    "Muzzle": [
+     0,
+     78,
+     7.4
+    ],
+    "LeftHand": [
+     0,
+     33,
+     2.8
+    ],
+    "Eject": [
+     -1.67,
+     9.3,
+     7.8
+    ],
+    "Sight": [
+     0,
+     -22,
+     12.7
+    ],
+    "Mag": [
+     0,
+     12.9,
+     0.3
+    ]
+   },
+   "dims": [
+    8.6,
+    110,
+    23.1
+   ],
+   "materials": [
+    "Metal",
+    "Alloy",
+    "Polymer",
+    "Rubber",
+    "Glass"
+   ],
+   "n": "tex/w_n_swift_n.webp",
+   "m": "tex/w_n_swift_m.webp"
+  },
+  "n_warlord": {
+   "glb": "weapons/n_warlord.glb",
+   "tris": 19640,
+   "sockets": {
+    "Muzzle": [
+     0,
+     87,
+     7.6
+    ],
+    "LeftHand": [
+     0,
+     31,
+     0.9
+    ],
+    "Eject": [
+     -1.85,
+     8.3,
+     8
+    ],
+    "Sight": [
+     0,
+     -23,
+     13.4
+    ],
+    "Mag": [
+     0,
+     12.6,
+     0
+    ]
+   },
+   "dims": [
+    9.3,
+    120,
+    27.3
+   ],
+   "materials": [
+    "Metal",
+    "Alloy",
+    "Polymer",
+    "Rubber",
+    "Glass"
+   ],
+   "n": "tex/w_n_warlord_n.webp",
+   "m": "tex/w_n_warlord_m.webp"
+  },
+  "n_reaper": {
+   "glb": "weapons/n_reaper.glb",
+   "tris": 21332,
+   "sockets": {
+    "Muzzle": [
+     0,
+     73.6,
+     7
+    ],
+    "LeftHand": [
+     0,
+     34,
+     4.3
+    ],
+    "Eject": [
+     -2.4,
+     7,
+     7
+    ],
+    "Sight": [
+     0,
+     -15.5,
+     15
+    ],
+    "Mag": [
+     0,
+     13.7,
+     2.3
+    ]
+   },
+   "dims": [
+    5.8,
+    112,
+    30.69
+   ],
+   "materials": [
+    "Metal",
+    "Alloy",
+    "Polymer",
+    "Rubber",
+    "Glass"
+   ],
+   "n": "tex/w_n_reaper_n.webp",
+   "m": "tex/w_n_reaper_m.webp"
+  },
+  "n_tempest": {
+   "glb": "weapons/n_tempest.glb",
+   "tris": 19024,
+   "sockets": {
+    "Muzzle": [
+     0,
+     72,
+     7.6
+    ],
+    "LeftHand": [
+     0,
+     29,
+     4.35
+    ],
+    "Eject": [
+     -1.95,
+     7.6,
+     7.6
+    ],
+    "Sight": [
+     0,
+     -12,
+     13.6
+    ],
+    "Mag": [
+     0,
+     13.2,
+     0.3
+    ]
+   },
+   "dims": [
+    6.75,
+    105,
+    28.04
+   ],
+   "materials": [
+    "Metal",
+    "Alloy",
+    "Polymer",
+    "Rubber",
+    "Glass"
+   ],
+   "n": "tex/w_n_tempest_n.webp",
+   "m": "tex/w_n_tempest_m.webp"
+  },
+  "h_nova": {
+   "glb": "weapons/h_nova.glb",
+   "tris": 11776,
+   "sockets": {
+    "Muzzle": [
+     0,
+     97.7,
+     3.4
+    ],
+    "LeftHand": [
+     0,
+     43.7,
+     -0.95
+    ],
+    "Eject": [
+     -1.95,
+     18.5,
+     3.4
+    ],
+    "Sight": [
+     0,
+     -4.8,
+     5.65
+    ],
+    "Mag": [
+     0,
+     21.2,
+     -1.1
+    ]
+   },
+   "dims": [
+    5.39,
+    125.1,
+    19.61
+   ],
+   "materials": [
+    "Metal",
+    "Alloy",
+    "Polymer",
+    "Rubber"
+   ],
+   "n": "tex/w_h_nova_n.webp",
+   "m": "tex/w_h_nova_m.webp"
+  },
+  "h_rampart": {
+   "glb": "weapons/h_rampart.glb",
+   "tris": 10922,
+   "sockets": {
+    "Muzzle": [
+     0,
+     69.4,
+     7.4
+    ],
+    "LeftHand": [
+     0,
+     31,
+     3.05
+    ],
+    "Eject": [
+     -1.9,
+     9,
+     7.4
+    ],
+    "Sight": [
+     0,
+     -8.7,
+     11.9
+    ],
+    "Mag": [
+     0,
+     14.5,
+     2.9
+    ]
+   },
+   "dims": [
+    6.8,
+    101.3,
+    20.3
+   ],
+   "materials": [
+    "Metal",
+    "Alloy",
+    "Polymer",
+    "Rubber"
+   ],
+   "n": "tex/w_h_rampart_n.webp",
+   "m": "tex/w_h_rampart_m.webp"
+  },
+  "h_reaver": {
+   "glb": "weapons/h_reaver.glb",
+   "tris": 9840,
+   "sockets": {
+    "Muzzle": [
+     0,
+     54.2,
+     5.2
+    ],
+    "LeftHand": [
+     0,
+     35.2,
+     0.95
+    ],
+    "Eject": [
+     -1.7,
+     13.9,
+     5.2
+    ],
+    "Sight": [
+     0,
+     -6.8,
+     7.45
+    ],
+    "Mag": [
+     0,
+     16.9,
+     1.3
+    ]
+   },
+   "dims": [
+    4.45,
+    60.46,
+    14.27
+   ],
+   "materials": [
+    "Metal",
+    "Alloy",
+    "Wood"
+   ],
+   "n": "tex/w_h_reaver_n.webp",
+   "m": "tex/w_h_reaver_m.webp"
+  },
+  "h_brick": {
+   "glb": "weapons/h_brick.glb",
+   "tris": 10816,
+   "sockets": {
+    "Muzzle": [
+     0,
+     34,
+     9.4
+    ],
+    "LeftHand": [
+     0,
+     23.8,
+     0.7
+    ],
+    "Eject": [
+     -2.2,
+     0,
+     9.4
+    ],
+    "Sight": [
+     0,
+     -24.6,
+     12.5
+    ],
+    "Mag": [
+     0,
+     -1.842,
+     -10.299
+    ]
+   },
+   "dims": [
+    6.74,
+    70,
+    24.02
+   ],
+   "materials": [
+    "Metal",
+    "Polymer",
+    "Rubber"
+   ],
+   "n": "tex/w_h_brick_n.webp",
+   "m": "tex/w_h_brick_m.webp"
+  },
+  "h_titan": {
+   "glb": "weapons/h_titan.glb",
+   "tris": 20428,
+   "sockets": {
+    "Muzzle": [
+     0,
+     64,
+     8.8
+    ],
+    "LeftHand": [
+     0,
+     37,
+     4.3
+    ],
+    "Eject": [
+     -2.4,
+     7,
+     8.3
+    ],
+    "Sight": [
+     0,
+     -14.2,
+     14.6
+    ],
+    "Mag": [
+     2.6,
+     17.15,
+     -1.1
+    ]
+   },
+   "dims": [
+    11.4,
+    104,
+    22.88
+   ],
+   "materials": [
+    "Metal",
+    "Alloy",
+    "Polymer",
+    "Rubber"
+   ],
+   "n": "tex/w_h_titan_n.webp",
+   "m": "tex/w_h_titan_m.webp"
+  },
+  "h_onslaught": {
+   "glb": "weapons/h_onslaught.glb",
+   "tris": 18338,
+   "sockets": {
+    "Muzzle": [
+     0,
+     64,
+     8.6
+    ],
+    "LeftHand": [
+     0,
+     34.4,
+     0.2
+    ],
+    "Eject": [
+     -2.25,
+     7,
+     8.1
+    ],
+    "Sight": [
+     0,
+     -15.6,
+     14.6
+    ],
+    "Mag": [
+     2.55,
+     16.8,
+     -0.4
+    ]
+   },
+   "dims": [
+    10.7,
+    102,
+    23.2
+   ],
+   "materials": [
+    "Metal",
+    "Alloy",
+    "Polymer",
+    "Rubber"
+   ],
+   "n": "tex/w_h_onslaught_n.webp",
+   "m": "tex/w_h_onslaught_m.webp"
+  },
+  "k_default_t": {
+   "glb": "weapons/k_default_t.glb",
+   "tris": 4680,
+   "sockets": {
+    "Muzzle": [
+     0,
+     21.3,
+     0.25
+    ],
+    "LeftHand": [
+     0,
+     -6.95,
+     0
+    ],
+    "Eject": [
+     0,
+     13.5,
+     -1.75
+    ],
+    "Sight": [
+     0,
+     -16.95,
+     7
+    ],
+    "Mag": [
+     0,
+     5.9,
+     0
+    ]
+   },
+   "dims": [
+    3,
+    28.24,
+    5.1
+   ],
+   "materials": [
+    "Metal",
+    "Alloy",
+    "Rubber"
+   ],
+   "n": "tex/w_k_default_t_n.webp",
+   "m": "tex/w_k_default_t_m.webp"
+  },
+  "k_default_ct": {
+   "glb": "weapons/k_default_ct.glb",
+   "tris": 4832,
+   "sockets": {
+    "Muzzle": [
+     0,
+     21.9,
+     1.05
+    ],
+    "LeftHand": [
+     0,
+     -7.1,
+     0
+    ],
+    "Eject": [
+     0,
+     13,
+     -1.75
+    ],
+    "Sight": [
+     0,
+     -17.1,
+     7
+    ],
+    "Mag": [
+     0,
+     5.95,
+     0
+    ]
+   },
+   "dims": [
+    2.6,
+    29,
+    4.64
+   ],
+   "materials": [
+    "Metal",
+    "Polymer"
+   ],
+   "n": "tex/w_k_default_ct_n.webp",
+   "m": "tex/w_k_default_ct_m.webp"
+  },
+  "k_bayonet": {
+   "glb": "weapons/k_bayonet.glb",
+   "tris": 5024,
+   "sockets": {
+    "Muzzle": [
+     0,
+     24.15,
+     0.1
+    ],
+    "LeftHand": [
+     0,
+     -5.85,
+     0
+    ],
+    "Eject": [
+     0,
+     14,
+     -1.8
+    ],
+    "Sight": [
+     0,
+     -15.85,
+     7
+    ],
+    "Mag": [
+     0,
+     6.35,
+     0
+    ]
+   },
+   "dims": [
+    3.2,
+    30,
+    7.96
+   ],
+   "materials": [
+    "Metal",
+    "Alloy",
+    "Polymer"
+   ],
+   "n": "tex/w_k_bayonet_n.webp",
+   "m": "tex/w_k_bayonet_m.webp"
+  },
+  "k_karambit": {
+   "glb": "weapons/k_karambit.glb",
+   "tris": 4234,
+   "sockets": {
+    "Muzzle": [
+     0,
+     10.55,
+     -5.45
+    ],
+    "LeftHand": [
+     0,
+     -8.05,
+     0
+    ],
+    "Eject": [
+     0,
+     7.2,
+     -2.7
+    ],
+    "Sight": [
+     0,
+     -18.05,
+     7
+    ],
+    "Mag": [
+     0,
+     3.3,
+     0
+    ]
+   },
+   "dims": [
+    1.26,
+    18.97,
+    6.85
+   ],
+   "materials": [
+    "Metal",
+    "Alloy",
+    "Polymer"
+   ],
+   "n": "tex/w_k_karambit_n.webp",
+   "m": "tex/w_k_karambit_m.webp"
+  },
+  "k_butterfly": {
+   "glb": "weapons/k_butterfly.glb",
+   "tris": 5134,
+   "sockets": {
+    "Muzzle": [
+     0,
+     16.3,
+     -0.05
+    ],
+    "LeftHand": [
+     0,
+     -7,
+     0
+    ],
+    "Eject": [
+     0,
+     10,
+     -1.2
+    ],
+    "Sight": [
+     0,
+     -17,
+     7
+    ],
+    "Mag": [
+     0,
+     6.36,
+     0
+    ]
+   },
+   "dims": [
+    1.4,
+    23.28,
+    2.53
+   ],
+   "materials": [
+    "Metal",
+    "Alloy"
+   ],
+   "n": "tex/w_k_butterfly_n.webp",
+   "m": "tex/w_k_butterfly_m.webp"
+  },
+  "k_bowie": {
+   "glb": "weapons/k_bowie.glb",
+   "tris": 3642,
+   "sockets": {
+    "Muzzle": [
+     0,
+     26.6,
+     0.5
+    ],
+    "LeftHand": [
+     0,
+     -7.48,
+     0
+    ],
+    "Eject": [
+     0,
+     15,
+     -2.1
+    ],
+    "Sight": [
+     0,
+     -17.48,
+     7
+    ],
+    "Mag": [
+     0,
+     6.4,
+     0
+    ]
+   },
+   "dims": [
+    2.48,
+    34.05,
+    7.08
+   ],
+   "materials": [
+    "Alloy",
+    "Polymer",
+    "Wood"
+   ],
+   "n": "tex/w_k_bowie_n.webp",
+   "m": "tex/w_k_bowie_m.webp"
+  },
+  "k_talon": {
+   "glb": "weapons/k_talon.glb",
+   "tris": 4668,
+   "sockets": {
+    "Muzzle": [
+     0,
+     14.4,
+     -3.6
+    ],
+    "LeftHand": [
+     0,
+     -7.62,
+     0
+    ],
+    "Eject": [
+     0,
+     9,
+     -2.3
+    ],
+    "Sight": [
+     0,
+     -17.62,
+     7
+    ],
+    "Mag": [
+     0,
+     3.2,
+     0
+    ]
+   },
+   "dims": [
+    1.3,
+    22.02,
+    4.85
+   ],
+   "materials": [
+    "Metal",
+    "Alloy",
+    "Polymer"
+   ],
+   "n": "tex/w_k_talon_n.webp",
+   "m": "tex/w_k_talon_m.webp"
+  },
+  "k_flip": {
+   "glb": "weapons/k_flip.glb",
+   "tris": 5122,
+   "sockets": {
+    "Muzzle": [
+     0,
+     13.4,
+     0.1
+    ],
+    "LeftHand": [
+     0,
+     -7.6,
+     0
+    ],
+    "Eject": [
+     0,
+     9,
+     -1.45
+    ],
+    "Sight": [
+     0,
+     -17.6,
+     7
+    ],
+    "Mag": [
+     0,
+     4.5,
+     0
+    ]
+   },
+   "dims": [
+    1.48,
+    21,
+    3.58
+   ],
+   "materials": [
+    "Metal",
+    "Alloy",
+    "Polymer"
+   ],
+   "n": "tex/w_k_flip_n.webp",
+   "m": "tex/w_k_flip_m.webp"
+  },
+  "k_huntsman": {
+   "glb": "weapons/k_huntsman.glb",
+   "tris": 4326,
+   "sockets": {
+    "Muzzle": [
+     0,
+     21.8,
+     0.3
+    ],
+    "LeftHand": [
+     0,
+     -8.2,
+     0
+    ],
+    "Eject": [
+     0,
+     13,
+     -1.95
+    ],
+    "Sight": [
+     0,
+     -18.2,
+     7
+    ],
+    "Mag": [
+     0,
+     5.6,
+     0
+    ]
+   },
+   "dims": [
+    3.16,
+    29.99,
+    8.04
+   ],
+   "materials": [
+    "Metal",
+    "Alloy",
+    "Rubber",
+    "Glass"
+   ],
+   "n": "tex/w_k_huntsman_n.webp",
+   "m": "tex/w_k_huntsman_m.webp"
+  },
+  "k_kukri": {
+   "glb": "weapons/k_kukri.glb",
+   "tris": 3274,
+   "sockets": {
+    "Muzzle": [
+     0,
+     26.9,
+     -4.6
+    ],
+    "LeftHand": [
+     0,
+     -6.1,
+     0
+    ],
+    "Eject": [
+     0,
+     21.4,
+     -5.95
+    ],
+    "Sight": [
+     0,
+     -16.1,
+     7
+    ],
+    "Mag": [
+     0,
+     5.5,
+     0
+    ]
+   },
+   "dims": [
+    2.5,
+    33,
+    8.01
+   ],
+   "materials": [
+    "Alloy",
+    "Wood"
+   ],
+   "n": "tex/w_k_kukri_n.webp",
+   "m": "tex/w_k_kukri_m.webp"
+  }
+ },
+ "audio": {
+  "wpn_lmg": {
+   "category": "weapon_fire",
+   "loop": false,
+   "files": [
+    "audio/SFX_wpn_lmg_01.mp3",
+    "audio/SFX_wpn_lmg_02.mp3",
+    "audio/SFX_wpn_lmg_03.mp3"
+   ]
+  },
+  "wpn_pistol": {
+   "category": "weapon_fire",
+   "loop": false,
+   "files": [
+    "audio/SFX_wpn_pistol_01.mp3",
+    "audio/SFX_wpn_pistol_02.mp3",
+    "audio/SFX_wpn_pistol_03.mp3"
+   ]
+  },
+  "wpn_pistol_heavy": {
+   "category": "weapon_fire",
+   "loop": false,
+   "files": [
+    "audio/SFX_wpn_pistol_heavy_01.mp3",
+    "audio/SFX_wpn_pistol_heavy_02.mp3"
+   ]
+  },
+  "wpn_pistol_sil": {
+   "category": "weapon_fire",
+   "loop": false,
+   "files": [
+    "audio/SFX_wpn_pistol_sil_01.mp3",
+    "audio/SFX_wpn_pistol_sil_02.mp3",
+    "audio/SFX_wpn_pistol_sil_03.mp3"
+   ]
+  },
+  "wpn_rifle_ak": {
+   "category": "weapon_fire",
+   "loop": false,
+   "files": [
+    "audio/SFX_wpn_rifle_ak_01.mp3",
+    "audio/SFX_wpn_rifle_ak_02.mp3",
+    "audio/SFX_wpn_rifle_ak_03.mp3"
+   ]
+  },
+  "wpn_rifle_bullpup": {
+   "category": "weapon_fire",
+   "loop": false,
+   "files": [
+    "audio/SFX_wpn_rifle_bullpup_01.mp3",
+    "audio/SFX_wpn_rifle_bullpup_02.mp3"
+   ]
+  },
+  "wpn_rifle_m4": {
+   "category": "weapon_fire",
+   "loop": false,
+   "files": [
+    "audio/SFX_wpn_rifle_m4_01.mp3",
+    "audio/SFX_wpn_rifle_m4_02.mp3",
+    "audio/SFX_wpn_rifle_m4_03.mp3"
+   ]
+  },
+  "wpn_rifle_sil": {
+   "category": "weapon_fire",
+   "loop": false,
+   "files": [
+    "audio/SFX_wpn_rifle_sil_01.mp3",
+    "audio/SFX_wpn_rifle_sil_02.mp3",
+    "audio/SFX_wpn_rifle_sil_03.mp3"
+   ]
+  },
+  "wpn_shotgun": {
+   "category": "weapon_fire",
+   "loop": false,
+   "files": [
+    "audio/SFX_wpn_shotgun_01.mp3",
+    "audio/SFX_wpn_shotgun_02.mp3"
+   ]
+  },
+  "wpn_smg": {
+   "category": "weapon_fire",
+   "loop": false,
+   "files": [
+    "audio/SFX_wpn_smg_01.mp3",
+    "audio/SFX_wpn_smg_02.mp3",
+    "audio/SFX_wpn_smg_03.mp3"
+   ]
+  },
+  "wpn_smg_sil": {
+   "category": "weapon_fire",
+   "loop": false,
+   "files": [
+    "audio/SFX_wpn_smg_sil_01.mp3",
+    "audio/SFX_wpn_smg_sil_02.mp3"
+   ]
+  },
+  "wpn_sniper_auto": {
+   "category": "weapon_fire",
+   "loop": false,
+   "files": [
+    "audio/SFX_wpn_sniper_auto_01.mp3",
+    "audio/SFX_wpn_sniper_auto_02.mp3"
+   ]
+  },
+  "wpn_sniper_bolt": {
+   "category": "weapon_fire",
+   "loop": false,
+   "files": [
+    "audio/SFX_wpn_sniper_bolt_01.mp3",
+    "audio/SFX_wpn_sniper_bolt_02.mp3"
+   ]
+  },
+  "wpn_sniper_heavy": {
+   "category": "weapon_fire",
+   "loop": false,
+   "files": [
+    "audio/SFX_wpn_sniper_heavy_01.mp3",
+    "audio/SFX_wpn_sniper_heavy_02.mp3"
+   ]
+  },
+  "wpn_taser": {
+   "category": "weapon_fire",
+   "loop": false,
+   "files": [
+    "audio/SFX_wpn_taser_01.mp3"
+   ]
+  },
+  "wpn_bolt_pull": {
+   "category": "weapon_handling",
+   "loop": false,
+   "files": [
+    "audio/SFX_wpn_bolt_pull_01.mp3"
+   ]
+  },
+  "wpn_bolt_release": {
+   "category": "weapon_handling",
+   "loop": false,
+   "files": [
+    "audio/SFX_wpn_bolt_release_01.mp3"
+   ]
+  },
+  "wpn_deploy_pistol": {
+   "category": "weapon_handling",
+   "loop": false,
+   "files": [
+    "audio/SFX_wpn_deploy_pistol_01.mp3"
+   ]
+  },
+  "wpn_deploy_rifle": {
+   "category": "weapon_handling",
+   "loop": false,
+   "files": [
+    "audio/SFX_wpn_deploy_rifle_01.mp3"
+   ]
+  },
+  "wpn_dryfire": {
+   "category": "weapon_handling",
+   "loop": false,
+   "files": [
+    "audio/SFX_wpn_dryfire_01.mp3"
+   ]
+  },
+  "wpn_lmg_belt": {
+   "category": "weapon_handling",
+   "loop": false,
+   "files": [
+    "audio/SFX_wpn_lmg_belt_01.mp3"
+   ]
+  },
+  "wpn_mag_in": {
+   "category": "weapon_handling",
+   "loop": false,
+   "files": [
+    "audio/SFX_wpn_mag_in_01.mp3"
+   ]
+  },
+  "wpn_mag_out": {
+   "category": "weapon_handling",
+   "loop": false,
+   "files": [
+    "audio/SFX_wpn_mag_out_01.mp3"
+   ]
+  },
+  "wpn_mode_switch": {
+   "category": "weapon_handling",
+   "loop": false,
+   "files": [
+    "audio/SFX_wpn_mode_switch_01.mp3"
+   ]
+  },
+  "wpn_pistol_slide": {
+   "category": "weapon_handling",
+   "loop": false,
+   "files": [
+    "audio/SFX_wpn_pistol_slide_01.mp3"
+   ]
+  },
+  "wpn_shell_casing": {
+   "category": "weapon_handling",
+   "loop": false,
+   "files": [
+    "audio/SFX_wpn_shell_casing_01.mp3",
+    "audio/SFX_wpn_shell_casing_02.mp3",
+    "audio/SFX_wpn_shell_casing_03.mp3"
+   ]
+  },
+  "wpn_shotgun_pump": {
+   "category": "weapon_handling",
+   "loop": false,
+   "files": [
+    "audio/SFX_wpn_shotgun_pump_01.mp3"
+   ]
+  },
+  "wpn_shotgun_shell_in": {
+   "category": "weapon_handling",
+   "loop": false,
+   "files": [
+    "audio/SFX_wpn_shotgun_shell_in_01.mp3",
+    "audio/SFX_wpn_shotgun_shell_in_02.mp3"
+   ]
+  },
+  "wpn_silencer_attach": {
+   "category": "weapon_handling",
+   "loop": false,
+   "files": [
+    "audio/SFX_wpn_silencer_attach_01.mp3"
+   ]
+  },
+  "wpn_sniper_bolt_cycle": {
+   "category": "weapon_handling",
+   "loop": false,
+   "files": [
+    "audio/SFX_wpn_sniper_bolt_cycle_01.mp3"
+   ]
+  },
+  "wpn_zoom_in": {
+   "category": "weapon_handling",
+   "loop": false,
+   "files": [
+    "audio/SFX_wpn_zoom_in_01.mp3"
+   ]
+  },
+  "wpn_zoom_out": {
+   "category": "weapon_handling",
+   "loop": false,
+   "files": [
+    "audio/SFX_wpn_zoom_out_01.mp3"
+   ]
+  },
+  "knife_deploy": {
+   "category": "knife",
+   "loop": false,
+   "files": [
+    "audio/SFX_knife_deploy_01.mp3"
+   ]
+  },
+  "knife_hit_body": {
+   "category": "knife",
+   "loop": false,
+   "files": [
+    "audio/SFX_knife_hit_body_01.mp3",
+    "audio/SFX_knife_hit_body_02.mp3"
+   ]
+  },
+  "knife_hit_wall": {
+   "category": "knife",
+   "loop": false,
+   "files": [
+    "audio/SFX_knife_hit_wall_01.mp3"
+   ]
+  },
+  "knife_stab": {
+   "category": "knife",
+   "loop": false,
+   "files": [
+    "audio/SFX_knife_stab_01.mp3"
+   ]
+  },
+  "knife_swing": {
+   "category": "knife",
+   "loop": false,
+   "files": [
+    "audio/SFX_knife_swing_01.mp3",
+    "audio/SFX_knife_swing_02.mp3"
+   ]
+  },
+  "bullet_whizz": {
+   "category": "impact",
+   "loop": false,
+   "files": [
+    "audio/SFX_bullet_whizz_01.mp3",
+    "audio/SFX_bullet_whizz_02.mp3",
+    "audio/SFX_bullet_whizz_03.mp3"
+   ]
+  },
+  "impact_body": {
+   "category": "impact",
+   "loop": false,
+   "files": [
+    "audio/SFX_impact_body_01.mp3",
+    "audio/SFX_impact_body_02.mp3",
+    "audio/SFX_impact_body_03.mp3"
+   ]
+  },
+  "impact_concrete": {
+   "category": "impact",
+   "loop": false,
+   "files": [
+    "audio/SFX_impact_concrete_01.mp3",
+    "audio/SFX_impact_concrete_02.mp3",
+    "audio/SFX_impact_concrete_03.mp3"
+   ]
+  },
+  "impact_glass": {
+   "category": "impact",
+   "loop": false,
+   "files": [
+    "audio/SFX_impact_glass_01.mp3"
+   ]
+  },
+  "impact_headshot": {
+   "category": "impact",
+   "loop": false,
+   "files": [
+    "audio/SFX_impact_headshot_01.mp3",
+    "audio/SFX_impact_headshot_02.mp3"
+   ]
+  },
+  "impact_helmet": {
+   "category": "impact",
+   "loop": false,
+   "files": [
+    "audio/SFX_impact_helmet_01.mp3",
+    "audio/SFX_impact_helmet_02.mp3"
+   ]
+  },
+  "impact_metal": {
+   "category": "impact",
+   "loop": false,
+   "files": [
+    "audio/SFX_impact_metal_01.mp3",
+    "audio/SFX_impact_metal_02.mp3",
+    "audio/SFX_impact_metal_03.mp3"
+   ]
+  },
+  "impact_sand": {
+   "category": "impact",
+   "loop": false,
+   "files": [
+    "audio/SFX_impact_sand_01.mp3",
+    "audio/SFX_impact_sand_02.mp3"
+   ]
+  },
+  "impact_wood": {
+   "category": "impact",
+   "loop": false,
+   "files": [
+    "audio/SFX_impact_wood_01.mp3",
+    "audio/SFX_impact_wood_02.mp3",
+    "audio/SFX_impact_wood_03.mp3"
+   ]
+  },
+  "ricochet": {
+   "category": "impact",
+   "loop": false,
+   "files": [
+    "audio/SFX_ricochet_01.mp3",
+    "audio/SFX_ricochet_02.mp3"
+   ]
+  },
+  "armor_equip": {
+   "category": "player",
+   "loop": false,
+   "files": [
+    "audio/SFX_armor_equip_01.mp3"
+   ]
+  },
+  "armor_hit": {
+   "category": "player",
+   "loop": false,
+   "files": [
+    "audio/SFX_armor_hit_01.mp3"
+   ]
+  },
+  "body_fall": {
+   "category": "player",
+   "loop": false,
+   "files": [
+    "audio/SFX_body_fall_01.mp3"
+   ]
+  },
+  "buy": {
+   "category": "player",
+   "loop": false,
+   "files": [
+    "audio/SFX_buy_01.mp3"
+   ]
+  },
+  "drop_weapon": {
+   "category": "player",
+   "loop": false,
+   "files": [
+    "audio/SFX_drop_weapon_01.mp3"
+   ]
+  },
+  "jump": {
+   "category": "player",
+   "loop": false,
+   "files": [
+    "audio/SFX_jump_01.mp3"
+   ]
+  },
+  "land": {
+   "category": "player",
+   "loop": false,
+   "files": [
+    "audio/SFX_land_01.mp3",
+    "audio/SFX_land_02.mp3"
+   ]
+  },
+  "land_heavy": {
+   "category": "player",
+   "loop": false,
+   "files": [
+    "audio/SFX_land_heavy_01.mp3"
+   ]
+  },
+  "pickup": {
+   "category": "player",
+   "loop": false,
+   "files": [
+    "audio/SFX_pickup_01.mp3"
+   ]
+  },
+  "step_concrete": {
+   "category": "player",
+   "loop": false,
+   "files": [
+    "audio/SFX_step_concrete_01.mp3",
+    "audio/SFX_step_concrete_02.mp3",
+    "audio/SFX_step_concrete_03.mp3",
+    "audio/SFX_step_concrete_04.mp3"
+   ]
+  },
+  "step_metal": {
+   "category": "player",
+   "loop": false,
+   "files": [
+    "audio/SFX_step_metal_01.mp3",
+    "audio/SFX_step_metal_02.mp3",
+    "audio/SFX_step_metal_03.mp3",
+    "audio/SFX_step_metal_04.mp3"
+   ]
+  },
+  "step_sand": {
+   "category": "player",
+   "loop": false,
+   "files": [
+    "audio/SFX_step_sand_01.mp3",
+    "audio/SFX_step_sand_02.mp3",
+    "audio/SFX_step_sand_03.mp3",
+    "audio/SFX_step_sand_04.mp3"
+   ]
+  },
+  "step_wood": {
+   "category": "player",
+   "loop": false,
+   "files": [
+    "audio/SFX_step_wood_01.mp3",
+    "audio/SFX_step_wood_02.mp3",
+    "audio/SFX_step_wood_03.mp3",
+    "audio/SFX_step_wood_04.mp3"
+   ]
+  },
+  "decoy_pop": {
+   "category": "grenade",
+   "loop": false,
+   "files": [
+    "audio/SFX_decoy_pop_01.mp3"
+   ]
+  },
+  "fire": {
+   "category": "grenade",
+   "loop": true,
+   "files": [
+    "audio/SFX_fire_01.mp3"
+   ]
+  },
+  "fire_ignite": {
+   "category": "grenade",
+   "loop": false,
+   "files": [
+    "audio/SFX_fire_ignite_01.mp3"
+   ]
+  },
+  "flash_bang": {
+   "category": "grenade",
+   "loop": false,
+   "files": [
+    "audio/SFX_flash_bang_01.mp3"
+   ]
+  },
+  "flash_ring": {
+   "category": "grenade",
+   "loop": false,
+   "files": [
+    "audio/SFX_flash_ring_01.mp3"
+   ]
+  },
+  "he_explode": {
+   "category": "grenade",
+   "loop": false,
+   "files": [
+    "audio/SFX_he_explode_01.mp3",
+    "audio/SFX_he_explode_02.mp3"
+   ]
+  },
+  "molotov_break": {
+   "category": "grenade",
+   "loop": false,
+   "files": [
+    "audio/SFX_molotov_break_01.mp3"
+   ]
+  },
+  "nade_bounce": {
+   "category": "grenade",
+   "loop": false,
+   "files": [
+    "audio/SFX_nade_bounce_01.mp3",
+    "audio/SFX_nade_bounce_02.mp3",
+    "audio/SFX_nade_bounce_03.mp3"
+   ]
+  },
+  "nade_pin": {
+   "category": "grenade",
+   "loop": false,
+   "files": [
+    "audio/SFX_nade_pin_01.mp3"
+   ]
+  },
+  "nade_throw": {
+   "category": "grenade",
+   "loop": false,
+   "files": [
+    "audio/SFX_nade_throw_01.mp3"
+   ]
+  },
+  "smoke_hiss": {
+   "category": "grenade",
+   "loop": true,
+   "files": [
+    "audio/SFX_smoke_hiss_01.mp3"
+   ]
+  },
+  "smoke_pop": {
+   "category": "grenade",
+   "loop": false,
+   "files": [
+    "audio/SFX_smoke_pop_01.mp3"
+   ]
+  },
+  "c4_armed": {
+   "category": "bomb",
+   "loop": false,
+   "files": [
+    "audio/SFX_c4_armed_01.mp3"
+   ]
+  },
+  "c4_beep": {
+   "category": "bomb",
+   "loop": false,
+   "files": [
+    "audio/SFX_c4_beep_01.mp3"
+   ]
+  },
+  "c4_defuse_start": {
+   "category": "bomb",
+   "loop": false,
+   "files": [
+    "audio/SFX_c4_defuse_start_01.mp3"
+   ]
+  },
+  "c4_defused": {
+   "category": "bomb",
+   "loop": false,
+   "files": [
+    "audio/SFX_c4_defused_01.mp3"
+   ]
+  },
+  "c4_explode": {
+   "category": "bomb",
+   "loop": false,
+   "files": [
+    "audio/SFX_c4_explode_01.mp3"
+   ]
+  },
+  "c4_key": {
+   "category": "bomb",
+   "loop": false,
+   "files": [
+    "audio/SFX_c4_key_01.mp3",
+    "audio/SFX_c4_key_02.mp3",
+    "audio/SFX_c4_key_03.mp3"
+   ]
+  },
+  "bomb_planted": {
+   "category": "music",
+   "loop": false,
+   "files": [
+    "audio/MUS_bomb_planted.mp3"
+   ]
+  },
+  "match_lose": {
+   "category": "music",
+   "loop": false,
+   "files": [
+    "audio/MUS_match_lose.mp3"
+   ]
+  },
+  "match_win": {
+   "category": "music",
+   "loop": false,
+   "files": [
+    "audio/MUS_match_win.mp3"
+   ]
+  },
+  "menu_theme": {
+   "category": "music",
+   "loop": true,
+   "files": [
+    "audio/MUS_menu_theme.mp3"
+   ]
+  },
+  "mvp": {
+   "category": "music",
+   "loop": false,
+   "files": [
+    "audio/MUS_mvp.mp3"
+   ]
+  },
+  "round_lose": {
+   "category": "music",
+   "loop": false,
+   "files": [
+    "audio/MUS_round_lose.mp3"
+   ]
+  },
+  "round_start": {
+   "category": "music",
+   "loop": false,
+   "files": [
+    "audio/MUS_round_start.mp3"
+   ]
+  },
+  "ten_seconds": {
+   "category": "music",
+   "loop": false,
+   "files": [
+    "audio/MUS_ten_seconds.mp3"
+   ]
+  },
+  "win_ct": {
+   "category": "music",
+   "loop": false,
+   "files": [
+    "audio/MUS_win_ct.mp3"
+   ]
+  },
+  "win_t": {
+   "category": "music",
+   "loop": false,
+   "files": [
+    "audio/MUS_win_t.mp3"
+   ]
+  },
+  "headshot_confirm": {
+   "category": "ui",
+   "loop": false,
+   "files": [
+    "audio/SFX_headshot_confirm_01.mp3"
+   ]
+  },
+  "kill_confirm": {
+   "category": "ui",
+   "loop": false,
+   "files": [
+    "audio/SFX_kill_confirm_01.mp3"
+   ]
+  },
+  "level_up": {
+   "category": "ui",
+   "loop": false,
+   "files": [
+    "audio/SFX_level_up_01.mp3"
+   ]
+  },
+  "money": {
+   "category": "ui",
+   "loop": false,
+   "files": [
+    "audio/SFX_money_01.mp3"
+   ]
+  },
+  "ui_back": {
+   "category": "ui",
+   "loop": false,
+   "files": [
+    "audio/SFX_ui_back_01.mp3"
+   ]
+  },
+  "ui_click": {
+   "category": "ui",
+   "loop": false,
+   "files": [
+    "audio/SFX_ui_click_01.mp3"
+   ]
+  },
+  "ui_equip": {
+   "category": "ui",
+   "loop": false,
+   "files": [
+    "audio/SFX_ui_equip_01.mp3"
+   ]
+  },
+  "ui_error": {
+   "category": "ui",
+   "loop": false,
+   "files": [
+    "audio/SFX_ui_error_01.mp3"
+   ]
+  },
+  "ui_hover": {
+   "category": "ui",
+   "loop": false,
+   "files": [
+    "audio/SFX_ui_hover_01.mp3"
+   ]
+  },
+  "ui_tab": {
+   "category": "ui",
+   "loop": false,
+   "files": [
+    "audio/SFX_ui_tab_01.mp3"
+   ]
+  },
+  "xp_gain": {
+   "category": "ui",
+   "loop": false,
+   "files": [
+    "audio/SFX_xp_gain_01.mp3"
+   ]
+  },
+  "desert": {
+   "category": "ambience",
+   "loop": true,
+   "files": [
+    "audio/AMB_desert.mp3"
+   ]
+  },
+  "harbor": {
+   "category": "ambience",
+   "loop": true,
+   "files": [
+    "audio/AMB_harbor.mp3"
+   ]
+  },
+  "town": {
+   "category": "ambience",
+   "loop": true,
+   "files": [
+    "audio/AMB_town.mp3"
+   ]
+  }
+ }
+}

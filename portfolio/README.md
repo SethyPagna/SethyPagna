@@ -2,7 +2,7 @@
 
 The personal site of **Sethy Pagna UNG (Pagna)**: a neon night-city terminal that flies from Angkor Wat to Hong Kong, with every project's screenshots, working links, and five builds you can play inside the page.
 
-Live at **https://sethy-pagna-portfolio.vercel.app** (once this folder is connected to the Vercel project; see below). It lives in the `portfolio/` folder of the GitHub profile repository, next to the profile artwork it borrows its look from.
+Production address: **https://sethy-pagna.vercel.app**. Vercel is connected to the `portfolio/` folder of this GitHub profile repository. Preview deployments follow pull requests; production follows `main`.
 
 ## What's on the page
 
@@ -11,9 +11,9 @@ Live at **https://sethy-pagna-portfolio.vercel.app** (once this folder is connec
 | Hero | Canvas skyline (Angkor Wat → Hong Kong harbour) with rain, reflections, a KH→HK flight and fireworks when you click the sky |
 | About | A boarding pass: passenger photo, studies, languages, next stop |
 | Now building | Split-flap departures board; each flight opens that project's dossier |
-| Projects | Cards that preview their screenshots on hover; each opens a dossier (gallery, features, stack, links; AllChess has a live preview) |
+| Projects | Cards that preview their screenshots on hover; each opens a dossier (gallery, features, stack, links). Projects with a cabinet can be played from the dossier too |
 | Game dev lab | Living Kingdom (UE5), Sandline (UE5) and Wreckabulary (Unity 6) |
-| Arcade | Sandline web arena, Living Kingdom *Worlds Within* and *The First Hearth*, Cathay Cargo Twin and the live AllChess app, in the page |
+| Arcade | Browser editions of Sandline and Living Kingdom (ported from the UE5 builds), AllChess, Cathay Cargo Twin v2 and AI Summary v2, in the page |
 | Build · Toolbox · Road · Activity · Contact | The AI-assisted build loop, tools cross-linked to projects, a timeline, the daily GitHub activity cards and contact links |
 
 Extras: <kbd>Ctrl</kbd>/<kbd>⌘</kbd>+<kbd>K</kbd> (or <kbd>/</kbd>) opens a command palette, deep links such as `#project/allchess` or `#arcade/sandline` work, and the Konami code does something.
@@ -47,7 +47,7 @@ Open http://localhost:8080. The page must be served over HTTP (not `file://`) be
 
 ## Deploy on Vercel
 
-In the existing `sethy-pagna-portfolio` project (or a new one):
+The existing `sethy-pagna` project already uses this configuration. To reproduce it:
 
 1. **Settings → Git → Connect** the `SethyPagna/SethyPagna` repository.
 2. **Settings → Build and Deployment → Root Directory**: `portfolio`.
@@ -65,18 +65,23 @@ Only changes inside `portfolio/` need a redeploy; you can tick "Skip deployments
 
 ## Playable builds in `play/`
 
+Each folder is the static build of a project, copied in as-is. They all use relative paths, so they work from a sub-folder and inside the arcade iframe. Third-party licences ship with each build (`NOTICES.txt`, `THIRD-PARTY-NOTICES.txt` or the licence files next to the assets); the site's own fonts are covered by `fonts/OFL.txt`.
+
 | Folder | Source | Notes |
 |---|---|---|
-| `play/sandline/` | `sandline/sandline_web` (v1 prototype) | three.js r157 (MIT) vendored in `lib/`; arena, models and audio are generated at runtime |
-| `play/worlds-within/` | `LivingKingdom/…/Living-Kingdom-Play.html` | Single-file WebGL app (17 MB). Licence and data notices sit next to it |
-| `play/first-hearth/` | `LivingKingdom/Development` | Static ES-module decisions lab |
-| `play/cargo-twin/` | `Ainnovator_Prototype` | `vite build --base=./`, with Tailwind v4 recompiled from source |
+| `play/sandline/` | `sandline/web` (browser edition of the UE5 v0.2.x build) | Vite + TypeScript + three.js; desktop only (WebGL 2, keyboard and mouse). Notices in `NOTICES.txt` |
+| `play/living-kingdom/` | `livingkingdom/web` (browser edition of the UE5 playtest) | Vite + TypeScript + three.js + Rapier; the font, sound and Rapier licences sit next to the files in `assets/` |
+| `play/allchess/` | `AllChess` commit `444b0c0b910b3a6a58ce30fd2f67122045cc2fc3` (`codex/portfolio-arcade-20260929`; `npm run build:arcade`) | 29 September 2026 game-studio export (bots and pass-and-play); 3D set models are compressed with gltf-transform. Stockfish (GPLv3) ships with its licence and source links in `engines/stockfish/` |
+| `play/cargo-twin/` | `ainnovator_prototype/cargo-twin` (v2) | React + three.js + cannon-es; the cabinet renders it at 1280 px wide and scales it to fit |
+| `play/ai-summary/` | `ai-summary-app/web` (v2) | Runs in the browser; Claude features use the visitor's own API key, kept in their browser and sent only to the Claude API |
 
-The AllChess cabinet embeds the live app at allchess.learn-app.workers.dev.
+Online AllChess matches, rooms and accounts are in the live app at allchess.learn-app.workers.dev, which still runs an older build.
+
+This AllChess export includes the committed game-studio source through `418f8bd`; further source work continues separately. Update the arcade only from a completed, verified export; do not copy a working tree's unfinished changes into `play/`. The source links for AI Summary v2 and Cargo Twin v2 point to their exact commits because their repository default branches still contain v1.
 
 ## Credits
 
-- UrCut is built on [OpenCut classic](https://github.com/opencut-app/opencut-classic) (MIT).
+- UrCut is built on [OpenCut classic](https://github.com/OpenCut-app/opencut-classic) (MIT).
 - Secretary Jarvis is built on [Hermes Agent](https://github.com/NousResearch/hermes-agent) by Nous Research (MIT).
 - Cathay Cargo Twin and Wreckabulary are team projects.
 - Fonts: [Unbounded](https://github.com/googlefonts/unbounded), [Sora](https://github.com/sora-xor/sora-font), [Chakra Petch](https://github.com/cadsondemak/Chakra-Petch), [Kantumruy Pro](https://github.com/google/fonts/tree/main/ofl/kantumruypro) and [Noto Sans SC](https://github.com/google/fonts/tree/main/ofl/notosanssc), all under the SIL Open Font License.

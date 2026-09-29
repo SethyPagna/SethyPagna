@@ -1,6 +1,6 @@
 """Crop and compress project images into card banners and thumbnails (assets/shots/).
 
-Sources: the public portfolio's screenshots (sethy-pagna-portfolio.vercel.app) and the
+Sources: the public portfolio's screenshots (sethy-pagna.vercel.app) and the
 Wreckabulary key art from its public repository.
 Run with a Python that has Pillow:
     python scripts/shots.py <portfolio-assets-dir> <wreckabulary-key-art.jpg>

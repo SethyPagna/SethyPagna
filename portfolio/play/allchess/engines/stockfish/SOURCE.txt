@@ -1,0 +1,11 @@
+Stockfish 18 (lite, single-threaded WebAssembly build)
+
+These two files (stockfish-18-lite-single.js and .wasm) are unmodified copies
+from the npm package "stockfish" 18.0.7 by Nathan Rugg, a WebAssembly port of
+the Stockfish chess engine. AllChess runs it in a Web Worker and talks to it
+over the UCI protocol.
+
+Licence: GNU General Public License v3 (see Copying.txt in this folder).
+Source code:
+  - WebAssembly port: https://github.com/nmrugg/stockfish.js (release 18.0.7)
+  - Stockfish engine:  https://github.com/official-stockfish/Stockfish
