@@ -51,6 +51,7 @@ SHOTS: dict[str, list[tuple[Path, str, str]]] = {
     ],
     "allchess": [
         (RAW / "allchess-latest/allchess-02-classic-tabletop-bot-game.png", "Classic chess in the 29 September arcade build: bot replies and a played suggestion on the 3D tabletop.", "screen"),
+        (RAW / "allchess-shore/konane-shore-desktop.png", "Shore Konane in the latest 29 September arcade: stone board and counters under studio lighting.", "screen"),
         (RAW / "allchess-latest/allchess-03-xiangqi-celadon-3d.png", "Xiangqi with the Celadon collection: glazed ceramic discs on a wood 3D board.", "screen"),
         (RAW / "allchess-latest/allchess-04-shogi-carved-3d.png", "Shogi with the carved collection, lacquered glyphs and hand stands.", "screen"),
         (RAW / "allchess-latest/allchess-05-ouk-courtyard-3d.png", "Ouk Chaktrang (Khmer chess) with the Courtyard sandstone and charcoal set.", "screen"),

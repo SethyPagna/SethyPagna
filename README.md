@@ -32,7 +32,7 @@ I'm **Pagna** (Sethy Pagna UNG, or James), a Computer Science student at The Hon
   <a href="https://github.com/SethyPagna/LEARN"><img src="assets/project-learn.svg" width="49%" alt="LEARN, in active development: capture, create, practise, review. Notes, docs, sheets and slides beside AI tutoring, quizzes, vocabulary practice and progress tracking. Next.js, React, TypeScript and Cloudflare."></a>
   <a href="https://sethy-pagna.vercel.app/#project/codeage"><img src="assets/project-codeage.svg" width="49%" alt="CodeAge, private alpha: AI conversations beside your code. A Windows workbench with chat and code panels, editor, terminal and Git diffs, using local Ollama models or API providers. Electron, React, TypeScript and SQLite."></a>
   <a href="https://sethy-pagna.vercel.app/#project/urcut"><img src="assets/project-urcut.svg" width="49%" alt="UrCut and UrVoice, new and private: your cut, visual, fast, private. A local-first, CapCut-style video editor with AI voiceovers and captions from UrVoice, a speech engine on your own machine. Built on OpenCut (MIT). Next.js, TypeScript, Python and local AI. The picture is an illustration, not a screenshot."></a>
-  <a href="https://github.com/SethyPagna/AllChess/tree/444b0c0b910b3a6a58ce30fd2f67122045cc2fc3"><img src="assets/project-allchess.svg" width="49%" alt="AllChess, public: discover how the world plays chess. Classic chess and global variants with rule guides, bot practice, rooms, history and game review. Next.js, TypeScript and Cloudflare D1."></a>
+  <a href="https://github.com/SethyPagna/AllChess/tree/8940655e558c8834cd8c8f0f37f7d493222d4d8f"><img src="assets/project-allchess.svg" width="49%" alt="AllChess, public: discover how the world plays chess. Classic chess and global variants with rule guides, bot practice, rooms, history and game review. Next.js, TypeScript and Cloudflare D1."></a>
   <a href="https://github.com/SethyPagna/EdSync"><img src="assets/project-edsync.svg" width="49%" alt="EdSync, preview: connect classroom work across roles. Separate student, teacher and admin spaces for lessons, classes, assignments, gradebooks and progress. Next.js, TypeScript and Cloudflare."></a>
   <a href="https://sethy-pagna.vercel.app/#project/living-kingdom"><img src="assets/project-living-kingdom.svg" width="49%" alt="Living Kingdom, prototype: experimenting with a fantasy world. An Unreal Engine prototype fitting combat, gathering, inventory, recruitment and travel between areas together. Unreal Engine 5, C++ and Blueprints."></a>
   <a href="https://sethy-pagna.vercel.app/#project/sandline"><img src="assets/project-sandline.svg" width="49%" alt="Sandline, offline prototype: iterating on shooter gameplay. An offline Unreal Engine shooter with bot matches, round state and data-driven modes. Online multiplayer is unfinished. Unreal Engine 5, C++ and Blueprints."></a>
@@ -43,7 +43,7 @@ I'm **Pagna** (Sethy Pagna UNG, or James), a Computer Science student at The Hon
   <a href="https://leangbeauty.com">Business OS</a> ·
   <a href="https://learn-ten-pearl.vercel.app">LEARN</a> ·
   <a href="https://allchess.learn-app.workers.dev">AllChess</a> ·
-  <a href="https://edsync-two.vercel.app">EdSync</a>
+  <a href="https://edsync.learn-app.workers.dev">EdSync</a>
   <br>
   <b>Play in your browser:</b>
   <a href="https://sethy-pagna.vercel.app/#arcade/sandline">Sandline</a> ·

@@ -7,5 +7,8 @@ over the UCI protocol.
 
 Licence: GNU General Public License v3 (see Copying.txt in this folder).
 Source code:
-  - WebAssembly port: https://github.com/nmrugg/stockfish.js (release 18.0.7)
+  - WebAssembly port, exact source commit for npm 18.0.7:
+    https://github.com/nmrugg/stockfish.js/tree/32d4b5ae40c01db88219bfbe2b82dbe6dec93832
+  - Corresponding source archive, including build scripts:
+    https://github.com/nmrugg/stockfish.js/archive/32d4b5ae40c01db88219bfbe2b82dbe6dec93832.zip
   - Stockfish engine:  https://github.com/official-stockfish/Stockfish
