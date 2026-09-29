@@ -29,11 +29,11 @@ I'm **Pagna** (Sethy Pagna UNG, or James), a Computer Science student at The Hon
 
 <p align="center">
   <a href="https://github.com/SethyPagna/business-os"><img src="assets/project-business-os.svg" width="49%" alt="Business OS, live: a connected workspace for retail. Point of sale, inventory, branch transfers, shifts and reporting, plus a customer storefront, in English and Khmer. React, TypeScript, Cloudflare Workers, D1 and R2."></a>
-  <a href="https://github.com/SethyPagna/LEARN"><img src="assets/project-learn.svg" width="49%" alt="LEARN, in active development: capture, create, practise, review. Notes, docs, sheets and slides beside AI tutoring, quizzes, vocabulary practice and progress tracking. Next.js, React, TypeScript and Cloudflare."></a>
+  <a href="https://github.com/SethyPagna/LEARN/tree/cleanup/stage-1"><img src="assets/project-learn.svg" width="49%" alt="LEARN, in active development with public previews: capture, create, practise, review. Notes, docs, sheets and slides beside AI tutoring, quizzes, vocabulary practice and progress tracking. The newer studio remains in development. Next.js, React, TypeScript and Cloudflare."></a>
   <a href="https://sethy-pagna.vercel.app/#project/codeage"><img src="assets/project-codeage.svg" width="49%" alt="CodeAge, private alpha: AI conversations beside your code. A Windows workbench with chat and code panels, editor, terminal and Git diffs, using local Ollama models or API providers. Electron, React, TypeScript and SQLite."></a>
   <a href="https://sethy-pagna.vercel.app/#project/urcut"><img src="assets/project-urcut.svg" width="49%" alt="UrCut and UrVoice, desktop web preview with private source: your cut, visual, fast, private. A local-first, CapCut-style video editor with AI voiceovers and captions from UrVoice, a speech engine on your own machine. Built on OpenCut (MIT). Next.js, TypeScript, Python and local AI. The picture is an illustration, not a screenshot."></a>
-  <a href="https://github.com/SethyPagna/AllChess/tree/8940655e558c8834cd8c8f0f37f7d493222d4d8f"><img src="assets/project-allchess.svg" width="49%" alt="AllChess, public: discover how the world plays chess. Classic chess and global variants with rule guides, bot practice, rooms, history and game review. Next.js, TypeScript and Cloudflare D1."></a>
-  <a href="https://github.com/SethyPagna/EdSync"><img src="assets/project-edsync.svg" width="49%" alt="EdSync, preview: connect classroom work across roles. Separate student, teacher and admin spaces for lessons, classes, assignments, gradebooks and progress. Next.js, TypeScript and Cloudflare."></a>
+  <a href="https://sethy-pagna.vercel.app/#arcade/allchess"><img src="assets/project-allchess.svg" width="49%" alt="AllChess arcade: 21 board games with browser bots, local pass-and-play and physical 3D tabletops. September 2026 Shore snapshot. The separate older online app has accounts and rooms. Next.js, TypeScript, three.js and Stockfish."></a>
+  <a href="https://edsync-demo.learn-app.workers.dev"><img src="assets/project-edsync.svg" width="49%" alt="EdSync read-only demo: explore fictional courses and learner or teacher views without changing classroom data. The separate official app provides account access. Next.js, TypeScript and Cloudflare."></a>
   <a href="https://sethy-pagna.vercel.app/#project/living-kingdom"><img src="assets/project-living-kingdom.svg" width="49%" alt="Living Kingdom, prototype: experimenting with a fantasy world. An Unreal Engine prototype fitting combat, gathering, inventory, recruitment and travel between areas together. Unreal Engine 5, C++ and Blueprints."></a>
   <a href="https://sethy-pagna.vercel.app/#project/sandline"><img src="assets/project-sandline.svg" width="49%" alt="Sandline, offline prototype: iterating on shooter gameplay. An offline Unreal Engine shooter with bot matches, round state and data-driven modes. Online multiplayer is unfinished. Unreal Engine 5, C++ and Blueprints."></a>
 </p>
@@ -41,9 +41,9 @@ I'm **Pagna** (Sethy Pagna UNG, or James), a Computer Science student at The Hon
 <p align="center"><sub>
   <b>Try them live:</b>
   <a href="https://leangbeauty.com">Business OS</a> ·
-  <a href="https://learn-ten-pearl.vercel.app">LEARN</a> ·
-  <a href="https://allchess.learn-app.workers.dev">AllChess</a> ·
-  <a href="https://edsync.learn-app.workers.dev">EdSync</a> ·
+  <a href="https://learn-ten-pearl.vercel.app">LEARN preview</a> ·
+  <a href="https://sethy-pagna.vercel.app/#arcade/allchess">AllChess · bot/local</a> ·
+  <a href="https://edsync-demo.learn-app.workers.dev">EdSync read-only demo</a> ·
   <a href="https://urcut-preview.ungsethypagna.workers.dev">UrCut desktop preview</a> ·
   <a href="https://ai-summary.ungsethypagna.workers.dev">AI Summary v2</a>
   <br>
@@ -53,6 +53,11 @@ I'm **Pagna** (Sethy Pagna UNG, or James), a Computer Science student at The Hon
   <a href="https://sethy-pagna.vercel.app/#arcade/allchess">AllChess</a> ·
   <a href="https://sethy-pagna.vercel.app/#arcade/cargo-twin">Cargo Twin</a> ·
   <a href="https://sethy-pagna.vercel.app/#arcade/ai-summary">AI Summary</a>
+  <br>
+  <b>Other app builds:</b>
+  <a href="https://allchess.learn-app.workers.dev">AllChess online · older build</a> ·
+  <a href="https://learn.learn-app.workers.dev">LEARN Cloudflare preview</a> ·
+  <a href="https://edsync.learn-app.workers.dev">EdSync official app</a>
   <br>
   CodeAge, UrCut + UrVoice, Living Kingdom, Sandline, OmniDrama and KhShop are private repositories: the portfolio has screenshots of each.
   UrCut is built on <a href="https://github.com/OpenCut-app/opencut-classic">OpenCut classic</a> (MIT).
@@ -64,7 +69,7 @@ I'm **Pagna** (Sethy Pagna UNG, or James), a Computer Science student at The Hon
   <a href="https://sethy-pagna.vercel.app/#project/omnidrama"><img src="assets/quest-omnidrama.svg" width="49%" alt="OmniDrama, new and private: your shows in one local library. A Windows video library: searchable catalogue, episode player with saved progress, and a studio that converts uploads with FFmpeg."></a>
   <a href="https://sethy-pagna.vercel.app/#project/khshop"><img src="assets/quest-khshop.svg" width="49%" alt="KhShop, a pilot with test data: shopping designed around Khmer. Khmer-first marketplace pilot: local discovery, USD and KHR prices, offers and viewing appointments."></a>
   <a href="https://github.com/SethyPagna/Secretary-Jarvis"><img src="assets/quest-jarvis.svg" width="49%" alt="Secretary Jarvis, prototype: a desktop home for an AI assistant. Electron interface with a Python backend: chat, voice, terminal and local-model helpers."></a>
-  <a href="https://github.com/SethyPagna/ai-summary-app/tree/81046bd2b29b27eb314b30ab0623515d206ae7a3/web"><img src="assets/quest-ai-summary.svg" width="49%" alt="AI Summary, rebuilt as v2: ask questions of your documents. Rebuilt in 2026: summaries, cited answers and study cards for PDF, Word and slides, worked out in your browser."></a>
+  <a href="https://github.com/SethyPagna/ai-summary-app/tree/8a77f09c6d13e0a2e5fb0dd836e6c88f61f18c2f/web"><img src="assets/quest-ai-summary.svg" width="49%" alt="AI Summary, rebuilt as v2: ask questions of your documents. Rebuilt in 2026: summaries, cited answers and study cards for PDF, Word and slides, worked out in your browser."></a>
   <a href="https://github.com/SethyPagna/wreckabulary"><img src="assets/quest-wreckabulary.svg" width="49%" alt="Wreckabulary, a team project for COMP4122: wreck the room, build the word! A 2 to 4 player couch party game in Unity 6: smash furniture into letters, then spell new things."></a>
   <a href="https://github.com/SethyPagna/cargo-twin/tree/f7c91908b50d2ccc248ee0dd410d08a80014075c/cargo-twin"><img src="assets/quest-cargo-twin.svg" width="49%" alt="Cargo Twin: customizable road, sea, air, rail and cargo spaces, weight- and fragility-aware packing, space utilization and a replayable 3D load plan. Originally a team hackathon project."></a>
 </p>
