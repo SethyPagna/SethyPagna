@@ -55,6 +55,19 @@ The existing `sethy-pagna` project already uses this configuration. To reproduce
 
 Only changes inside `portfolio/` need a redeploy; you can tick "Skip deployments when there are no changes to the root directory" so README edits don't redeploy. `vercel.json` sets cache headers; `.vercelignore` keeps `tools/` out of the deployment.
 
+## Public app links
+
+Checked on 30 September 2026. Keep `js/data.js` and the root profile README consistent. A working public preview, a packaged arcade export and a development branch are different things; a successful protected preview build is not a public app link.
+
+| Project | Public entry points | What visitors can use |
+|---|---|---|
+| AllChess | [Arcade](https://sethy-pagna.vercel.app/#arcade/allchess); [older online app](https://allchess.learn-app.workers.dev) | The 29 September Shore arcade snapshot provides 21 games with browser bots/local play. The separate online build has accounts and rooms. Newer development is on `codex/compact-game-studio`; its protected preview is not linked publicly. |
+| LEARN | [Vercel preview](https://learn-ten-pearl.vercel.app); [Cloudflare preview](https://learn.learn-app.workers.dev) | Both expose public demo sign-in, but run different earlier builds. They are not identical mirrors. The newer studio is on `cleanup/stage-1`; providers and other release work remain. |
+| EdSync | [Read-only demo](https://edsync-demo.learn-app.workers.dev); [official app](https://edsync.learn-app.workers.dev) | The demo exposes fictional courses and learner/teacher previews. The official app is for account access. |
+| UrCut | [Desktop web preview](https://urcut-preview.ungsethypagna.workers.dev) | Browser editing/export; voice generation requires local UrCut/UrVoice. |
+| AI Summary | [Standalone v2](https://ai-summary.ungsethypagna.workers.dev); [arcade](https://sethy-pagna.vercel.app/#arcade/ai-summary) | Local document ingestion, summaries and cited questions/answers. |
+| Cargo Twin | [Cargo studio v3](https://sethy-pagna.vercel.app/#arcade/cargo-twin) | Current packing studio; the separately labeled Figma link is the historical hackathon prototype. |
+
 ## Updating screenshots
 
 1. Capture PNGs of a project (Playwright against a local build works well) into `raw/<project>/`.

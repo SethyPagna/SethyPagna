@@ -689,6 +689,7 @@ class Project:
     shot: str | None = None
     address: str | None = None
     game: bool = False
+    shot_note: str | None = None
 
 
 PROJECTS = [
@@ -704,12 +705,14 @@ PROJECTS = [
     Project("urcut", "UrCut + UrVoice", "Your cut. Visual, fast, private.",
             "A local-first, CapCut-style video editor with AI voiceovers and captions from UrVoice, a speech engine on your own machine.",
             "NEW · PRIVATE", MAGENTA, "AI · CREATIVE", ("Next.js", "TypeScript", "Python", "Local AI")),
-    Project("allchess", "AllChess", "Discover how the world plays chess",
-            "Classic chess and global variants with rule guides, bot practice, rooms, history and game review.",
-            "PUBLIC", ACID, "GAMES · WEB", ("Next.js", "TypeScript", "Cloudflare D1"), "allchess", "allchess.learn-app.workers.dev"),
-    Project("edsync", "EdSync", "Connect classroom work across roles",
-            "Separate student, teacher and admin spaces for lessons, classes, assignments, gradebooks and progress.",
-            "PREVIEW", BLUE, "EDTECH", ("Next.js", "TypeScript", "Cloudflare"), "edsync", "edsync-two.vercel.app"),
+    Project("allchess", "AllChess", "Play 21 games with bots or a friend",
+            "The 29 September 2026 Shore snapshot: browser bots and local pass-and-play, with rule guides and 3D boards.",
+            "ARCADE SNAPSHOT", ACID, "GAMES · WEB", ("React", "TypeScript", "Three.js"), "allchess", "sethy-pagna.vercel.app/#arcade/allchess",
+            shot_note="Earlier online app screenshot"),
+    Project("edsync", "EdSync", "Explore a fictional classroom",
+            "Read-only learner and teacher views with fictional courses and lesson progress. Demo changes are not saved.",
+            "READ-ONLY DEMO", BLUE, "EDTECH", ("Next.js", "TypeScript", "Cloudflare"), "edsync", "edsync-demo.learn-app.workers.dev",
+            shot_note="Earlier app screenshot"),
     Project("living-kingdom", "Living Kingdom", "Experimenting with a fantasy world",
             "An Unreal Engine prototype fitting combat, gathering, inventory, recruitment and travel between areas together.",
             "PROTOTYPE", LIME, "GAME", ("Unreal Engine 5", "C++", "Blueprints"), "living-kingdom", game=True),
@@ -836,6 +839,8 @@ def project_card(project: Project, index: int) -> str:
                  + txt(78, 29.5, project.address, 12, MUTED, style="hud-semi", tracking=.04))
     if project.game:
         b.append(hud_corners(color))
+    if project.shot_note:
+        b.append(tag(24, 182, project.shot_note, MUTED, size=11.5, height=24, mode="dark")[0])
     b.append("</g>")
     b.append(tag(592, status_y, project.status, color, size=11.5, height=22, dot=True, anchor="end")[0])
     b.append(f'<path d="M8 218H608" stroke="url(#accent)" stroke-width="2.5"/>'
@@ -850,7 +855,8 @@ def project_card(project: Project, index: int) -> str:
     b.append(chips(30, 370, project.stack, color))
     b.append(arrow_button(560, 366, color))
     return document(W, H, "".join(b), css=css, defs=defs, title=f"{project.name}: {project.tagline}",
-                    desc=f"{project.name} ({project.status.lower()}). {project.blurb} Stack: {', '.join(project.stack)}.")
+                    desc=f"{project.name} ({project.status.lower()}). {project.blurb} Stack: {', '.join(project.stack)}."
+                         + (f" Image: {project.shot_note}." if project.shot_note else ""))
 
 
 # ---------------------------------------------------------------- side quests (smaller projects)
