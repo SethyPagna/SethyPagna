@@ -674,6 +674,22 @@ export const SHOTS = {
  ],
  "cargo-twin": [
   {
+   "src": "img/shots/cargo-twin/studio-v3-desktop.webp",
+   "sm": "img/shots/cargo-twin/studio-v3-desktop-sm.webp",
+   "w": 1440,
+   "h": 1356,
+   "caption": "Cargo Twin v3: a 40-piece mixed delivery load with calculated usable-space and payload percentages, handling rules and replayable 3D placements.",
+   "kind": "screen"
+  },
+  {
+   "src": "img/shots/cargo-twin/studio-v3-mobile.webp",
+   "sm": "img/shots/cargo-twin/studio-v3-mobile-sm.webp",
+   "w": 390,
+   "h": 2721,
+   "caption": "Cargo Twin v3 on a phone: editable cargo and custom transport spaces with the same local packing engine.",
+   "kind": "phone"
+  },
+  {
    "src": "img/shots/cargo-twin/01.webp",
    "sm": "img/shots/cargo-twin/01-sm.webp",
    "w": 1440,

@@ -885,9 +885,9 @@ SIDE_QUESTS = [
     SideQuest("wreckabulary", "Wreckabulary", "Wreck the room, build the word!",
               "A 2–4 player couch party game in Unity 6: smash furniture into letters, then spell new things.",
               "TEAM · COMP4122", VIOLET, "GAME · TEAM", "thumb-wreckabulary"),
-    SideQuest("cargo-twin", "Cathay Cargo Twin", "Planning air cargo in 3D",
-              "v2 of our AInnovator hackathon prototype: ULD build-up against real contours, a physics stress test and 777F weight and balance.",
-              "V2 · TEAM ORIGIN", ACID, "SIMULATION · 3D", None, "cargo"),
+    SideQuest("cargo-twin", "Cargo Twin", "Smart packing. Any space.",
+              "Road, sea, air, rail or custom rectangular spaces: pack with weight and fragility constraints, then replay the 3D load plan.",
+              "V3 STUDIO · TEAM ORIGIN", ACID, "SIMULATION · 3D", None, "cargo"),
 ]
 
 # name -> ((gradient from, gradient to), white icon drawn inside the 156px tile at x/y 24..180)

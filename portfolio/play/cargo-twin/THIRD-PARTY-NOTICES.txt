@@ -1,4 +1,4 @@
-Cathay Cargo Twin v2 (static build) - https://github.com/SethyPagna/Ainnovator_Prototype (cargo-twin/)
+Cargo Twin v3 (static build) - https://github.com/SethyPagna/cargo-twin/tree/f7c91908b50d2ccc248ee0dd410d08a80014075c/cargo-twin
 
 This folder is a static build. It bundles the third-party packages below
 (the production dependency tree of the source project, minus native

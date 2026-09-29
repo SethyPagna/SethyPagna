@@ -49,7 +49,7 @@ I'm **Pagna** (Sethy Pagna UNG, or James), a Computer Science student at The Hon
   <a href="https://sethy-pagna.vercel.app/#arcade/sandline">Sandline</a> ·
   <a href="https://sethy-pagna.vercel.app/#arcade/living-kingdom">Living Kingdom</a> ·
   <a href="https://sethy-pagna.vercel.app/#arcade/allchess">AllChess</a> ·
-  <a href="https://sethy-pagna.vercel.app/#arcade/cargo-twin">Cathay Cargo Twin</a> ·
+  <a href="https://sethy-pagna.vercel.app/#arcade/cargo-twin">Cargo Twin</a> ·
   <a href="https://sethy-pagna.vercel.app/#arcade/ai-summary">AI Summary</a>
   <br>
   CodeAge, UrCut + UrVoice, Living Kingdom, Sandline, OmniDrama and KhShop are private repositories: the portfolio has screenshots of each.
@@ -64,7 +64,7 @@ I'm **Pagna** (Sethy Pagna UNG, or James), a Computer Science student at The Hon
   <a href="https://github.com/SethyPagna/Secretary-Jarvis"><img src="assets/quest-jarvis.svg" width="49%" alt="Secretary Jarvis, prototype: a desktop home for an AI assistant. Electron interface with a Python backend: chat, voice, terminal and local-model helpers."></a>
   <a href="https://github.com/SethyPagna/ai-summary-app/tree/81046bd2b29b27eb314b30ab0623515d206ae7a3/web"><img src="assets/quest-ai-summary.svg" width="49%" alt="AI Summary, rebuilt as v2: ask questions of your documents. Rebuilt in 2026: summaries, cited answers and study cards for PDF, Word and slides, worked out in your browser."></a>
   <a href="https://github.com/SethyPagna/wreckabulary"><img src="assets/quest-wreckabulary.svg" width="49%" alt="Wreckabulary, a team project for COMP4122: wreck the room, build the word! A 2 to 4 player couch party game in Unity 6: smash furniture into letters, then spell new things."></a>
-  <a href="https://github.com/SethyPagna/Ainnovator_Prototype/tree/0def6dc6553b007f9377fe097abe80302109551b/cargo-twin"><img src="assets/quest-cargo-twin.svg" width="49%" alt="Cathay Cargo Twin v2, which started as a team hackathon project in November 2025: planning air cargo in 3D. ULD build-up against real contours, a physics stress test and 777F weight and balance."></a>
+  <a href="https://github.com/SethyPagna/cargo-twin/tree/f7c91908b50d2ccc248ee0dd410d08a80014075c/cargo-twin"><img src="assets/quest-cargo-twin.svg" width="49%" alt="Cargo Twin: customizable road, sea, air, rail and cargo spaces, weight- and fragility-aware packing, space utilization and a replayable 3D load plan. Originally a team hackathon project."></a>
 </p>
 
 <details>

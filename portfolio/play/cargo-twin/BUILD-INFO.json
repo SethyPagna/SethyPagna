@@ -1,0 +1,25 @@
+{
+  "project": "Cargo Twin",
+  "version": "3.0.0",
+  "sourceRepository": "https://github.com/SethyPagna/cargo-twin",
+  "sourceCommit": "f7c91908b50d2ccc248ee0dd410d08a80014075c",
+  "files": {
+    "index.html": "2b5fa6ee8351ced89d89d49377a621dab365d420f552707e132328765e5a11a3",
+    "THIRD-PARTY-NOTICES.txt": "23494f01d35e64c0cbf70c94539edeaf1c345019a80c3634ee03776eea722ebc",
+    "assets/app-DZS-e9_R.css": "e218f6f847dda5a7e4022da6fbd458e09dcfb5cc73db6b2f4253e505b85b215a",
+    "assets/App-Jj1aC7rX.js": "9a0e98e1dd31b4ae64c2027eec1b666f025a2ec938f31a6ad1ce29a681aaf713",
+    "assets/engine.worker-ChWZk6Qy.js": "46ce12c6edb41a52f92400956e1224f4a973a58c7a67028fa518f49eef092c14",
+    "assets/index-BpDp8qZc.js": "3e476c4d8dee55f1557eef49009cf6b55ed482b8655a94a54ca0799138a64d38",
+    "assets/index-CSvIoSTn.css": "f699cb8ff5a4b9cda61c581a18f4321afb619b2e067a7fb39d6e1ff1824a408f",
+    "assets/inter-latin-wght-normal-Dx4kXJAl.woff2": "3100e775e8616cd2611beecfa23a4263d7037586789b43f035236a2e6fbd4c62",
+    "assets/jetbrains-mono-latin-400-normal-V6pRDFza.woff2": "14425ba9c695763c1547f48a206b7aa60350a33ae23de09f0407877f3fcd89eb",
+    "assets/jetbrains-mono-latin-600-normal-C8RAYTDA.woff2": "400c6bfda18d5d14acad1c15d6dcb9f8e13c015e7286317e0b9a482539bef147",
+    "assets/packing.worker-Br1qmdb-.js": "13f9204a91b339c3d99d9bbdd6ae5774c78592391c348ce15fd34d4c7592eb11",
+    "assets/physics-BG8CKx0_.js": "2bcc65dc6175acbc9ba8931ba8ab7ed1c5a87ee8915a36f10d3d530801176176",
+    "assets/physics.worker-jzpxMkW5.js": "cd327b0f30937ed17a3c1b50267424562a98b970e7618fe04b9f18c9d95611d1",
+    "assets/react-CR5VJ85Q.js": "b19a9fcdb691b2158d837ef44b93412f755c06ec395363af87850a92252826b4",
+    "assets/rolldown-runtime-hePW80VL.js": "580ad8c58061a4dde99bde0a56905e382f0568516ee2f5b84dbfb52085709021",
+    "assets/stability-D7EBHipe.js": "591a0f867810b23d469d3d92e441de2d55fb1cea337079e5ec73548d61232fe7",
+    "assets/three-BPPEB0Cc.js": "fab8d0379dfe6efc3c66c2c40e7d0eeff5776e2accdf954906f5f1aab83b84ac"
+  }
+}
