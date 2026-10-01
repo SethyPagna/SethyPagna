@@ -587,14 +587,14 @@ class Flight:
 
 FLIGHTS = [
     Flight("BOS 01", "BUSINESS OS", "Retail POS + storefront, EN/KH", "CLOUDFLARE", "IN SERVICE", ACID),
-    Flight("LRN 02", "LEARN", "Notes → AI tutor → quizzes", "NEXT.JS", "ACTIVE DEV", CYAN),
-    Flight("URC 03", "URCUT+URVOICE", "Local-first video editor + voice", "NEXT + PY", "BOARDING", MAGENTA),
-    Flight("CDA 04", "CODEAGE", "AI workbench beside your code", "ELECTRON", "ALPHA", VIOLET),
-    Flight("ACH 05", "ALLCHESS", "Chess variants of the world", "NEXT + D1", "PUBLIC", ACID),
-    Flight("EDS 06", "EDSYNC", "Classes for students & teachers", "NEXT.JS", "PREVIEW", BLUE),
-    Flight("LKG 07", "LIVING KINGDOM", "Fantasy world, UE5 prototype", "UE5 C++", "PROTOTYPE", VOLT),
-    Flight("SND 08", "SANDLINE", "Offline bot shooter, UE5", "UE5 C++", "PROTOTYPE", VOLT),
-    Flight("OMD 09", "OMNIDRAMA", "Local video library + player", "NODE + TS", "NEW", ORANGE),
+    Flight("LRN 02", "LEARN", "Notes → AI tutor → quizzes", "NEXT.JS", "PREVIEWS", CYAN),
+    Flight("ACH 03", "ALLCHESS", "21 games: browser bots + local play", "3D + BOTS", "ARCADE", ACID),
+    Flight("URC 04", "URCUT+URVOICE", "Browser editor + local voice", "NEXT + PY", "WEB PREVIEW", MAGENTA),
+    Flight("CDA 05", "CODEAGE", "AI workbench beside your code", "ELECTRON", "LOCAL ALPHA", VIOLET),
+    Flight("EDS 06", "EDSYNC", "Fictional classroom demo", "NEXT.JS", "READ-ONLY", BLUE),
+    Flight("LKG 07", "LIVING KINGDOM", "Fantasy playtest, UE5 + browser", "UE5 + WEB", "PLAYTEST", VOLT),
+    Flight("SND 08", "SANDLINE", "Offline bot shooter, UE5 + browser", "UE5 + WEB", "BOT PLAY", ORANGE),
+    Flight("OMD 09", "OMNIDRAMA", "Local video library + player", "NODE + TS", "LOCAL DEV", BLUE),
 ]
 FLAP_CHARS = "ABCDEFGHIJKLMNOPRSTUVWXYZ0123456789"
 
@@ -641,7 +641,7 @@ def departures() -> str:
         x += width(value, size, style) + 18
     now, now_w = tag(W - 44, 43, "NOW BUILDING", ACID, size=14, height=32, dot=True, pulse=True, anchor="end")
     b.append(now)
-    b.append(txt(W - 62 - now_w, 64, "SNAPSHOT · SEP 2026", 13, DIM, style="hud", anchor="end", tracking=.14))
+    b.append(txt(W - 62 - now_w, 64, "UPDATED · OCT 2026", 13, DIM, style="hud", anchor="end", tracking=.14))
 
     for x, head in ((40, "FLIGHT"), (196, "DESTINATION"), (548, "ROUTE"), (880, "GATE"), (1012, "STATUS")):
         b.append(txt(x, 130, head, 12, DIM, style="hud", tracking=.24))
@@ -667,10 +667,10 @@ def departures() -> str:
     return document(W, H, "".join(b), css=css, defs=defs,
                     title="Departures: what I'm building now",
                     desc="Departures board listing current projects: Business OS (retail POS and storefront, in service); "
-                         "LEARN (notes to AI tutor to quizzes, active development); UrCut and UrVoice (local-first video editor "
-                         "and voice engine, boarding); CodeAge (AI workbench, alpha); AllChess (chess variants, public); EdSync "
-                         "(classes for students and teachers, preview); Living Kingdom and Sandline (Unreal Engine 5 prototypes); "
-                         "OmniDrama (local video library and player, new).")
+                         "LEARN (study workspace, public previews); AllChess (21 games with browser bots and local play, current browser arcade); "
+                         "UrCut and UrVoice (browser editor and local voice engine, desktop web preview); CodeAge (Windows AI workbench, local alpha); "
+                         "EdSync (fictional classroom, read-only demo); Living Kingdom and Sandline (Unreal prototypes with browser editions); "
+                         "OmniDrama (local video library and player, in development). Updated October 2026.")
 
 
 # ---------------------------------------------------------------- project cards
@@ -697,28 +697,28 @@ PROJECTS = [
             "Point of sale, inventory, branch transfers, shifts and reporting, plus a customer storefront, in English and Khmer.",
             "LIVE", VOLT, "SOFTWARE", ("React", "TypeScript", "Cloudflare Workers", "D1", "R2"), "business-os", "leangbeauty.com"),
     Project("learn", "LEARN", "Capture → create → practise → review",
-            "Notes, docs, sheets and slides beside AI tutoring, quizzes, vocabulary practice and progress tracking.",
-            "ACTIVE DEV", CYAN, "AI · EDTECH", ("Next.js", "React", "TypeScript", "Cloudflare"), "learn", "learn-ten-pearl.vercel.app"),
+            "A study workspace for notes, tutoring and practice. Public previews run earlier builds; the newer studio remains in development.",
+            "PUBLIC PREVIEWS", CYAN, "AI · EDTECH", ("Next.js", "React", "TypeScript", "Cloudflare"), "learn", "learn-ten-pearl.vercel.app"),
     Project("codeage", "CodeAge", "AI conversations beside your code",
             "A Windows workbench with chat and code panels, editor, terminal and Git diffs, using local Ollama models or API providers.",
             "ALPHA · PRIVATE", VIOLET, "AI · DEV TOOLS", ("Electron", "React", "TypeScript", "SQLite"), "codeage", "CodeAge · desktop alpha"),
     Project("urcut", "UrCut + UrVoice", "Your cut. Visual, fast, private.",
-            "A local-first, CapCut-style video editor with AI voiceovers and captions from UrVoice, a speech engine on your own machine.",
-            "NEW · PRIVATE", MAGENTA, "AI · CREATIVE", ("Next.js", "TypeScript", "Python", "Local AI")),
+            "Edit and export video in a desktop browser. UrVoice adds speech tools; voice generation requires the local app.",
+            "WEB PREVIEW", MAGENTA, "AI · CREATIVE", ("Next.js", "TypeScript", "Python", "Local AI")),
     Project("allchess", "AllChess", "Play 21 games with bots or a friend",
-            "The 29 September 2026 Shore snapshot: browser bots and local pass-and-play, with rule guides and 3D boards.",
-            "ARCADE SNAPSHOT", ACID, "GAMES · WEB", ("React", "TypeScript", "Three.js"), "allchess", "sethy-pagna.vercel.app/#arcade/allchess",
+            "30 September 2026 source: browser bots and local pass-and-play, with rule guides, saved games and 3D boards.",
+            "BROWSER ARCADE", ACID, "GAMES · WEB", ("React", "TypeScript", "Three.js"), "allchess", "sethy-pagna.vercel.app/#arcade/allchess",
             shot_note="Earlier online app screenshot"),
     Project("edsync", "EdSync", "Explore a fictional classroom",
             "Read-only learner and teacher views with fictional courses and lesson progress. Demo changes are not saved.",
             "READ-ONLY DEMO", BLUE, "EDTECH", ("Next.js", "TypeScript", "Cloudflare"), "edsync", "edsync-demo.learn-app.workers.dev",
             shot_note="Earlier app screenshot"),
     Project("living-kingdom", "Living Kingdom", "Experimenting with a fantasy world",
-            "An Unreal Engine prototype fitting combat, gathering, inventory, recruitment and travel between areas together.",
-            "PROTOTYPE", LIME, "GAME", ("Unreal Engine 5", "C++", "Blueprints"), "living-kingdom", game=True),
+            "Combat, gathering, carrying and quests in a fantasy playtest. Play the browser edition; the Unreal build remains the reference.",
+            "BROWSER PLAYTEST", LIME, "GAME", ("Unreal Engine 5", "C++", "TypeScript"), "living-kingdom", game=True),
     Project("sandline", "Sandline", "Iterating on shooter gameplay",
-            "An offline Unreal Engine shooter with bot matches, round state and data-driven modes. Online multiplayer is unfinished.",
-            "OFFLINE PROTOTYPE", ORANGE, "GAME", ("Unreal Engine 5", "C++", "Blueprints"), "sandline", game=True),
+            "An offline shooter with bot matches and a desktop browser edition. Built from the Unreal prototype; online multiplayer is unfinished.",
+            "OFFLINE BOTS", ORANGE, "GAME", ("Unreal Engine 5", "C++", "TypeScript"), "sandline", game=True),
 ]
 
 URCUT_LOGO = ('<rect width="64" height="64" rx="16" fill="url(#urcut-bg)"/>'
@@ -878,19 +878,19 @@ class SideQuest:
 SIDE_QUESTS = [
     SideQuest("omnidrama", "OmniDrama", "Your shows in one local library",
               "A Windows video library: searchable catalogue, episode player with saved progress, and a studio that converts uploads with FFmpeg.",
-              "NEW · PRIVATE", BLUE, "MEDIA · LOCAL APP", None, "play"),
+              "LOCAL DEVELOPMENT", BLUE, "MEDIA · LOCAL APP", None, "play"),
     SideQuest("khshop", "KhShop", "Shopping designed around Khmer",
-              "Khmer-first marketplace pilot: local discovery, USD/KHR prices, offers and viewing appointments.",
-              "PILOT · TEST DATA", MAGENTA, "SOFTWARE", "thumb-khshop"),
-    SideQuest("jarvis", "Secretary Jarvis", "A desktop home for an AI assistant",
-              "Electron interface with a Python backend: chat, voice, terminal and local-model helpers.",
-              "PROTOTYPE", CYAN, "AI · DESKTOP", "thumb-jarvis"),
+              "A Khmer-first marketplace prototype with buyer, seller and staff workspaces. The image shows an earlier pilot with fictional shops.",
+              "PRIVATE PROTOTYPE", MAGENTA, "SOFTWARE", "thumb-khshop"),
+    SideQuest("jarvis", "JARVIS", "A desktop home for an AI assistant",
+              "Chat, voice and terminal work with local models and configurable permissions. Based on Hermes Agent (MIT).",
+              "EXPERIMENTAL", CYAN, "AI · DESKTOP", "thumb-jarvis"),
     SideQuest("ai-summary", "AI Summary", "Ask questions of your documents",
               "Rebuilt in 2026: summaries, cited answers and study cards for PDF, Word and slides, worked out in your browser.",
               "REBUILT · V2", ORANGE, "AI · LOCAL", None),
     SideQuest("wreckabulary", "Wreckabulary", "Wreck the room, build the word!",
-              "A 2–4 player couch party game in Unity 6: smash furniture into letters, then spell new things.",
-              "TEAM · COMP4122", VIOLET, "GAME · TEAM", "thumb-wreckabulary"),
+              "Unity 6 prototype: 100 HP separate from letters, inventory, crafting and keyboard/mouse/gamepad controls. Multiplayer unfinished.",
+              "PUBLIC FORK", VIOLET, "TEAM · COMP4122", "thumb-wreckabulary"),
     SideQuest("cargo-twin", "Cargo Twin", "Smart packing. Any space.",
               "Road, sea, air, rail or custom rectangular spaces: pack with weight and fragility constraints, then replay the 3D load plan.",
               "V3 STUDIO · TEAM ORIGIN", ACID, "SIMULATION · 3D", None, "cargo"),
@@ -961,8 +961,8 @@ LOOP = [
     ("03", "REVIEW & TEST", "Check behaviour, run the tests and catch regressions early.", CYAN, "shield"),
     ("04", "UNDERSTAND", "Study the code and architecture until I can own it.", ACID, "book"),
 ]
-LEVEL_UP = ("I build with AI, and the AI grows too: each loop's experience becomes reusable skills, "
-            "and I keep perfecting the workflow as we go.")
+LEVEL_UP = ("Verified lessons become reusable skills and workflows, improving how the AI and I build "
+            "together from one iteration to the next.")
 XP_SEGMENTS = 13
 
 
@@ -1138,13 +1138,14 @@ MILESTONES = [
     ("MAR 2026", "Business OS", "retail POS begins", VOLT),
     ("MAY 2026", "LEARN · AllChess", "EdSync · Jarvis", CYAN),
     ("SEP 2026", "CodeAge · UrCut", "Unreal prototypes", MAGENTA),
+    ("OCT 2026", "Portfolio arcade", "games + app previews", CYAN),
     ("JUL 2027", "Graduation", "expected", ACID),
 ]
 
 
 def timeline() -> str:
     W, H, axis = 1200, 336, 170
-    now_index = 8
+    now_index = 9
     xs = [100 + i * (1000 / (len(MILESTONES) - 1)) for i in range(len(MILESTONES))]
     css = (".ring{animation:ring 2.2s ease-out infinite;transform-box:fill-box;transform-origin:center}"
            "@keyframes ring{from{transform:scale(.5) rotate(45deg);opacity:1}to{transform:scale(2.6) rotate(45deg);opacity:0}}"
