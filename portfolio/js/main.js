@@ -2,6 +2,7 @@ import { PROJECTS, CATEGORIES, COURSE, ARCADE, FLIGHTS, TOOLBOX, TOOL_USES, MILE
 import { SHOTS } from './shots.js';
 import { mountSkyline } from './skyline.js';
 import { flapRow } from './flap.js';
+import { createProjectWindow } from './project-window.js';
 
 const $ = (sel, root = document) => root.querySelector(sel);
 const $$ = (sel, root = document) => [...root.querySelectorAll(sel)];
@@ -95,8 +96,8 @@ const watchReveals = root => $$('.reveal:not(.in)', root).forEach(el => revealer
 // ------------------------------------------------------------ about
 
 $('#facts').innerHTML = [
-  ['14', 'projects on this page', 'volt'],
-  ['5', 'builds you can play in the page', 'cyan'],
+  [String(PROJECTS.length), 'projects to explore', 'volt'],
+  [String(ARCADE.length), 'projects to try in the page', 'cyan'],
   ['3', 'languages: Khmer, English, Mandarin', 'magenta'],
   ['1', 'app in daily use by a real shop', 'acid'],
 ].map(([n, t, c]) => `<div class="fact" style="--c:${color(c)}"><b>${n}</b><span>${t}</span></div>`).join('');
@@ -150,19 +151,19 @@ function cardHTML(p) {
     : `<a class="btn sm ghost" href="${l.href}" target="_blank" rel="noopener">${esc(l.label)}${icon(l.kind === 'code' ? 'code' : 'out')}</a>`).join('');
   return `
   <article class="card reveal" style="--c:${color(p.color)}" data-cats="${p.cats.join(' ')}" data-id="${p.id}">
-    <div class="shot">
-      <div class="shot-bar"><i></i><i></i><i></i><span>${esc(domainFor(p))}</span><span class="tag" style="--c:${color(p.status.color)}">${esc(p.status.label)}</span></div>
-      <div class="slides" data-count="${Math.min(4, shots.length)}">${imgs || `<div class="noshot">${esc(p.name)}</div>`}</div>
-      <div class="scan"></div>
-      ${shots.length > 1 ? `<div class="dots">${shots.slice(0, 4).map((_, i) => `<i class="${i ? '' : 'on'}"></i>`).join('')}</div>` : ''}
-    </div>
+    <button class="shot project-cover" type="button" data-open="${p.id}" aria-label="Open ${esc(p.name)} full screen" aria-haspopup="dialog">
+      <span class="shot-bar"><i></i><i></i><i></i><span>${esc(domainFor(p))}</span><span class="tag" style="--c:${color(p.status.color)}">${esc(p.status.label)}</span></span>
+      <span class="slides" data-count="${Math.min(4, shots.length)}">${imgs || `<span class="noshot">${esc(p.name)}</span>`}</span>
+      <span class="scan"></span>
+      ${shots.length > 1 ? `<span class="dots">${shots.slice(0, 4).map((_, i) => `<i class="${i ? '' : 'on'}"></i>`).join('')}</span>` : ''}
+    </button>
     <div class="card-body">
       <div class="card-kicker"><span>${p.no} //</span>${esc(p.kicker)}</div>
       <h3><button class="open" data-open="${p.id}" aria-haspopup="dialog">${esc(p.name)}</button></h3>
       <p class="tagline">${esc(p.tagline)}</p>
       <p class="summary">${esc(p.summary)}</p>
       <div class="stack">${p.stack.slice(0, 5).map(s => `<span class="chip">${esc(s)}</span>`).join('')}</div>
-      <div class="card-actions"><button class="btn sm" type="button" data-open="${p.id}" style="--c:${color(p.color)}">Dossier ${icon('right')}</button>${actions}</div>
+      <div class="card-actions"><button class="btn sm" type="button" data-open="${p.id}" style="--c:${color(p.color)}">Explore project ${icon('right')}</button>${actions}</div>
     </div>
   </article>`;
 }
@@ -218,22 +219,22 @@ function renderLab() {
     const others = p.links.filter(l => l.kind !== 'play');
     return `
     <article class="lab-card reveal" style="--c:${color(p.color)}">
-      <div class="lab-hero">
+      <button type="button" class="lab-hero project-cover" data-open="${p.id}" aria-label="Open ${esc(p.name)} full screen" aria-haspopup="dialog">
         ${hero ? `<img src="${hero.src}" alt="${esc(hero.caption)}" loading="lazy" width="${hero.w}" height="${hero.h}">` : ''}
-        <div class="hud"></div>
+        <span class="hud"></span>
         <span class="tag solid engine" style="--c:${color(p.color)}">${esc(p.stack[0])}</span>
-        ${hero ? `<p class="lab-cap">${esc(hero.caption)}</p>` : ''}
-      </div>
+        ${hero ? `<span class="lab-cap">${esc(hero.caption)}</span>` : ''}
+      </button>
       <div class="lab-strip">${strip.map((s, k) => `<button type="button" data-zoom="${p.id}:${k + 1}" aria-label="Enlarge: ${esc(s.caption)}"><img src="${s.sm}" alt="" loading="lazy"></button>`).join('')}</div>
       <div class="lab-body">
         <div class="card-kicker"><span>${p.no} //</span>${esc(p.kicker)}<span class="tag" style="--c:${color(p.status.color)}">${esc(p.status.label)}</span></div>
-        <h3>${esc(p.name)}</h3>
+        <h3><button class="open" type="button" data-open="${p.id}" aria-haspopup="dialog">${esc(p.name)}</button></h3>
         <p class="tagline">${esc(p.tagline)}</p>
         <p>${esc(p.summary)}</p>
         <ul>${p.features.slice(0, 3).map(f => `<li>${esc(f)}</li>`).join('')}</ul>
         <div class="card-actions">
           ${plays.map(l => `<a class="btn sm" href="${l.href}" style="--c:${color(p.color)}">${icon('play')}${esc(l.label)}</a>`).join('')}
-          <button class="btn sm ghost" type="button" data-open="${p.id}" style="--c:${color(p.color)}">Dossier ${icon('right')}</button>
+          <button class="btn sm ghost" type="button" data-open="${p.id}" style="--c:${color(p.color)}">Explore project ${icon('right')}</button>
           ${others.map(l => `<a class="btn sm ghost" href="${l.href}" target="_blank" rel="noopener" style="--c:var(--muted)">${esc(l.label)}${icon('code')}</a>`).join('')}
         </div>
       </div>
@@ -251,18 +252,34 @@ function renderLab() {
 
 const overlay = $('#dossier-overlay');
 const dossier = $('#dossier');
-let current = null, lastFocus = null;
+let current = null, lastFocus = null, returnHash = '#projects';
+const projectWindow = createProjectWindow({ overlay, window: dossier, dock: $('#project-dock'), onClose: () => closeDossier() });
+
+function focusableControls(scope) {
+  return $$('button, a[href], input, select, textarea, iframe, [tabindex="0"]', scope)
+    .filter(el => !el.disabled && el.tabIndex >= 0 && el.getClientRects().length && !el.closest('[hidden], [aria-hidden="true"]'));
+}
 
 function linkButton(l, p) {
-  if (l.kind === 'play') return `<a class="btn" href="${l.href}" data-close-then style="--c:${color(p.color)}">${icon('play')}${esc(l.label)}</a>`;
+  if (l.kind === 'play') return `<button class="btn" type="button" data-play="${l.href.slice('#arcade/'.length)}" style="--c:${color(p.color)}">${icon('play')}${esc(l.label)}</button>`;
   return `<a class="btn ${l.kind === 'code' ? 'ghost' : ''}" href="${l.href}" target="_blank" rel="noopener" style="--c:${l.kind === 'code' ? 'var(--muted)' : color(p.color)}">${esc(l.label)}${icon(l.kind === 'code' ? 'code' : 'out')}</a>`;
 }
 
-function openDossier(id, { push = true } = {}) {
+function openDossier(id, { push = true, stage = 'shots', restart = false } = {}) {
   const p = byId[id];
   if (!p) return;
-  if (!current) lastFocus = document.activeElement;
+  if (current === id && dossier.childElementCount && !restart) {
+    projectWindow.restore();
+    if (stage === 'live') $('[data-stage="live"]', dossier)?.click();
+    return;
+  }
+  if (!current || !projectWindow.isVisible()) {
+    lastFocus = document.activeElement;
+    const origin = lastFocus?.closest('#projects, #games, #arcade');
+    returnHash = origin ? `#${origin.id}` : location.hash.startsWith('#arcade') ? '#arcade' : '#projects';
+  }
   current = id;
+  dossier.classList.remove('windowed', 'playing');
   const shots = shotsOf(id);
   const order = PROJECTS.map(x => x.id);
   const idx = order.indexOf(id);
@@ -276,18 +293,20 @@ function openDossier(id, { push = true } = {}) {
       <span class="code">${p.code} ${p.no}</span><h2 id="dossier-title">${esc(p.name)}</h2><span class="spacer"></span>
       <button class="icon-btn" type="button" data-nav="${prev.id}" aria-label="Previous project: ${esc(prev.name)}">${icon('left', 18)}</button>
       <button class="icon-btn" type="button" data-nav="${next.id}" aria-label="Next project: ${esc(next.name)}">${icon('right', 18)}</button>
-      <button class="icon-btn" type="button" data-close aria-label="Close">${icon('close', 18)}</button>
+      <button class="icon-btn window-control" type="button" data-minimize aria-label="Minimize project" title="Minimize">−</button>
+      <button class="icon-btn window-control" type="button" data-size aria-label="Restore window size" title="Restore window size">▣</button>
+      <button class="icon-btn" type="button" data-close aria-label="Close project" title="Close · Esc">${icon('close', 18)}</button>
     </header>
     <div class="dossier-grid">
       <div class="stage">
         <div class="stage-tabs">
-          <button class="btn sm" type="button" data-stage="shots" aria-pressed="true">Screens <span class="count">${shots.length}</span></button>
-          ${cab ? `<button class="btn sm ghost" type="button" data-stage="live" aria-pressed="false">${icon('play')}Play here</button>
-          <a class="btn sm ghost" id="open-full" href="${cabUrl}" target="_blank" rel="noopener" style="--c:var(--muted)" hidden>Open full screen${icon('out')}</a>` : ''}
+          <button class="btn sm" type="button" data-stage="shots" aria-pressed="true">Overview & screens</button>
+          ${cab ? `<button class="btn sm ghost" type="button" data-stage="live" aria-pressed="false">${icon('play')}${p.game ? 'Play' : 'Try project'}</button>
+          <a class="btn sm ghost" id="open-full" href="${cabUrl}" target="_blank" rel="noopener" style="--c:var(--muted)" hidden>Open separately${icon('out')}</a>` : ''}
           <span class="spacer"></span>
           ${p.private ? '<span class="tag" style="--c:var(--dim)">Private source</span>' : ''}
         </div>
-        <div class="stage-main" id="stage-main"></div>
+        <div class="stage-main" id="stage-main"><div id="shots-view"></div><div id="live-view" hidden></div></div>
         <div class="thumbs" id="thumbs">${shots.map((s, k) => `<button type="button" data-shot="${k}" aria-label="${esc(s.caption)}" aria-current="${k === 0}"><img src="${s.sm}" alt="" loading="lazy"></button>`).join('')}</div>
         <p class="caption" id="caption"></p>
       </div>
@@ -311,13 +330,15 @@ function openDossier(id, { push = true } = {}) {
     <nav class="dossier-nav">
       <button class="btn sm ghost" type="button" data-nav="${prev.id}" style="--c:var(--muted)">${icon('left')}${esc(prev.name)}</button>
       <button class="btn sm ghost" type="button" data-nav="${next.id}" style="--c:var(--muted)">${esc(next.name)}${icon('right')}</button>
-    </nav>`;
-  const stageMain = $('#stage-main', dossier);
+    </nav>
+    <footer class="window-help" id="window-help"><span>Minimize to keep this window. Restore from the bar below.</span><span><kbd>Esc</kbd> exits · release the mouse first while aiming</span></footer>`;
+  const shotsView = $('#shots-view', dossier);
+  const liveView = $('#live-view', dossier);
   const showShot = k => {
     const s = shots[k];
-    if (!s) { stageMain.innerHTML = `<div class="noshot">${esc(p.name)}</div>`; return; }
-    stageMain.innerHTML = `<img src="${s.src}" alt="${esc(s.caption)}" class="${s.kind}">`;
-    $('img', stageMain).addEventListener('click', () => openLightbox(s.src, s.caption));
+    if (!s) { shotsView.innerHTML = `<div class="noshot">${esc(p.name)}</div>`; return; }
+    shotsView.innerHTML = `<img src="${s.src}" alt="${esc(s.caption)}" class="${s.kind}">`;
+    $('img', shotsView).addEventListener('click', () => openLightbox(s.src, s.caption));
     $('#caption', dossier).textContent = `${k + 1} / ${shots.length} · ${s.caption}`;
     $$('#thumbs button', dossier).forEach((b, j) => b.setAttribute('aria-current', String(j === k)));
   };
@@ -325,20 +346,47 @@ function openDossier(id, { push = true } = {}) {
   const setStage = stage => {
     $$('[data-stage]', dossier).forEach(x => { const on = x.dataset.stage === stage; x.setAttribute('aria-pressed', String(on)); x.classList.toggle('ghost', !on); });
     const live = stage === 'live';
+    shotsView.hidden = live;
+    liveView.hidden = !live;
+    dossier.classList.toggle('playing', live);
     $('#thumbs', dossier).hidden = live;
     if (cab) $('#open-full', dossier).hidden = !live;
     if (!live) return showShot(0);
+    $('#caption', dossier).textContent = `${cab.controls}. Minimize or switch to Overview to keep your session; close ends it.`;
+    if (liveView.childElementCount) return;
     const load = () => {
-      stageMain.innerHTML = `<div class="frame-wrap"><iframe src="${cabUrl}" title="${esc(cab.title)}" allow="fullscreen; gamepad; autoplay; clipboard-write" allowfullscreen></iframe></div>`;
-      fitFrame($('iframe', stageMain), $('.frame-wrap', stageMain), cab.vw);
-      $('#caption', dossier).textContent = cab.live
-        ? 'Live app: if it stays blank, the host may be asleep. Use “Open full screen”.'
-        : `${cab.controls}. For more room, use “Open full screen” or the arcade.`;
+      liveView.innerHTML = `<div class="frame-wrap"><iframe src="${cabUrl}" title="${esc(cab.title)}" allow="fullscreen; gamepad; autoplay; clipboard-write" allowfullscreen></iframe><div class="booting" role="status">Loading ${esc(cab.title)}…</div></div>`;
+      const frame = $('iframe', liveView);
+      frame.addEventListener('load', () => {
+        $('.booting', liveView)?.remove();
+        // Bundled apps are same-origin: keep the window's exit key available inside them.
+        try {
+          frame.contentDocument.addEventListener('keydown', event => {
+            if (event.key === 'Escape') {
+              event.preventDefault();
+              event.stopImmediatePropagation();
+              closeDossier();
+              return;
+            }
+            // Games reserve Tab for their own menus; apps use it for focus navigation.
+            if (event.key !== 'Tab' || p.game) return;
+            const doc = frame.contentDocument;
+            const controls = focusableControls(doc);
+            if (event.shiftKey && doc.activeElement === controls[0]) {
+              event.preventDefault();
+              $('#open-full', dossier).focus();
+            } else if (!event.shiftKey && doc.activeElement === controls[controls.length - 1]) {
+              event.preventDefault();
+              focusableControls(dossier)[0]?.focus();
+            }
+          }, true);
+        } catch { /* External apps retain their own keyboard controls. */ }
+      });
     };
     if (cab.desktop && coarse) {
-      stageMain.innerHTML = `<div class="desk-only"><p>${esc(cab.title)} needs a keyboard and mouse. Open this page on a computer to play it.</p>
+      liveView.innerHTML = `<div class="desk-only"><p>${esc(cab.title)} needs a keyboard and mouse. Open this page on a computer to play it.</p>
         <button class="btn sm ghost" type="button" style="--c:var(--muted)">Load anyway${cab.size ? ` · ${esc(cab.size)}` : ''}</button></div>`;
-      $('button', stageMain).addEventListener('click', load);
+      $('button', liveView).addEventListener('click', load);
       $('#caption', dossier).textContent = 'Desktop only.';
     } else load();
   };
@@ -346,33 +394,38 @@ function openDossier(id, { push = true } = {}) {
   $$('#thumbs button', dossier).forEach(b => b.addEventListener('click', () => { setStage('shots'); showShot(+b.dataset.shot); }));
   $$('[data-stage]', dossier).forEach(b => b.addEventListener('click', () => setStage(b.dataset.stage)));
   $$('[data-nav]', dossier).forEach(b => b.addEventListener('click', () => openDossier(b.dataset.nav)));
+  $('[data-minimize]', dossier).addEventListener('click', () => projectWindow.minimize());
+  $('[data-size]', dossier).addEventListener('click', event => projectWindow.toggleSize(event.currentTarget));
   $$('[data-close]', overlay).forEach(b => b.addEventListener('click', closeDossier));
-  $$('[data-close-then]', dossier).forEach(a => a.addEventListener('click', () => closeDossier({ restore: false })));
-  overlay.hidden = false;
-  overlay.classList.add('open');
-  document.body.classList.add('locked');
+  $$('[data-play]', dossier).forEach(b => b.addEventListener('click', () => selectGame(b.dataset.play)));
+  projectWindow.show(p.name);
   dossier.scrollTop = 0;
   dossier.focus();
+  if (stage === 'live' && cab) setStage('live');
   if (push) history.replaceState(null, '', `#project/${id}`);
 }
 
 function closeDossier({ restore = true } = {}) {
   if (!current) return;
   current = null;
-  overlay.classList.remove('open');
-  overlay.hidden = true;
+  projectWindow.close();
   dossier.innerHTML = '';
-  document.body.classList.remove('locked');
-  if (location.hash.startsWith('#project/')) history.replaceState(null, '', location.pathname + location.search);
+  if (/^#(project|arcade)\//.test(location.hash)) history.replaceState(null, '', returnHash);
   if (restore) lastFocus?.focus?.();
 }
 
 overlay.addEventListener('keydown', e => {
   if (e.key === 'Tab') {
-    const focusables = $$('button, a[href], iframe, [tabindex="0"]', dossier).filter(el => !el.closest('[hidden]'));
+    const focusables = focusableControls(dossier);
     const first = focusables[0], last = focusables[focusables.length - 1];
-    if (e.shiftKey && document.activeElement === first) { e.preventDefault(); last.focus(); }
-    else if (!e.shiftKey && document.activeElement === last) { e.preventDefault(); first.focus(); }
+    if (e.shiftKey && (document.activeElement === first || document.activeElement === dossier)) {
+      e.preventDefault();
+      if (last?.tagName === 'IFRAME') {
+        try { focusableControls(last.contentDocument).at(-1)?.focus(); }
+        catch { last.focus(); }
+      } else last?.focus();
+    }
+    else if (!e.shiftKey && (document.activeElement === last || document.activeElement === dossier)) { e.preventDefault(); first.focus(); }
   }
 });
 
@@ -405,7 +458,7 @@ function renderArcade() {
       <span><span class="kind">${esc(g.kind)}</span><b>${esc(g.title)}</b><span>${esc(g.blurb.split('.')[0])}.</span></span></button>`;
   }).join(''));
   $$('[data-game]', list).forEach(b => b.addEventListener('click', () => selectGame(b.dataset.game)));
-  selectGame(ARCADE[0].id, { scroll: false });
+  selectGame(ARCADE[0].id, { scroll: false, start: false });
 }
 
 function gameCover(g) {
@@ -430,11 +483,10 @@ const blockedOnTouch = g => g.desktop && coarse;
 // Cabinets that were merged into another, so old #arcade/<id> links still land somewhere.
 const CABINET_ALIASES = { 'worlds-within': 'living-kingdom', 'first-hearth': 'living-kingdom' };
 
-function selectGame(id, { scroll = true, start = false } = {}) {
+function selectGame(id, { scroll = true, start = true } = {}) {
   id = CABINET_ALIASES[id] || id;
   const g = ARCADE.find(x => x.id === id);
   if (!g) return;
-  closeDossier({ restore: false });
   cabinet = g;
   const p = byId[g.project];
   $$('[data-game]').forEach(b => b.setAttribute('aria-pressed', String(b.dataset.game === id)));
@@ -445,56 +497,20 @@ function selectGame(id, { scroll = true, start = false } = {}) {
   $('#screen-tools').innerHTML = `
     <small>${esc(g.controls)}</small><span class="spacer"></span>
     <button class="btn sm ghost" type="button" id="game-reload" style="--c:var(--muted)">${icon('reload')}Restart</button>
-    <button class="btn sm ghost" type="button" id="game-full" style="--c:var(--cyan)">${icon('expand')}Fullscreen</button>
+    <button class="btn sm ghost" type="button" id="game-full" style="--c:var(--cyan)">${icon('expand')}Launch full screen</button>
     <a class="btn sm ghost" href="${url}" target="_blank" rel="noopener" style="--c:var(--volt)">New tab${icon('out')}</a>
     <button class="btn sm ghost" type="button" data-open="${p.id}" style="--c:${color(p.color)}">About ${esc(p.name)}</button>`;
   // on a touch screen a desktop-only game loads only from its own "Load anyway" button
-  const waiting = () => blockedOnTouch(g) && !$('#screen iframe');
-  $('#start-game').addEventListener('click', () => startGame(g, { full: coarse && !g.desktop }));
-  $('#game-reload').addEventListener('click', () => waiting() ? $('#start-game')?.focus() : startGame(g));
-  $('#game-full').addEventListener('click', () => {
-    if (waiting()) return $('#start-game')?.focus();
-    if (!$('#screen iframe')) startGame(g);
-    goFullscreen($('#screen'));
-  });
+  $('#start-game').addEventListener('click', () => startGame(g));
+  $('#game-reload').addEventListener('click', () => startGame(g, { restart: true }));
+  $('#game-full').addEventListener('click', () => startGame(g));
   $('[data-open]', $('#screen-tools')).addEventListener('click', () => openDossier(p.id));
   if (scroll) $('#arcade').scrollIntoView({ behavior: reduced ? 'auto' : 'smooth' });
-  if (start && !blockedOnTouch(g)) startGame(g, { full: coarse && !g.desktop });
+  if (start) startGame(g);
 }
 
-const goFullscreen = el => { try { (el.requestFullscreen || el.webkitRequestFullscreen)?.call(el)?.catch?.(() => {}); } catch {} };
-
-// full: on phones a cabinet is a few centimetres tall, so starting one also asks for fullscreen
-// (a no-op where the browser doesn't allow it, e.g. iPhone Safari)
-function startGame(g, { full = false } = {}) {
-  const screen = $('#screen');
-  if (full && innerWidth < 700) goFullscreen(screen);
-  const url = g.src || g.live;
-  screen.innerHTML = `<iframe src="${url}" title="${esc(g.title)}" allow="fullscreen; gamepad; autoplay; clipboard-write" allowfullscreen></iframe>
-    <div class="booting"><span>LOADING ${esc(g.title.toUpperCase())}…</span></div>`;
-  const frame = $('iframe', screen);
-  frame.addEventListener('load', () => $('.booting', screen)?.remove(), { once: true });
-  fitFrame(frame, screen, g.vw);
-  setTimeout(() => frame.focus(), 400);
-}
-
-// Apps with a wide desktop layout get a virtual width (g.vw): in a desktop-sized cabinet the
-// iframe renders at that width and is scaled down, so they keep their full layout. Phone-sized
-// boxes and fullscreen get the app's own responsive layout instead.
-let fitObserver = null;
-function fitFrame(frame, box, vw) {
-  fitObserver?.disconnect();
-  if (!vw) return;
-  const fit = () => {
-    if (document.fullscreenElement === box || box.clientWidth < 600) { frame.style.cssText = ''; return; }
-    const k = Math.min(1, box.clientWidth / vw);
-    frame.style.cssText = k < 1
-      ? `width:${vw}px;height:${box.clientHeight / k}px;transform:scale(${k});transform-origin:0 0`
-      : '';
-  };
-  fitObserver = new ResizeObserver(fit);
-  fitObserver.observe(box);
-  fit();
+function startGame(g, { restart = false } = {}) {
+  openDossier(g.project, { stage: 'live', restart });
 }
 
 // ------------------------------------------------------------ build loop
@@ -547,7 +563,7 @@ function renderTools() {
     const hint = $('#tool-hint');
     if (!on) { hint.textContent = 'Tap a tool to see which projects use it.'; return; }
     hint.innerHTML = uses.length
-      ? `<b>${esc(b.dataset.tool)}</b> shows up in: ${uses.map(p => `<a href="#project/${p.id}" data-open="${p.id}">${esc(p.name)}</a>`).join(' · ')}`
+      ? `<b>${esc(b.dataset.tool)}</b> shows up in: ${uses.map(p => `<a href="#project/${p.id}" data-open="${p.id}">${esc(p.name)}${p.id === 'ai-summary' && ['Supabase', 'OpenRouter'].includes(b.dataset.tool) ? ' v1 (earlier version)' : ''}</a>`).join(' · ')}`
       : `<b>${esc(b.dataset.tool)}</b>: part of my everyday workflow.`;
     $$('[data-open]', hint).forEach(a => a.addEventListener('click', e => { e.preventDefault(); openDossier(a.dataset.open); }));
   }));
@@ -582,10 +598,15 @@ $('#copy-email').addEventListener('click', async () => {
 const palette = $('#palette');
 const input = $('#palette-input');
 const listEl = $('#palette-list');
-let items = [], sel = 0;
+let items = [], sel = 0, paletteFocus = null;
 
 function paletteItems() {
-  const sections = $$('#nav a').map(a => ({ label: `Go to ${a.textContent}`, k: 'section', c: 'dim', run: () => $(a.hash).scrollIntoView({ behavior: 'smooth' }) }));
+  const sections = $$('#nav a').map(a => ({ label: `Go to ${a.textContent}`, k: 'section', c: 'dim', run: () => {
+    closeDossier({ restore: false });
+    history.replaceState(null, '', a.hash);
+    $(a.hash).scrollIntoView({ behavior: reduced ? 'auto' : 'smooth' });
+    a.focus();
+  } }));
   const projects = PROJECTS.map(p => ({ label: `${p.name}: ${p.tagline}`, search: [p.kicker, ...p.cats, ...p.stack].join(' '), k: 'project', c: p.color, run: () => openDossier(p.id) }));
   const games = ARCADE.map(g => ({ label: `Play ${g.title}`, search: g.kind, k: 'arcade', c: byId[g.project].color, run: () => selectGame(g.id, { start: true }) }));
   const actions = [
@@ -620,8 +641,8 @@ function renderPalette() {
   $(`#pal-${sel}`)?.scrollIntoView({ block: 'nearest' });
 }
 function runItem(i) { const it = items[i]; if (!it) return; closePalette(); it.run(); }
-function openPalette() { palette.hidden = false; palette.classList.add('open'); input.value = ''; sel = 0; renderPalette(); input.focus(); }
-function closePalette() { palette.classList.remove('open'); palette.hidden = true; }
+function openPalette() { paletteFocus = document.activeElement; palette.hidden = false; palette.classList.add('open'); input.value = ''; sel = 0; renderPalette(); input.focus(); }
+function closePalette() { palette.classList.remove('open'); palette.hidden = true; paletteFocus?.focus?.(); }
 $('#open-palette').addEventListener('click', openPalette);
 palette.addEventListener('click', e => { if (e.target === palette) closePalette(); });
 input.addEventListener('input', () => { sel = 0; renderPalette(); });
@@ -648,9 +669,9 @@ addEventListener('keydown', e => {
     if (!palette.hidden) return closePalette();
     if (topbar.classList.contains('open')) { closeMenu(); $('#menu-btn').focus(); return; }
     if (!lightbox.hidden) { lightbox.click(); return; }
-    if (current) return closeDossier();
+    if (current && projectWindow.isVisible()) return closeDossier();
   }
-  if (current && !typing && (e.key === 'ArrowLeft' || e.key === 'ArrowRight')) {
+  if (current && projectWindow.isVisible() && !dossier.classList.contains('playing') && !typing && (e.key === 'ArrowLeft' || e.key === 'ArrowRight')) {
     const order = PROJECTS.map(x => x.id), i = order.indexOf(current);
     openDossier(order[(i + (e.key === 'ArrowLeft' ? -1 : 1) + order.length) % order.length]);
     return;
@@ -662,7 +683,7 @@ addEventListener('keydown', e => {
 function route() {
   const h = decodeURIComponent(location.hash.slice(1));
   if (h.startsWith('project/')) openDossier(h.split('/')[1], { push: false });
-  else if (h.startsWith('arcade/')) { closeDossier({ restore: false }); selectGame(h.split('/')[1]); history.replaceState(null, '', '#arcade'); }
+  else if (h.startsWith('arcade/')) selectGame(h.split('/')[1]);
 }
 addEventListener('hashchange', route);
 

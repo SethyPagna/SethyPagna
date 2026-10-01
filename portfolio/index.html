@@ -20,6 +20,7 @@
   <link rel="preload" href="fonts/sora.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="fonts/chakra-700.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="css/site.css">
+  <link rel="stylesheet" href="css/project-window.css">
   <script type="module" src="js/main.js"></script>
   <script type="application/ld+json">
   {"@context":"https://schema.org","@type":"Person","name":"Sethy Pagna UNG","alternateName":["Pagna","James"],
@@ -137,7 +138,7 @@
 
         <div class="about-copy">
           <div class="reveal">
-            <p>I'm <strong>Pagna</strong> (Sethy Pagna UNG, or James), a Computer Science student at The Hong Kong Polytechnic University, graduating in July 2027. I build software for everyday work, learning and play, with a particular interest in useful AI tools and in software for Cambodia.</p>
+            <p>I'm <strong>Pagna</strong> (Sethy Pagna UNG, or James), a Computer Science student at The Hong Kong Polytechnic University, with graduation expected in July 2027. I build software for everyday work, learning and play, with a particular interest in useful AI tools and in software for Cambodia.</p>
             <p>Some of it is in real use: <strong>Business OS</strong> runs a cosmetics shop's tills and storefront in Khmer and English. Some of it you can play right here, from a Sandline match against bots to Living Kingdom's floating Origin and the Stonebrook valley.</p>
             <p>I grew up in Cambodia and have studied in Malaysia, China, Australia and Hong Kong. Off the keyboard: basketball, football, badminton, swimming and table tennis.</p>
           </div>
@@ -149,7 +150,7 @@
     <!-- 02 now building -->
     <section class="section" id="departures" aria-labelledby="dep-title">
       <div class="wrap">
-        <div class="sec-head reveal" style="--c:var(--acid)"><span class="sec-num">02</span><div class="sec-title"><h2 id="dep-title">Now building</h2><span class="rule"></span><span class="alt">Snapshot · <span id="dep-date">Sep 2026</span></span></div></div>
+        <div class="sec-head reveal" style="--c:var(--acid)"><span class="sec-num">02</span><div class="sec-title"><h2 id="dep-title">Now building</h2><span class="rule"></span><span class="alt">Reviewed · <span id="dep-date">1 Oct 2026</span></span></div></div>
         <div class="board reveal">
           <div class="board-head">
             <h3><svg width="34" height="26"><use href="#i-plane"/></svg>Departures <span class="alt zh" lang="zh">出發</span> <span class="alt km" lang="km">ចេញដំណើរ</span></h3>
@@ -168,7 +169,7 @@
     <section class="section" id="projects" aria-labelledby="projects-title">
       <div class="wrap">
         <div class="sec-head reveal" style="--c:var(--volt)"><span class="sec-num">03</span><div class="sec-title"><h2 id="projects-title">Projects</h2><span class="rule"></span><span class="alt">Hover a card to preview</span></div></div>
-        <p class="lede reveal">Apps I've built, from a shop's live POS to local AI tools. Each card opens a dossier with a gallery, the features that are really there, and <strong>working links</strong>: live sites, source, or a playable build in the arcade.</p>
+        <p class="lede reveal">Software for a shop, a study session or a creative idea. <strong>Open a project</strong> for its purpose, screenshots and current links. Use the window controls to minimize, restore or close it.</p>
         <div class="filters reveal" id="filters" role="group" aria-label="Filter projects"></div>
         <div class="cards two" id="cards-featured"></div>
         <h3 class="subhead reveal">More projects</h3>
@@ -193,13 +194,13 @@
     <section class="section" id="arcade" aria-labelledby="arcade-title">
       <div class="wrap">
         <div class="sec-head reveal" style="--c:var(--cyan)"><span class="sec-num">05</span><div class="sec-title"><h2 id="arcade-title">Arcade</h2><span class="rule"></span><span class="alt">Insert coin</span></div></div>
-        <p class="lede reveal">Five of my projects running <strong>inside this page</strong>. Nothing to install: pick a cabinet and press start.</p>
+        <p class="lede reveal">Try five games and apps <strong>inside this page</strong>. Select a project to launch it full screen. Minimize keeps your session; <kbd>Esc</kbd> or Close returns here.</p>
         <div class="arcade reveal">
           <div class="cabinet">
             <div class="screen" id="screen"></div>
             <div class="screen-tools" id="screen-tools"></div>
           </div>
-          <div class="game-list" id="game-list" role="group" aria-label="Choose a game"><h3>SELECT GAME</h3></div>
+          <div class="game-list" id="game-list" role="group" aria-label="Choose an arcade project"><h3>SELECT PROJECT</h3></div>
         </div>
       </div>
     </section>
@@ -270,8 +271,12 @@
 
   <div class="overlay" id="dossier-overlay" hidden>
     <div class="overlay-bg" data-close></div>
-    <article class="dossier" id="dossier" role="dialog" aria-modal="true" aria-labelledby="dossier-title" tabindex="-1"></article>
+    <article class="dossier" id="dossier" role="dialog" aria-modal="true" aria-labelledby="dossier-title" aria-describedby="window-help" tabindex="-1"></article>
   </div>
+  <aside class="project-dock" id="project-dock" aria-label="Minimized project" hidden>
+    <button type="button" id="restore-project"><span id="dock-title"></span><span>Restore ↑</span></button>
+    <button type="button" id="close-minimized" aria-label="Close minimized project">✕</button>
+  </aside>
   <div class="lightbox" id="lightbox" hidden><img alt=""></div>
   <div class="palette" id="palette" hidden>
     <div class="palette-box" role="dialog" aria-modal="true" aria-label="Search">

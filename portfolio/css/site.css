@@ -441,7 +441,7 @@ main { position: relative; }
 @keyframes fade { from { opacity: 0; } }
 .dossier {
   --c: var(--volt);
-  position: absolute; inset: clamp(0px, 3vh, 36px) clamp(0px, 3vw, 48px); overflow: auto; overscroll-behavior: contain;
+  position: absolute; inset: 0; overflow: auto; overscroll-behavior: contain;
   background: var(--deep); border: 1px solid var(--edge); animation: rise .45s var(--ease);
 }
 @keyframes rise { from { opacity: 0; transform: translateY(30px) scale(.98); } }

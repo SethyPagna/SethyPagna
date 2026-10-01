@@ -1,0 +1,42 @@
+.project-cover { display: block; width: 100%; padding: 0; color: inherit; text-align: left; cursor: pointer; border: 0; background: transparent; font: inherit; }
+.project-cover:focus-visible { outline: 3px solid var(--c); outline-offset: -3px; }
+.project-cover .slides { display: block; }
+.stage-main > div { width: 100%; height: 100%; }
+#shots-view > img { display: block; width: 100%; height: 100%; object-fit: contain; }
+.lab-body .open { background: transparent; border: 0; padding: 0; text-align: left; font: inherit; color: inherit; cursor: pointer; }
+.window-control { font: 700 24px var(--hud); }
+.dossier.windowed { inset: 5vh 5vw; box-shadow: 0 24px 100px #000a; }
+.dossier.playing { display: flex; flex-direction: column; height: 100%; overflow: hidden; }
+.dossier.windowed.playing { height: 90%; }
+.dossier.playing .dossier-grid { display: flex; flex: 1; min-height: 0; }
+.dossier.playing .stage { display: flex; flex-direction: column; flex: 1; border: 0; padding: 10px 16px; min-height: 0; }
+.dossier.playing .stage-main { flex: 1; min-height: 0; aspect-ratio: auto; }
+.dossier.playing .info, .dossier.playing .dossier-nav { display: none; }
+.dossier.playing .caption { flex-shrink: 0; font-size: 12px; }
+.window-help { padding: 10px 20px; display: flex; flex-wrap: wrap; justify-content: space-between; gap: 8px 20px; color: var(--muted); background: var(--deep); border-top: 1px solid var(--line); font-size: 12px; }
+.window-help kbd { color: var(--ink); }
+.project-dock { position: fixed; z-index: 55; bottom: max(14px, env(safe-area-inset-bottom)); left: 50%; transform: translateX(-50%); display: flex; max-width: calc(100vw - 28px); background: var(--panel); border: 1px solid var(--cyan); box-shadow: 0 6px 32px #0009; }
+.project-dock button { min-height: 48px; padding: 10px 16px; border: 0; background: transparent; color: var(--ink); font: 600 14px var(--body); cursor: pointer; }
+#restore-project { display: flex; align-items: center; gap: 20px; min-width: 0; }
+#dock-title { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+#restore-project > span:last-child { color: var(--cyan); white-space: nowrap; }
+#close-minimized { border-left: 1px solid var(--edge); }
+.project-dock button:hover { background: var(--deep); }
+.stage-main .booting { pointer-events: none; color: var(--ink); background: #08031ae8; }
+@media (max-width: 700px) {
+  .dossier-head { gap: 6px; padding: 8px; }
+  .dossier-head h2 { min-width: 0; flex: 1; }
+  .dossier-head .spacer { display: none; }
+  .dossier-head .icon-btn { width: 40px; height: 40px; }
+  .dossier-head [data-nav] { display: none; }
+  .dossier.windowed { inset: 0; }
+  .dossier.windowed.playing { height: 100%; }
+  .dossier.playing .stage { padding: 8px; }
+  .stage-tabs { gap: 6px; }
+  .stage-tabs .btn { padding: 8px; letter-spacing: .02em; }
+  .window-help { padding: 8px; font-size: 11px; }
+  .window-help > span:first-child { display: none; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .dossier, .overlay-bg { animation: none; }
+}
