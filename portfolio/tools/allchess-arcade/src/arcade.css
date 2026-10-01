@@ -1,0 +1,55 @@
+/* Shell for the static arcade build; board and library styles come from the app. */
+.arcade-boot { margin: 20vh auto; text-align: center; color: #5f6f68; font: 14px/1.5 Arial, sans-serif; }
+
+.arcade-shell { min-height: 100dvh; }
+.arcade-header {
+  position: sticky; top: 0; z-index: 30;
+  display: flex; align-items: center; justify-content: space-between; gap: 12px;
+  padding: 10px clamp(12px, 2vw, 24px);
+  border-bottom: 1px solid var(--border);
+  background: color-mix(in srgb, var(--surface) 92%, transparent);
+  backdrop-filter: blur(10px);
+}
+.arcade-brand { padding: 2px; gap: 10px; color: var(--foreground); }
+.arcade-brand .app-brand-mark { width: 2.1rem; height: 2.1rem; color: #fff; background: var(--accent-strong); }
+.arcade-brand strong { font-size: 1.12rem; font-weight: 900; letter-spacing: -.02em; }
+.arcade-badge { padding: 2px 8px; border: 1px solid var(--border-strong); border-radius: 999px; color: var(--accent); font-size: 11px; font-weight: 700; letter-spacing: .04em; text-transform: uppercase; }
+.arcade-header-actions { display: flex; align-items: center; gap: 8px; min-width: 0; }
+.arcade-header-actions .btn { width: 2.5rem; height: 2.5rem; min-height: 2.5rem; }
+.arcade-link { display: inline-flex; align-items: center; gap: 6px; min-height: 40px; padding: 8px 12px; border: 1px solid var(--border); border-radius: 8px; background: var(--surface); color: var(--foreground); font-size: 13px; font-weight: 600; white-space: nowrap; }
+.arcade-link:hover { border-color: var(--accent); color: var(--accent); }
+
+.arcade-main { width: 100%; max-width: 1500px; margin-inline: auto; padding: clamp(12px, 2vw, 24px); display: grid; gap: 16px; }
+.arcade-main > .play-arena { min-height: 0; }
+.arcade-main-play { padding-top: clamp(10px, 1.4vw, 18px); }
+/* The app sizes the board from the viewport; leave room for the arcade header. */
+@media (min-width: 981px) {
+  .arcade-main-play .play-arena .game-studio { --board-fixed-size: clamp(300px, min(48vw, calc((100dvh - 13rem - 3.5rem) * var(--board-ratio, 1))), 760px); }
+  .arcade-main-play .play-arena .game-studio .game-side-panel { max-height: calc(100dvh - 3rem - 3.5rem); }
+}
+.arcade-header-note { flex: 1 1 auto; min-width: 0; margin: 0; color: var(--muted); font-size: 12px; line-height: 1.4; text-align: end; }
+.arcade-header-note a { color: var(--accent); font-weight: 650; text-decoration: underline; text-underline-offset: 2px; }
+
+.arcade-intro { padding: clamp(20px, 3vw, 34px) clamp(20px, 3.4vw, 42px); border: 1px solid var(--border); border-radius: 18px; background: linear-gradient(110deg, var(--surface) 5%, var(--surface-soft) 100%); }
+.arcade-intro h1 { margin: 0 0 10px; max-width: 24em; font-family: Georgia, "Times New Roman", serif; font-size: clamp(26px, 2.9vw, 42px); line-height: 1.05; font-weight: 400; letter-spacing: -.035em; color: var(--foreground); }
+.arcade-intro h1 em { color: var(--accent); }
+.arcade-intro p { margin: 0; max-width: 62ch; color: var(--muted); font-size: 14px; line-height: 1.6; }
+
+.arcade-note { margin: 0; padding: 10px 14px; border: 1px dashed var(--border-strong); border-radius: 10px; background: var(--surface-soft); color: var(--muted); font-size: 12.5px; line-height: 1.5; }
+.arcade-note a { display: inline-flex; align-items: center; gap: 3px; color: var(--accent); font-weight: 650; text-decoration: underline; text-underline-offset: 2px; }
+
+.arcade-main .game-library { display: grid; gap: 0; }
+.arcade-main .saved-matches { margin-bottom: 18px; }
+
+@media (max-width: 1100px) {
+  .arcade-header-note { display: none; }
+}
+
+@media (max-width: 640px) {
+  .arcade-link span { display: none; }
+  .arcade-link { padding: 8px 10px; }
+  .arcade-badge { display: none; }
+  .arcade-main .library-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px; }
+  .arcade-main .library-toolbar { flex-direction: column; align-items: stretch; }
+  .arcade-main .library-search { width: 100%; }
+}
