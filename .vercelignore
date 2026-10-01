@@ -1,0 +1,10 @@
+/docs/
+/output/
+/scripts/
+/assets/
+/fonts/
+/META-HARNESS.md
+/.env*
+/.git/
+/portfolio/tools/
+/portfolio/README.md
