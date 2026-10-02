@@ -29,7 +29,7 @@ const coarse = matchMedia('(pointer: coarse)').matches;
 if (coarse) {
   document.documentElement.classList.add('touch');
   $('.hero-hint').textContent = 'Tap the sky for fireworks';
-  $('#projects .sec-title .alt').textContent = 'Tap a title to open';
+  $('#projects .sec-title .alt').textContent = 'Tap Explore project or Show details';
   $('#copy-email small').textContent = 'Email · tap to copy';
 }
 $('#sky').addEventListener('click', e => {
@@ -143,27 +143,36 @@ function domainFor(p) {
 }
 
 function cardHTML(p) {
-  const shots = shotsOf(p.id).filter(s => s.kind !== 'phone');
-  const cover = shots[0];
-  const imgs = shots.slice(0, 4).map((s, i) => `<img src="${s.sm}" alt="" ${i ? 'loading="lazy"' : 'class="on"'} width="${s.w}" height="${s.h}">`).join('');
-  const actions = p.links.slice(0, 2).map(l => l.kind === 'play'
+  const cover = shotsOf(p.id).find(s => s.kind !== 'phone');
+  const image = cover
+    ? `<img src="${cover.src}" alt="${esc(`${p.name}: ${cover.caption}`)}" class="on" loading="lazy" width="${cover.w}" height="${cover.h}">`
+    : `<span class="noshot">${esc(p.name)}</span>`;
+  const actions = p.links.map(l => l.kind === 'play'
     ? `<a class="btn sm" href="${l.href}">${icon('play')}${esc(l.label)}</a>`
     : `<a class="btn sm ghost" href="${l.href}" target="_blank" rel="noopener">${esc(l.label)}${icon(l.kind === 'code' ? 'code' : 'out')}</a>`).join('');
   return `
   <article class="card reveal" style="--c:${color(p.color)}" data-cats="${p.cats.join(' ')}" data-id="${p.id}">
-    <button class="shot project-cover" type="button" data-open="${p.id}" aria-label="Open ${esc(p.name)} full screen" aria-haspopup="dialog">
-      <span class="shot-bar"><i></i><i></i><i></i><span>${esc(domainFor(p))}</span><span class="tag" style="--c:${color(p.status.color)}">${esc(p.status.label)}</span></span>
-      <span class="slides" data-count="${Math.min(4, shots.length)}">${imgs || `<span class="noshot">${esc(p.name)}</span>`}</span>
-      <span class="scan"></span>
-      ${shots.length > 1 ? `<span class="dots">${shots.slice(0, 4).map((_, i) => `<i class="${i ? '' : 'on'}"></i>`).join('')}</span>` : ''}
-    </button>
+    <div class="shot">
+      <span class="slides" data-count="1">${image}</span>
+    </div>
+    <div class="shot-bar"><span>${esc(domainFor(p))}</span><span class="tag" style="--c:${color(p.status.color)}">${esc(p.status.label)}</span></div>
     <div class="card-body">
       <div class="card-kicker"><span>${p.no} //</span>${esc(p.kicker)}</div>
-      <h3><button class="open" data-open="${p.id}" aria-haspopup="dialog">${esc(p.name)}</button></h3>
+      <h3 id="card-name-${p.id}">${esc(p.name)}</h3>
       <p class="tagline">${esc(p.tagline)}</p>
-      <p class="summary">${esc(p.summary)}</p>
-      <div class="stack">${p.stack.slice(0, 5).map(s => `<span class="chip">${esc(s)}</span>`).join('')}</div>
-      <div class="card-actions"><button class="btn sm" type="button" data-open="${p.id}" style="--c:${color(p.color)}">Explore project ${icon('right')}</button>${actions}</div>
+      <div class="card-actions">
+        <button class="btn sm" type="button" data-open="${p.id}" aria-haspopup="dialog" style="--c:${color(p.color)}">Explore project ${icon('right')}</button>
+        <button class="btn sm ghost card-details-toggle" type="button" aria-controls="card-details-${p.id}" aria-expanded="false" aria-label="Show ${esc(p.name)} details">Show details</button>
+      </div>
+      <div class="card-detail-slot">
+        <p class="summary">${esc(p.summary)}</p>
+        <div class="card-details" id="card-details-${p.id}" role="region" aria-labelledby="card-name-${p.id}" hidden>
+          <div class="card-secondary">${actions}</div>
+          <p class="summary">${esc(p.summary)}</p>
+          <div class="stack">${p.stack.slice(0, 5).map(s => `<span class="chip">${esc(s)}</span>`).join('')}</div>
+          ${p.note ? `<p class="card-note">${esc(p.note)}</p>` : ''}
+        </div>
+      </div>
     </div>
   </article>`;
 }
@@ -190,9 +199,71 @@ function renderProjects() {
   bindCards($('#projects'));
 }
 
+function bindCardDetails(card) {
+  const panel = $('.card-details', card);
+  const toggle = $('.card-details-toggle', card);
+  const defaultSummary = $('.card-detail-slot > .summary', card);
+  const hoverPointer = matchMedia('(hover: hover) and (pointer: fine)');
+  let hovering = false;
+  let focused = false;
+  let pinned = false;
+  let dismissed = false;
+  let pointerWasOpen = null;
+
+  const showDetails = () => {
+    const open = pinned || (!dismissed && (hovering || focused));
+    panel.hidden = !open;
+    defaultSummary.hidden = open;
+    toggle.setAttribute('aria-expanded', String(open));
+    toggle.textContent = open ? 'Hide details' : 'Show details';
+    toggle.setAttribute('aria-label', `${open ? 'Hide' : 'Show'} ${byId[card.dataset.id].name} details`);
+  };
+  card.addEventListener('pointerenter', e => {
+    if (e.pointerType === 'touch' || !hoverPointer.matches) return;
+    hovering = true;
+    dismissed = false;
+    showDetails();
+  });
+  card.addEventListener('pointerleave', () => {
+    hovering = false;
+    if (!card.contains(document.activeElement)) dismissed = false;
+    showDetails();
+  });
+  card.addEventListener('focusin', e => {
+    if (!card.contains(e.relatedTarget)) dismissed = false;
+    focused = true;
+    showDetails();
+  });
+  card.addEventListener('focusout', e => {
+    if (card.contains(e.relatedTarget)) return;
+    focused = false;
+    pinned = false;
+    dismissed = false;
+    showDetails();
+  });
+  toggle.addEventListener('pointerdown', () => { pointerWasOpen = !panel.hidden; });
+  toggle.addEventListener('pointercancel', () => { pointerWasOpen = null; });
+  toggle.addEventListener('click', e => {
+    const wasOpen = e.detail > 0 && pointerWasOpen !== null ? pointerWasOpen : !panel.hidden;
+    pointerWasOpen = null;
+    pinned = !wasOpen;
+    dismissed = wasOpen;
+    showDetails();
+  });
+  card.addEventListener('keydown', e => {
+    if (e.key !== 'Escape' || panel.hidden) return;
+    e.preventDefault();
+    pinned = false;
+    dismissed = true;
+    if (panel.contains(document.activeElement)) toggle.focus();
+    showDetails();
+  });
+}
+
 function bindCards(root) {
   $$('[data-open]', root).forEach(el => el.addEventListener('click', e => { e.preventDefault(); openDossier(el.dataset.open); }));
-  $$('.card, .lab-card', root).forEach(card => {
+  $$('.card', root).forEach(bindCardDetails);
+  $$('.lab-card', root).forEach(card => {
     const imgs = $$('.slides img', card);
     const dots = $$('.dots i', card);
     if (imgs.length < 2) return;
