@@ -49,8 +49,8 @@ SHOTS: dict[str, list[tuple[Path, str, str]]] = {
         (RAW / "allchess/home.jpg", "Latest public AllChess library: 21 games, including Ouk Chaktrang. The same engine powers local arcade play.", "screen"),
     ],
     "urcut": [
-        (RAW / "urcut/desktop-effects.jpg", "Current development UI, October 1: desktop Effects & looks panel, scene preview and timeline. Local release validation is pending.", "screen"),
-        (RAW / "urcut/mobile-effects.jpg", "Current development UI, October 1: mobile searchable Effects & looks library with scene look presets.", "phone"),
+        (RAW / "urcut/desktop-c6b88fe-preview.png", "Verified local Windows build, October 3: sample project with Effects & looks, a scene preview and background/audio tracks. Public distribution is pending.", "screen"),
+        (RAW / "urcut/phone-c6b88fe-preview.png", "The same local build in a 390-pixel browser viewport: sample project preview, timeline and touch-sized editing controls. This is a browser layout check.", "phone"),
     ],
     "codeage": [
         (RAW / "codeage/codeage-web-code.png", "CodeAge web alpha 0.8.3-web.1: text editor and isolated interactive HTML preview on Cloudflare, October capture.", "screen"),

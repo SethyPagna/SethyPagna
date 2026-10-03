@@ -112,19 +112,19 @@ export const SHOTS = {
  ],
  "urcut": [
   {
-   "src": "img/shots/urcut/desktop-effects.webp",
-   "sm": "img/shots/urcut/desktop-effects-sm.webp",
-   "w": 888,
-   "h": 560,
-   "caption": "Current development UI, October 1: desktop Effects & looks panel, scene preview and timeline. Local release validation is pending.",
+   "src": "img/shots/urcut/desktop-c6b88fe-preview.webp",
+   "sm": "img/shots/urcut/desktop-c6b88fe-preview-sm.webp",
+   "w": 960,
+   "h": 600,
+   "caption": "Verified local Windows build, October 3: sample project with Effects & looks, a scene preview and background/audio tracks. Public distribution is pending.",
    "kind": "screen"
   },
   {
-   "src": "img/shots/urcut/mobile-effects.webp",
-   "sm": "img/shots/urcut/mobile-effects-sm.webp",
+   "src": "img/shots/urcut/phone-c6b88fe-preview.webp",
+   "sm": "img/shots/urcut/phone-c6b88fe-preview-sm.webp",
    "w": 312,
    "h": 675,
-   "caption": "Current development UI, October 1: mobile searchable Effects & looks library with scene look presets.",
+   "caption": "The same local build in a 390-pixel browser viewport: sample project preview, timeline and touch-sized editing controls. This is a browser layout check.",
    "kind": "phone"
   }
  ],

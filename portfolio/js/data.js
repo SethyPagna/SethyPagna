@@ -95,7 +95,7 @@ export const PROJECTS = [
   {
     id: 'urcut', code: 'URC', no: '04', name: 'UrCut + UrVoice', color: 'magenta', featured: true,
     cats: ['ai'], kicker: 'AI · Creative', year: '2026', private: true,
-    status: { label: 'Local editor · release pending', color: 'magenta' },
+    status: { label: 'Verified local Windows build', color: 'magenta' },
     tagline: 'Your cut. Visual, fast, private.',
     summary: 'A local-first video editor: import media, edit a timeline and export MP4/WebM on your device. UrVoice adds speech tools in the local app.',
     about: 'UrCut runs in the browser and keeps your media on your device: no account, no upload. UrVoice is its companion engine, an OpenAI-style speech API on localhost for transcription, 132 preset voices and consent-gated Khmer voice cloning.',
@@ -109,7 +109,7 @@ export const PROJECTS = [
       '54 offline sounds and eight bundled font families, including Khmer',
     ],
     stack: ['Next.js', 'TypeScript', 'Rust/WASM (wgpu)', 'Python', 'faster-whisper', 'ONNX'],
-    note: 'Latest local editor source; the portable Windows release is pending startup validation. Screenshots show the current development UI. Media stays on your device; export files to keep finished edits. Voice generation and cloning need local UrCut with UrVoice. Captions may download a speech model. Built on OpenCut classic (MIT), with private source.',
+    note: 'Windows build verified locally on 3 October 2026 for startup, editing and saved-project reopening. Screenshots show a sample project in that build. A public download and hosted editor are still pending. Media stays on your device; export files to keep finished edits. Voice generation and cloning need local UrCut with UrVoice. Captions may download a speech model. Built on OpenCut classic (MIT), with private source.',
     credit: { label: 'OpenCut classic (MIT)', href: 'https://github.com/OpenCut-app/opencut-classic' },
     links: [],
     route: 'Browser editor + local voice', gate: 'NEXT + PY',
