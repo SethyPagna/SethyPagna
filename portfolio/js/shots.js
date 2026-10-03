@@ -70,156 +70,44 @@ export const SHOTS = {
   {
    "src": "img/shots/learn/01.webp",
    "sm": "img/shots/learn/01-sm.webp",
-   "w": 1440,
-   "h": 900,
-   "caption": "Landing page: capture what you learn, turn it into practice.",
+   "w": 640,
+   "h": 400,
+   "caption": "Latest public LEARN studio: anonymous editable canvas demo on Cloudflare, October 3 capture.",
    "kind": "screen"
   },
   {
    "src": "img/shots/learn/02.webp",
    "sm": "img/shots/learn/02-sm.webp",
-   "w": 1600,
-   "h": 1000,
-   "caption": "Studio: projects, templates and recent work.",
-   "kind": "screen"
+   "w": 390,
+   "h": 844,
+   "caption": "The current editable studio demo at 390px, with phone controls and no horizontal overflow.",
+   "kind": "phone"
   },
   {
    "src": "img/shots/learn/03.webp",
    "sm": "img/shots/learn/03-sm.webp",
-   "w": 1440,
-   "h": 900,
-   "caption": "Algorithms practice quiz, two of six answered (demo account).",
+   "w": 640,
+   "h": 400,
+   "caption": "Current LEARN access screen. AI tools need a configured provider; authenticated features have separate access requirements.",
    "kind": "screen"
-  },
-  {
-   "src": "img/shots/learn/04.webp",
-   "sm": "img/shots/learn/04-sm.webp",
-   "w": 1600,
-   "h": 1000,
-   "caption": "Dashboard with AI suggestions, review queue and calendar.",
-   "kind": "screen"
-  },
-  {
-   "src": "img/shots/learn/05.webp",
-   "sm": "img/shots/learn/05-sm.webp",
-   "w": 1600,
-   "h": 1000,
-   "caption": "AI tutor workspace.",
-   "kind": "screen"
-  },
-  {
-   "src": "img/shots/learn/06.webp",
-   "sm": "img/shots/learn/06-sm.webp",
-   "w": 1440,
-   "h": 900,
-   "caption": "Studio with the demo account's seeded notes.",
-   "kind": "screen"
-  },
-  {
-   "src": "img/shots/learn/07.webp",
-   "sm": "img/shots/learn/07-sm.webp",
-   "w": 1440,
-   "h": 900,
-   "caption": "Product tour: the dashboard slide.",
-   "kind": "screen"
-  },
-  {
-   "src": "img/shots/learn/08.webp",
-   "sm": "img/shots/learn/08-sm.webp",
-   "w": 780,
-   "h": 1688,
-   "caption": "Sign-in on a phone, with demo-account shortcuts.",
-   "kind": "phone"
   }
  ],
  "allchess": [
   {
    "src": "img/shots/allchess/01.webp",
    "sm": "img/shots/allchess/01-sm.webp",
-   "w": 1440,
-   "h": 900,
-   "caption": "Classic chess in the 29 September arcade build: bot replies and a played suggestion on the 3D tabletop.",
-   "kind": "screen"
-  },
-  {
-   "src": "img/shots/allchess/shore-desktop.webp",
-   "sm": "img/shots/allchess/shore-desktop-sm.webp",
-   "w": 1440,
-   "h": 900,
-   "caption": "Shore Konane in the latest 29 September arcade: stone board and counters under studio lighting.",
+   "w": 1280,
+   "h": 575,
+   "caption": "Current Cloudflare app, October 3: actual e4/e5 bot moves on the rendered physical 3D chess board.",
    "kind": "screen"
   },
   {
    "src": "img/shots/allchess/02.webp",
    "sm": "img/shots/allchess/02-sm.webp",
-   "w": 1440,
-   "h": 900,
-   "caption": "Xiangqi with the Celadon collection: glazed ceramic discs on a wood 3D board.",
+   "w": 1265,
+   "h": 568,
+   "caption": "Latest public AllChess library: 21 games, including Ouk Chaktrang. The same engine powers local arcade play.",
    "kind": "screen"
-  },
-  {
-   "src": "img/shots/allchess/03.webp",
-   "sm": "img/shots/allchess/03-sm.webp",
-   "w": 1440,
-   "h": 900,
-   "caption": "Shogi with the carved collection, lacquered glyphs and hand stands.",
-   "kind": "screen"
-  },
-  {
-   "src": "img/shots/allchess/04.webp",
-   "sm": "img/shots/allchess/04-sm.webp",
-   "w": 1440,
-   "h": 900,
-   "caption": "Ouk Chaktrang (Khmer chess) with the Courtyard sandstone and charcoal set.",
-   "kind": "screen"
-  },
-  {
-   "src": "img/shots/allchess/05.webp",
-   "sm": "img/shots/allchess/05-sm.webp",
-   "w": 1440,
-   "h": 900,
-   "caption": "Game studio home: a visual library with bot, local, friend, quick match and watch modes.",
-   "kind": "screen"
-  },
-  {
-   "src": "img/shots/allchess/06.webp",
-   "sm": "img/shots/allchess/06-sm.webp",
-   "w": 1440,
-   "h": 900,
-   "caption": "English draughts with the Club ivory and oxblood counters.",
-   "kind": "screen"
-  },
-  {
-   "src": "img/shots/allchess/07.webp",
-   "sm": "img/shots/allchess/07-sm.webp",
-   "w": 1440,
-   "h": 900,
-   "caption": "Board style picker: piece collection, 2D style and board colours per game.",
-   "kind": "screen"
-  },
-  {
-   "src": "img/shots/allchess/08.webp",
-   "sm": "img/shots/allchess/08-sm.webp",
-   "w": 1440,
-   "h": 900,
-   "caption": "All 21 games, each with its own artwork.",
-   "kind": "screen"
-  },
-  {
-   "src": "img/shots/allchess/09.webp",
-   "sm": "img/shots/allchess/09-sm.webp",
-   "w": 1440,
-   "h": 900,
-   "caption": "Move review with factual notation and playback.",
-   "kind": "screen"
-  },
-  {
-   "src": "img/shots/allchess/10.webp",
-   "sm": "img/shots/allchess/10-sm.webp",
-   "w": 780,
-   "h": 1688,
-   "caption": "Celadon Xiangqi on a phone.",
-   "kind": "phone"
   }
  ],
  "urcut": [
@@ -284,107 +172,43 @@ export const SHOTS = {
   {
    "src": "img/shots/codeage/01.webp",
    "sm": "img/shots/codeage/01-sm.webp",
-   "w": 1440,
-   "h": 900,
-   "caption": "Chat panels beside a real terminal (no model connected, drafts only).",
+   "w": 1000,
+   "h": 680,
+   "caption": "CodeAge web alpha 0.8.3-web.1: text editor and isolated interactive HTML preview on Cloudflare, October capture.",
    "kind": "screen"
   },
   {
    "src": "img/shots/codeage/02.webp",
    "sm": "img/shots/codeage/02-sm.webp",
-   "w": 1440,
-   "h": 900,
-   "caption": "Code view: file tree, editor and terminal.",
+   "w": 1000,
+   "h": 680,
+   "caption": "Current browser Chat home: local history and your own API provider; no desktop terminal or device sync.",
    "kind": "screen"
-  },
-  {
-   "src": "img/shots/codeage/03.webp",
-   "sm": "img/shots/codeage/03-sm.webp",
-   "w": 1440,
-   "h": 900,
-   "caption": "Built-in agents: builder, code reviewer, researcher, debugger, planner.",
-   "kind": "screen"
-  },
-  {
-   "src": "img/shots/codeage/04.webp",
-   "sm": "img/shots/codeage/04-sm.webp",
-   "w": 1440,
-   "h": 900,
-   "caption": "Jarvis, the voice assistant, with its 3D presence.",
-   "kind": "screen"
-  },
-  {
-   "src": "img/shots/codeage/05.webp",
-   "sm": "img/shots/codeage/05-sm.webp",
-   "w": 1440,
-   "h": 900,
-   "caption": "Connect a model: Ollama, OpenAI-compatible or Anthropic.",
-   "kind": "screen"
-  },
-  {
-   "src": "img/shots/codeage/06.webp",
-   "sm": "img/shots/codeage/06-sm.webp",
-   "w": 1440,
-   "h": 900,
-   "caption": "Library of imported project assets.",
-   "kind": "screen"
-  },
-  {
-   "src": "img/shots/codeage/07.webp",
-   "sm": "img/shots/codeage/07-sm.webp",
-   "w": 900,
-   "h": 315,
-   "caption": "Chat and side panel, September 2026 capture.",
-   "kind": "wide"
   }
  ],
  "edsync": [
   {
    "src": "img/shots/edsync/01.webp",
    "sm": "img/shots/edsync/01-sm.webp",
-   "w": 1440,
-   "h": 900,
-   "caption": "Teacher: create a lesson with AI, from a draft or blank.",
+   "w": 1280,
+   "h": 720,
+   "caption": "Current official EdSync app: individual sign-in, October 2026 Cloudflare capture.",
    "kind": "screen"
   },
   {
    "src": "img/shots/edsync/02.webp",
    "sm": "img/shots/edsync/02-sm.webp",
-   "w": 1440,
-   "h": 900,
-   "caption": "Admin command center.",
+   "w": 1270,
+   "h": 714,
+   "caption": "Organization sign-in in the current official app; no account credentials entered.",
    "kind": "screen"
   },
   {
    "src": "img/shots/edsync/03.webp",
    "sm": "img/shots/edsync/03-sm.webp",
-   "w": 1440,
-   "h": 900,
-   "caption": "Student home.",
-   "kind": "screen"
-  },
-  {
-   "src": "img/shots/edsync/04.webp",
-   "sm": "img/shots/edsync/04-sm.webp",
-   "w": 1440,
-   "h": 900,
-   "caption": "Organisation sign-in.",
-   "kind": "screen"
-  },
-  {
-   "src": "img/shots/edsync/05.webp",
-   "sm": "img/shots/edsync/05-sm.webp",
-   "w": 1440,
-   "h": 900,
-   "caption": "Student home, light theme.",
-   "kind": "screen"
-  },
-  {
-   "src": "img/shots/edsync/06.webp",
-   "sm": "img/shots/edsync/06-sm.webp",
-   "w": 1440,
-   "h": 900,
-   "caption": "Teacher work builder.",
+   "w": 1270,
+   "h": 714,
+   "caption": "Current public catalog: zero public courses at capture time. Account features require sign-in.",
    "kind": "screen"
   }
  ],
@@ -540,34 +364,34 @@ export const SHOTS = {
   {
    "src": "img/shots/wreckabulary/01.webp",
    "sm": "img/shots/wreckabulary/01-sm.webp",
-   "w": 1600,
-   "h": 900,
-   "caption": "Key art (team concept).",
+   "w": 1000,
+   "h": 625,
+   "caption": "Creative Workshop, October browser edition: arrange supplied decor, apply finishes and save a portable house layout.",
    "kind": "screen"
   },
   {
    "src": "img/shots/wreckabulary/02.webp",
    "sm": "img/shots/wreckabulary/02-sm.webp",
-   "w": 1600,
-   "h": 900,
-   "caption": "Gameplay mock-up: versus round (team concept).",
+   "w": 1000,
+   "h": 625,
+   "caption": "Current browser gameplay: one human with AI housemates in an authored home.",
    "kind": "screen"
   },
   {
    "src": "img/shots/wreckabulary/03.webp",
    "sm": "img/shots/wreckabulary/03-sm.webp",
-   "w": 1600,
-   "h": 1600,
-   "caption": "Early room sketch.",
-   "kind": "art"
+   "w": 1000,
+   "h": 625,
+   "caption": "A peaceful Workshop tour through the furnished house.",
+   "kind": "screen"
   },
   {
    "src": "img/shots/wreckabulary/04.webp",
    "sm": "img/shots/wreckabulary/04-sm.webp",
-   "w": 1600,
-   "h": 1600,
-   "caption": "Logo sketch.",
-   "kind": "art"
+   "w": 323,
+   "h": 700,
+   "caption": "Browser gameplay with illustrated touch controls, October capture.",
+   "kind": "phone"
   }
  ],
  "omnidrama": [
@@ -674,75 +498,19 @@ export const SHOTS = {
  ],
  "cargo-twin": [
   {
-   "src": "img/shots/cargo-twin/studio-v3-desktop.webp",
-   "sm": "img/shots/cargo-twin/studio-v3-desktop-sm.webp",
-   "w": 1440,
-   "h": 1356,
-   "caption": "Cargo Twin v3: a 40-piece mixed delivery load with calculated usable-space and payload percentages, handling rules and replayable 3D placements.",
-   "kind": "screen"
-  },
-  {
-   "src": "img/shots/cargo-twin/studio-v3-mobile.webp",
-   "sm": "img/shots/cargo-twin/studio-v3-mobile-sm.webp",
-   "w": 390,
-   "h": 2721,
-   "caption": "Cargo Twin v3 on a phone: editable cargo and custom transport spaces with the same local packing engine.",
-   "kind": "phone"
-  },
-  {
    "src": "img/shots/cargo-twin/01.webp",
    "sm": "img/shots/cargo-twin/01-sm.webp",
-   "w": 1440,
-   "h": 900,
-   "caption": "A 96-in PMC pallet packed from seven air waybills, with dangerous-goods labels and the ULD's centre of gravity.",
+   "w": 1280,
+   "h": 800,
+   "caption": "Current Cargo Twin v4 in the portfolio: guided Choose space → Add cargo → Review plan with a browser-local project.",
    "kind": "screen"
   },
   {
    "src": "img/shots/cargo-twin/02.webp",
    "sm": "img/shots/cargo-twin/02-sm.webp",
-   "w": 1440,
-   "h": 900,
-   "caption": "Physics stress test: cartons that tipped or shifted are flagged and the ULD is marked for restacking.",
-   "kind": "screen"
-  },
-  {
-   "src": "img/shots/cargo-twin/03.webp",
-   "sm": "img/shots/cargo-twin/03-sm.webp",
-   "w": 1440,
-   "h": 900,
-   "caption": "777F load plan after auto-optimisation: 32 ULDs, deck plan and the CG envelope (representative data).",
-   "kind": "screen"
-  },
-  {
-   "src": "img/shots/cargo-twin/04.webp",
-   "sm": "img/shots/cargo-twin/04-sm.webp",
-   "w": 1440,
-   "h": 900,
-   "caption": "Strategy comparison on a 589-piece manifest: the genetic refinement wins with 36 ULDs.",
-   "kind": "screen"
-  },
-  {
-   "src": "img/shots/cargo-twin/05.webp",
-   "sm": "img/shots/cargo-twin/05-sm.webp",
-   "w": 1440,
-   "h": 900,
-   "caption": "Stress test running: loose cartons lean into the void under a 1.5 g lateral load.",
-   "kind": "screen"
-  },
-  {
-   "src": "img/shots/cargo-twin/06.webp",
-   "sm": "img/shots/cargo-twin/06-sm.webp",
-   "w": 1440,
-   "h": 900,
-   "caption": "Equipment library: ULD contours drawn to scale with weights and aircraft compatibility.",
-   "kind": "screen"
-  },
-  {
-   "src": "img/shots/cargo-twin/07.webp",
-   "sm": "img/shots/cargo-twin/07-sm.webp",
-   "w": 1440,
-   "h": 900,
-   "caption": "Version 1 (hackathon, Nov 2025): the original pseudo-3D packing view.",
+   "w": 1280,
+   "h": 800,
+   "caption": "Current v4 3D delivery-van plan: 40 pieces rendered, labeled views and the replay sequence. Planning limits remain visible.",
    "kind": "screen"
   }
  ],

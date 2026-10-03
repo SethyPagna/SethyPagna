@@ -587,14 +587,14 @@ class Flight:
 
 FLIGHTS = [
     Flight("BOS 01", "BUSINESS OS", "Retail POS + storefront, EN/KH", "CLOUDFLARE", "IN SERVICE", ACID),
-    Flight("LRN 02", "LEARN", "Notes → AI tutor → quizzes", "NEXT.JS", "PREVIEWS", CYAN),
-    Flight("ACH 03", "ALLCHESS", "21 games: browser bots + local play", "3D + BOTS", "ARCADE", ACID),
-    Flight("URC 04", "URCUT+URVOICE", "Browser editor + local voice", "NEXT + PY", "WEB PREVIEW", MAGENTA),
-    Flight("CDA 05", "CODEAGE", "AI workbench beside your code", "ELECTRON", "LOCAL ALPHA", VIOLET),
-    Flight("EDS 06", "EDSYNC", "Fictional classroom demo", "NEXT.JS", "READ-ONLY", BLUE),
+    Flight("LRN 02", "LEARN", "Notes → canvas → study practice", "CLOUDFLARE", "APP + DEMO", CYAN),
+    Flight("ACH 03", "ALLCHESS", "21 games: browser bots + local play", "3D + BOTS", "WEB APP", ACID),
+    Flight("URC 04", "URCUT+URVOICE", "Local editor + local voice", "NEXT + PY", "LOCAL EDITOR", MAGENTA),
+    Flight("CDA 05", "CODEAGE", "Browser chats + code + preview", "REACT + TS", "WEB ALPHA", VIOLET),
+    Flight("EDS 06", "EDSYNC", "Lessons + classroom progress", "NEXT.JS", "ACCOUNT APP", BLUE),
     Flight("LKG 07", "LIVING KINGDOM", "Fantasy playtest, UE5 + browser", "UE5 + WEB", "PLAYTEST", VOLT),
     Flight("SND 08", "SANDLINE", "Offline bot shooter, UE5 + browser", "UE5 + WEB", "BOT PLAY", ORANGE),
-    Flight("OMD 09", "OMNIDRAMA", "Local video library + player", "NODE + TS", "LOCAL DEV", BLUE),
+    Flight("OMD 09", "OMNIDRAMA", "Two original short chapters", "WEB PLAYER", "PREVIEW", BLUE),
 ]
 FLAP_CHARS = "ABCDEFGHIJKLMNOPRSTUVWXYZ0123456789"
 
@@ -667,10 +667,10 @@ def departures() -> str:
     return document(W, H, "".join(b), css=css, defs=defs,
                     title="Departures: what I'm building now",
                     desc="Departures board listing current projects: Business OS (retail POS and storefront, in service); "
-                         "LEARN (study workspace, public previews); AllChess (21 games with browser bots and local play, current browser arcade); "
-                         "UrCut and UrVoice (browser editor and local voice engine, desktop web preview); CodeAge (Windows AI workbench, local alpha); "
-                         "EdSync (fictional classroom, read-only demo); Living Kingdom and Sandline (Unreal prototypes with browser editions); "
-                         "OmniDrama (local video library and player, in development). Updated October 2026.")
+                         "LEARN (live study workspace and editable public canvas); AllChess (current standalone app with 21 games, browser bots and local play); "
+                         "UrCut and UrVoice (latest local editor and voice engine, public release pending); CodeAge (browser AI workbench, web alpha); "
+                         "EdSync (official classroom app, account access); Living Kingdom and Sandline (Unreal prototypes with browser editions); "
+                         "OmniDrama (two original 12-second chapters in a public browser preview, separate Windows library). Updated October 2026.")
 
 
 # ---------------------------------------------------------------- project cards
@@ -697,22 +697,22 @@ PROJECTS = [
             "Point of sale, inventory, branch transfers, shifts and reporting, plus a customer storefront, in English and Khmer.",
             "LIVE", VOLT, "SOFTWARE", ("React", "TypeScript", "Cloudflare Workers", "D1", "R2"), "business-os", "leangbeauty.com"),
     Project("learn", "LEARN", "Capture → create → practise → review",
-            "A study workspace for notes, tutoring and practice. Public previews run earlier builds; the newer studio remains in development.",
-            "PUBLIC PREVIEWS", CYAN, "AI · EDTECH", ("Next.js", "React", "TypeScript", "Cloudflare"), "learn", "learn-ten-pearl.vercel.app"),
+            "Capture notes, create documents and practise with tutoring. Try the editable public canvas; AI tools need a configured provider.",
+            "CLOUDFLARE APP", CYAN, "AI · EDTECH", ("Next.js", "React", "TypeScript", "Cloudflare"), "learn", "learn.pagna.workers.dev"),
     Project("codeage", "CodeAge", "AI conversations beside your code",
-            "A Windows workbench with chat and code panels, editor, terminal and Git diffs, using local Ollama models or API providers.",
-            "ALPHA · PRIVATE", VIOLET, "AI · DEV TOOLS", ("Electron", "React", "TypeScript", "SQLite"), "codeage", "CodeAge · desktop alpha"),
+            "Browser-local chats, projects and text editing with isolated HTML/JS preview. Bring your own AI key; native terminals are Windows-only.",
+            "WEB · 0.8.3-WEB.1", VIOLET, "AI · DEV TOOLS", ("React", "TypeScript", "BYOK"), "codeage", "codeage-pagna.pages.dev"),
     Project("urcut", "UrCut + UrVoice", "Your cut. Visual, fast, private.",
-            "Edit and export video in a desktop browser. UrVoice adds speech tools; voice generation requires the local app.",
-            "WEB PREVIEW", MAGENTA, "AI · CREATIVE", ("Next.js", "TypeScript", "Python", "Local AI")),
+            "Local video editing with 22 effects, 8 transitions and 54 offline sounds. Public release pending; voice generation needs local UrVoice.",
+            "RELEASE PENDING", MAGENTA, "AI · CREATIVE", ("Next.js", "TypeScript", "Python", "Local AI")),
     Project("allchess", "AllChess", "Play 21 games with bots or a friend",
-            "30 September 2026 source: browser bots and local pass-and-play, with rule guides, saved games and 3D boards.",
-            "BROWSER ARCADE", ACID, "GAMES · WEB", ("React", "TypeScript", "Three.js"), "allchess", "sethy-pagna.vercel.app/#arcade/allchess",
-            shot_note="Earlier online app screenshot"),
-    Project("edsync", "EdSync", "Explore a fictional classroom",
-            "Read-only learner and teacher views with fictional courses and lesson progress. Demo changes are not saved.",
-            "READ-ONLY DEMO", BLUE, "EDTECH", ("Next.js", "TypeScript", "Cloudflare"), "edsync", "edsync-demo.learn-app.workers.dev",
-            shot_note="Earlier app screenshot"),
+            "21 games with browser bots, local play, guides and 3D boards. Open the standalone app for its online workspace; the arcade offers bot/local play.",
+            "CURRENT WEB APP", ACID, "GAMES · WEB", ("React", "TypeScript", "Three.js"), "allchess", "allchess.pagna.workers.dev/en",
+            shot_note="Current game studio"),
+    Project("edsync", "EdSync", "Connect lessons and learner progress",
+            "Classroom workflows for learners, teachers and staff: lessons, assignments, gradebooks and progress. Account access required.",
+            "CLASSROOM APP", BLUE, "EDTECH", ("Next.js", "TypeScript", "Cloudflare"), "edsync", "edsync.pagna.workers.dev",
+            shot_note="Current classroom app"),
     Project("living-kingdom", "Living Kingdom", "Experimenting with a fantasy world",
             "Combat, gathering, carrying and quests in a fantasy playtest. Play the browser edition; the Unreal build remains the reference.",
             "BROWSER PLAYTEST", LIME, "GAME", ("Unreal Engine 5", "C++", "TypeScript"), "living-kingdom", game=True),
@@ -876,9 +876,9 @@ class SideQuest:
 
 
 SIDE_QUESTS = [
-    SideQuest("omnidrama", "OmniDrama", "Your shows in one local library",
-              "A Windows video library: searchable catalogue, episode player with saved progress, and a studio that converts uploads with FFmpeg.",
-              "LOCAL DEVELOPMENT", BLUE, "MEDIA · LOCAL APP", None, "play"),
+    SideQuest("omnidrama", "OmniDrama", "Two original chapters in your browser",
+              "Play two original 12-second chapters with local saved progress. The full Windows video library and import tools are separate.",
+              "ORIGINAL PREVIEW", BLUE, "MEDIA · WEB", None, "play"),
     SideQuest("khshop", "KhShop", "Shopping designed around Khmer",
               "A Khmer-first marketplace prototype with buyer, seller and staff workspaces. The image shows an earlier pilot with fictional shops.",
               "PRIVATE PROTOTYPE", MAGENTA, "SOFTWARE", "thumb-khshop"),
@@ -889,11 +889,11 @@ SIDE_QUESTS = [
               "Rebuilt in 2026: summaries, cited answers and study cards for PDF, Word and slides, worked out in your browser.",
               "REBUILT · V2", ORANGE, "AI · LOCAL", None),
     SideQuest("wreckabulary", "Wreckabulary", "Wreck the room, build the word!",
-              "Unity 6 prototype: 100 HP separate from letters, inventory, crafting and keyboard/mouse/gamepad controls. Multiplayer unfinished.",
-              "PUBLIC FORK", VIOLET, "TEAM · COMP4122", "thumb-wreckabulary"),
-    SideQuest("cargo-twin", "Cargo Twin", "Smart packing. Any space.",
-              "Road, sea, air, rail or custom rectangular spaces: pack with weight and fragility constraints, then replay the 3D load plan.",
-              "V3 STUDIO · TEAM ORIGIN", ACID, "SIMULATION · 3D", None, "cargo"),
+              "Play five modes with AI housemates or build in Creative Workshop. One human player; online multiplayer unfinished. Unity team origin.",
+              "BROWSER PROTOTYPE", VIOLET, "JS · THREE.JS", "thumb-wreckabulary"),
+    SideQuest("cargo-twin", "Cargo Twin", "Choose space → add cargo → review",
+              "Save local projects, exchange JSON/CSV and review a 3D plan with maps and load sheets. Illustrative planning, not certification.",
+              "V4 STUDIO · TEAM ORIGIN", ACID, "SIMULATION · 3D", None, "cargo"),
 ]
 
 # name -> ((gradient from, gradient to), white icon drawn inside the 156px tile at x/y 24..180)
