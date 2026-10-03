@@ -13,7 +13,7 @@
     "_app/bot-knowledge.packed.json-kqVSIY6b.gz": "6d64ba680b67756ecb47966f0853a830c3d458d4193734893547394e24195a74",
     "_app/engine-asyjMy8i.js": "f66e69a650bc19f0ce26bbe59c6214a2bcbab417598c3fba7c53277bc5c57c41",
     "_app/index-BavQ7qjh.css": "f01fee0d7950b9a58f34c844904cd8013e456a5ae7efcacefa62b8f038247092",
-    "_app/index-IFyANL0H.js": "3212498f6002fb2dedb0aad76c9d7d5c7703c1dbc086d81a52d3b71b71539d9b",
+    "_app/index-IFyANL0H.js": "743c782bd957fff42de17f38c85e47ab661dab0ee24bbd0c65e5277f44d1ad78",
     "_app/piece-sets-BRS2ucgI.js": "a34fff4f81bc8f999788626c4ceed7abf97842e0601a0d8936c74a1c27f20c64",
     "_app/rules-atlas-BmvkvL_Y.js": "1317c0cdb9490b4b14809537cffab20d9fd519475cd06de592d835d5af549673",
     "_app/runtime-BFwvOyTs.js": "94f2e4597d0f7c585e7295f399359bcec62cf84e7b8e37c4b9cc152b0f567191",
@@ -252,5 +252,13 @@
       }
     ]
   },
-  "textNormalization": "Text files use LF line endings; runtime contents preserved."
+  "textNormalization": "Text files use LF line endings; runtime contents preserved.",
+  "portfolioIntegration": {
+    "date": "2026-10-03",
+    "change": "Only the shared full-app URL constant was updated to the current Cloudflare standalone app; engine and artwork are unchanged.",
+    "fullAppUrl": "https://allchess.pagna.workers.dev/en",
+    "standaloneSourceCommit": "f30b8b62a26b6b43c131ab2ef93a716d27960a5c",
+    "bundleBeforeSha256": "3212498f6002fb2dedb0aad76c9d7d5c7703c1dbc086d81a52d3b71b71539d9b",
+    "bundleAfterSha256": "743c782bd957fff42de17f38c85e47ab661dab0ee24bbd0c65e5277f44d1ad78"
+  }
 }

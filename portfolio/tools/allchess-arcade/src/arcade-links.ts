@@ -1,5 +1,5 @@
 /** The hosted AllChess app, used for everything the static arcade cannot run. */
-export const fullAppUrl = "https://allchess.learn-app.workers.dev";
+export const fullAppUrl = "https://allchess.pagna.workers.dev/en";
 
 export type ArcadeMode = "bot" | "offline";
 
