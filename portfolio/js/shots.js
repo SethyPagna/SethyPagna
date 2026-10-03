@@ -112,60 +112,20 @@ export const SHOTS = {
  ],
  "urcut": [
   {
-   "src": "img/shots/urcut/01.webp",
-   "sm": "img/shots/urcut/01-sm.webp",
-   "w": 1440,
-   "h": 900,
-   "caption": "Khmer and Chinese text on a 9:16 video, both clips on the timeline.",
+   "src": "img/shots/urcut/desktop-effects.webp",
+   "sm": "img/shots/urcut/desktop-effects-sm.webp",
+   "w": 888,
+   "h": 560,
+   "caption": "Current development UI, October 1: desktop Effects & looks panel, scene preview and timeline. Local release validation is pending.",
    "kind": "screen"
   },
   {
-   "src": "img/shots/urcut/02.webp",
-   "sm": "img/shots/urcut/02-sm.webp",
-   "w": 1440,
-   "h": 900,
-   "caption": "AI voice panel with a Khmer script (voice list mocked here; UrVoice runs on your machine).",
-   "kind": "screen"
-  },
-  {
-   "src": "img/shots/urcut/03.webp",
-   "sm": "img/shots/urcut/03-sm.webp",
-   "w": 1440,
-   "h": 900,
-   "caption": "Imported English and Khmer captions on the timeline (sample subtitle file).",
-   "kind": "screen"
-  },
-  {
-   "src": "img/shots/urcut/04.webp",
-   "sm": "img/shots/urcut/04-sm.webp",
-   "w": 1440,
-   "h": 900,
-   "caption": "Editor: media, preview, transform properties and timeline.",
-   "kind": "screen"
-  },
-  {
-   "src": "img/shots/urcut/05.webp",
-   "sm": "img/shots/urcut/05-sm.webp",
-   "w": 1440,
-   "h": 900,
-   "caption": "Chinese voice gallery (mocked voice list).",
-   "kind": "screen"
-  },
-  {
-   "src": "img/shots/urcut/06.webp",
-   "sm": "img/shots/urcut/06-sm.webp",
-   "w": 1440,
-   "h": 900,
-   "caption": "Projects dashboard with aspect-ratio tiles.",
-   "kind": "screen"
-  },
-  {
-   "src": "img/shots/urcut/07.webp",
-   "sm": "img/shots/urcut/07-sm.webp",
-   "w": 1440,
-   "h": 900,
-   "caption": "A 9:16 poster project in the light theme.",
-   "kind": "screen"
+   "src": "img/shots/urcut/mobile-effects.webp",
+   "sm": "img/shots/urcut/mobile-effects-sm.webp",
+   "w": 312,
+   "h": 675,
+   "caption": "Current development UI, October 1: mobile searchable Effects & looks library with scene look presets.",
+   "kind": "phone"
   }
  ],
  "codeage": [

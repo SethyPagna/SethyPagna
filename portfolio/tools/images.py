@@ -49,13 +49,8 @@ SHOTS: dict[str, list[tuple[Path, str, str]]] = {
         (RAW / "allchess/home.jpg", "Latest public AllChess library: 21 games, including Ouk Chaktrang. The same engine powers local arcade play.", "screen"),
     ],
     "urcut": [
-        (RAW / "urcut/editor-text.png", "Khmer and Chinese text on a 9:16 video, both clips on the timeline.", "screen"),
-        (RAW / "urcut/voice.png", "AI voice panel with a Khmer script (voice list mocked here; UrVoice runs on your machine).", "screen"),
-        (RAW / "urcut/captions.png", "Imported English and Khmer captions on the timeline (sample subtitle file).", "screen"),
-        (RAW / "urcut/editor.png", "Editor: media, preview, transform properties and timeline.", "screen"),
-        (RAW / "urcut/voice-zh.png", "Chinese voice gallery (mocked voice list).", "screen"),
-        (RAW / "urcut/projects.png", "Projects dashboard with aspect-ratio tiles.", "screen"),
-        (RAW / "urcut/projects-916.png", "A 9:16 poster project in the light theme.", "screen"),
+        (RAW / "urcut/desktop-effects.jpg", "Current development UI, October 1: desktop Effects & looks panel, scene preview and timeline. Local release validation is pending.", "screen"),
+        (RAW / "urcut/mobile-effects.jpg", "Current development UI, October 1: mobile searchable Effects & looks library with scene look presets.", "phone"),
     ],
     "codeage": [
         (RAW / "codeage/codeage-web-code.png", "CodeAge web alpha 0.8.3-web.1: text editor and isolated interactive HTML preview on Cloudflare, October capture.", "screen"),
@@ -150,7 +145,7 @@ def main() -> None:
             image = Image.open(src)
             image = image.convert("RGBA" if image.mode in ("RGBA", "LA", "P") and kind in ("render", "art") else "RGB")
             index += 1
-            name = f"{index:02d}"
+            name = src.stem if project == "urcut" else f"{index:02d}"
             limit = 900 if kind == "phone" else SIZES["lg"]
             w, h = save(image, OUT / project / f"{name}.webp", limit, 80)
             save(image, OUT / project / f"{name}-sm.webp", 420 if kind == "phone" else SIZES["sm"], 72)

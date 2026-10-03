@@ -109,7 +109,7 @@ export const PROJECTS = [
       '54 offline sounds and eight bundled font families, including Khmer',
     ],
     stack: ['Next.js', 'TypeScript', 'Rust/WASM (wgpu)', 'Python', 'faster-whisper', 'ONNX'],
-    note: 'Latest local editor; its new public release is being prepared. Media stays on your device; export files to keep finished edits. Voice generation and cloning need local UrCut with UrVoice. Captions may download a speech model. Built on OpenCut classic (MIT), with private source.',
+    note: 'Latest local editor source; the portable Windows release is pending startup validation. Screenshots show the current development UI. Media stays on your device; export files to keep finished edits. Voice generation and cloning need local UrCut with UrVoice. Captions may download a speech model. Built on OpenCut classic (MIT), with private source.',
     credit: { label: 'OpenCut classic (MIT)', href: 'https://github.com/OpenCut-app/opencut-classic' },
     links: [],
     route: 'Browser editor + local voice', gate: 'NEXT + PY',
