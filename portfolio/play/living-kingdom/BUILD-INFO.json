@@ -1,0 +1,455 @@
+{
+  "project": "Living Kingdom browser playtest",
+  "sourceCommit": "c6061aac93d475d7345fd78a6d2132ec55e7a8b8",
+  "webTree": "0c1c2e41f5c22edd10b2161f3f6c090b2d03b3e2",
+  "exportDate": "2026-10-01",
+  "portfolioUpdateDate": "2026-10-03",
+  "method": "Preserved 41-test/58-module export; tracked web inputs independently verified twice against GitHub; source and copied export bytes reread twice.",
+  "verification": {
+    "priorTests": 41,
+    "priorBuildModules": 58,
+    "currentBrowserAcceptance": "pending"
+  },
+  "files": {
+    "assets/audio/back_001.wav": {
+      "bytes": 5932,
+      "sha256": "11d09823c673f0ca16e7db4c30367c88b2328581436e836cc9b4706ce3b2cba7"
+    },
+    "assets/audio/click_001.wav": {
+      "bytes": 9402,
+      "sha256": "8d8cdc2e4446ae9991d94194de400f210a30c5454dec26bbdc6dcde52267e744"
+    },
+    "assets/audio/click_003.wav": {
+      "bytes": 762,
+      "sha256": "88abff8c3612414a3daa58a3d050135a0d2a68498b223cb37b2bb2f9d1a4163c"
+    },
+    "assets/audio/error_003.wav": {
+      "bytes": 51292,
+      "sha256": "e3288d16b2ae2ae9983947044a41e8dedae65e4c9deae4ccad0c1e724776e7f4"
+    },
+    "assets/audio/footstep_concrete_000.wav": {
+      "bytes": 9968,
+      "sha256": "4fcc02e2a9d5795c5781e8670b8520cda3b49d1bad2ca989cb5c42d67ec2ea76"
+    },
+    "assets/audio/footstep_concrete_001.wav": {
+      "bytes": 10134,
+      "sha256": "ccaec469e012ff4bc22de587c0d9cb86e6b34517d71c7d6518b1441c9301fcb8"
+    },
+    "assets/audio/footstep_concrete_002.wav": {
+      "bytes": 10628,
+      "sha256": "b0b1c008cac706b06685c9153f125f8eb8fa8e9b890d7e468b124f42bf00621e"
+    },
+    "assets/audio/footstep_concrete_003.wav": {
+      "bytes": 10408,
+      "sha256": "c74ced0f92f4c283243484537a81bf35b9d33170e67d138ef47a02afcddfb28c"
+    },
+    "assets/audio/footstep_concrete_004.wav": {
+      "bytes": 10778,
+      "sha256": "09efd056fe48fedf38f0c8c45a631d3cffd07f0c6ccdf07ca9f55d5c06e24133"
+    },
+    "assets/audio/footstep_grass_000.wav": {
+      "bytes": 74448,
+      "sha256": "ddac4a182185b2666ab3edebe54b4c3c018f76fdf234c18e0c47cdc465e3890f"
+    },
+    "assets/audio/footstep_grass_001.wav": {
+      "bytes": 64466,
+      "sha256": "f82f5ddf172f63c0f820d940d30517aa37d30c92eab61ee1c88dcac18dc23824"
+    },
+    "assets/audio/footstep_grass_002.wav": {
+      "bytes": 66276,
+      "sha256": "f251b83913bb0b9c990272fe2a26dcd0e7cd98f5d391456dc4278cb6e4d56cea"
+    },
+    "assets/audio/footstep_grass_003.wav": {
+      "bytes": 64056,
+      "sha256": "ce856a6091c9caaf124e9dbac1782d7da08ff03f47216a145efb12ab5ca05393"
+    },
+    "assets/audio/footstep_grass_004.wav": {
+      "bytes": 56462,
+      "sha256": "6f84cd376ab88e1e952791404dfca97c31111a35d4abc173ae7352e4b9ff6f16"
+    },
+    "assets/audio/footstep_wood_000.wav": {
+      "bytes": 26132,
+      "sha256": "8d9e74eb9d5c41741146a3278e455dfaabd442ccd80f3c77d036d93359e6f276"
+    },
+    "assets/audio/footstep_wood_001.wav": {
+      "bytes": 23950,
+      "sha256": "f322595ce005cffbe30546c4f95d4ab7f537890783664214532a142d1607b08f"
+    },
+    "assets/audio/footstep_wood_002.wav": {
+      "bytes": 23934,
+      "sha256": "f70a6290c9af3ddb5f0c850a38507c0a2435f4801a8635d2556d897cb4eceac2"
+    },
+    "assets/audio/footstep_wood_003.wav": {
+      "bytes": 23946,
+      "sha256": "f5635abb9d7245bcd0acec1f55f69bb3ac484fabaf980752b2dc9cb19fdb35ce"
+    },
+    "assets/audio/footstep_wood_004.wav": {
+      "bytes": 23600,
+      "sha256": "dd1fcabe35c7bda745007a1bd054f06408361359634cc9a27e1440961d575535"
+    },
+    "assets/audio/impactSoft_medium_000.wav": {
+      "bytes": 11128,
+      "sha256": "6b2a9942e3585b4969c38b01ae67865178e5119d267cc45ca9a0204baa7503c7"
+    },
+    "assets/audio/impactSoft_medium_001.wav": {
+      "bytes": 17396,
+      "sha256": "e75305863f682fde8b2255c5578839c20bd14653fbf033635a9969bfc331d8ab"
+    },
+    "assets/audio/impactSoft_medium_002.wav": {
+      "bytes": 12778,
+      "sha256": "013e2e0ec37b51b2f0288e4ddd4788b38f010b2f05b6cb184733937bb8f5434e"
+    },
+    "assets/audio/impactWood_medium_000.wav": {
+      "bytes": 31738,
+      "sha256": "d79fbff70bbe936c321d22b9a1d1ba27f6fda70c5e57114636515435b0e02777"
+    },
+    "assets/audio/impactWood_medium_001.wav": {
+      "bytes": 31738,
+      "sha256": "b56cca56737c710f791865c7a136ffa19a75a1e835b8ac65a955c5288a6a506b"
+    },
+    "assets/audio/impactWood_medium_002.wav": {
+      "bytes": 31738,
+      "sha256": "11ba8a79de2a1ab43bbd8efe6f172623393a86c5196916b0f0da64e8a087f0f5"
+    },
+    "assets/audio/KENNEY-LICENSE.txt": {
+      "bytes": 608,
+      "sha256": "b49aa9c56b04528b95913de13e506a0f7c5e807b9925db9bfef86af1f91120db"
+    },
+    "assets/fonts/INTER-LICENSE.txt": {
+      "bytes": 4380,
+      "sha256": "262481e844521b326f5ecd053e59b98c8b2da78c8ee1bdbb6e8174305e54935a"
+    },
+    "assets/fonts/Inter-Regular.woff2": {
+      "bytes": 109276,
+      "sha256": "7ce85dc96a5475630cb33ac3be0e757b7c6887c995af8a9556eaf83abf8b4cf4"
+    },
+    "assets/fonts/Inter-SemiBold.woff2": {
+      "bytes": 118684,
+      "sha256": "7abec1e0c079ed12291f958076cbe753ac8a51ea755ae6edc167ea6995c4c704"
+    },
+    "assets/fonts/SOURCE-SERIF-LICENSE.txt": {
+      "bytes": 4491,
+      "sha256": "c21d7293d87b6d7ab1d0229a2f55b77f33a7613a6a4e66f6693d68d7d8d09464"
+    },
+    "assets/fonts/SourceSerif4-Bold.woff2": {
+      "bytes": 112912,
+      "sha256": "89229c7255936b90643cc669e000ea4950226b39691fac586d743adf8108e83c"
+    },
+    "assets/fonts/SourceSerif4-It.woff2": {
+      "bytes": 79996,
+      "sha256": "88c55cece7a788948b71bd81c5e3996f9e5dd4826d728cffd79b4e87a5ade5e7"
+    },
+    "assets/fonts/SourceSerif4-Regular.woff2": {
+      "bytes": 107316,
+      "sha256": "f2e32e57e7cce48e645995909de012aa62d43b0c889230e9605a76e0c78a2d7c"
+    },
+    "assets/founder.glb": {
+      "bytes": 778896,
+      "sha256": "928c20894f5d4aa64644fb0fd6c6e2db9c7461fee9245bed8e009fc43006c8fe"
+    },
+    "assets/icons/card_rose.svg": {
+      "bytes": 1750,
+      "sha256": "f2d4801969573c518b5e2e4628f5121a6cde3121cc949b320dfa2c5d836a7b95"
+    },
+    "assets/icons/hub_caret.svg": {
+      "bytes": 541,
+      "sha256": "67c6eee9b7153dd2f8e1faec549bfbd1b50d740ed7395d11bee894ad6157294a"
+    },
+    "assets/icons/hub_chevron.svg": {
+      "bytes": 375,
+      "sha256": "dc7032b909ffc56c1687d5aca7352063b9c7bdfaf796b2763b330758d4ddcbec"
+    },
+    "assets/icons/ico_character.svg": {
+      "bytes": 748,
+      "sha256": "7c17a22913c8a57b55595bcb2be178ea1dbc1e2a14611b3409b8a22f26bf5322"
+    },
+    "assets/icons/ico_forge.svg": {
+      "bytes": 636,
+      "sha256": "ff13cd6aac0c797e8505c94acea8da522a6864138f75918e6e5aa7fa704b3c6e"
+    },
+    "assets/icons/ico_home.svg": {
+      "bytes": 500,
+      "sha256": "8518de3349e458dfa6e38f2756b15a7abc4b2ec3c8a8d07918e73d766606eed4"
+    },
+    "assets/icons/ico_inventory.svg": {
+      "bytes": 1041,
+      "sha256": "a3796fe2d10665befda25a36bd523b4e3c827f42263dfb9a817935f4a740f4ab"
+    },
+    "assets/icons/ico_map.svg": {
+      "bytes": 844,
+      "sha256": "50719f2855ee6cce4b09a10ad96ddcff46fecd69ab6c03a31544808a0f9a4648"
+    },
+    "assets/icons/ico_origin.svg": {
+      "bytes": 619,
+      "sha256": "2c28a1695862de569338b95201708832e24a6a3c9b82f58b34257696f073e295"
+    },
+    "assets/icons/ico_quests.svg": {
+      "bytes": 1350,
+      "sha256": "8f0991b0452bcec2c3c2ebcf5dc2b216c4a88b9b5acd5502dde386b153ba4b35"
+    },
+    "assets/icons/ico_sect.svg": {
+      "bytes": 1582,
+      "sha256": "5f71a0b38c79bfece9eda24e5832374b69a6f6f46cfd0b6a2ecdd73ab16be640"
+    },
+    "assets/icons/ico_settings.svg": {
+      "bytes": 422,
+      "sha256": "e977cac12ef593647e25d7894cf1dd57cdaadc5e9911cdb78d54f15820f6e3ad"
+    },
+    "assets/icons/ico_system.svg": {
+      "bytes": 897,
+      "sha256": "72c06a0e6d60c5f73454b1c159575868abbdf5aefb424388acba6bf59364e929"
+    },
+    "assets/icons/ico_talents.svg": {
+      "bytes": 955,
+      "sha256": "d8079a72f6a7741ac9216f948dd598f9ec0036eb00071e56a148335721bb99f5"
+    },
+    "assets/icons/logo_emblem.svg": {
+      "bytes": 2256,
+      "sha256": "a5f7f379cb0c14f3507d6f122a457a186b48a18e547fc010831b1e9741f5eb08"
+    },
+    "assets/icons/more_dots.svg": {
+      "bytes": 545,
+      "sha256": "69149208e071054bfba0dd8219f533dd01643704d3da869f184f1ce28a6ba03e"
+    },
+    "assets/icons/quest_active.svg": {
+      "bytes": 465,
+      "sha256": "5519a0ddcb1bcc4ddca257b8a06d26b876e5d6d88bf86262e8d0af467b95a179"
+    },
+    "assets/icons/quest_main.svg": {
+      "bytes": 479,
+      "sha256": "41b9b813773c7697c9ae4e468790384dee500c99a6a6e2faeff204f27069d465"
+    },
+    "assets/icons/quest_pending.svg": {
+      "bytes": 391,
+      "sha256": "a7f2a7681834a1207661f59c85321ebd0d51905103d0526a3f4d3fb036c76bb2"
+    },
+    "assets/index-B3PAcfQh.js": {
+      "bytes": 303125,
+      "sha256": "fba06ecc58b35dd61fea6c8c782241ef1f4e8b90338acaaf76c2d60c69a841c8"
+    },
+    "assets/index-DFU4Mvwa.css": {
+      "bytes": 19553,
+      "sha256": "b1778969c730c847ff2d57745873cabdb4fed17756ccaca767f20385cf1b7e96"
+    },
+    "assets/jacaranda.glb": {
+      "bytes": 529720,
+      "sha256": "a6b165ee8f776ee39a00befa367ae623e54e0f52c6c5b812d620903cae53cbcb"
+    },
+    "assets/nature.glb": {
+      "bytes": 584396,
+      "sha256": "0d8d3d6fa35a1460ac8df6be6d6dbcca805b046f7968f7436d90a51c0f371902"
+    },
+    "assets/origin-height.bin": {
+      "bytes": 79532,
+      "sha256": "0ce91c59c4bbf18a23f8eee2f94508d3d180b54cec857744694d7c10ebfc0980"
+    },
+    "assets/origin-kit.glb": {
+      "bytes": 778244,
+      "sha256": "2f38f776c99761c42f6068c7415c4ab86c9cb55c7cf013a85f45e70fbabae4d8"
+    },
+    "assets/rapier-D3Mqfikn.js": {
+      "bytes": 2056360,
+      "sha256": "dce9ebe6f197c13dc43a9ed5c9a0c137a601735834fdbfe16fd33edcc7215ef2"
+    },
+    "assets/RAPIER-LICENSE.txt": {
+      "bytes": 11545,
+      "sha256": "c7ccc6e67409ca151f47f598584a0f85acafad568b3d2ca2117000876fb5c69c"
+    },
+    "assets/stonebrook-DbqlVU4F.js": {
+      "bytes": 7297,
+      "sha256": "63789a4ee7825a22a03c2089a105f6189173b017af0d21747bb5bebcbf8a3e63"
+    },
+    "assets/stonebrook-height.bin": {
+      "bytes": 114252,
+      "sha256": "30c330e2c3f2fdd23870189c59b5068756da7b061e7e324b40624b4c3ad092cc"
+    },
+    "assets/stonebrook-kit.glb": {
+      "bytes": 523576,
+      "sha256": "976994fd0c5b8b61681820b67e738548bbd3a75fad98cce8f89a57fc2d5e9816"
+    },
+    "assets/tex/aerial_grass_rock_d.webp": {
+      "bytes": 603314,
+      "sha256": "9b2078d5d98148b314996449559d753c771576e79215d2c107b6ceec1fdf6bef"
+    },
+    "assets/tex/aerial_grass_rock_n.webp": {
+      "bytes": 88516,
+      "sha256": "6feb152ebf6a155d4e92e095dd5acdef473ab4a7928c2d37ece89bc1bd3381b6"
+    },
+    "assets/tex/bark_brown_02_d.webp": {
+      "bytes": 180068,
+      "sha256": "726895ac565d0c13aedd2cea395b2df2bcc6cf15bf4e6a90271d6d8ff0c0a275"
+    },
+    "assets/tex/bark_brown_02_n.webp": {
+      "bytes": 28392,
+      "sha256": "40fb357f037c21996c44e8f08cc691423154fb5c51af7fae1cf1b0c15377c425"
+    },
+    "assets/tex/brown_mud_leaves_01_d.webp": {
+      "bytes": 915638,
+      "sha256": "46beeca3d9be8f82314116b54d3c71eda016902fe96df9cd739dad60e5889e4c"
+    },
+    "assets/tex/brown_mud_leaves_01_n.webp": {
+      "bytes": 146190,
+      "sha256": "ab98e07772d791f0f8eb9bbddff6fa400d916976800be2ef08dedaeb8a3d5dea"
+    },
+    "assets/tex/brown_planks_09_d.webp": {
+      "bytes": 116388,
+      "sha256": "a6da638912f80de822aa8d0ea68284b093d45ec27469f3f543d655376c0c6c50"
+    },
+    "assets/tex/brown_planks_09_n.webp": {
+      "bytes": 4448,
+      "sha256": "cae26bbb61e7f2ce330b91222cad8cde8b9be12b82517dbc39fe9aeb0f87239b"
+    },
+    "assets/tex/castle_wall_slates_d.webp": {
+      "bytes": 191894,
+      "sha256": "a6f16446979e2a1c5f54113bf6ef2e1e9620b0f6c7cd280e1f3eb80c78f1d0f0"
+    },
+    "assets/tex/castle_wall_slates_n.webp": {
+      "bytes": 29862,
+      "sha256": "66aba4a0d13797aa87b7a4f615a0acf8ee6f6185a6c4cac7b34f233123fd0a33"
+    },
+    "assets/tex/cobblestone_floor_01_d.webp": {
+      "bytes": 508724,
+      "sha256": "450c1c1b67ca685528780ce26c45a0571db210c90bc6c2fe477f71080eca7b7d"
+    },
+    "assets/tex/cobblestone_floor_01_n.webp": {
+      "bytes": 68702,
+      "sha256": "dcc2dbbf35c88cf6d98e861bf6956abb116bfd2053b5a99e5ac0f029ea14a238"
+    },
+    "assets/tex/fern_02.webp": {
+      "bytes": 47038,
+      "sha256": "41534e0a7a5068120c3c731ccde2b6dc366550d91194e2861c05f5a21fe329a0"
+    },
+    "assets/tex/flower_heliophila.webp": {
+      "bytes": 33748,
+      "sha256": "aa20884caebf98e795d8d05e9d6253a111acba8f98a93e1c3c42b585c0000b86"
+    },
+    "assets/tex/founder_base.webp": {
+      "bytes": 836468,
+      "sha256": "f4497d2aa4b157d280bf48ae827b6b61d4630e813ceb0be90abf6791c3bcdde2"
+    },
+    "assets/tex/founder_dye.webp": {
+      "bytes": 65248,
+      "sha256": "51aec1a9d7a76469c9c7367ba84508a401cb1a3a3c6d5250f700eb98db53b38e"
+    },
+    "assets/tex/founder_normal.webp": {
+      "bytes": 255006,
+      "sha256": "6caa13be87ea745c805499da51ab6b26d78ef70dfc0308db8f6abd778b8fed22"
+    },
+    "assets/tex/grass_medium_01.webp": {
+      "bytes": 139750,
+      "sha256": "97f477f75abe869ef387e513eab7bcfc2e84506506b4477c75ac98d9efd4cdb5"
+    },
+    "assets/tex/grassy_cobblestone_d.webp": {
+      "bytes": 554594,
+      "sha256": "aaab198c0c77496728c73046c1c41cb02bfc5af5cc93e4051c2ec8496782767e"
+    },
+    "assets/tex/grassy_cobblestone_n.webp": {
+      "bytes": 84674,
+      "sha256": "661bb4b81244aef7d7aab805d859a2d98a207fe089ebb8a0c3c3160ef0c6c3fc"
+    },
+    "assets/tex/jacaranda_branches.webp": {
+      "bytes": 41598,
+      "sha256": "f31940656f034108dcd5510c429ad845ab6fedd74a907a2125ff39759d77cee7"
+    },
+    "assets/tex/jacaranda_leaves.webp": {
+      "bytes": 371190,
+      "sha256": "27a027689330a0d595edec20ee21f8187cce8189ee6372f099dcbaee95d7e64c"
+    },
+    "assets/tex/jacaranda_trunk.webp": {
+      "bytes": 237234,
+      "sha256": "6b4692efb9d69815632983917bdffce9b2e2fc57e2e20fe3a318a59f775c1e98"
+    },
+    "assets/tex/mossy_rock_d.webp": {
+      "bytes": 156554,
+      "sha256": "9d24b98fdf33aa68949483ffbfa05670cd9f2d7f6a0de6ab2035187edb7afedb"
+    },
+    "assets/tex/mossy_rock_n.webp": {
+      "bytes": 17980,
+      "sha256": "feed13a57427706920fa4ccdcd9138365626ab43858b74a826634eeee49ae40b"
+    },
+    "assets/tex/muddy_tracks_d.webp": {
+      "bytes": 563520,
+      "sha256": "b5806b835351ad3ccce23008bda7fedd9f441487cdf836cdd18cbe371ae04316"
+    },
+    "assets/tex/muddy_tracks_n.webp": {
+      "bytes": 117870,
+      "sha256": "50358bf8ceeeaf4a9357d905c8806f789f9bd6ec637413fc9a5224fd7f0517c2"
+    },
+    "assets/tex/plaster_brick_01_d.webp": {
+      "bytes": 169202,
+      "sha256": "3adb067659b75c21666229142531655e6a7bceba5c28ff89cacb57e43c2c8080"
+    },
+    "assets/tex/plaster_brick_01_n.webp": {
+      "bytes": 13976,
+      "sha256": "88ee9353c5a157b2e9d08fa8a415c770e5e34b9bef06bd9801434f0cdef23818"
+    },
+    "assets/tex/rock_face_03_d.webp": {
+      "bytes": 503586,
+      "sha256": "051a03ac766dfc4663430a87482a5ac527fb5248fac17382f692f71a7ea72cdf"
+    },
+    "assets/tex/rock_face_03_n.webp": {
+      "bytes": 100358,
+      "sha256": "9df411fdf59eee93d0c129a7d8e4f22b4674961aa66cb95f54c3f49abec10ab7"
+    },
+    "assets/tex/rock_moss_d.webp": {
+      "bytes": 104120,
+      "sha256": "062678b37cf841b3b40bd1f1522e87089a783f3717149e6bb754d6ff977e869b"
+    },
+    "assets/tex/rock_moss_n.webp": {
+      "bytes": 53756,
+      "sha256": "5a7cfbb7ad36d3030f2c0146621b6d11b76c637ca6f94955768389bc10312a04"
+    },
+    "assets/tex/thatch_roof_angled_d.webp": {
+      "bytes": 160654,
+      "sha256": "9d1217981f90a00176992c80697ef6e57f00310966af14e2223d8f620d2fd646"
+    },
+    "assets/tex/thatch_roof_angled_n.webp": {
+      "bytes": 26562,
+      "sha256": "f65eef924c215201a706d35f18ebe2a74e01f058f3d1f10270fe38220cf3be4c"
+    },
+    "assets/three-DVqW8tiO.js": {
+      "bytes": 524849,
+      "sha256": "4eb1b0d75b5e89d343170a13ee3a6bc6a2fdbe4417852c6f7799e2ddbd98cd2d"
+    },
+    "assets/ui/hub_hero_cloudsong.webp": {
+      "bytes": 18580,
+      "sha256": "cc0238c8d0f166b77bf03c0e25f7cf4ab4951be084394f69aeb78a588038b1fb"
+    },
+    "assets/ui/hub_minimap_showcase.webp": {
+      "bytes": 4776,
+      "sha256": "9b0c545b9eb97f16e63934996e6e1f9ad598e99e2b5d3037825a70576d637dd9"
+    },
+    "assets/ui/hub_portrait_founder.webp": {
+      "bytes": 1342,
+      "sha256": "00b318cc2c65165db40a3266b357e09bc0e50fd4d782fda4a4c6a9fad52ddbc1"
+    },
+    "assets/ui/hub_tile_inventory.webp": {
+      "bytes": 5740,
+      "sha256": "6891145b5b41d76a8b49aae1363d8b344b0d635fce223716c20b3e033963f459"
+    },
+    "assets/ui/hub_tile_origin.webp": {
+      "bytes": 5386,
+      "sha256": "0a6619325e4b52b99d831bc89c289524ce7a66db19632918310405d1eaab19d0"
+    },
+    "assets/ui/hub_tile_quests.webp": {
+      "bytes": 6756,
+      "sha256": "f3ea09f823fd2e64e41c0a53ae03a17afdb6cb6eb115a08a5010ce511e073c57"
+    },
+    "assets/ui/hub_tile_sect.webp": {
+      "bytes": 5720,
+      "sha256": "9a37b29c29fd2cc3c6c8f7145d5c9d9f2847235626cb6f36657fcbe755ae657b"
+    },
+    "assets/ui/hub_tile_talents.webp": {
+      "bytes": 6176,
+      "sha256": "9ddfc4cc50e721124eb38d24e364e26488c768665acc36937ac6928a82e3f05d"
+    },
+    "assets/ui/hub_tile_world.webp": {
+      "bytes": 6244,
+      "sha256": "23a9ade2d28d362ed5a21dc4472b40707a974882fcb9efd16df191d0ca13d14e"
+    },
+    "index.html": {
+      "bytes": 1054,
+      "sha256": "07572ac9e045958e4ec276eef39dfb07465bc089133bc5fbc6111b69abb3b2d2"
+    }
+  }
+}

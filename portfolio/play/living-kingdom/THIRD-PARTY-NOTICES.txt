@@ -1,0 +1,49 @@
+Living Kingdom browser edition — third-party notices and asset credits
+
+Project source: https://github.com/SethyPagna/LivingKingdom
+This browser playtest adapts the project's Unreal gameplay and project assets.
+
+SOFTWARE
+
+Three.js 0.169.0, including its GLTFLoader addon.
+Copyright 2010-2024 three.js authors. MIT licence.
+Full notice: licenses/THREE-LICENSE.txt
+Source: https://github.com/mrdoob/three.js/tree/r169
+
+Meshoptimizer 0.18 MeshoptDecoder, bundled through Three.js's
+examples/jsm/libs/meshopt_decoder.module.js.
+Copyright (c) 2016-2022 Arseny Kapoulkine. MIT licence.
+Full notice: licenses/MESHOPTIMIZER-LICENSE.txt
+Source and licence: https://github.com/zeux/meshoptimizer/blob/v0.18/LICENSE.md
+
+Vite 5.4.21 generated modulepreload helper.
+Copyright (c) 2019-present, VoidZero Inc. and Vite contributors. MIT licence.
+Full core notice: licenses/VITE-LICENSE.txt
+Source: https://github.com/vitejs/vite/tree/v5.4.21
+
+Rapier 3D (@dimforge/rapier3d-compat 0.14.0), by Dimforge.
+Apache License 2.0. Full notice retained at assets/RAPIER-LICENSE.txt
+Source: https://github.com/dimforge/rapier.js
+
+ASSET CREDITS
+
+The project's own kit meshes, Founder mesh, dye masks, icons and hub art are
+adapted from its supplied project assets. The Founder generation is recorded
+as Higgsfield/Meshy in the project's provenance.
+
+Poly Haven: CC0 nature assets and surface textures, including jacaranda, rocks,
+fern, flowers and grass; grass/rock, bark, mud/leaves, planks, slates,
+cobblestones, plaster, thatch, rock face, mossy rock and muddy tracks.
+Source: https://polyhaven.com
+
+Kenney Impact Sounds and Interface Sounds: CC0 footsteps, impacts and clicks.
+Full notice retained at assets/audio/KENNEY-LICENSE.txt
+Source: https://kenney.nl
+
+Inter: Rasmus Andersson; SIL Open Font License 1.1.
+Full notice retained at assets/fonts/INTER-LICENSE.txt
+Source: https://rsms.me/inter/
+
+Source Serif 4: Adobe; SIL Open Font License 1.1.
+Full notice retained at assets/fonts/SOURCE-SERIF-LICENSE.txt
+Source: https://github.com/adobe-fonts/source-serif
