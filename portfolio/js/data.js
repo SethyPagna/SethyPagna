@@ -220,7 +220,7 @@ export const PROJECTS = [
     links: [
       { label: 'Play in the arcade', href: '#arcade/wreckabulary', kind: 'play' },
       { label: 'Open Wreckabulary', href: 'https://wreckabulary.pagna.workers.dev', kind: 'live' },
-      { label: 'Browser source', href: gh('wreckabulary/tree/11f72937beaf19e9eab4b3b53634bec7849b729f/Web'), kind: 'code' },
+      { label: 'Browser source', href: gh('wreckabulary/tree/8b944d22ec9e012d4634faab353b4780dcdd6598/Web'), kind: 'code' },
       { label: 'Team repo', href: 'https://github.com/cchayadap/wreckabulary', kind: 'code' },
     ],
   },
