@@ -1,0 +1,2537 @@
+{
+  "checked": 99,
+  "failed": 0,
+  "results": [
+    {
+      "name": "BAT",
+      "kind": "item",
+      "triangles": 5248,
+      "issues": [],
+      "unchanged_texture_checks": 2,
+      "animations": [],
+      "bounds_min": [
+        -0.08600000292062694,
+        0.0,
+        -0.08600000292062694
+      ],
+      "bounds_max": [
+        0.08600000292062694,
+        1.0180000066757202,
+        0.08600000292062694
+      ],
+      "bounds_tolerance_m": 0.001,
+      "mesh_triangles": {
+        "BAT": 5248
+      },
+      "default_visible_triangles": null,
+      "default_material_slots": null,
+      "maximum_reference_bounds_delta_m": 6.6757201988565384e-09
+    },
+    {
+      "name": "BLADE",
+      "kind": "item",
+      "triangles": 4384,
+      "issues": [],
+      "unchanged_texture_checks": 0,
+      "animations": [],
+      "bounds_min": [
+        -0.16500000891692457,
+        0.0,
+        -0.04600000008940661
+      ],
+      "bounds_max": [
+        0.16500000891692457,
+        0.8660000143572688,
+        0.04600000008940661
+      ],
+      "bounds_tolerance_m": 0.001,
+      "mesh_triangles": {
+        "BLADE": 4384
+      },
+      "default_visible_triangles": null,
+      "default_material_slots": null,
+      "maximum_reference_bounds_delta_m": 1.4357268818265823e-08
+    },
+    {
+      "name": "LAMP",
+      "kind": "item",
+      "triangles": 3664,
+      "issues": [],
+      "unchanged_texture_checks": 1,
+      "animations": [],
+      "bounds_min": [
+        -0.26800000667571816,
+        0.0,
+        -0.26800000667571816
+      ],
+      "bounds_max": [
+        0.26800000667571816,
+        0.8930000066757202,
+        0.26800000667571816
+      ],
+      "bounds_tolerance_m": 0.001,
+      "mesh_triangles": {
+        "LAMP": 3664
+      },
+      "default_visible_triangles": null,
+      "default_material_slots": null,
+      "maximum_reference_bounds_delta_m": 6.6757201988565384e-09
+    },
+    {
+      "name": "BALL",
+      "kind": "item",
+      "triangles": 3156,
+      "issues": [],
+      "unchanged_texture_checks": 2,
+      "animations": [],
+      "bounds_min": [
+        -0.1835000067949281,
+        0.0,
+        -0.1835000067949281
+      ],
+      "bounds_max": [
+        0.1835000067949281,
+        0.3669999991543591,
+        0.1835000067949281
+      ],
+      "bounds_tolerance_m": 0.001,
+      "mesh_triangles": {
+        "BALL": 3156
+      },
+      "default_visible_triangles": null,
+      "default_material_slots": null,
+      "maximum_reference_bounds_delta_m": 6.7949280924128885e-09
+    },
+    {
+      "name": "PLATE",
+      "kind": "item",
+      "triangles": 1952,
+      "issues": [],
+      "unchanged_texture_checks": 0,
+      "animations": [],
+      "bounds_min": [
+        -0.270000010728834,
+        0.0,
+        -0.270000010728834
+      ],
+      "bounds_max": [
+        0.270000010728834,
+        0.0729999989271164,
+        0.270000010728834
+      ],
+      "bounds_tolerance_m": 0.001,
+      "mesh_triangles": {
+        "PLATE": 1952
+      },
+      "default_visible_triangles": null,
+      "default_material_slots": null,
+      "maximum_reference_bounds_delta_m": 1.0728833987894149e-08
+    },
+    {
+      "name": "TABLE",
+      "kind": "item",
+      "triangles": 4320,
+      "issues": [],
+      "unchanged_texture_checks": 2,
+      "animations": [],
+      "bounds_min": [
+        -0.600000080054697,
+        0.0,
+        -0.345500093081633
+      ],
+      "bounds_max": [
+        0.600000080054697,
+        0.7200000286102295,
+        0.345500093081633
+      ],
+      "bounds_tolerance_m": 0.001,
+      "mesh_triangles": {
+        "TABLE": 4320
+      },
+      "default_visible_triangles": null,
+      "default_material_slots": null,
+      "maximum_reference_bounds_delta_m": 9.308163301247063e-08
+    },
+    {
+      "name": "BED",
+      "kind": "item",
+      "triangles": 5760,
+      "issues": [],
+      "unchanged_texture_checks": 4,
+      "animations": [],
+      "bounds_min": [
+        -0.5175001140077415,
+        0.0,
+        -0.7900001027608455
+      ],
+      "bounds_max": [
+        0.5175001140077415,
+        0.8180000185966492,
+        0.7900001027608455
+      ],
+      "bounds_tolerance_m": 0.001,
+      "mesh_triangles": {
+        "BED": 5760
+      },
+      "default_visible_triangles": null,
+      "default_material_slots": null,
+      "maximum_reference_bounds_delta_m": 1.140077415806573e-07
+    },
+    {
+      "name": "MAT",
+      "kind": "item",
+      "triangles": 1260,
+      "issues": [],
+      "unchanged_texture_checks": 2,
+      "animations": [],
+      "bounds_min": [
+        -0.580000038366063,
+        0.0,
+        -0.32500008772004985
+      ],
+      "bounds_max": [
+        0.580000038366063,
+        0.050999999046325684,
+        0.32500008772004985
+      ],
+      "bounds_tolerance_m": 0.001,
+      "mesh_triangles": {
+        "MAT": 1260
+      },
+      "default_visible_triangles": null,
+      "default_material_slots": null,
+      "maximum_reference_bounds_delta_m": 8.772004983503834e-08
+    },
+    {
+      "name": "SOFA",
+      "kind": "item",
+      "triangles": 6248,
+      "issues": [],
+      "unchanged_texture_checks": 3,
+      "animations": [],
+      "bounds_min": [
+        -0.7600000423923766,
+        0.0,
+        -0.39000009497334853
+      ],
+      "bounds_max": [
+        0.7600000486868187,
+        0.9300000071525574,
+        0.42300012501432865
+      ],
+      "bounds_tolerance_m": 0.001,
+      "mesh_triangles": {
+        "SOFA": 6248
+      },
+      "default_visible_triangles": null,
+      "default_material_slots": null,
+      "maximum_reference_bounds_delta_m": 1.2501432866685036e-07
+    },
+    {
+      "name": "SOAP",
+      "kind": "item",
+      "triangles": 2352,
+      "issues": [],
+      "unchanged_texture_checks": 0,
+      "animations": [],
+      "bounds_min": [
+        -0.16000000359238767,
+        0.0,
+        -0.1050000135069163
+      ],
+      "bounds_max": [
+        0.16000000359238767,
+        0.14849999314174056,
+        0.1050000135069163
+      ],
+      "bounds_tolerance_m": 0.001,
+      "mesh_triangles": {
+        "SOAP": 2352
+      },
+      "default_visible_triangles": null,
+      "default_material_slots": null,
+      "maximum_reference_bounds_delta_m": 1.350691630763734e-08
+    },
+    {
+      "name": "FOAM",
+      "kind": "item",
+      "triangles": 4000,
+      "issues": [],
+      "unchanged_texture_checks": 1,
+      "animations": [],
+      "bounds_min": [
+        -0.09544999897479937,
+        0.0,
+        -0.09544999897479937
+      ],
+      "bounds_max": [
+        0.09544999897479937,
+        0.3725000023841858,
+        0.10000000673548162
+      ],
+      "bounds_tolerance_m": 0.001,
+      "mesh_triangles": {
+        "FOAM": 4000
+      },
+      "default_visible_triangles": null,
+      "default_material_slots": null,
+      "maximum_reference_bounds_delta_m": 6.735481616892969e-09
+    },
+    {
+      "name": "BOMB",
+      "kind": "item",
+      "triangles": 2236,
+      "issues": [],
+      "unchanged_texture_checks": 1,
+      "animations": [],
+      "bounds_min": [
+        -0.17200000584125388,
+        0.0,
+        -0.17200000584125388
+      ],
+      "bounds_max": [
+        0.17200000584125388,
+        0.47179344296455383,
+        0.17200000584125388
+      ],
+      "bounds_tolerance_m": 0.001,
+      "mesh_triangles": {
+        "BOMB": 2236
+      },
+      "default_visible_triangles": null,
+      "default_material_slots": null,
+      "maximum_reference_bounds_delta_m": 4.4296455381509503e-07
+    },
+    {
+      "name": "ARROW",
+      "kind": "item",
+      "triangles": 144,
+      "issues": [],
+      "unchanged_texture_checks": 2,
+      "animations": [],
+      "bounds_min": [
+        -0.05500000188754571,
+        0.0,
+        -0.04530126597441013
+      ],
+      "bounds_max": [
+        0.05500000188754571,
+        0.6650000074878335,
+        0.04530127350532169
+      ],
+      "bounds_tolerance_m": 0.001,
+      "mesh_triangles": {
+        "ARROW": 144
+      },
+      "default_visible_triangles": null,
+      "default_material_slots": null,
+      "maximum_reference_bounds_delta_m": 2.7350532168929353e-07
+    },
+    {
+      "name": "BOW",
+      "kind": "item",
+      "triangles": 684,
+      "issues": [],
+      "unchanged_texture_checks": 2,
+      "animations": [],
+      "bounds_min": [
+        -0.020999999716877778,
+        0.0,
+        -0.029000032386188083
+      ],
+      "bounds_max": [
+        0.21899999678134752,
+        0.7493087612092495,
+        0.02899996594488142
+      ],
+      "bounds_tolerance_m": 0.001,
+      "mesh_triangles": {
+        "BOW": 684
+      },
+      "default_visible_triangles": null,
+      "default_material_slots": null,
+      "maximum_reference_bounds_delta_m": 2.38790750506368e-07
+    },
+    {
+      "name": "BROOM",
+      "kind": "item",
+      "triangles": 4416,
+      "issues": [],
+      "unchanged_texture_checks": 3,
+      "animations": [],
+      "bounds_min": [
+        -0.15000000989448828,
+        0.0,
+        -0.04750002125964645
+      ],
+      "bounds_max": [
+        0.15000000989448828,
+        1.0211728196591139,
+        0.04750002125964645
+      ],
+      "bounds_tolerance_m": 0.001,
+      "mesh_triangles": {
+        "BROOM": 4416
+      },
+      "default_visible_triangles": null,
+      "default_material_slots": null,
+      "maximum_reference_bounds_delta_m": 1.8034088622442823e-07
+    },
+    {
+      "name": "HAMMER",
+      "kind": "item",
+      "triangles": 5872,
+      "issues": [],
+      "unchanged_texture_checks": 1,
+      "animations": [],
+      "bounds_min": [
+        -0.17250001295448214,
+        0.0,
+        -0.08750002692228341
+      ],
+      "bounds_max": [
+        0.17250001295448214,
+        0.6349999718368053,
+        0.08750002692228341
+      ],
+      "bounds_tolerance_m": 0.001,
+      "mesh_triangles": {
+        "HAMMER": 5872
+      },
+      "default_visible_triangles": null,
+      "default_material_slots": null,
+      "maximum_reference_bounds_delta_m": 2.8163194665253855e-08
+    },
+    {
+      "name": "PAN",
+      "kind": "item",
+      "triangles": 1136,
+      "issues": [],
+      "unchanged_texture_checks": 0,
+      "animations": [],
+      "bounds_min": [
+        -0.23000000417232339,
+        0.0,
+        -0.23000000417232339
+      ],
+      "bounds_max": [
+        0.5562188625335651,
+        0.15444307029247284,
+        0.23000000417232339
+      ],
+      "bounds_tolerance_m": 0.001,
+      "mesh_triangles": {
+        "PAN": 1136
+      },
+      "default_visible_triangles": null,
+      "default_material_slots": null,
+      "maximum_reference_bounds_delta_m": 1.3746643490186727e-07
+    },
+    {
+      "name": "SHIELD",
+      "kind": "item",
+      "triangles": 172,
+      "issues": [],
+      "unchanged_texture_checks": 1,
+      "animations": [],
+      "bounds_min": [
+        -0.23000001046676277,
+        0.0,
+        -0.12464505367928895
+      ],
+      "bounds_max": [
+        0.23000001046676277,
+        0.5700000245124102,
+        0.0630000146488943
+      ],
+      "bounds_tolerance_m": 0.001,
+      "mesh_triangles": {
+        "SHIELD": 172
+      },
+      "default_visible_triangles": null,
+      "default_material_slots": null,
+      "maximum_reference_bounds_delta_m": 5.367928894439711e-08
+    },
+    {
+      "name": "SPEAR",
+      "kind": "item",
+      "triangles": 2028,
+      "issues": [],
+      "unchanged_texture_checks": 1,
+      "animations": [],
+      "bounds_min": [
+        -0.08500000421613428,
+        0.0,
+        -0.034000001847743724
+      ],
+      "bounds_max": [
+        0.08500000421613428,
+        1.234999980777502,
+        0.034000001847743724
+      ],
+      "bounds_tolerance_m": 0.001,
+      "mesh_triangles": {
+        "SPEAR": 2028
+      },
+      "default_visible_triangles": null,
+      "default_material_slots": null,
+      "maximum_reference_bounds_delta_m": 1.9222498037763103e-08
+    },
+    {
+      "name": "APPLE",
+      "kind": "item",
+      "triangles": 1764,
+      "issues": [],
+      "unchanged_texture_checks": 1,
+      "animations": [],
+      "bounds_min": [
+        -0.11999999731779007,
+        0.0,
+        -0.11500000208616169
+      ],
+      "bounds_max": [
+        0.11999999731779007,
+        0.2708774546626955,
+        0.11500000208616169
+      ],
+      "bounds_tolerance_m": 0.001,
+      "mesh_triangles": {
+        "APPLE": 1764
+      },
+      "default_visible_triangles": null,
+      "default_material_slots": null,
+      "maximum_reference_bounds_delta_m": 4.546626955481692e-07
+    },
+    {
+      "name": "CAKE",
+      "kind": "item",
+      "triangles": 3088,
+      "issues": [],
+      "unchanged_texture_checks": 3,
+      "animations": [],
+      "bounds_min": [
+        -0.24999999999999808,
+        0.0,
+        -0.24999999999999808
+      ],
+      "bounds_max": [
+        0.24999999999999808,
+        0.4164855480194092,
+        0.24999999999999808
+      ],
+      "bounds_tolerance_m": 0.001,
+      "mesh_triangles": {
+        "CAKE": 3088
+      },
+      "default_visible_triangles": null,
+      "default_material_slots": null,
+      "maximum_reference_bounds_delta_m": 4.5198059084317066e-07
+    },
+    {
+      "name": "PIE",
+      "kind": "item",
+      "triangles": 4640,
+      "issues": [],
+      "unchanged_texture_checks": 2,
+      "animations": [],
+      "bounds_min": [
+        -0.24999999999999808,
+        0.0,
+        -0.24999999999999808
+      ],
+      "bounds_max": [
+        0.24999999999999808,
+        0.18199999630451202,
+        0.24999999999999808
+      ],
+      "bounds_tolerance_m": 0.001,
+      "mesh_triangles": {
+        "PIE": 4640
+      },
+      "default_visible_triangles": null,
+      "default_material_slots": null,
+      "maximum_reference_bounds_delta_m": 3.6954879711892374e-09
+    },
+    {
+      "name": "SODA",
+      "kind": "item",
+      "triangles": 2372,
+      "issues": [],
+      "unchanged_texture_checks": 1,
+      "animations": [],
+      "bounds_min": [
+        -0.0908999964594834,
+        0.0,
+        -0.0908999964594834
+      ],
+      "bounds_max": [
+        0.0908999964594834,
+        0.3019999861717224,
+        0.09300001051977064
+      ],
+      "bounds_tolerance_m": 0.001,
+      "mesh_triangles": {
+        "SODA": 2372
+      },
+      "default_visible_triangles": null,
+      "default_material_slots": null,
+      "maximum_reference_bounds_delta_m": 1.3828277578564752e-08
+    },
+    {
+      "name": "WATER",
+      "kind": "item",
+      "triangles": 2544,
+      "issues": [],
+      "unchanged_texture_checks": 1,
+      "animations": [],
+      "bounds_min": [
+        -0.08799999952316216,
+        0.0,
+        -0.08799999952316216
+      ],
+      "bounds_max": [
+        0.08799999952316216,
+        0.4099999964237213,
+        0.09050000450999376
+      ],
+      "bounds_tolerance_m": 0.001,
+      "mesh_triangles": {
+        "WATER": 2544
+      },
+      "default_visible_triangles": null,
+      "default_material_slots": null,
+      "maximum_reference_bounds_delta_m": 4.509993767332077e-09
+    },
+    {
+      "name": "BARREL",
+      "kind": "item",
+      "triangles": 4240,
+      "issues": [],
+      "unchanged_texture_checks": 2,
+      "animations": [],
+      "bounds_min": [
+        -0.279000014066694,
+        0.0,
+        -0.279000014066694
+      ],
+      "bounds_max": [
+        0.279000014066694,
+        0.6000000238418579,
+        0.279000014066694
+      ],
+      "bounds_tolerance_m": 0.001,
+      "mesh_triangles": {
+        "BARREL": 4240
+      },
+      "default_visible_triangles": null,
+      "default_material_slots": null,
+      "maximum_reference_bounds_delta_m": 2.384185793236071e-08
+    },
+    {
+      "name": "BOX",
+      "kind": "item",
+      "triangles": 1772,
+      "issues": [],
+      "unchanged_texture_checks": 2,
+      "animations": [],
+      "bounds_min": [
+        -0.31000003822752004,
+        0.0,
+        -0.2480000054759643
+      ],
+      "bounds_max": [
+        0.31000003822752004,
+        0.5174999833106995,
+        0.2495000210994438
+      ],
+      "bounds_tolerance_m": 0.001,
+      "mesh_triangles": {
+        "BOX": 1772
+      },
+      "default_visible_triangles": null,
+      "default_material_slots": null,
+      "maximum_reference_bounds_delta_m": 3.8227520038347507e-08
+    },
+    {
+      "name": "CABINET",
+      "kind": "item",
+      "triangles": 3600,
+      "issues": [],
+      "unchanged_texture_checks": 2,
+      "animations": [],
+      "bounds_min": [
+        -0.49500003886324806,
+        0.0,
+        -0.22500007534271332
+      ],
+      "bounds_max": [
+        0.49500003886324806,
+        1.1349999904632568,
+        0.3109999979021664
+      ],
+      "bounds_tolerance_m": 0.001,
+      "mesh_triangles": {
+        "CABINET": 3600
+      },
+      "default_visible_triangles": null,
+      "default_material_slots": null,
+      "maximum_reference_bounds_delta_m": 7.534271331821607e-08
+    },
+    {
+      "name": "CHAIR",
+      "kind": "item",
+      "triangles": 3408,
+      "issues": [],
+      "unchanged_texture_checks": 3,
+      "animations": [],
+      "bounds_min": [
+        -0.2500000372420993,
+        0.0,
+        -0.24134137310466178
+      ],
+      "bounds_max": [
+        0.2500000372420993,
+        0.8979848492890596,
+        0.24134137310466178
+      ],
+      "bounds_tolerance_m": 0.001,
+      "mesh_triangles": {
+        "CHAIR": 3408
+      },
+      "default_visible_triangles": null,
+      "default_material_slots": null,
+      "maximum_reference_bounds_delta_m": 3.731046617772016e-07
+    },
+    {
+      "name": "CHEST",
+      "kind": "item",
+      "triangles": 3104,
+      "issues": [],
+      "unchanged_texture_checks": 2,
+      "animations": [],
+      "bounds_min": [
+        -0.3900000140548305,
+        0.0,
+        -0.245000058480924
+      ],
+      "bounds_max": [
+        0.3900000140548305,
+        0.5674999952316284,
+        0.3019999861717201
+      ],
+      "bounds_tolerance_m": 0.001,
+      "mesh_triangles": {
+        "CHEST": 3104
+      },
+      "default_visible_triangles": null,
+      "default_material_slots": null,
+      "maximum_reference_bounds_delta_m": 5.848092399229898e-08
+    },
+    {
+      "name": "CRATE",
+      "kind": "item",
+      "triangles": 7776,
+      "issues": [],
+      "unchanged_texture_checks": 2,
+      "animations": [],
+      "bounds_min": [
+        -0.30500005033940386,
+        0.0,
+        -0.2890000419272636
+      ],
+      "bounds_max": [
+        0.30500005033940386,
+        0.4819999933242798,
+        0.2890000419272636
+      ],
+      "bounds_tolerance_m": 0.001,
+      "mesh_triangles": {
+        "CRATE": 7776
+      },
+      "default_visible_triangles": null,
+      "default_material_slots": null,
+      "maximum_reference_bounds_delta_m": 5.033940386756086e-08
+    },
+    {
+      "name": "DESK",
+      "kind": "item",
+      "triangles": 5344,
+      "issues": [],
+      "unchanged_texture_checks": 2,
+      "animations": [],
+      "bounds_min": [
+        -0.6700000694052263,
+        0.0,
+        -0.32550012439431686
+      ],
+      "bounds_max": [
+        0.6700000694052263,
+        0.7799999713897705,
+        0.3519999281544292
+      ],
+      "bounds_tolerance_m": 0.001,
+      "mesh_triangles": {
+        "DESK": 5344
+      },
+      "default_visible_triangles": null,
+      "default_material_slots": null,
+      "maximum_reference_bounds_delta_m": 1.2439431684718727e-07
+    },
+    {
+      "name": "SHELF",
+      "kind": "item",
+      "triangles": 3024,
+      "issues": [],
+      "unchanged_texture_checks": 2,
+      "animations": [],
+      "bounds_min": [
+        -0.4950000281976716,
+        0.0,
+        -0.16000007055823073
+      ],
+      "bounds_max": [
+        0.4950000281976716,
+        1.2799999713897705,
+        0.16000007055823073
+      ],
+      "bounds_tolerance_m": 0.001,
+      "mesh_triangles": {
+        "SHELF": 3024
+      },
+      "default_visible_triangles": null,
+      "default_material_slots": null,
+      "maximum_reference_bounds_delta_m": 7.055823073032208e-08
+    },
+    {
+      "name": "STOOL",
+      "kind": "item",
+      "triangles": 704,
+      "issues": [],
+      "unchanged_texture_checks": 2,
+      "animations": [],
+      "bounds_min": [
+        -0.25999999046325484,
+        0.0,
+        -0.25999999046325484
+      ],
+      "bounds_max": [
+        0.25999999046325484,
+        0.4659848380833864,
+        0.25999999046325484
+      ],
+      "bounds_tolerance_m": 0.001,
+      "mesh_triangles": {
+        "STOOL": 704
+      },
+      "default_visible_triangles": null,
+      "default_material_slots": null,
+      "maximum_reference_bounds_delta_m": 1.6191661356135256e-07
+    },
+    {
+      "name": "BOOK",
+      "kind": "item",
+      "triangles": 3492,
+      "issues": [],
+      "unchanged_texture_checks": 2,
+      "animations": [],
+      "bounds_min": [
+        -0.17700002126754336,
+        0.0,
+        -0.12750002427975962
+      ],
+      "bounds_max": [
+        0.16250001458388588,
+        0.12999999290332198,
+        0.12750002646532949
+      ],
+      "bounds_tolerance_m": 0.001,
+      "mesh_triangles": {
+        "BOOK": 3492
+      },
+      "default_visible_triangles": null,
+      "default_material_slots": null,
+      "maximum_reference_bounds_delta_m": 2.6465329483471578e-08
+    },
+    {
+      "name": "CLOCK",
+      "kind": "item",
+      "triangles": 3536,
+      "issues": [],
+      "unchanged_texture_checks": 1,
+      "animations": [],
+      "bounds_min": [
+        -0.2399999998809464,
+        0.0,
+        -0.03000004129237763
+      ],
+      "bounds_max": [
+        0.24000000162940183,
+        0.47999998927116394,
+        0.09200000017881323
+      ],
+      "bounds_tolerance_m": 0.001,
+      "mesh_triangles": {
+        "CLOCK": 3536
+      },
+      "default_visible_triangles": null,
+      "default_material_slots": null,
+      "maximum_reference_bounds_delta_m": 4.1292377631757526e-08
+    },
+    {
+      "name": "FAN",
+      "kind": "item",
+      "triangles": 4828,
+      "issues": [],
+      "unchanged_texture_checks": 1,
+      "animations": [],
+      "bounds_min": [
+        -0.26100000739097395,
+        0.0,
+        -0.12500002657652118
+      ],
+      "bounds_max": [
+        0.26100000739097395,
+        0.8209999799728394,
+        0.12500002657652118
+      ],
+      "bounds_tolerance_m": 0.001,
+      "mesh_triangles": {
+        "FAN": 4828
+      },
+      "default_visible_triangles": null,
+      "default_material_slots": null,
+      "maximum_reference_bounds_delta_m": 2.6576521178212076e-08
+    },
+    {
+      "name": "MUG",
+      "kind": "item",
+      "triangles": 1228,
+      "issues": [],
+      "unchanged_texture_checks": 1,
+      "animations": [],
+      "bounds_min": [
+        -0.12499999999999904,
+        0.0,
+        -0.12499999999999904
+      ],
+      "bounds_max": [
+        0.22699999809264962,
+        0.2750000059604645,
+        0.126000010083092
+      ],
+      "bounds_tolerance_m": 0.001,
+      "mesh_triangles": {
+        "MUG": 1228
+      },
+      "default_visible_triangles": null,
+      "default_material_slots": null,
+      "maximum_reference_bounds_delta_m": 1.0083092000234828e-08
+    },
+    {
+      "name": "PLANT",
+      "kind": "item",
+      "triangles": 3764,
+      "issues": [],
+      "unchanged_texture_checks": 0,
+      "animations": [],
+      "bounds_min": [
+        -0.17000000178813804,
+        0.0,
+        -0.17000000178813804
+      ],
+      "bounds_max": [
+        0.1704341322183596,
+        0.7876498103141785,
+        0.17591627086773018
+      ],
+      "bounds_tolerance_m": 0.001,
+      "mesh_triangles": {
+        "PLANT": 3764
+      },
+      "default_visible_triangles": null,
+      "default_material_slots": null,
+      "maximum_reference_bounds_delta_m": 2.708677301899165e-07
+    },
+    {
+      "name": "POT",
+      "kind": "item",
+      "triangles": 2320,
+      "issues": [],
+      "unchanged_texture_checks": 0,
+      "animations": [],
+      "bounds_min": [
+        -0.35699999332427707,
+        0.0,
+        -0.23000000417232339
+      ],
+      "bounds_max": [
+        0.35699999332427707,
+        0.25699999928474426,
+        0.23000000417232339
+      ],
+      "bounds_tolerance_m": 0.001,
+      "mesh_triangles": {
+        "POT": 2320
+      },
+      "default_visible_triangles": null,
+      "default_material_slots": null,
+      "maximum_reference_bounds_delta_m": 6.675722918902949e-09
+    },
+    {
+      "name": "VASE",
+      "kind": "item",
+      "triangles": 1760,
+      "issues": [],
+      "unchanged_texture_checks": 0,
+      "animations": [],
+      "bounds_min": [
+        -0.16500000655650965,
+        0.0,
+        -0.16500000655650965
+      ],
+      "bounds_max": [
+        0.16500000655650965,
+        0.492000013589859,
+        0.16500000655650965
+      ],
+      "bounds_tolerance_m": 0.001,
+      "mesh_triangles": {
+        "VASE": 1760
+      },
+      "default_visible_triangles": null,
+      "default_material_slots": null,
+      "maximum_reference_bounds_delta_m": 1.358985901589449e-08
+    },
+    {
+      "name": "A",
+      "kind": "letter",
+      "triangles": 908,
+      "issues": [],
+      "unchanged_texture_checks": 1,
+      "animations": [],
+      "bounds_min": [
+        -0.1049999989073131,
+        0.0,
+        -0.02850001557615481
+      ],
+      "bounds_max": [
+        0.1049999989073131,
+        0.20999999344348907,
+        0.040500012032200966
+      ],
+      "bounds_tolerance_m": 0.001,
+      "mesh_triangles": {
+        "Tile_A": 908
+      },
+      "default_visible_triangles": null,
+      "default_material_slots": null,
+      "maximum_reference_bounds_delta_m": 1.5576154810403864e-08
+    },
+    {
+      "name": "B",
+      "kind": "letter",
+      "triangles": 1032,
+      "issues": [],
+      "unchanged_texture_checks": 1,
+      "animations": [],
+      "bounds_min": [
+        -0.1049999989073131,
+        0.0,
+        -0.02850001557615481
+      ],
+      "bounds_max": [
+        0.1049999989073131,
+        0.20999999344348907,
+        0.04050000947228375
+      ],
+      "bounds_tolerance_m": 0.001,
+      "mesh_triangles": {
+        "Tile_B": 1032
+      },
+      "default_visible_triangles": null,
+      "default_material_slots": null,
+      "maximum_reference_bounds_delta_m": 1.5576154810403864e-08
+    },
+    {
+      "name": "C",
+      "kind": "letter",
+      "triangles": 996,
+      "issues": [],
+      "unchanged_texture_checks": 1,
+      "animations": [],
+      "bounds_min": [
+        -0.1049999989073131,
+        0.0,
+        -0.02850001557615481
+      ],
+      "bounds_max": [
+        0.1049999989073131,
+        0.20999999344348907,
+        0.04050000943702094
+      ],
+      "bounds_tolerance_m": 0.001,
+      "mesh_triangles": {
+        "Tile_C": 996
+      },
+      "default_visible_triangles": null,
+      "default_material_slots": null,
+      "maximum_reference_bounds_delta_m": 1.5576154810403864e-08
+    },
+    {
+      "name": "D",
+      "kind": "letter",
+      "triangles": 984,
+      "issues": [],
+      "unchanged_texture_checks": 1,
+      "animations": [],
+      "bounds_min": [
+        -0.1049999989073131,
+        0.0,
+        -0.02850001557615481
+      ],
+      "bounds_max": [
+        0.1049999989073131,
+        0.20999999344348907,
+        0.04050001081191745
+      ],
+      "bounds_tolerance_m": 0.001,
+      "mesh_triangles": {
+        "Tile_D": 984
+      },
+      "default_visible_triangles": null,
+      "default_material_slots": null,
+      "maximum_reference_bounds_delta_m": 1.5576154810403864e-08
+    },
+    {
+      "name": "E",
+      "kind": "letter",
+      "triangles": 908,
+      "issues": [],
+      "unchanged_texture_checks": 1,
+      "animations": [],
+      "bounds_min": [
+        -0.1049999989073131,
+        0.0,
+        -0.02850001557615481
+      ],
+      "bounds_max": [
+        0.1049999989073131,
+        0.20999999344348907,
+        0.04050000819354349
+      ],
+      "bounds_tolerance_m": 0.001,
+      "mesh_triangles": {
+        "Tile_E": 908
+      },
+      "default_visible_triangles": null,
+      "default_material_slots": null,
+      "maximum_reference_bounds_delta_m": 1.5576154810403864e-08
+    },
+    {
+      "name": "F",
+      "kind": "letter",
+      "triangles": 900,
+      "issues": [],
+      "unchanged_texture_checks": 1,
+      "animations": [],
+      "bounds_min": [
+        -0.1049999989073131,
+        0.0,
+        -0.02850001557615481
+      ],
+      "bounds_max": [
+        0.1049999989073131,
+        0.20999999344348907,
+        0.0405000080254801
+      ],
+      "bounds_tolerance_m": 0.001,
+      "mesh_triangles": {
+        "Tile_F": 900
+      },
+      "default_visible_triangles": null,
+      "default_material_slots": null,
+      "maximum_reference_bounds_delta_m": 1.5576154810403864e-08
+    },
+    {
+      "name": "G",
+      "kind": "letter",
+      "triangles": 1012,
+      "issues": [],
+      "unchanged_texture_checks": 1,
+      "animations": [],
+      "bounds_min": [
+        -0.1049999989073131,
+        0.0,
+        -0.02850001557615481
+      ],
+      "bounds_max": [
+        0.1049999989073131,
+        0.20999999344348907,
+        0.040500010594411356
+      ],
+      "bounds_tolerance_m": 0.001,
+      "mesh_triangles": {
+        "Tile_G": 1012
+      },
+      "default_visible_triangles": null,
+      "default_material_slots": null,
+      "maximum_reference_bounds_delta_m": 1.5576154810403864e-08
+    },
+    {
+      "name": "H",
+      "kind": "letter",
+      "triangles": 908,
+      "issues": [],
+      "unchanged_texture_checks": 1,
+      "animations": [],
+      "bounds_min": [
+        -0.1049999989073131,
+        0.0,
+        -0.02850001557615481
+      ],
+      "bounds_max": [
+        0.1049999989073131,
+        0.20999999344348907,
+        0.040500010302856486
+      ],
+      "bounds_tolerance_m": 0.001,
+      "mesh_triangles": {
+        "Tile_H": 908
+      },
+      "default_visible_triangles": null,
+      "default_material_slots": null,
+      "maximum_reference_bounds_delta_m": 1.5576154810403864e-08
+    },
+    {
+      "name": "I",
+      "kind": "letter",
+      "triangles": 876,
+      "issues": [],
+      "unchanged_texture_checks": 1,
+      "animations": [],
+      "bounds_min": [
+        -0.1049999989073131,
+        0.0,
+        -0.02850001557615481
+      ],
+      "bounds_max": [
+        0.1049999989073131,
+        0.20999999344348907,
+        0.04050000304935214
+      ],
+      "bounds_tolerance_m": 0.001,
+      "mesh_triangles": {
+        "Tile_I": 876
+      },
+      "default_visible_triangles": null,
+      "default_material_slots": null,
+      "maximum_reference_bounds_delta_m": 1.5576154810403864e-08
+    },
+    {
+      "name": "J",
+      "kind": "letter",
+      "triangles": 916,
+      "issues": [],
+      "unchanged_texture_checks": 1,
+      "animations": [],
+      "bounds_min": [
+        -0.1049999989073131,
+        0.0,
+        -0.02850001557615481
+      ],
+      "bounds_max": [
+        0.1049999989073131,
+        0.20999999344348907,
+        0.040500004227946945
+      ],
+      "bounds_tolerance_m": 0.001,
+      "mesh_triangles": {
+        "Tile_J": 916
+      },
+      "default_visible_triangles": null,
+      "default_material_slots": null,
+      "maximum_reference_bounds_delta_m": 1.5576154810403864e-08
+    },
+    {
+      "name": "K",
+      "kind": "letter",
+      "triangles": 904,
+      "issues": [],
+      "unchanged_texture_checks": 1,
+      "animations": [],
+      "bounds_min": [
+        -0.1049999989073131,
+        0.0,
+        -0.02850001557615481
+      ],
+      "bounds_max": [
+        0.1049999989073131,
+        0.20999999344348907,
+        0.04050001123816442
+      ],
+      "bounds_tolerance_m": 0.001,
+      "mesh_triangles": {
+        "Tile_K": 904
+      },
+      "default_visible_triangles": null,
+      "default_material_slots": null,
+      "maximum_reference_bounds_delta_m": 1.5576154810403864e-08
+    },
+    {
+      "name": "L",
+      "kind": "letter",
+      "triangles": 884,
+      "issues": [],
+      "unchanged_texture_checks": 1,
+      "animations": [],
+      "bounds_min": [
+        -0.1049999989073131,
+        0.0,
+        -0.02850001557615481
+      ],
+      "bounds_max": [
+        0.1049999989073131,
+        0.20999999344348907,
+        0.04050000819354349
+      ],
+      "bounds_tolerance_m": 0.001,
+      "mesh_triangles": {
+        "Tile_L": 884
+      },
+      "default_visible_triangles": null,
+      "default_material_slots": null,
+      "maximum_reference_bounds_delta_m": 1.5576154810403864e-08
+    },
+    {
+      "name": "M",
+      "kind": "letter",
+      "triangles": 912,
+      "issues": [],
+      "unchanged_texture_checks": 1,
+      "animations": [],
+      "bounds_min": [
+        -0.1049999989073131,
+        0.0,
+        -0.02850001557615481
+      ],
+      "bounds_max": [
+        0.1049999989073131,
+        0.20999999344348907,
+        0.04050001276047456
+      ],
+      "bounds_tolerance_m": 0.001,
+      "mesh_triangles": {
+        "Tile_M": 912
+      },
+      "default_visible_triangles": null,
+      "default_material_slots": null,
+      "maximum_reference_bounds_delta_m": 1.5576154810403864e-08
+    },
+    {
+      "name": "N",
+      "kind": "letter",
+      "triangles": 900,
+      "issues": [],
+      "unchanged_texture_checks": 1,
+      "animations": [],
+      "bounds_min": [
+        -0.1049999989073131,
+        0.0,
+        -0.02850001557615481
+      ],
+      "bounds_max": [
+        0.1049999989073131,
+        0.20999999344348907,
+        0.040500010302856486
+      ],
+      "bounds_tolerance_m": 0.001,
+      "mesh_triangles": {
+        "Tile_N": 900
+      },
+      "default_visible_triangles": null,
+      "default_material_slots": null,
+      "maximum_reference_bounds_delta_m": 1.5576154810403864e-08
+    },
+    {
+      "name": "O",
+      "kind": "letter",
+      "triangles": 992,
+      "issues": [],
+      "unchanged_texture_checks": 1,
+      "animations": [],
+      "bounds_min": [
+        -0.1049999989073131,
+        0.0,
+        -0.02850001557615481
+      ],
+      "bounds_max": [
+        0.1049999989073131,
+        0.20999999344348907,
+        0.040500011387916396
+      ],
+      "bounds_tolerance_m": 0.001,
+      "mesh_triangles": {
+        "Tile_O": 992
+      },
+      "default_visible_triangles": null,
+      "default_material_slots": null,
+      "maximum_reference_bounds_delta_m": 1.5576154810403864e-08
+    },
+    {
+      "name": "P",
+      "kind": "letter",
+      "triangles": 960,
+      "issues": [],
+      "unchanged_texture_checks": 1,
+      "animations": [],
+      "bounds_min": [
+        -0.1049999989073131,
+        0.0,
+        -0.02850001557615481
+      ],
+      "bounds_max": [
+        0.1049999989073131,
+        0.20999999344348907,
+        0.04050000947228375
+      ],
+      "bounds_tolerance_m": 0.001,
+      "mesh_triangles": {
+        "Tile_P": 960
+      },
+      "default_visible_triangles": null,
+      "default_material_slots": null,
+      "maximum_reference_bounds_delta_m": 1.5576154810403864e-08
+    },
+    {
+      "name": "Q",
+      "kind": "letter",
+      "triangles": 1008,
+      "issues": [],
+      "unchanged_texture_checks": 1,
+      "animations": [],
+      "bounds_min": [
+        -0.1049999989073131,
+        0.0,
+        -0.02850001557615481
+      ],
+      "bounds_max": [
+        0.1049999989073131,
+        0.20999999344348907,
+        0.040500009716642416
+      ],
+      "bounds_tolerance_m": 0.001,
+      "mesh_triangles": {
+        "Tile_Q": 1008
+      },
+      "default_visible_triangles": null,
+      "default_material_slots": null,
+      "maximum_reference_bounds_delta_m": 1.5576154810403864e-08
+    },
+    {
+      "name": "R",
+      "kind": "letter",
+      "triangles": 1004,
+      "issues": [],
+      "unchanged_texture_checks": 1,
+      "animations": [],
+      "bounds_min": [
+        -0.1049999989073131,
+        0.0,
+        -0.02850001557615481
+      ],
+      "bounds_max": [
+        0.1049999989073131,
+        0.20999999344348907,
+        0.04050001037836298
+      ],
+      "bounds_tolerance_m": 0.001,
+      "mesh_triangles": {
+        "Tile_R": 1004
+      },
+      "default_visible_triangles": null,
+      "default_material_slots": null,
+      "maximum_reference_bounds_delta_m": 1.5576154810403864e-08
+    },
+    {
+      "name": "S",
+      "kind": "letter",
+      "triangles": 1068,
+      "issues": [],
+      "unchanged_texture_checks": 1,
+      "animations": [],
+      "bounds_min": [
+        -0.1049999989073131,
+        0.0,
+        -0.02850001557615481
+      ],
+      "bounds_max": [
+        0.1049999989073131,
+        0.20999999344348907,
+        0.040500008763246484
+      ],
+      "bounds_tolerance_m": 0.001,
+      "mesh_triangles": {
+        "Tile_S": 1068
+      },
+      "default_visible_triangles": null,
+      "default_material_slots": null,
+      "maximum_reference_bounds_delta_m": 1.5576154810403864e-08
+    },
+    {
+      "name": "T",
+      "kind": "letter",
+      "triangles": 892,
+      "issues": [],
+      "unchanged_texture_checks": 1,
+      "animations": [],
+      "bounds_min": [
+        -0.1049999989073131,
+        0.0,
+        -0.02850001557615481
+      ],
+      "bounds_max": [
+        0.1049999989073131,
+        0.20999999344348907,
+        0.04050001059270482
+      ],
+      "bounds_tolerance_m": 0.001,
+      "mesh_triangles": {
+        "Tile_T": 892
+      },
+      "default_visible_triangles": null,
+      "default_material_slots": null,
+      "maximum_reference_bounds_delta_m": 1.5576154810403864e-08
+    },
+    {
+      "name": "U",
+      "kind": "letter",
+      "triangles": 948,
+      "issues": [],
+      "unchanged_texture_checks": 1,
+      "animations": [],
+      "bounds_min": [
+        -0.1049999989073131,
+        0.0,
+        -0.02850001557615481
+      ],
+      "bounds_max": [
+        0.1049999989073131,
+        0.20999999344348907,
+        0.04050000972578998
+      ],
+      "bounds_tolerance_m": 0.001,
+      "mesh_triangles": {
+        "Tile_U": 948
+      },
+      "default_visible_triangles": null,
+      "default_material_slots": null,
+      "maximum_reference_bounds_delta_m": 1.5576154810403864e-08
+    },
+    {
+      "name": "V",
+      "kind": "letter",
+      "triangles": 888,
+      "issues": [],
+      "unchanged_texture_checks": 1,
+      "animations": [],
+      "bounds_min": [
+        -0.1049999989073131,
+        0.0,
+        -0.02850001557615481
+      ],
+      "bounds_max": [
+        0.1049999989073131,
+        0.20999999344348907,
+        0.040500012032200966
+      ],
+      "bounds_tolerance_m": 0.001,
+      "mesh_triangles": {
+        "Tile_V": 888
+      },
+      "default_visible_triangles": null,
+      "default_material_slots": null,
+      "maximum_reference_bounds_delta_m": 1.5576154810403864e-08
+    },
+    {
+      "name": "W",
+      "kind": "letter",
+      "triangles": 912,
+      "issues": [],
+      "unchanged_texture_checks": 1,
+      "animations": [],
+      "bounds_min": [
+        -0.1049999989073131,
+        0.0,
+        -0.02850001557615481
+      ],
+      "bounds_max": [
+        0.1049999989073131,
+        0.20999999344348907,
+        0.0405000163604336
+      ],
+      "bounds_tolerance_m": 0.001,
+      "mesh_triangles": {
+        "Tile_W": 912
+      },
+      "default_visible_triangles": null,
+      "default_material_slots": null,
+      "maximum_reference_bounds_delta_m": 1.6360433598150426e-08
+    },
+    {
+      "name": "X",
+      "kind": "letter",
+      "triangles": 908,
+      "issues": [],
+      "unchanged_texture_checks": 1,
+      "animations": [],
+      "bounds_min": [
+        -0.1049999989073131,
+        0.0,
+        -0.02850001557615481
+      ],
+      "bounds_max": [
+        0.1049999989073131,
+        0.20999999344348907,
+        0.04050001152801145
+      ],
+      "bounds_tolerance_m": 0.001,
+      "mesh_triangles": {
+        "Tile_X": 908
+      },
+      "default_visible_triangles": null,
+      "default_material_slots": null,
+      "maximum_reference_bounds_delta_m": 1.5576154810403864e-08
+    },
+    {
+      "name": "Y",
+      "kind": "letter",
+      "triangles": 896,
+      "issues": [],
+      "unchanged_texture_checks": 1,
+      "animations": [],
+      "bounds_min": [
+        -0.1049999989073131,
+        0.0,
+        -0.02850001557615481
+      ],
+      "bounds_max": [
+        0.1049999989073131,
+        0.20999999344348907,
+        0.040500011713125235
+      ],
+      "bounds_tolerance_m": 0.001,
+      "mesh_triangles": {
+        "Tile_Y": 896
+      },
+      "default_visible_triangles": null,
+      "default_material_slots": null,
+      "maximum_reference_bounds_delta_m": 1.5576154810403864e-08
+    },
+    {
+      "name": "Z",
+      "kind": "letter",
+      "triangles": 900,
+      "issues": [],
+      "unchanged_texture_checks": 1,
+      "animations": [],
+      "bounds_min": [
+        -0.1049999989073131,
+        0.0,
+        -0.02850001557615481
+      ],
+      "bounds_max": [
+        0.1049999989073131,
+        0.20999999344348907,
+        0.04050001002031566
+      ],
+      "bounds_tolerance_m": 0.001,
+      "mesh_triangles": {
+        "Tile_Z": 900
+      },
+      "default_visible_triangles": null,
+      "default_material_slots": null,
+      "maximum_reference_bounds_delta_m": 1.5576154810403864e-08
+    },
+    {
+      "name": "Arena_Rug",
+      "kind": "environment",
+      "triangles": 1356,
+      "issues": [],
+      "unchanged_texture_checks": 1,
+      "animations": [],
+      "bounds_min": [
+        -1.0000001721109504,
+        0.0,
+        -1.0000001721109504
+      ],
+      "bounds_max": [
+        1.0000001721109504,
+        0.06300000101327896,
+        1.0000001721109504
+      ],
+      "bounds_tolerance_m": 0.001,
+      "mesh_triangles": {
+        "Arena_Rug": 1356
+      },
+      "default_visible_triangles": null,
+      "default_material_slots": null,
+      "maximum_reference_bounds_delta_m": 1.7211095038049962e-07
+    },
+    {
+      "name": "Corner_Post",
+      "kind": "environment",
+      "triangles": 1296,
+      "issues": [],
+      "unchanged_texture_checks": 2,
+      "animations": [],
+      "bounds_min": [
+        -0.1250000183587808,
+        0.0,
+        -0.1250000183587808
+      ],
+      "bounds_max": [
+        0.1250000183587808,
+        2.0199999809265137,
+        0.1250000183587808
+      ],
+      "bounds_tolerance_m": 0.001,
+      "mesh_triangles": {
+        "Corner_Post": 1296
+      },
+      "default_visible_triangles": null,
+      "default_material_slots": null,
+      "maximum_reference_bounds_delta_m": 1.907348634588857e-08
+    },
+    {
+      "name": "Curtain",
+      "kind": "environment",
+      "triangles": 3552,
+      "issues": [],
+      "unchanged_texture_checks": 1,
+      "animations": [],
+      "bounds_min": [
+        -0.6999999912262854,
+        0.17000000178813934,
+        -0.05579564059840443
+      ],
+      "bounds_max": [
+        0.6999999912262854,
+        1.218000054359436,
+        0.0565001077704489
+      ],
+      "bounds_tolerance_m": 0.001,
+      "mesh_triangles": {
+        "Curtain": 3552
+      },
+      "default_visible_triangles": null,
+      "default_material_slots": null,
+      "maximum_reference_bounds_delta_m": 3.594015955676877e-07
+    },
+    {
+      "name": "Doorstep",
+      "kind": "environment",
+      "triangles": 864,
+      "issues": [],
+      "unchanged_texture_checks": 1,
+      "animations": [],
+      "bounds_min": [
+        -0.7000000317904522,
+        0.0,
+        -0.27500012398120804
+      ],
+      "bounds_max": [
+        0.7000000317904522,
+        0.17949999868869781,
+        0.27500012398120804
+      ],
+      "bounds_tolerance_m": 0.001,
+      "mesh_triangles": {
+        "Doorstep": 864
+      },
+      "default_visible_triangles": null,
+      "default_material_slots": null,
+      "maximum_reference_bounds_delta_m": 1.2398120802226131e-07
+    },
+    {
+      "name": "Floor_Carpet_2m",
+      "kind": "environment",
+      "triangles": 864,
+      "issues": [],
+      "unchanged_texture_checks": 1,
+      "animations": [],
+      "bounds_min": [
+        -1.0000001730970847,
+        -0.14000000059604645,
+        -1.0000001730970847
+      ],
+      "bounds_max": [
+        1.0000001730970847,
+        0.013000000268220901,
+        1.0000001730970847
+      ],
+      "bounds_tolerance_m": 0.001,
+      "mesh_triangles": {
+        "Floor_Carpet_2m": 864
+      },
+      "default_visible_triangles": null,
+      "default_material_slots": null,
+      "maximum_reference_bounds_delta_m": 1.7309708466584084e-07
+    },
+    {
+      "name": "Kitchen_Counter",
+      "kind": "environment",
+      "triangles": 2784,
+      "issues": [],
+      "unchanged_texture_checks": 1,
+      "animations": [],
+      "bounds_min": [
+        -0.6350000492113547,
+        0.009999999776482582,
+        -0.355000096976017
+      ],
+      "bounds_max": [
+        0.6350000492113547,
+        0.9350000023841858,
+        0.3820000202662064
+      ],
+      "bounds_tolerance_m": 0.001,
+      "mesh_triangles": {
+        "Kitchen_Counter": 2784
+      },
+      "default_visible_triangles": null,
+      "default_material_slots": null,
+      "maximum_reference_bounds_delta_m": 9.697601699443226e-08
+    },
+    {
+      "name": "Kitchen_Fridge",
+      "kind": "environment",
+      "triangles": 2268,
+      "issues": [],
+      "unchanged_texture_checks": 3,
+      "animations": [],
+      "bounds_min": [
+        -0.4000000540429876,
+        0.0,
+        -0.3500000508643332
+      ],
+      "bounds_max": [
+        0.4000000540429876,
+        1.8200000524520874,
+        0.4490000458889761
+      ],
+      "bounds_tolerance_m": 0.001,
+      "mesh_triangles": {
+        "Kitchen_Fridge": 2268
+      },
+      "default_visible_triangles": null,
+      "default_material_slots": null,
+      "maximum_reference_bounds_delta_m": 5.4042987585045665e-08
+    },
+    {
+      "name": "Kitchen_Sink",
+      "kind": "environment",
+      "triangles": 4104,
+      "issues": [],
+      "unchanged_texture_checks": 0,
+      "animations": [],
+      "bounds_min": [
+        -0.385000039420007,
+        0.009999999776482582,
+        -0.3050000700969541
+      ],
+      "bounds_max": [
+        0.385000039420007,
+        0.48379841446876526,
+        0.3050000700969541
+      ],
+      "bounds_tolerance_m": 0.001,
+      "mesh_triangles": {
+        "Kitchen_Sink": 4104
+      },
+      "default_visible_triangles": null,
+      "default_material_slots": null,
+      "maximum_reference_bounds_delta_m": 4.1446876525297327e-07
+    },
+    {
+      "name": "Kitchen_Stove",
+      "kind": "environment",
+      "triangles": 8064,
+      "issues": [],
+      "unchanged_texture_checks": 0,
+      "animations": [],
+      "bounds_min": [
+        -0.41000005482212903,
+        -5.551115123125783e-17,
+        -0.3500000629286769
+      ],
+      "bounds_max": [
+        0.41000005482212903,
+        0.9419999718666077,
+        0.42950006342083574
+      ],
+      "bounds_tolerance_m": 0.001,
+      "mesh_triangles": {
+        "Kitchen_Stove": 8064
+      },
+      "default_visible_triangles": null,
+      "default_material_slots": null,
+      "maximum_reference_bounds_delta_m": 6.34208357497279e-08
+    },
+    {
+      "name": "Platform_2m",
+      "kind": "environment",
+      "triangles": 864,
+      "issues": [],
+      "unchanged_texture_checks": 2,
+      "animations": [],
+      "bounds_min": [
+        -1.020000155772052,
+        0.0,
+        -1.020000155772052
+      ],
+      "bounds_max": [
+        1.020000155772052,
+        0.8475000262260437,
+        1.020000155772052
+      ],
+      "bounds_tolerance_m": 0.001,
+      "mesh_triangles": {
+        "Platform_2m": 864
+      },
+      "default_visible_triangles": null,
+      "default_material_slots": null,
+      "maximum_reference_bounds_delta_m": 1.5577205192407462e-07
+    },
+    {
+      "name": "Radiator",
+      "kind": "environment",
+      "triangles": 4512,
+      "issues": [],
+      "unchanged_texture_checks": 0,
+      "animations": [],
+      "bounds_min": [
+        -0.49000001985262664,
+        0.009999999776482582,
+        -0.05900008603194665
+      ],
+      "bounds_max": [
+        0.49000000796312954,
+        0.5899999737739563,
+        0.05500008056804244
+      ],
+      "bounds_tolerance_m": 0.001,
+      "mesh_triangles": {
+        "Radiator": 4512
+      },
+      "default_visible_triangles": null,
+      "default_material_slots": null,
+      "maximum_reference_bounds_delta_m": 8.603194665002256e-08
+    },
+    {
+      "name": "Railing_2m",
+      "kind": "environment",
+      "triangles": 1536,
+      "issues": [],
+      "unchanged_texture_checks": 2,
+      "animations": [],
+      "bounds_min": [
+        -1.0000000026226754,
+        0.019999999552965164,
+        -0.05000016894647514
+      ],
+      "bounds_max": [
+        1.0000000026226754,
+        0.7799999713897705,
+        0.05000016894647514
+      ],
+      "bounds_tolerance_m": 0.001,
+      "mesh_triangles": {
+        "Railing_2m": 1536
+      },
+      "default_visible_triangles": null,
+      "default_material_slots": null,
+      "maximum_reference_bounds_delta_m": 1.689464751361558e-07
+    },
+    {
+      "name": "Round_Rug",
+      "kind": "environment",
+      "triangles": 1408,
+      "issues": [],
+      "unchanged_texture_checks": 2,
+      "animations": [],
+      "bounds_min": [
+        -0.939999997615807,
+        0.0,
+        -0.939999997615807
+      ],
+      "bounds_max": [
+        0.939999997615807,
+        0.02800000086426735,
+        0.939999997615807
+      ],
+      "bounds_tolerance_m": 0.001,
+      "mesh_triangles": {
+        "Round_Rug": 1408
+      },
+      "default_visible_triangles": null,
+      "default_material_slots": null,
+      "maximum_reference_bounds_delta_m": 2.38419295417458e-09
+    },
+    {
+      "name": "Stairs_1m",
+      "kind": "environment",
+      "triangles": 4320,
+      "issues": [],
+      "unchanged_texture_checks": 2,
+      "animations": [],
+      "bounds_min": [
+        -0.5250001711109236,
+        0.0,
+        -1.1270000639465518
+      ],
+      "bounds_max": [
+        0.5250000025598144,
+        0.8165000081062317,
+        0.16300009219916095
+      ],
+      "bounds_tolerance_m": 0.001,
+      "mesh_triangles": {
+        "Stairs_1m": 4320
+      },
+      "default_visible_triangles": null,
+      "default_material_slots": null,
+      "maximum_reference_bounds_delta_m": 1.7111092354138435e-07
+    },
+    {
+      "name": "Wall_Door",
+      "kind": "environment",
+      "triangles": 3024,
+      "issues": [],
+      "unchanged_texture_checks": 1,
+      "animations": [],
+      "bounds_min": [
+        -1.0199999939524995,
+        0.0,
+        -0.09500010319069788
+      ],
+      "bounds_max": [
+        1.0200000026947762,
+        2.0299999713897705,
+        0.13750017904969072
+      ],
+      "bounds_tolerance_m": 0.001,
+      "mesh_triangles": {
+        "Wall_Door": 3024
+      },
+      "default_visible_triangles": null,
+      "default_material_slots": null,
+      "maximum_reference_bounds_delta_m": 8.209503092881931e-07
+    },
+    {
+      "name": "Wall_Sconce",
+      "kind": "environment",
+      "triangles": 1128,
+      "issues": [],
+      "unchanged_texture_checks": 0,
+      "animations": [],
+      "bounds_min": [
+        -0.05499996648132302,
+        0.07999999821186066,
+        -0.018000005071974766
+      ],
+      "bounds_max": [
+        0.055000032922629685,
+        0.4129999876022339,
+        0.2450000047683697
+      ],
+      "bounds_tolerance_m": 0.001,
+      "mesh_triangles": {
+        "Wall_Sconce": 1128
+      },
+      "default_visible_triangles": null,
+      "default_material_slots": null,
+      "maximum_reference_bounds_delta_m": 3.35186769798157e-08
+    },
+    {
+      "name": "Wall_Shelf",
+      "kind": "environment",
+      "triangles": 528,
+      "issues": [],
+      "unchanged_texture_checks": 1,
+      "animations": [],
+      "bounds_min": [
+        -0.4750000109995503,
+        0.029999999329447746,
+        -0.11500008199057403
+      ],
+      "bounds_max": [
+        0.4750000109995503,
+        0.3075000047683716,
+        0.11500008199057403
+      ],
+      "bounds_tolerance_m": 0.001,
+      "mesh_triangles": {
+        "Wall_Shelf": 528
+      },
+      "default_visible_triangles": null,
+      "default_material_slots": null,
+      "maximum_reference_bounds_delta_m": 8.199057402458187e-08
+    },
+    {
+      "name": "Wall_Sign",
+      "kind": "environment",
+      "triangles": 892,
+      "issues": [],
+      "unchanged_texture_checks": 2,
+      "animations": [],
+      "bounds_min": [
+        -0.36500000984446856,
+        0.0,
+        -0.022000060160541117
+      ],
+      "bounds_max": [
+        0.36500000984446856,
+        0.6399999856948853,
+        0.043500025334868096
+      ],
+      "bounds_tolerance_m": 0.001,
+      "mesh_triangles": {
+        "Wall_Sign": 892
+      },
+      "default_visible_triangles": null,
+      "default_material_slots": null,
+      "maximum_reference_bounds_delta_m": 6.01605411182371e-08
+    },
+    {
+      "name": "Wall_Solid",
+      "kind": "environment",
+      "triangles": 1296,
+      "issues": [],
+      "unchanged_texture_checks": 1,
+      "animations": [],
+      "bounds_min": [
+        -1.0199999939524995,
+        0.0,
+        -0.08750017457934274
+      ],
+      "bounds_max": [
+        1.0200000026947762,
+        2.0299999713897705,
+        0.13750017904969072
+      ],
+      "bounds_tolerance_m": 0.001,
+      "mesh_triangles": {
+        "Wall_Solid": 1296
+      },
+      "default_visible_triangles": null,
+      "default_material_slots": null,
+      "maximum_reference_bounds_delta_m": 8.209503092881931e-07
+    },
+    {
+      "name": "Wall_Window",
+      "kind": "environment",
+      "triangles": 6048,
+      "issues": [],
+      "unchanged_texture_checks": 2,
+      "animations": [],
+      "bounds_min": [
+        -1.0199999939524995,
+        0.0,
+        -0.08750017457934274
+      ],
+      "bounds_max": [
+        1.0200000026947762,
+        2.0299999713897705,
+        0.2900000983111331
+      ],
+      "bounds_tolerance_m": 0.001,
+      "mesh_triangles": {
+        "Wall_Window": 6048
+      },
+      "default_visible_triangles": null,
+      "default_material_slots": null,
+      "maximum_reference_bounds_delta_m": 1.7457934274600628e-07
+    },
+    {
+      "name": "Window_Frame",
+      "kind": "environment",
+      "triangles": 3024,
+      "issues": [],
+      "unchanged_texture_checks": 0,
+      "animations": [],
+      "bounds_min": [
+        -0.5849999846619176,
+        -0.012500000186264515,
+        -0.05000010040701767
+      ],
+      "bounds_max": [
+        0.5849999846619176,
+        1.1124999523162842,
+        0.05000010040701767
+      ],
+      "bounds_tolerance_m": 0.001,
+      "mesh_triangles": {
+        "Window_Frame": 3024
+      },
+      "default_visible_triangles": null,
+      "default_material_slots": null,
+      "maximum_reference_bounds_delta_m": 1.0040701766550475e-07
+    },
+    {
+      "name": "Bomb_Warning",
+      "kind": "vfx",
+      "triangles": 1696,
+      "issues": [],
+      "unchanged_texture_checks": 1,
+      "animations": [],
+      "bounds_min": [
+        -0.43799999356269503,
+        -0.004000000189989805,
+        -0.43799999356269503
+      ],
+      "bounds_max": [
+        0.43799999356269503,
+        0.4300000071525574,
+        0.43799999356269503
+      ],
+      "bounds_tolerance_m": 0.001,
+      "mesh_triangles": {
+        "Bomb_Warning": 1696
+      },
+      "default_visible_triangles": null,
+      "default_material_slots": null,
+      "maximum_reference_bounds_delta_m": 7.152557379708213e-09
+    },
+    {
+      "name": "Craft_Ring",
+      "kind": "vfx",
+      "triangles": 2624,
+      "issues": [],
+      "unchanged_texture_checks": 1,
+      "animations": [],
+      "bounds_min": [
+        -0.3919999897479981,
+        0.00800000037997961,
+        -0.3919999897479981
+      ],
+      "bounds_max": [
+        0.3919999897479981,
+        0.10400000214576721,
+        0.3919999897479981
+      ],
+      "bounds_tolerance_m": 0.001,
+      "mesh_triangles": {
+        "Craft_Ring": 2624
+      },
+      "default_visible_triangles": null,
+      "default_material_slots": null,
+      "maximum_reference_bounds_delta_m": 1.0252001914068387e-08
+    },
+    {
+      "name": "Foam_Cloud",
+      "kind": "vfx",
+      "triangles": 5760,
+      "issues": [],
+      "unchanged_texture_checks": 0,
+      "animations": [],
+      "bounds_min": [
+        -0.2872568923809637,
+        -0.06069609522819519,
+        -0.3305185425023565
+      ],
+      "bounds_max": [
+        0.34584922531122353,
+        0.32645806670188904,
+        0.33065887087353313
+      ],
+      "bounds_tolerance_m": 0.001,
+      "mesh_triangles": {
+        "Foam_Cloud": 5760
+      },
+      "default_visible_triangles": null,
+      "default_material_slots": null,
+      "maximum_reference_bounds_delta_m": 4.574976434912337e-07
+    },
+    {
+      "name": "Impact_Star",
+      "kind": "vfx",
+      "triangles": 52,
+      "issues": [],
+      "unchanged_texture_checks": 0,
+      "animations": [],
+      "bounds_min": [
+        -0.19498558735859162,
+        0.01980622671544552,
+        -0.0225000349864303
+      ],
+      "bounds_max": [
+        0.19498558735859162,
+        0.4000000059604645,
+        0.0225000349864303
+      ],
+      "bounds_tolerance_m": 0.001,
+      "mesh_triangles": {
+        "Impact_Star": 52
+      },
+      "default_visible_triangles": null,
+      "default_material_slots": null,
+      "maximum_reference_bounds_delta_m": 4.1264140837604657e-07
+    },
+    {
+      "name": "Jump_Arrow",
+      "kind": "vfx",
+      "triangles": 24,
+      "issues": [],
+      "unchanged_texture_checks": 1,
+      "animations": [],
+      "bounds_min": [
+        -0.18000001064946683,
+        0.029999999329447746,
+        -0.02000003102516455
+      ],
+      "bounds_max": [
+        0.18000001064946683,
+        0.49000000953674316,
+        0.02000003102516455
+      ],
+      "bounds_tolerance_m": 0.001,
+      "mesh_triangles": {
+        "Jump_Arrow": 24
+      },
+      "default_visible_triangles": null,
+      "default_material_slots": null,
+      "maximum_reference_bounds_delta_m": 3.10251645485593e-08
+    },
+    {
+      "name": "Pickup_Ring",
+      "kind": "vfx",
+      "triangles": 676,
+      "issues": [],
+      "unchanged_texture_checks": 0,
+      "animations": [],
+      "bounds_min": [
+        -0.2720000147819498,
+        0.003000000026077032,
+        -0.2720000147819498
+      ],
+      "bounds_max": [
+        0.27230811276440364,
+        0.23499999940395355,
+        0.2720000147819498
+      ],
+      "bounds_tolerance_m": 0.001,
+      "mesh_triangles": {
+        "Pickup_Ring": 676
+      },
+      "default_visible_triangles": null,
+      "default_material_slots": null,
+      "maximum_reference_bounds_delta_m": 1.1276440364804685e-07
+    },
+    {
+      "name": "Room_Hazard",
+      "kind": "vfx",
+      "triangles": 3200,
+      "issues": [],
+      "unchanged_texture_checks": 0,
+      "animations": [],
+      "bounds_min": [
+        -0.699000000953669,
+        0.061000000685453415,
+        -0.699000000953669
+      ],
+      "bounds_max": [
+        0.699000000953669,
+        0.7789999842643738,
+        0.699000000953669
+      ],
+      "bounds_tolerance_m": 0.001,
+      "mesh_triangles": {
+        "Room_Hazard": 3200
+      },
+      "default_visible_triangles": null,
+      "default_material_slots": null,
+      "maximum_reference_bounds_delta_m": 1.57356262464603e-08
+    },
+    {
+      "name": "Soap_Puddle",
+      "kind": "vfx",
+      "triangles": 3300,
+      "issues": [],
+      "unchanged_texture_checks": 0,
+      "animations": [],
+      "bounds_min": [
+        -0.3399999860917212,
+        0.0,
+        -0.21600000560283494
+      ],
+      "bounds_max": [
+        0.3199999841051627,
+        0.15000000596046448,
+        0.3339999791777403
+      ],
+      "bounds_tolerance_m": 0.001,
+      "mesh_triangles": {
+        "Soap_Puddle": 3300
+      },
+      "default_visible_triangles": null,
+      "default_material_slots": null,
+      "maximum_reference_bounds_delta_m": 2.0822259694242007e-08
+    },
+    {
+      "name": "Speed_Trail",
+      "kind": "vfx",
+      "triangles": 1296,
+      "issues": [],
+      "unchanged_texture_checks": 1,
+      "animations": [],
+      "bounds_min": [
+        -0.2999999965345187,
+        0.02500000037252903,
+        -0.11000002772893125
+      ],
+      "bounds_max": [
+        0.30000002800671693,
+        0.07500000298023224,
+        0.1100000487103976
+      ],
+      "bounds_tolerance_m": 0.001,
+      "mesh_triangles": {
+        "Speed_Trail": 1296
+      },
+      "default_visible_triangles": null,
+      "default_material_slots": null,
+      "maximum_reference_bounds_delta_m": 4.87103976043457e-08
+    },
+    {
+      "name": "Wood_Splinter",
+      "kind": "vfx",
+      "triangles": 16,
+      "issues": [],
+      "unchanged_texture_checks": 1,
+      "animations": [],
+      "bounds_min": [
+        -0.05000000529104197,
+        0.0,
+        -0.02600001364985808
+      ],
+      "bounds_max": [
+        0.07500000752621597,
+        0.36000001430511475,
+        0.02600000927871904
+      ],
+      "bounds_tolerance_m": 0.001,
+      "mesh_triangles": {
+        "Wood_Splinter": 16
+      },
+      "default_visible_triangles": null,
+      "default_material_slots": null,
+      "maximum_reference_bounds_delta_m": 1.4305114759416426e-08
+    },
+    {
+      "name": "Avatar",
+      "kind": "avatar",
+      "triangles": 63110,
+      "issues": [],
+      "unchanged_texture_checks": 28,
+      "animations": [
+        "Block_Plate",
+        "Carry_TwoHand",
+        "Celebrate",
+        "Drink_Consumable",
+        "Hit_Reaction",
+        "Hold_OneHand",
+        "Idle",
+        "Inspect_OneHand",
+        "Jump_Preview",
+        "Pickup",
+        "Place",
+        "Present_Item",
+        "Run_InPlace",
+        "Swing_OneHand",
+        "Throw_OneHand",
+        "Thrust_OneHand",
+        "Walk_InPlace"
+      ],
+      "bounds_min": [
+        -0.3725022652625167,
+        0.001999968197196722,
+        -0.25499993772512747
+      ],
+      "bounds_max": [
+        0.37250232906347414,
+        1.1550204753875732,
+        0.3099416790732437
+      ],
+      "bounds_tolerance_m": 0.001,
+      "mesh_triangles": {
+        "SK_Badge_T": 400,
+        "SK_Boots": 7616,
+        "SK_Cap": 2340,
+        "SK_Crewneck": 9472,
+        "SK_Glasses": 786,
+        "SK_Head": 7504,
+        "SK_Hood": 16944,
+        "SK_Hoodie": 9880,
+        "SK_Joggers": 2240,
+        "SK_Mittens": 4464,
+        "SK_Satchel": 1464
+      },
+      "default_visible_triangles": 31696,
+      "default_material_slots": 9,
+      "maximum_reference_bounds_delta_m": 4.7538757330656267e-07
+    },
+    {
+      "name": "Avatar-Mobile",
+      "kind": "avatar",
+      "triangles": 30848,
+      "issues": [],
+      "unchanged_texture_checks": 28,
+      "animations": [
+        "Block_Plate",
+        "Carry_TwoHand",
+        "Celebrate",
+        "Drink_Consumable",
+        "Hit_Reaction",
+        "Hold_OneHand",
+        "Idle",
+        "Inspect_OneHand",
+        "Jump_Preview",
+        "Pickup",
+        "Place",
+        "Present_Item",
+        "Run_InPlace",
+        "Swing_OneHand",
+        "Throw_OneHand",
+        "Thrust_OneHand",
+        "Walk_InPlace"
+      ],
+      "bounds_min": [
+        -0.3726131000964748,
+        0.001999969594180584,
+        -0.25527432771972597
+      ],
+      "bounds_max": [
+        0.3726186475275884,
+        1.1550151109695435,
+        0.3099415598639672
+      ],
+      "bounds_tolerance_m": 0.015,
+      "mesh_triangles": {
+        "SK_Badge_T": 167,
+        "SK_Boots": 3198,
+        "SK_Cap": 981,
+        "SK_Crewneck": 3977,
+        "SK_Glasses": 329,
+        "SK_Head": 7504,
+        "SK_Hood": 7115,
+        "SK_Hoodie": 4149,
+        "SK_Joggers": 940,
+        "SK_Mittens": 1874,
+        "SK_Satchel": 614
+      },
+      "default_visible_triangles": 17660,
+      "default_material_slots": 9,
+      "maximum_reference_bounds_delta_m": 0.00027432771972596415
+    }
+  ]
+}

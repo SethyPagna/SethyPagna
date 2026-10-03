@@ -1,0 +1,3856 @@
+{
+  "version": 1,
+  "coordinates": "metres, Y-up, forward +Z",
+  "items": {
+    "BAT": {
+      "path": "art/items/BAT.glb",
+      "size": [
+        0.172,
+        1.018,
+        0.172
+      ],
+      "boundsMin": [
+        -0.086,
+        -0.0,
+        -0.086
+      ],
+      "boundsMax": [
+        0.086,
+        1.018,
+        0.086
+      ],
+      "triangles": 5248,
+      "bytes": 192448,
+      "sha256": "f79c6a1465e6b1627953dc4baab9ef7a83b0cabd57b5c3ba8dbee11fc027ab15",
+      "grip": [
+        0.0,
+        0.17,
+        0.0
+      ],
+      "icon": "art/icons/BAT.png"
+    },
+    "BLADE": {
+      "path": "art/items/BLADE.glb",
+      "size": [
+        0.33,
+        0.866,
+        0.092
+      ],
+      "boundsMin": [
+        -0.165,
+        0.0,
+        -0.046
+      ],
+      "boundsMax": [
+        0.165,
+        0.866,
+        0.046
+      ],
+      "triangles": 4384,
+      "bytes": 166600,
+      "sha256": "8543779b13048c1525c548bc192e727e8e4ff8ca3227e59f4af78696e8a6bff0",
+      "grip": [
+        0.0,
+        0.146,
+        0.0
+      ],
+      "icon": "art/icons/BLADE.png"
+    },
+    "LAMP": {
+      "path": "art/items/LAMP.glb",
+      "size": [
+        0.536,
+        0.893,
+        0.536
+      ],
+      "boundsMin": [
+        -0.268,
+        -0.0,
+        -0.268
+      ],
+      "boundsMax": [
+        0.268,
+        0.893,
+        0.268
+      ],
+      "triangles": 3664,
+      "bytes": 137920,
+      "sha256": "025ab8376a8dd41bcdfd0abf32ee4285be1a231049203fa0e2da87754ed1851c",
+      "grip": [
+        0.0,
+        0.35,
+        0.0
+      ],
+      "icon": "art/icons/LAMP.png"
+    },
+    "BALL": {
+      "path": "art/items/BALL.glb",
+      "size": [
+        0.367,
+        0.367,
+        0.367
+      ],
+      "boundsMin": [
+        -0.1835,
+        0.0,
+        -0.1835
+      ],
+      "boundsMax": [
+        0.1835,
+        0.367,
+        0.1835
+      ],
+      "triangles": 3156,
+      "bytes": 114804,
+      "sha256": "917fc69f333478228fa5521f99e8d5f5d4ff05d543a3ed51b5d235861cdca848",
+      "grip": [
+        0.0,
+        0.1835,
+        0.0
+      ],
+      "icon": "art/icons/BALL.png"
+    },
+    "PLATE": {
+      "path": "art/items/PLATE.glb",
+      "size": [
+        0.54,
+        0.073,
+        0.54
+      ],
+      "boundsMin": [
+        -0.27,
+        -0.0,
+        -0.27
+      ],
+      "boundsMax": [
+        0.27,
+        0.073,
+        0.27
+      ],
+      "triangles": 1952,
+      "bytes": 71724,
+      "sha256": "4f73b422fb711d28f13135c8bba50beb20e48bad06035cbcbf32f0a52bf75b86",
+      "grip": [
+        0.0,
+        0.0365,
+        0.0
+      ],
+      "icon": "art/icons/PLATE.png"
+    },
+    "TABLE": {
+      "path": "art/items/TABLE.glb",
+      "size": [
+        1.2,
+        0.72,
+        0.691
+      ],
+      "boundsMin": [
+        -0.6,
+        -0.0,
+        -0.3455
+      ],
+      "boundsMax": [
+        0.6,
+        0.72,
+        0.3455
+      ],
+      "triangles": 4320,
+      "bytes": 195984,
+      "sha256": "dd7ff38abc826e0f51386a2c34811c8d7e00d072a44f05e75703b59ea778ddd2",
+      "grip": [
+        0.0,
+        0.36,
+        0.0
+      ],
+      "icon": "art/icons/TABLE.png"
+    },
+    "BED": {
+      "path": "art/items/BED.glb",
+      "size": [
+        1.035,
+        0.818,
+        1.58
+      ],
+      "boundsMin": [
+        -0.5175,
+        0.0,
+        -0.79
+      ],
+      "boundsMax": [
+        0.5175,
+        0.818,
+        0.79
+      ],
+      "triangles": 5760,
+      "bytes": 254568,
+      "sha256": "89c5474c285a77d8dd62a0c883ae42970bb690666aee60b73028888dbb905ee2",
+      "grip": [
+        0.0,
+        0.409,
+        0.0
+      ],
+      "icon": "art/icons/BED.png"
+    },
+    "MAT": {
+      "path": "art/items/MAT.glb",
+      "size": [
+        1.16,
+        0.051,
+        0.65
+      ],
+      "boundsMin": [
+        -0.58,
+        -0.0,
+        -0.325
+      ],
+      "boundsMax": [
+        0.58,
+        0.051,
+        0.325
+      ],
+      "triangles": 1260,
+      "bytes": 62708,
+      "sha256": "c9bf1034f30f523d7e7b846701d2951d451468f9dbae70788021e527ac375ee4",
+      "grip": [
+        0.0,
+        0.0255,
+        0.0
+      ],
+      "icon": "art/icons/MAT.png"
+    },
+    "SOFA": {
+      "path": "art/items/SOFA.glb",
+      "size": [
+        1.52,
+        0.93,
+        0.813
+      ],
+      "boundsMin": [
+        -0.76,
+        -0.0,
+        -0.39
+      ],
+      "boundsMax": [
+        0.76,
+        0.93,
+        0.423
+      ],
+      "triangles": 6248,
+      "bytes": 276848,
+      "sha256": "dfaca31fdc676de5d2d7fac74a4b6b26cbadea62bbd523f0739cbf7411705def",
+      "grip": [
+        0.0,
+        0.465,
+        0.0165
+      ],
+      "icon": "art/icons/SOFA.png"
+    },
+    "SOAP": {
+      "path": "art/items/SOAP.glb",
+      "size": [
+        0.32,
+        0.1485,
+        0.21
+      ],
+      "boundsMin": [
+        -0.16,
+        -0.0,
+        -0.105
+      ],
+      "boundsMax": [
+        0.16,
+        0.1485,
+        0.105
+      ],
+      "triangles": 2352,
+      "bytes": 87672,
+      "sha256": "47c09186593ea837405388366f0491dec7ce15c05d7385152295177f20937e3b",
+      "grip": [
+        0.0,
+        0.07425,
+        0.0
+      ],
+      "icon": "art/icons/SOAP.png"
+    },
+    "FOAM": {
+      "path": "art/items/FOAM.glb",
+      "size": [
+        0.1909,
+        0.3725,
+        0.19545
+      ],
+      "boundsMin": [
+        -0.09545,
+        -0.0,
+        -0.09545
+      ],
+      "boundsMax": [
+        0.09545,
+        0.3725,
+        0.1
+      ],
+      "triangles": 4000,
+      "bytes": 157924,
+      "sha256": "d354e197c9238becae0c3cc6ad4153a903a2a2a9619f9ed42227216ccb6c3127",
+      "grip": [
+        0.0,
+        0.18625,
+        0.002275
+      ],
+      "icon": "art/icons/FOAM.png"
+    },
+    "BOMB": {
+      "path": "art/items/BOMB.glb",
+      "size": [
+        0.344,
+        0.471793,
+        0.344
+      ],
+      "boundsMin": [
+        -0.172,
+        -0.0,
+        -0.172
+      ],
+      "boundsMax": [
+        0.172,
+        0.471793,
+        0.172
+      ],
+      "triangles": 2236,
+      "bytes": 90952,
+      "sha256": "61a95fa6de9f562ca37c3ba73a2f4e17a5c664d5459b47eaeb54cad352e5b035",
+      "grip": [
+        0.0,
+        0.235897,
+        0.0
+      ],
+      "icon": "art/icons/BOMB.png"
+    },
+    "ARROW": {
+      "path": "art/items/ARROW.glb",
+      "size": [
+        0.11,
+        0.665,
+        0.090603
+      ],
+      "boundsMin": [
+        -0.055,
+        -0.0,
+        -0.045301
+      ],
+      "boundsMax": [
+        0.055,
+        0.665,
+        0.045301
+      ],
+      "triangles": 144,
+      "bytes": 21060,
+      "sha256": "80c644500db92766f4a031717ec11e0eafeff9e4db133233b2cea5f77905816f",
+      "grip": [
+        0.0,
+        0.305,
+        0.0
+      ],
+      "icon": "art/icons/ARROW.png"
+    },
+    "BOW": {
+      "path": "art/items/BOW.glb",
+      "size": [
+        0.24,
+        0.749309,
+        0.058
+      ],
+      "boundsMin": [
+        -0.021,
+        -0.0,
+        -0.029
+      ],
+      "boundsMax": [
+        0.219,
+        0.749309,
+        0.029
+      ],
+      "triangles": 684,
+      "bytes": 33820,
+      "sha256": "8d6567b0b29309699642ef84cdf1365e171b7f991ea7975a385020db2ca09622",
+      "grip": [
+        0.19,
+        0.374654,
+        0.0
+      ],
+      "icon": "art/icons/BOW.png"
+    },
+    "BROOM": {
+      "path": "art/items/BROOM.glb",
+      "size": [
+        0.3,
+        1.021173,
+        0.095
+      ],
+      "boundsMin": [
+        -0.15,
+        -0.0,
+        -0.0475
+      ],
+      "boundsMax": [
+        0.15,
+        1.021173,
+        0.0475
+      ],
+      "triangles": 4416,
+      "bytes": 203440,
+      "sha256": "9c29e8cd960cc2e50464e56eadf2c8caa0e802d4f6f1ee28a6eab741856803bb",
+      "grip": [
+        0.0,
+        0.621173,
+        0.0
+      ],
+      "icon": "art/icons/BROOM.png"
+    },
+    "HAMMER": {
+      "path": "art/items/HAMMER.glb",
+      "size": [
+        0.345,
+        0.635,
+        0.175
+      ],
+      "boundsMin": [
+        -0.1725,
+        -0.0,
+        -0.0875
+      ],
+      "boundsMax": [
+        0.1725,
+        0.635,
+        0.0875
+      ],
+      "triangles": 5872,
+      "bytes": 224532,
+      "sha256": "b397ce961e7d7369118ca573e4bd5853391a3a1ea4c59076c686f13f4312b67f",
+      "grip": [
+        0.0,
+        0.13,
+        0.0
+      ],
+      "icon": "art/icons/HAMMER.png"
+    },
+    "PAN": {
+      "path": "art/items/PAN.glb",
+      "size": [
+        0.786219,
+        0.154443,
+        0.46
+      ],
+      "boundsMin": [
+        -0.23,
+        -0.0,
+        -0.23
+      ],
+      "boundsMax": [
+        0.556219,
+        0.154443,
+        0.23
+      ],
+      "triangles": 1136,
+      "bytes": 47296,
+      "sha256": "f1d13cf94fe23e59e1e9168fbe49050feeb1dd341057cacb5d4191664190cbf2",
+      "grip": [
+        0.43,
+        0.1,
+        -0.0
+      ],
+      "icon": "art/icons/PAN.png"
+    },
+    "SHIELD": {
+      "path": "art/items/SHIELD.glb",
+      "size": [
+        0.46,
+        0.57,
+        0.187645
+      ],
+      "boundsMin": [
+        -0.23,
+        -0.0,
+        -0.124645
+      ],
+      "boundsMax": [
+        0.23,
+        0.57,
+        0.063
+      ],
+      "triangles": 172,
+      "bytes": 21876,
+      "sha256": "c52b3c7c23f5cdd664bba168e11b1c803bfed57aee9cdd6a4b049f0fb58f5552",
+      "grip": [
+        0.0,
+        0.29,
+        -0.11
+      ],
+      "icon": "art/icons/SHIELD.png"
+    },
+    "SPEAR": {
+      "path": "art/items/SPEAR.glb",
+      "size": [
+        0.17,
+        1.235,
+        0.068
+      ],
+      "boundsMin": [
+        -0.085,
+        -0.0,
+        -0.034
+      ],
+      "boundsMax": [
+        0.085,
+        1.235,
+        0.034
+      ],
+      "triangles": 2028,
+      "bytes": 80228,
+      "sha256": "fc4e3e3cefe7a917ab3add74e1550f6c494bbb03d3d94522cbd6030aba787799",
+      "grip": [
+        0.0,
+        0.465,
+        0.0
+      ],
+      "icon": "art/icons/SPEAR.png"
+    },
+    "APPLE": {
+      "path": "art/items/APPLE.glb",
+      "size": [
+        0.24,
+        0.270877,
+        0.23
+      ],
+      "boundsMin": [
+        -0.12,
+        0.0,
+        -0.115
+      ],
+      "boundsMax": [
+        0.12,
+        0.270877,
+        0.115
+      ],
+      "triangles": 1764,
+      "bytes": 67720,
+      "sha256": "f9f6136f22df18d15d25e6c40f474e32a488c63be9ec3c820067cf4973dfecf4",
+      "grip": [
+        0.0,
+        0.135439,
+        0.0
+      ],
+      "icon": "art/icons/APPLE.png"
+    },
+    "CAKE": {
+      "path": "art/items/CAKE.glb",
+      "size": [
+        0.5,
+        0.416486,
+        0.5
+      ],
+      "boundsMin": [
+        -0.25,
+        -0.0,
+        -0.25
+      ],
+      "boundsMax": [
+        0.25,
+        0.416486,
+        0.25
+      ],
+      "triangles": 3088,
+      "bytes": 137452,
+      "sha256": "f92658998b3cbc9c074d7d986bf16001556b6fa56e2227069471e6f0dd71a04e",
+      "grip": [
+        0.0,
+        0.208243,
+        0.0
+      ],
+      "icon": "art/icons/CAKE.png"
+    },
+    "PIE": {
+      "path": "art/items/PIE.glb",
+      "size": [
+        0.5,
+        0.182,
+        0.5
+      ],
+      "boundsMin": [
+        -0.25,
+        -0.0,
+        -0.25
+      ],
+      "boundsMax": [
+        0.25,
+        0.182,
+        0.25
+      ],
+      "triangles": 4640,
+      "bytes": 194488,
+      "sha256": "ae589a313ccc87b9d25cfe49c199cfc6500fc135b8ef2b2fd24236d08a53363e",
+      "grip": [
+        0.0,
+        0.091,
+        0.0
+      ],
+      "icon": "art/icons/PIE.png"
+    },
+    "SODA": {
+      "path": "art/items/SODA.glb",
+      "size": [
+        0.1818,
+        0.302,
+        0.1839
+      ],
+      "boundsMin": [
+        -0.0909,
+        -0.0,
+        -0.0909
+      ],
+      "boundsMax": [
+        0.0909,
+        0.302,
+        0.093
+      ],
+      "triangles": 2372,
+      "bytes": 96748,
+      "sha256": "03649e0a617ea2785a903ac07d6f61aef8b1a0bfb5169adeac2f12dc5a98dcd7",
+      "grip": [
+        0.0,
+        0.151,
+        0.00105
+      ],
+      "icon": "art/icons/SODA.png"
+    },
+    "WATER": {
+      "path": "art/items/WATER.glb",
+      "size": [
+        0.176,
+        0.41,
+        0.1785
+      ],
+      "boundsMin": [
+        -0.088,
+        -0.0,
+        -0.088
+      ],
+      "boundsMax": [
+        0.088,
+        0.41,
+        0.0905
+      ],
+      "triangles": 2544,
+      "bytes": 105644,
+      "sha256": "d69b7a9dc9dce4f9219f7bbd39cc2331a93e5a6483b493dbad0e0478ecc78998",
+      "grip": [
+        0.0,
+        0.205,
+        0.00125
+      ],
+      "icon": "art/icons/WATER.png"
+    },
+    "BARREL": {
+      "path": "art/items/BARREL.glb",
+      "size": [
+        0.558,
+        0.6,
+        0.558
+      ],
+      "boundsMin": [
+        -0.279,
+        -0.0,
+        -0.279
+      ],
+      "boundsMax": [
+        0.279,
+        0.6,
+        0.279
+      ],
+      "triangles": 4240,
+      "bytes": 164668,
+      "sha256": "23e5a8a74d8fa7b2853d60302ec3535d9839f08d12badc860cedefc46195759f",
+      "grip": [
+        0.0,
+        0.3,
+        0.0
+      ],
+      "icon": "art/icons/BARREL.png"
+    },
+    "BOX": {
+      "path": "art/items/BOX.glb",
+      "size": [
+        0.62,
+        0.5175,
+        0.4975
+      ],
+      "boundsMin": [
+        -0.31,
+        -0.0,
+        -0.248
+      ],
+      "boundsMax": [
+        0.31,
+        0.5175,
+        0.2495
+      ],
+      "triangles": 1772,
+      "bytes": 90996,
+      "sha256": "4c5729e5225156b6596668cfb8e31d9c24bf3a520c4413edb219e3c9e6749bd7",
+      "grip": [
+        0.0,
+        0.25875,
+        0.00075
+      ],
+      "icon": "art/icons/BOX.png"
+    },
+    "CABINET": {
+      "path": "art/items/CABINET.glb",
+      "size": [
+        0.99,
+        1.135,
+        0.536
+      ],
+      "boundsMin": [
+        -0.495,
+        -0.0,
+        -0.225
+      ],
+      "boundsMax": [
+        0.495,
+        1.135,
+        0.311
+      ],
+      "triangles": 3600,
+      "bytes": 157108,
+      "sha256": "0edbb5a166aab7a59023acfb2c10bac094a1bed31542bfa77afa513af125eefa",
+      "grip": [
+        0.0,
+        0.5675,
+        0.043
+      ],
+      "icon": "art/icons/CABINET.png"
+    },
+    "CHAIR": {
+      "path": "art/items/CHAIR.glb",
+      "size": [
+        0.5,
+        0.897985,
+        0.482683
+      ],
+      "boundsMin": [
+        -0.25,
+        -0.0,
+        -0.241341
+      ],
+      "boundsMax": [
+        0.25,
+        0.897985,
+        0.241341
+      ],
+      "triangles": 3408,
+      "bytes": 163392,
+      "sha256": "b087630f08012d13e435209b2c74528b244032f9dc1ce700d3902e9a1f7c0d75",
+      "grip": [
+        0.0,
+        0.448992,
+        0.0
+      ],
+      "icon": "art/icons/CHAIR.png"
+    },
+    "CHEST": {
+      "path": "art/items/CHEST.glb",
+      "size": [
+        0.78,
+        0.5675,
+        0.547
+      ],
+      "boundsMin": [
+        -0.39,
+        -0.0,
+        -0.245
+      ],
+      "boundsMax": [
+        0.39,
+        0.5675,
+        0.302
+      ],
+      "triangles": 3104,
+      "bytes": 140984,
+      "sha256": "aa7841b2fc2de8b3192e76e876f3d50c153db03b5a1b5c0fa73a07f1bc578754",
+      "grip": [
+        0.0,
+        0.28375,
+        0.0285
+      ],
+      "icon": "art/icons/CHEST.png"
+    },
+    "CRATE": {
+      "path": "art/items/CRATE.glb",
+      "size": [
+        0.61,
+        0.482,
+        0.578
+      ],
+      "boundsMin": [
+        -0.305,
+        -0.0,
+        -0.289
+      ],
+      "boundsMax": [
+        0.305,
+        0.482,
+        0.289
+      ],
+      "triangles": 7776,
+      "bytes": 347528,
+      "sha256": "7cbfa952ce80390733b9915ddd4c2f8ff7f4f6676d5b39f7e168497b4f8f2eda",
+      "grip": [
+        0.0,
+        0.241,
+        0.0
+      ],
+      "icon": "art/icons/CRATE.png"
+    },
+    "DESK": {
+      "path": "art/items/DESK.glb",
+      "size": [
+        1.34,
+        0.78,
+        0.6775
+      ],
+      "boundsMin": [
+        -0.67,
+        -0.0,
+        -0.3255
+      ],
+      "boundsMax": [
+        0.67,
+        0.78,
+        0.352
+      ],
+      "triangles": 5344,
+      "bytes": 242360,
+      "sha256": "726a8cb960da38378fa2f6c5528b13af27d1cb708aaf21df743560de2677bd81",
+      "grip": [
+        0.0,
+        0.39,
+        0.01325
+      ],
+      "icon": "art/icons/DESK.png"
+    },
+    "SHELF": {
+      "path": "art/items/SHELF.glb",
+      "size": [
+        0.99,
+        1.28,
+        0.32
+      ],
+      "boundsMin": [
+        -0.495,
+        -0.0,
+        -0.16
+      ],
+      "boundsMax": [
+        0.495,
+        1.28,
+        0.16
+      ],
+      "triangles": 3024,
+      "bytes": 140076,
+      "sha256": "f5b7c771893ef124700a09bd3943c7a34934cf39c74d6ea85af80f7d58f03955",
+      "grip": [
+        0.0,
+        0.64,
+        0.0
+      ],
+      "icon": "art/icons/SHELF.png"
+    },
+    "STOOL": {
+      "path": "art/items/STOOL.glb",
+      "size": [
+        0.52,
+        0.465985,
+        0.52
+      ],
+      "boundsMin": [
+        -0.26,
+        -0.0,
+        -0.26
+      ],
+      "boundsMax": [
+        0.26,
+        0.465985,
+        0.26
+      ],
+      "triangles": 704,
+      "bytes": 41520,
+      "sha256": "1cc68e80af44a5c9bca0e0e89c0d3296863f050aec309f05d83462730b11813d",
+      "grip": [
+        0.0,
+        0.232992,
+        0.0
+      ],
+      "icon": "art/icons/STOOL.png"
+    },
+    "BOOK": {
+      "path": "art/items/BOOK.glb",
+      "size": [
+        0.3395,
+        0.13,
+        0.255
+      ],
+      "boundsMin": [
+        -0.177,
+        -0.0,
+        -0.1275
+      ],
+      "boundsMax": [
+        0.1625,
+        0.13,
+        0.1275
+      ],
+      "triangles": 3492,
+      "bytes": 163896,
+      "sha256": "2fa0a3fdb661ed77297e8e7c63a2660d200d6dfb4d4ea257939e7e59a0d10474",
+      "grip": [
+        -0.00725,
+        0.065,
+        0.0
+      ],
+      "icon": "art/icons/BOOK.png"
+    },
+    "CLOCK": {
+      "path": "art/items/CLOCK.glb",
+      "size": [
+        0.48,
+        0.48,
+        0.122
+      ],
+      "boundsMin": [
+        -0.24,
+        -0.0,
+        -0.03
+      ],
+      "boundsMax": [
+        0.24,
+        0.48,
+        0.092
+      ],
+      "triangles": 3536,
+      "bytes": 145408,
+      "sha256": "440d38a82593bc2daa9b03935b56d961e37c643d2dd27626b6200f00ba8d116b",
+      "grip": [
+        0.0,
+        0.24,
+        0.031
+      ],
+      "icon": "art/icons/CLOCK.png"
+    },
+    "FAN": {
+      "path": "art/items/FAN.glb",
+      "size": [
+        0.522,
+        0.821,
+        0.25
+      ],
+      "boundsMin": [
+        -0.261,
+        -0.0,
+        -0.125
+      ],
+      "boundsMax": [
+        0.261,
+        0.821,
+        0.125
+      ],
+      "triangles": 4828,
+      "bytes": 185472,
+      "sha256": "67bd384322b83617ac801211fb487f6be4e57c9d712f1b294660c13957700cd7",
+      "grip": [
+        0.0,
+        0.4105,
+        0.0
+      ],
+      "icon": "art/icons/FAN.png"
+    },
+    "MUG": {
+      "path": "art/items/MUG.glb",
+      "size": [
+        0.352,
+        0.275,
+        0.251
+      ],
+      "boundsMin": [
+        -0.125,
+        -0.0,
+        -0.125
+      ],
+      "boundsMax": [
+        0.227,
+        0.275,
+        0.126
+      ],
+      "triangles": 1228,
+      "bytes": 51240,
+      "sha256": "f76dd6a2041887b0bdb42ce812921310d28ae26da133b80cd1523a468ca2774c",
+      "grip": [
+        0.051,
+        0.1375,
+        0.0005
+      ],
+      "icon": "art/icons/MUG.png"
+    },
+    "PLANT": {
+      "path": "art/items/PLANT.glb",
+      "size": [
+        0.340434,
+        0.78765,
+        0.345916
+      ],
+      "boundsMin": [
+        -0.17,
+        -0.0,
+        -0.17
+      ],
+      "boundsMax": [
+        0.170434,
+        0.78765,
+        0.175916
+      ],
+      "triangles": 3764,
+      "bytes": 146988,
+      "sha256": "c956a0fbd1b00b5dbe1ace2a83009215908b7ee6640400dad0053ad167045da8",
+      "grip": [
+        0.000217,
+        0.393825,
+        0.002958
+      ],
+      "icon": "art/icons/PLANT.png"
+    },
+    "POT": {
+      "path": "art/items/POT.glb",
+      "size": [
+        0.714,
+        0.257,
+        0.46
+      ],
+      "boundsMin": [
+        -0.357,
+        -0.0,
+        -0.23
+      ],
+      "boundsMax": [
+        0.357,
+        0.257,
+        0.23
+      ],
+      "triangles": 2320,
+      "bytes": 84676,
+      "sha256": "240411f85cb311048f0da6306141ae62bc24fd8cd897d3708a807d4136f1ed87",
+      "grip": [
+        0.0,
+        0.1285,
+        0.0
+      ],
+      "icon": "art/icons/POT.png"
+    },
+    "VASE": {
+      "path": "art/items/VASE.glb",
+      "size": [
+        0.33,
+        0.492,
+        0.33
+      ],
+      "boundsMin": [
+        -0.165,
+        -0.0,
+        -0.165
+      ],
+      "boundsMax": [
+        0.165,
+        0.492,
+        0.165
+      ],
+      "triangles": 1760,
+      "bytes": 62744,
+      "sha256": "5344c69378cec39826a3a8f60816b78fc9f37e1003ba7c4379635d1807444a99",
+      "grip": [
+        0.0,
+        0.246,
+        0.0
+      ],
+      "icon": "art/icons/VASE.png"
+    }
+  },
+  "letters": {
+    "A": {
+      "path": "art/letters/A.glb",
+      "size": [
+        0.21,
+        0.21,
+        0.069
+      ],
+      "boundsMin": [
+        -0.105,
+        -0.0,
+        -0.0285
+      ],
+      "boundsMax": [
+        0.105,
+        0.21,
+        0.0405
+      ],
+      "triangles": 908,
+      "bytes": 50432,
+      "sha256": "1ed99030ef14a51e7f330cc404388badeeb6b6c37306c5c98eae7a8f5ac1429e"
+    },
+    "B": {
+      "path": "art/letters/B.glb",
+      "size": [
+        0.21,
+        0.21,
+        0.069
+      ],
+      "boundsMin": [
+        -0.105,
+        -0.0,
+        -0.0285
+      ],
+      "boundsMax": [
+        0.105,
+        0.21,
+        0.0405
+      ],
+      "triangles": 1032,
+      "bytes": 69036,
+      "sha256": "b610e8e5f4ed0dfaa3294d952138fe4cbbdd9c2e707466bb1367019ba61c89d6"
+    },
+    "C": {
+      "path": "art/letters/C.glb",
+      "size": [
+        0.21,
+        0.21,
+        0.069
+      ],
+      "boundsMin": [
+        -0.105,
+        -0.0,
+        -0.0285
+      ],
+      "boundsMax": [
+        0.105,
+        0.21,
+        0.0405
+      ],
+      "triangles": 996,
+      "bytes": 63636,
+      "sha256": "a0acf0b6ca094ff760d8625d8f63b62e39299fc1940f965d48ade6596d06e26f"
+    },
+    "D": {
+      "path": "art/letters/D.glb",
+      "size": [
+        0.21,
+        0.21,
+        0.069
+      ],
+      "boundsMin": [
+        -0.105,
+        -0.0,
+        -0.0285
+      ],
+      "boundsMax": [
+        0.105,
+        0.21,
+        0.0405
+      ],
+      "triangles": 984,
+      "bytes": 61836,
+      "sha256": "a51cdbd988fbadfd19156ce6641f89d7593fd5e0adedd3b606970b3386d236c7"
+    },
+    "E": {
+      "path": "art/letters/E.glb",
+      "size": [
+        0.21,
+        0.21,
+        0.069
+      ],
+      "boundsMin": [
+        -0.105,
+        -0.0,
+        -0.0285
+      ],
+      "boundsMax": [
+        0.105,
+        0.21,
+        0.0405
+      ],
+      "triangles": 908,
+      "bytes": 50436,
+      "sha256": "7d2d4e82f1c5a1c9ffb5a19b78238a44582f1dc9408d2bba8d491beb2f6bb7a3"
+    },
+    "F": {
+      "path": "art/letters/F.glb",
+      "size": [
+        0.21,
+        0.21,
+        0.069
+      ],
+      "boundsMin": [
+        -0.105,
+        -0.0,
+        -0.0285
+      ],
+      "boundsMax": [
+        0.105,
+        0.21,
+        0.0405
+      ],
+      "triangles": 900,
+      "bytes": 49232,
+      "sha256": "c325b12717c92ff3c946a1f7a2417fd9e942ce17da558f2b1c0d1adc9f49628b"
+    },
+    "G": {
+      "path": "art/letters/G.glb",
+      "size": [
+        0.21,
+        0.21,
+        0.069
+      ],
+      "boundsMin": [
+        -0.105,
+        -0.0,
+        -0.0285
+      ],
+      "boundsMax": [
+        0.105,
+        0.21,
+        0.0405
+      ],
+      "triangles": 1012,
+      "bytes": 66036,
+      "sha256": "4315ab495463743f2315b6a26f5ccf3f60253836828ec7b92a2e3c221c46b72c"
+    },
+    "H": {
+      "path": "art/letters/H.glb",
+      "size": [
+        0.21,
+        0.21,
+        0.069
+      ],
+      "boundsMin": [
+        -0.105,
+        -0.0,
+        -0.0285
+      ],
+      "boundsMax": [
+        0.105,
+        0.21,
+        0.0405
+      ],
+      "triangles": 908,
+      "bytes": 50436,
+      "sha256": "105d1a1193a1573c373c2b8c122a5af7ce56211d71da1fe1171e128d1b9a18c4"
+    },
+    "I": {
+      "path": "art/letters/I.glb",
+      "size": [
+        0.21,
+        0.21,
+        0.069
+      ],
+      "boundsMin": [
+        -0.105,
+        -0.0,
+        -0.0285
+      ],
+      "boundsMax": [
+        0.105,
+        0.21,
+        0.0405
+      ],
+      "triangles": 876,
+      "bytes": 45628,
+      "sha256": "1cfd5a04ca1b5c6413eb70537b8a0690b72965958005b9fbf1d3fa6b02f5bb1f"
+    },
+    "J": {
+      "path": "art/letters/J.glb",
+      "size": [
+        0.21,
+        0.21,
+        0.069
+      ],
+      "boundsMin": [
+        -0.105,
+        -0.0,
+        -0.0285
+      ],
+      "boundsMax": [
+        0.105,
+        0.21,
+        0.0405
+      ],
+      "triangles": 916,
+      "bytes": 51636,
+      "sha256": "746d2bf7307bc0df3d6b762464186b374391e14389d2ae0c3079103bc814b7cd"
+    },
+    "K": {
+      "path": "art/letters/K.glb",
+      "size": [
+        0.21,
+        0.21,
+        0.069
+      ],
+      "boundsMin": [
+        -0.105,
+        -0.0,
+        -0.0285
+      ],
+      "boundsMax": [
+        0.105,
+        0.21,
+        0.0405
+      ],
+      "triangles": 904,
+      "bytes": 49832,
+      "sha256": "c5e03fa0288db68b732e2487281f48be1137636d74884ced319c4778c12e160a"
+    },
+    "L": {
+      "path": "art/letters/L.glb",
+      "size": [
+        0.21,
+        0.21,
+        0.069
+      ],
+      "boundsMin": [
+        -0.105,
+        -0.0,
+        -0.0285
+      ],
+      "boundsMax": [
+        0.105,
+        0.21,
+        0.0405
+      ],
+      "triangles": 884,
+      "bytes": 46824,
+      "sha256": "637889a2acb272b13600120dc1c289076e1a77b7bed9e2248e948f4976b08691"
+    },
+    "M": {
+      "path": "art/letters/M.glb",
+      "size": [
+        0.21,
+        0.21,
+        0.069
+      ],
+      "boundsMin": [
+        -0.105,
+        -0.0,
+        -0.0285
+      ],
+      "boundsMax": [
+        0.105,
+        0.21,
+        0.0405
+      ],
+      "triangles": 912,
+      "bytes": 51036,
+      "sha256": "4c0cadc44e3f34e1b03f416d3a8de22781e8f2517ec80713486b6ba0156ecb13"
+    },
+    "N": {
+      "path": "art/letters/N.glb",
+      "size": [
+        0.21,
+        0.21,
+        0.069
+      ],
+      "boundsMin": [
+        -0.105,
+        -0.0,
+        -0.0285
+      ],
+      "boundsMax": [
+        0.105,
+        0.21,
+        0.0405
+      ],
+      "triangles": 900,
+      "bytes": 49232,
+      "sha256": "9c7f8a9bc3df248072355ccdd012b4d0ac7fd65c60ee562f68a6df406d1f22bc"
+    },
+    "O": {
+      "path": "art/letters/O.glb",
+      "size": [
+        0.21,
+        0.21,
+        0.069
+      ],
+      "boundsMin": [
+        -0.105,
+        -0.0,
+        -0.0285
+      ],
+      "boundsMax": [
+        0.105,
+        0.21,
+        0.0405
+      ],
+      "triangles": 992,
+      "bytes": 63032,
+      "sha256": "ea0caf868790e532f4c237d2278e598f7d29c22087b81a6b15ddbe1138c1ab88"
+    },
+    "P": {
+      "path": "art/letters/P.glb",
+      "size": [
+        0.21,
+        0.21,
+        0.069
+      ],
+      "boundsMin": [
+        -0.105,
+        -0.0,
+        -0.0285
+      ],
+      "boundsMax": [
+        0.105,
+        0.21,
+        0.0405
+      ],
+      "triangles": 960,
+      "bytes": 58236,
+      "sha256": "383541b22b175ff24a18102fc21cb03047ee38a93596294f9f718755842984f7"
+    },
+    "Q": {
+      "path": "art/letters/Q.glb",
+      "size": [
+        0.21,
+        0.21,
+        0.069
+      ],
+      "boundsMin": [
+        -0.105,
+        -0.0,
+        -0.0285
+      ],
+      "boundsMax": [
+        0.105,
+        0.21,
+        0.0405
+      ],
+      "triangles": 1008,
+      "bytes": 65436,
+      "sha256": "353af7532efe33f8477ccd048cb6c0cb6b2d1efb753636eafa2cd2331617edce"
+    },
+    "R": {
+      "path": "art/letters/R.glb",
+      "size": [
+        0.21,
+        0.21,
+        0.069
+      ],
+      "boundsMin": [
+        -0.105,
+        -0.0,
+        -0.0285
+      ],
+      "boundsMax": [
+        0.105,
+        0.21,
+        0.0405
+      ],
+      "triangles": 1004,
+      "bytes": 64836,
+      "sha256": "6a1bf8c416a5ee3b8e65f172f488116b30dd5f68cee3d1c492c387ccf01fadb7"
+    },
+    "S": {
+      "path": "art/letters/S.glb",
+      "size": [
+        0.21,
+        0.21,
+        0.069
+      ],
+      "boundsMin": [
+        -0.105,
+        -0.0,
+        -0.0285
+      ],
+      "boundsMax": [
+        0.105,
+        0.21,
+        0.0405
+      ],
+      "triangles": 1068,
+      "bytes": 74436,
+      "sha256": "e67cf017426cb256d91df6f31b80c184205a86c19784cf2e46f4f27fcc09761f"
+    },
+    "T": {
+      "path": "art/letters/T.glb",
+      "size": [
+        0.21,
+        0.21,
+        0.069
+      ],
+      "boundsMin": [
+        -0.105,
+        -0.0,
+        -0.0285
+      ],
+      "boundsMax": [
+        0.105,
+        0.21,
+        0.0405
+      ],
+      "triangles": 892,
+      "bytes": 48032,
+      "sha256": "7aafa8048da870761f44a8b29f1f0c5d8b39bec2f1c545cc81571cef836123e9"
+    },
+    "U": {
+      "path": "art/letters/U.glb",
+      "size": [
+        0.21,
+        0.21,
+        0.069
+      ],
+      "boundsMin": [
+        -0.105,
+        -0.0,
+        -0.0285
+      ],
+      "boundsMax": [
+        0.105,
+        0.21,
+        0.0405
+      ],
+      "triangles": 948,
+      "bytes": 56436,
+      "sha256": "0bcfe2cf82022e872e4865e0ddd2a2dbb7b997a468b714fd12b71ae989f3cf69"
+    },
+    "V": {
+      "path": "art/letters/V.glb",
+      "size": [
+        0.21,
+        0.21,
+        0.069
+      ],
+      "boundsMin": [
+        -0.105,
+        -0.0,
+        -0.0285
+      ],
+      "boundsMax": [
+        0.105,
+        0.21,
+        0.0405
+      ],
+      "triangles": 888,
+      "bytes": 47424,
+      "sha256": "9f24fdc5cdbb959ce71efd13039e224379b17e734da705d2bdc00dd683d761bf"
+    },
+    "W": {
+      "path": "art/letters/W.glb",
+      "size": [
+        0.21,
+        0.21,
+        0.069
+      ],
+      "boundsMin": [
+        -0.105,
+        -0.0,
+        -0.0285
+      ],
+      "boundsMax": [
+        0.105,
+        0.21,
+        0.0405
+      ],
+      "triangles": 912,
+      "bytes": 51032,
+      "sha256": "13b64aeb3b8f75b76b721ad8befd051890d3433a6b34bdd514969ce4c334e77a"
+    },
+    "X": {
+      "path": "art/letters/X.glb",
+      "size": [
+        0.21,
+        0.21,
+        0.069
+      ],
+      "boundsMin": [
+        -0.105,
+        -0.0,
+        -0.0285
+      ],
+      "boundsMax": [
+        0.105,
+        0.21,
+        0.0405
+      ],
+      "triangles": 908,
+      "bytes": 50436,
+      "sha256": "cc8d8ecc9d132c05067fc841ad2ad79b04b04b9346e74641c44e17618444ab0f"
+    },
+    "Y": {
+      "path": "art/letters/Y.glb",
+      "size": [
+        0.21,
+        0.21,
+        0.069
+      ],
+      "boundsMin": [
+        -0.105,
+        -0.0,
+        -0.0285
+      ],
+      "boundsMax": [
+        0.105,
+        0.21,
+        0.0405
+      ],
+      "triangles": 896,
+      "bytes": 48628,
+      "sha256": "317de55d3b5e7ef715818c40f37038a392575d76ae7e41a9e6a1f5761e2a1934"
+    },
+    "Z": {
+      "path": "art/letters/Z.glb",
+      "size": [
+        0.21,
+        0.21,
+        0.069
+      ],
+      "boundsMin": [
+        -0.105,
+        -0.0,
+        -0.0285
+      ],
+      "boundsMax": [
+        0.105,
+        0.21,
+        0.0405
+      ],
+      "triangles": 900,
+      "bytes": 49232,
+      "sha256": "83e36feaf7ade488adbecface822a5f5050b0d94ce8a23aba0499c057f9b32a6"
+    }
+  },
+  "environment": {
+    "Arena_Rug": {
+      "path": "art/environment/Arena_Rug.glb",
+      "size": [
+        2.0,
+        0.063,
+        2.0
+      ],
+      "boundsMin": [
+        -1.0,
+        -0.0,
+        -1.0
+      ],
+      "boundsMax": [
+        1.0,
+        0.063,
+        1.0
+      ],
+      "triangles": 1356,
+      "bytes": 58676,
+      "sha256": "a784e4420b502a570fcf75183dde66b25268c9f3ae59a07e28cca5cb2f3acff7"
+    },
+    "Corner_Post": {
+      "path": "art/environment/Corner_Post.glb",
+      "size": [
+        0.25,
+        2.02,
+        0.25
+      ],
+      "boundsMin": [
+        -0.125,
+        -0.0,
+        -0.125
+      ],
+      "boundsMax": [
+        0.125,
+        2.02,
+        0.125
+      ],
+      "triangles": 1296,
+      "bytes": 62828,
+      "sha256": "9823cd283fa9a1a1dd7d56fe7b780dd8f97ecff71fdbb016e1e204ffc6e383b9"
+    },
+    "Curtain": {
+      "path": "art/environment/Curtain.glb",
+      "size": [
+        1.4,
+        1.048,
+        0.112296
+      ],
+      "boundsMin": [
+        -0.7,
+        0.17,
+        -0.055796
+      ],
+      "boundsMax": [
+        0.7,
+        1.218,
+        0.0565
+      ],
+      "triangles": 3552,
+      "bytes": 156980,
+      "sha256": "72c9bdb1994f705bb7fc007462a55f0a3b90943ab8830b2cfabd7b5d5f061bbc"
+    },
+    "Doorstep": {
+      "path": "art/environment/Doorstep.glb",
+      "size": [
+        1.4,
+        0.1795,
+        0.55
+      ],
+      "boundsMin": [
+        -0.7,
+        -0.0,
+        -0.275
+      ],
+      "boundsMax": [
+        0.7,
+        0.1795,
+        0.275
+      ],
+      "triangles": 864,
+      "bytes": 39300,
+      "sha256": "f87c22b786c41de31813caf0ad6f7c37d78b305c6b3d6289987652e9cbf08ac3"
+    },
+    "Floor_Carpet_2m": {
+      "path": "art/environment/Floor_Carpet_2m.glb",
+      "size": [
+        2.0,
+        0.153001,
+        2.0
+      ],
+      "boundsMin": [
+        -1.0,
+        -0.14,
+        -1.0
+      ],
+      "boundsMax": [
+        1.0,
+        0.013,
+        1.0
+      ],
+      "triangles": 864,
+      "bytes": 39196,
+      "sha256": "d34775b9987699799510883e3be3b897d4d265b87c1b9970513acac89dea8b08"
+    },
+    "Kitchen_Counter": {
+      "path": "art/environment/Kitchen_Counter.glb",
+      "size": [
+        1.27,
+        0.925,
+        0.737
+      ],
+      "boundsMin": [
+        -0.635,
+        0.01,
+        -0.355
+      ],
+      "boundsMax": [
+        0.635,
+        0.935,
+        0.382
+      ],
+      "triangles": 2784,
+      "bytes": 131240,
+      "sha256": "e95083356a0f977f55ce55880c7408d23af7e1a32d1935e56485827a8577e852"
+    },
+    "Kitchen_Fridge": {
+      "path": "art/environment/Kitchen_Fridge.glb",
+      "size": [
+        0.8,
+        1.82,
+        0.799
+      ],
+      "boundsMin": [
+        -0.4,
+        -0.0,
+        -0.35
+      ],
+      "boundsMax": [
+        0.4,
+        1.82,
+        0.449
+      ],
+      "triangles": 2268,
+      "bytes": 113684,
+      "sha256": "21886429432d78d8742bc50e659bec723b6fb2e4ba31db2603b5c6b9e8608384"
+    },
+    "Kitchen_Sink": {
+      "path": "art/environment/Kitchen_Sink.glb",
+      "size": [
+        0.77,
+        0.473799,
+        0.61
+      ],
+      "boundsMin": [
+        -0.385,
+        0.01,
+        -0.305
+      ],
+      "boundsMax": [
+        0.385,
+        0.483798,
+        0.305
+      ],
+      "triangles": 4104,
+      "bytes": 185464,
+      "sha256": "7b0dc4e95990c4824b48010e734a7adffa2568a133a84a764da04fbba30032b9"
+    },
+    "Kitchen_Stove": {
+      "path": "art/environment/Kitchen_Stove.glb",
+      "size": [
+        0.82,
+        0.942,
+        0.7795
+      ],
+      "boundsMin": [
+        -0.41,
+        -0.0,
+        -0.35
+      ],
+      "boundsMax": [
+        0.41,
+        0.942,
+        0.4295
+      ],
+      "triangles": 8064,
+      "bytes": 305964,
+      "sha256": "e1a66a3a8282bdf8db34c3481ce41c8e82089968f6cf9b314504b859e6953030"
+    },
+    "Platform_2m": {
+      "path": "art/environment/Platform_2m.glb",
+      "size": [
+        2.04,
+        0.847501,
+        2.04
+      ],
+      "boundsMin": [
+        -1.02,
+        -0.0,
+        -1.02
+      ],
+      "boundsMax": [
+        1.02,
+        0.8475,
+        1.02
+      ],
+      "triangles": 864,
+      "bytes": 41092,
+      "sha256": "6f24f42a0844a06dcd096d913dc057bce7feb7182fa53c1e0da4c4238c65f5a8"
+    },
+    "Radiator": {
+      "path": "art/environment/Radiator.glb",
+      "size": [
+        0.98,
+        0.58,
+        0.114
+      ],
+      "boundsMin": [
+        -0.49,
+        0.01,
+        -0.059
+      ],
+      "boundsMax": [
+        0.49,
+        0.59,
+        0.055
+      ],
+      "triangles": 4512,
+      "bytes": 203652,
+      "sha256": "e0653a0b3d43f94263902bb8f975060019a66793949ba3f176755929f5b3546b"
+    },
+    "Railing_2m": {
+      "path": "art/environment/Railing_2m.glb",
+      "size": [
+        2.0,
+        0.76,
+        0.1
+      ],
+      "boundsMin": [
+        -1.0,
+        0.02,
+        -0.05
+      ],
+      "boundsMax": [
+        1.0,
+        0.78,
+        0.05
+      ],
+      "triangles": 1536,
+      "bytes": 82148,
+      "sha256": "8ec27ff8f757da6e6f576fb819b5bb78aa087292f1a164f7a4a4e5b944c8ce16"
+    },
+    "Round_Rug": {
+      "path": "art/environment/Round_Rug.glb",
+      "size": [
+        1.88,
+        0.028,
+        1.88
+      ],
+      "boundsMin": [
+        -0.94,
+        -0.0,
+        -0.94
+      ],
+      "boundsMax": [
+        0.94,
+        0.028,
+        0.94
+      ],
+      "triangles": 1408,
+      "bytes": 56544,
+      "sha256": "95ce16c74067c60a44816eb4e86c587577f91f88afa81061d7c87785ca154f59"
+    },
+    "Stairs_1m": {
+      "path": "art/environment/Stairs_1m.glb",
+      "size": [
+        1.05,
+        0.8165,
+        1.29
+      ],
+      "boundsMin": [
+        -0.525,
+        -0.0,
+        -1.127
+      ],
+      "boundsMax": [
+        0.525,
+        0.8165,
+        0.163
+      ],
+      "triangles": 4320,
+      "bytes": 182820,
+      "sha256": "8a1a3c77fe93b3553edd48363cd14acd32eb465ef785768fd9dac2d6f7036e8f"
+    },
+    "Wall_Door": {
+      "path": "art/environment/Wall_Door.glb",
+      "size": [
+        2.04,
+        2.03,
+        0.232501
+      ],
+      "boundsMin": [
+        -1.02,
+        -0.0,
+        -0.095
+      ],
+      "boundsMax": [
+        1.02,
+        2.03,
+        0.137501
+      ],
+      "triangles": 3024,
+      "bytes": 131996,
+      "sha256": "fbf541e3fff8f864b072049823f5707e81c878bffeac57f563030a19422a659b"
+    },
+    "Wall_Sconce": {
+      "path": "art/environment/Wall_Sconce.glb",
+      "size": [
+        0.11,
+        0.333,
+        0.263
+      ],
+      "boundsMin": [
+        -0.055,
+        0.08,
+        -0.018
+      ],
+      "boundsMax": [
+        0.055,
+        0.413,
+        0.245
+      ],
+      "triangles": 1128,
+      "bytes": 46916,
+      "sha256": "b2ac491c2e821c3659787b133556f9356c6cd05dfebba9f866bdc9408b194124"
+    },
+    "Wall_Shelf": {
+      "path": "art/environment/Wall_Shelf.glb",
+      "size": [
+        0.95,
+        0.2775,
+        0.23
+      ],
+      "boundsMin": [
+        -0.475,
+        0.03,
+        -0.115
+      ],
+      "boundsMax": [
+        0.475,
+        0.3075,
+        0.115
+      ],
+      "triangles": 528,
+      "bytes": 29924,
+      "sha256": "63168f8f402221155b3a2ce8020845daebb6a48a2140ede7ae87db6d26ca85eb"
+    },
+    "Wall_Sign": {
+      "path": "art/environment/Wall_Sign.glb",
+      "size": [
+        0.73,
+        0.64,
+        0.0655
+      ],
+      "boundsMin": [
+        -0.365,
+        -0.0,
+        -0.022
+      ],
+      "boundsMax": [
+        0.365,
+        0.64,
+        0.0435
+      ],
+      "triangles": 892,
+      "bytes": 47752,
+      "sha256": "58752c09fbdfba1c9bdffbd318c761f9702fc16482515d6adf841c80c30ae040"
+    },
+    "Wall_Solid": {
+      "path": "art/environment/Wall_Solid.glb",
+      "size": [
+        2.04,
+        2.03,
+        0.225
+      ],
+      "boundsMin": [
+        -1.02,
+        -0.0,
+        -0.0875
+      ],
+      "boundsMax": [
+        1.02,
+        2.03,
+        0.137501
+      ],
+      "triangles": 1296,
+      "bytes": 58364,
+      "sha256": "d5f2e26c1365382b74bc13982129a289262d346dfebba7a87834127a0eb3540a"
+    },
+    "Wall_Window": {
+      "path": "art/environment/Wall_Window.glb",
+      "size": [
+        2.04,
+        2.03,
+        0.3775
+      ],
+      "boundsMin": [
+        -1.02,
+        -0.0,
+        -0.0875
+      ],
+      "boundsMax": [
+        1.02,
+        2.03,
+        0.29
+      ],
+      "triangles": 6048,
+      "bytes": 269728,
+      "sha256": "2e6918e2f0d1c4a6218a30c48822e0bebbc7d23d10c238857f771e1531ac8bb8"
+    },
+    "Window_Frame": {
+      "path": "art/environment/Window_Frame.glb",
+      "size": [
+        1.17,
+        1.125,
+        0.1
+      ],
+      "boundsMin": [
+        -0.585,
+        -0.0125,
+        -0.05
+      ],
+      "boundsMax": [
+        0.585,
+        1.1125,
+        0.05
+      ],
+      "triangles": 3024,
+      "bytes": 135684,
+      "sha256": "ed03418a131e19410f5ec55fecd2e90c7b63d35e19705957428ba25173bb15bb"
+    }
+  },
+  "vfx": {
+    "Bomb_Warning": {
+      "path": "art/vfx/Bomb_Warning.glb",
+      "size": [
+        0.876,
+        0.434,
+        0.876
+      ],
+      "boundsMin": [
+        -0.438,
+        -0.004,
+        -0.438
+      ],
+      "boundsMax": [
+        0.438,
+        0.43,
+        0.438
+      ],
+      "triangles": 1696,
+      "bytes": 65624,
+      "sha256": "55eb7fd356717dfdeb4401531c576aa926271607ef209f5aadf07632cff20e25"
+    },
+    "Craft_Ring": {
+      "path": "art/vfx/Craft_Ring.glb",
+      "size": [
+        0.784,
+        0.096,
+        0.784
+      ],
+      "boundsMin": [
+        -0.392,
+        0.008,
+        -0.392
+      ],
+      "boundsMax": [
+        0.392,
+        0.104,
+        0.392
+      ],
+      "triangles": 2624,
+      "bytes": 100240,
+      "sha256": "e3b35ec94c8461469391873572a71d43765477444a8d1aab1f06b6ddd0e4ee6a"
+    },
+    "Foam_Cloud": {
+      "path": "art/vfx/Foam_Cloud.glb",
+      "size": [
+        0.633106,
+        0.387154,
+        0.661177
+      ],
+      "boundsMin": [
+        -0.287257,
+        -0.060696,
+        -0.330519
+      ],
+      "boundsMax": [
+        0.345849,
+        0.326458,
+        0.330659
+      ],
+      "triangles": 5760,
+      "bytes": 213696,
+      "sha256": "841e4ada6486618d812b54cab08aadaa52aa09d32900d1ce0d4e5318789d23d8"
+    },
+    "Impact_Star": {
+      "path": "art/vfx/Impact_Star.glb",
+      "size": [
+        0.389971,
+        0.380194,
+        0.045
+      ],
+      "boundsMin": [
+        -0.194986,
+        0.019806,
+        -0.0225
+      ],
+      "boundsMax": [
+        0.194986,
+        0.4,
+        0.0225
+      ],
+      "triangles": 52,
+      "bytes": 9324,
+      "sha256": "d41ae216edfd5a5c847f92d8a8f9ce1ba851637e0c499eb740f0c7dd84e6c1ff"
+    },
+    "Jump_Arrow": {
+      "path": "art/vfx/Jump_Arrow.glb",
+      "size": [
+        0.36,
+        0.46,
+        0.04
+      ],
+      "boundsMin": [
+        -0.18,
+        0.03,
+        -0.02
+      ],
+      "boundsMax": [
+        0.18,
+        0.49,
+        0.02
+      ],
+      "triangles": 24,
+      "bytes": 6556,
+      "sha256": "177ae8087ded9f63cdb20827d4aa4d53b9091e8e2e1629794078c965d678c8d5"
+    },
+    "Pickup_Ring": {
+      "path": "art/vfx/Pickup_Ring.glb",
+      "size": [
+        0.544308,
+        0.232,
+        0.544
+      ],
+      "boundsMin": [
+        -0.272,
+        0.003,
+        -0.272
+      ],
+      "boundsMax": [
+        0.272308,
+        0.235,
+        0.272
+      ],
+      "triangles": 676,
+      "bytes": 28912,
+      "sha256": "ac67f140fd1a56156125e5f1f2e4fa58b88d395a1c78e26036a76c6c1c275e87"
+    },
+    "Room_Hazard": {
+      "path": "art/vfx/Room_Hazard.glb",
+      "size": [
+        1.398,
+        0.718,
+        1.398
+      ],
+      "boundsMin": [
+        -0.699,
+        0.061,
+        -0.699
+      ],
+      "boundsMax": [
+        0.699,
+        0.779,
+        0.699
+      ],
+      "triangles": 3200,
+      "bytes": 111456,
+      "sha256": "17887e1f741dcb6e7f1bfaf054c15c8c5e2eaca6555a91f4c9162d943f4ae4ea"
+    },
+    "Soap_Puddle": {
+      "path": "art/vfx/Soap_Puddle.glb",
+      "size": [
+        0.66,
+        0.15,
+        0.55
+      ],
+      "boundsMin": [
+        -0.34,
+        -0.0,
+        -0.216
+      ],
+      "boundsMax": [
+        0.32,
+        0.15,
+        0.334
+      ],
+      "triangles": 3300,
+      "bytes": 119704,
+      "sha256": "22ce52ce6e816633ca7e6a860e48eb358e3b9eb8eb985f7e9cae2c3786fd04e9"
+    },
+    "Speed_Trail": {
+      "path": "art/vfx/Speed_Trail.glb",
+      "size": [
+        0.6,
+        0.05,
+        0.22
+      ],
+      "boundsMin": [
+        -0.3,
+        0.025,
+        -0.11
+      ],
+      "boundsMax": [
+        0.3,
+        0.075,
+        0.11
+      ],
+      "triangles": 1296,
+      "bytes": 60004,
+      "sha256": "469e8d45ecc8b6a20df34ca9efcb2d26e07558de9a3490c4755f127f57421283"
+    },
+    "Wood_Splinter": {
+      "path": "art/vfx/Wood_Splinter.glb",
+      "size": [
+        0.125,
+        0.36,
+        0.052
+      ],
+      "boundsMin": [
+        -0.05,
+        0.0,
+        -0.026
+      ],
+      "boundsMax": [
+        0.075,
+        0.36,
+        0.026
+      ],
+      "triangles": 16,
+      "bytes": 7132,
+      "sha256": "807abe0f46c2d5430d02b5135b5f50592bd90194bff63b974473b47ab13d2347"
+    }
+  },
+  "wardrobe": {
+    "notes": "The shared avatar's wardrobe (brief section 3): cosmetic only, never stats. Each piece switches on one skinned mesh in Avatar.fbx and tints one material with the slot's colourway. rgb values are sRGB 0-1. The rib material (cuffs, hems) is tinted 25% darker than fabric_main by the wardrobe code. The head, eyes and base body are always on.",
+    "slots": [
+      "Top",
+      "Bottoms",
+      "Gloves",
+      "Footwear",
+      "Headwear",
+      "Face",
+      "Back",
+      "Badge"
+    ],
+    "requiredSlots": [
+      "Top",
+      "Bottoms",
+      "Gloves",
+      "Footwear"
+    ],
+    "pieces": [
+      {
+        "id": "Crewneck",
+        "slot": "Top",
+        "mesh": "SK_Crewneck",
+        "tint": "fabric_main"
+      },
+      {
+        "id": "Hoodie",
+        "slot": "Top",
+        "mesh": "SK_Hoodie",
+        "tint": "fabric_main"
+      },
+      {
+        "id": "Joggers",
+        "slot": "Bottoms",
+        "mesh": "SK_Joggers",
+        "tint": "joggers_color"
+      },
+      {
+        "id": "Mittens",
+        "slot": "Gloves",
+        "mesh": "SK_Mittens",
+        "tint": "gloves_color"
+      },
+      {
+        "id": "Boots",
+        "slot": "Footwear",
+        "mesh": "SK_Boots",
+        "tint": "boots_color"
+      },
+      {
+        "id": "Cap",
+        "slot": "Headwear",
+        "mesh": "SK_Cap",
+        "tint": "headwear_color"
+      },
+      {
+        "id": "Hood",
+        "slot": "Headwear",
+        "mesh": "SK_Hood",
+        "tint": "fabric_main",
+        "colourFrom": "Top",
+        "requires": [
+          "Hoodie"
+        ]
+      },
+      {
+        "id": "Glasses",
+        "slot": "Face",
+        "mesh": "SK_Glasses",
+        "tint": "glasses_frame"
+      },
+      {
+        "id": "Satchel",
+        "slot": "Back",
+        "mesh": "SK_Satchel",
+        "tint": "satchel_canvas"
+      },
+      {
+        "id": "TBadge",
+        "slot": "Badge",
+        "mesh": "SK_Badge_T"
+      }
+    ],
+    "palettes": {
+      "Top": [
+        {
+          "id": "pool",
+          "name": "Pool Teal",
+          "rgb": [
+            0.341,
+            0.694,
+            0.735
+          ]
+        },
+        {
+          "id": "tomato",
+          "name": "Tomato",
+          "rgb": [
+            0.91,
+            0.329,
+            0.247
+          ]
+        },
+        {
+          "id": "tangerine",
+          "name": "Tangerine",
+          "rgb": [
+            0.969,
+            0.58,
+            0.227
+          ]
+        },
+        {
+          "id": "sunflower",
+          "name": "Sunflower",
+          "rgb": [
+            0.976,
+            0.788,
+            0.247
+          ]
+        },
+        {
+          "id": "mint",
+          "name": "Mint",
+          "rgb": [
+            0.549,
+            0.851,
+            0.659
+          ]
+        },
+        {
+          "id": "sky",
+          "name": "Sky",
+          "rgb": [
+            0.447,
+            0.678,
+            0.949
+          ]
+        },
+        {
+          "id": "periwinkle",
+          "name": "Periwinkle",
+          "rgb": [
+            0.604,
+            0.604,
+            0.918
+          ]
+        },
+        {
+          "id": "grape",
+          "name": "Grape",
+          "rgb": [
+            0.549,
+            0.353,
+            0.702
+          ]
+        },
+        {
+          "id": "bubblegum",
+          "name": "Bubblegum",
+          "rgb": [
+            0.961,
+            0.549,
+            0.722
+          ]
+        },
+        {
+          "id": "oat",
+          "name": "Oat",
+          "rgb": [
+            0.902,
+            0.851,
+            0.741
+          ]
+        },
+        {
+          "id": "charcoal",
+          "name": "Charcoal",
+          "rgb": [
+            0.251,
+            0.263,
+            0.29
+          ]
+        }
+      ],
+      "Bottoms": [
+        {
+          "id": "navy",
+          "name": "Night Navy",
+          "rgb": [
+            0.366,
+            0.417,
+            0.485
+          ]
+        },
+        {
+          "id": "denim",
+          "name": "Denim",
+          "rgb": [
+            0.31,
+            0.435,
+            0.639
+          ]
+        },
+        {
+          "id": "khaki",
+          "name": "Khaki",
+          "rgb": [
+            0.761,
+            0.682,
+            0.51
+          ]
+        },
+        {
+          "id": "olive",
+          "name": "Olive",
+          "rgb": [
+            0.431,
+            0.478,
+            0.271
+          ]
+        },
+        {
+          "id": "plum",
+          "name": "Plum",
+          "rgb": [
+            0.42,
+            0.227,
+            0.369
+          ]
+        },
+        {
+          "id": "brick",
+          "name": "Brick",
+          "rgb": [
+            0.659,
+            0.282,
+            0.227
+          ]
+        },
+        {
+          "id": "forest",
+          "name": "Forest",
+          "rgb": [
+            0.184,
+            0.42,
+            0.31
+          ]
+        },
+        {
+          "id": "cream",
+          "name": "Cream",
+          "rgb": [
+            0.929,
+            0.89,
+            0.8
+          ]
+        },
+        {
+          "id": "charcoal",
+          "name": "Charcoal",
+          "rgb": [
+            0.251,
+            0.263,
+            0.29
+          ]
+        }
+      ],
+      "Gloves": [
+        {
+          "id": "putty",
+          "name": "Putty",
+          "rgb": [
+            0.865,
+            0.87,
+            0.827
+          ]
+        },
+        {
+          "id": "tomato",
+          "name": "Tomato",
+          "rgb": [
+            0.91,
+            0.329,
+            0.247
+          ]
+        },
+        {
+          "id": "sunflower",
+          "name": "Sunflower",
+          "rgb": [
+            0.976,
+            0.788,
+            0.247
+          ]
+        },
+        {
+          "id": "mint",
+          "name": "Mint",
+          "rgb": [
+            0.549,
+            0.851,
+            0.659
+          ]
+        },
+        {
+          "id": "sky",
+          "name": "Sky",
+          "rgb": [
+            0.447,
+            0.678,
+            0.949
+          ]
+        },
+        {
+          "id": "bubblegum",
+          "name": "Bubblegum",
+          "rgb": [
+            0.961,
+            0.549,
+            0.722
+          ]
+        },
+        {
+          "id": "charcoal",
+          "name": "Charcoal",
+          "rgb": [
+            0.251,
+            0.263,
+            0.29
+          ]
+        }
+      ],
+      "Footwear": [
+        {
+          "id": "classic",
+          "name": "Classic",
+          "rgb": [
+            1.0,
+            1.0,
+            1.0
+          ]
+        },
+        {
+          "id": "tan",
+          "name": "Tan",
+          "rgb": [
+            0.851,
+            0.651,
+            0.42
+          ]
+        },
+        {
+          "id": "cherry",
+          "name": "Cherry",
+          "rgb": [
+            0.878,
+            0.322,
+            0.353
+          ]
+        },
+        {
+          "id": "forest",
+          "name": "Forest",
+          "rgb": [
+            0.373,
+            0.639,
+            0.478
+          ]
+        },
+        {
+          "id": "navy",
+          "name": "Navy",
+          "rgb": [
+            0.424,
+            0.51,
+            0.722
+          ]
+        },
+        {
+          "id": "mustard",
+          "name": "Mustard",
+          "rgb": [
+            0.89,
+            0.725,
+            0.278
+          ]
+        }
+      ],
+      "Headwear": [
+        {
+          "id": "harbour",
+          "name": "Harbour Blue",
+          "rgb": [
+            0.313,
+            0.547,
+            0.65
+          ]
+        },
+        {
+          "id": "tomato",
+          "name": "Tomato",
+          "rgb": [
+            0.91,
+            0.329,
+            0.247
+          ]
+        },
+        {
+          "id": "sunflower",
+          "name": "Sunflower",
+          "rgb": [
+            0.976,
+            0.788,
+            0.247
+          ]
+        },
+        {
+          "id": "mint",
+          "name": "Mint",
+          "rgb": [
+            0.549,
+            0.851,
+            0.659
+          ]
+        },
+        {
+          "id": "grape",
+          "name": "Grape",
+          "rgb": [
+            0.549,
+            0.353,
+            0.702
+          ]
+        },
+        {
+          "id": "oat",
+          "name": "Oat",
+          "rgb": [
+            0.902,
+            0.851,
+            0.741
+          ]
+        },
+        {
+          "id": "charcoal",
+          "name": "Charcoal",
+          "rgb": [
+            0.251,
+            0.263,
+            0.29
+          ]
+        }
+      ],
+      "Face": [
+        {
+          "id": "classic",
+          "name": "Classic",
+          "rgb": [
+            1.0,
+            1.0,
+            1.0
+          ]
+        },
+        {
+          "id": "tortoise",
+          "name": "Tortoiseshell",
+          "rgb": [
+            0.659,
+            0.439,
+            0.247
+          ]
+        },
+        {
+          "id": "cherry",
+          "name": "Cherry",
+          "rgb": [
+            0.878,
+            0.322,
+            0.353
+          ]
+        },
+        {
+          "id": "sky",
+          "name": "Sky",
+          "rgb": [
+            0.447,
+            0.678,
+            0.949
+          ]
+        },
+        {
+          "id": "gold",
+          "name": "Gold",
+          "rgb": [
+            0.91,
+            0.757,
+            0.353
+          ]
+        }
+      ],
+      "Back": [
+        {
+          "id": "canvas",
+          "name": "Canvas",
+          "rgb": [
+            0.722,
+            0.575,
+            0.41
+          ]
+        },
+        {
+          "id": "olive",
+          "name": "Olive",
+          "rgb": [
+            0.431,
+            0.478,
+            0.271
+          ]
+        },
+        {
+          "id": "navy",
+          "name": "Navy",
+          "rgb": [
+            0.208,
+            0.275,
+            0.431
+          ]
+        },
+        {
+          "id": "mustard",
+          "name": "Mustard",
+          "rgb": [
+            0.851,
+            0.651,
+            0.227
+          ]
+        },
+        {
+          "id": "brick",
+          "name": "Brick",
+          "rgb": [
+            0.659,
+            0.282,
+            0.227
+          ]
+        }
+      ]
+    },
+    "default": {
+      "pieces": {
+        "Top": "Crewneck",
+        "Bottoms": "Joggers",
+        "Gloves": "Mittens",
+        "Footwear": "Boots",
+        "Badge": "TBadge"
+      },
+      "colours": {
+        "Top": "pool",
+        "Bottoms": "navy",
+        "Gloves": "putty",
+        "Footwear": "classic",
+        "Headwear": "harbour",
+        "Face": "classic",
+        "Back": "canvas"
+      }
+    }
+  },
+  "materialSkins": {
+    "blue": {
+      "Arcade": {
+        "baseColor": [
+          0.17,
+          0.66,
+          0.74,
+          1
+        ],
+        "metallic": 0,
+        "roughness": 0.42,
+        "emissive": [
+          0,
+          0,
+          0
+        ]
+      },
+      "Candy": {
+        "baseColor": [
+          0.33,
+          0.69,
+          0.86,
+          1
+        ],
+        "metallic": 0,
+        "roughness": 0.42,
+        "emissive": [
+          0,
+          0,
+          0
+        ]
+      },
+      "Classic": {
+        "baseColor": [
+          0.09,
+          0.35,
+          0.71,
+          1
+        ],
+        "metallic": 0,
+        "roughness": 0.66,
+        "emissive": [
+          0,
+          0,
+          0
+        ]
+      }
+    },
+    "ceramic": {
+      "Arcade": {
+        "baseColor": [
+          0.95,
+          0.92,
+          0.81,
+          1
+        ],
+        "metallic": 0,
+        "roughness": 0.24,
+        "emissive": [
+          0,
+          0,
+          0
+        ]
+      },
+      "Candy": {
+        "baseColor": [
+          0.95,
+          0.92,
+          0.81,
+          1
+        ],
+        "metallic": 0,
+        "roughness": 0.24,
+        "emissive": [
+          0,
+          0,
+          0
+        ]
+      },
+      "Classic": {
+        "baseColor": [
+          0.95,
+          0.92,
+          0.81,
+          1
+        ],
+        "metallic": 0,
+        "roughness": 0.24,
+        "emissive": [
+          0,
+          0,
+          0
+        ]
+      }
+    },
+    "cream": {
+      "Arcade": {
+        "baseColor": [
+          0.77,
+          0.69,
+          0.93,
+          1
+        ],
+        "metallic": 0,
+        "roughness": 0.72,
+        "emissive": [
+          0,
+          0,
+          0
+        ]
+      },
+      "Candy": {
+        "baseColor": [
+          0.98,
+          0.93,
+          0.77,
+          1
+        ],
+        "metallic": 0,
+        "roughness": 0.72,
+        "emissive": [
+          0,
+          0,
+          0
+        ]
+      },
+      "Classic": {
+        "baseColor": [
+          0.84,
+          0.76,
+          0.59,
+          1
+        ],
+        "metallic": 0,
+        "roughness": 0.88,
+        "emissive": [
+          0,
+          0,
+          0
+        ]
+      }
+    },
+    "dark": {
+      "Arcade": {
+        "baseColor": [
+          0.035,
+          0.047,
+          0.062,
+          1
+        ],
+        "metallic": 0.12,
+        "roughness": 0.58,
+        "emissive": [
+          0,
+          0,
+          0
+        ]
+      },
+      "Candy": {
+        "baseColor": [
+          0.035,
+          0.047,
+          0.062,
+          1
+        ],
+        "metallic": 0.12,
+        "roughness": 0.58,
+        "emissive": [
+          0,
+          0,
+          0
+        ]
+      },
+      "Classic": {
+        "baseColor": [
+          0.035,
+          0.047,
+          0.062,
+          1
+        ],
+        "metallic": 0.12,
+        "roughness": 0.58,
+        "emissive": [
+          0,
+          0,
+          0
+        ]
+      }
+    },
+    "foam": {
+      "Classic": {
+        "baseColor": [
+          0.93,
+          0.97,
+          1,
+          1
+        ],
+        "metallic": 0,
+        "roughness": 0.95,
+        "emissive": [
+          0,
+          0,
+          0
+        ]
+      }
+    },
+    "glass": {
+      "Classic": {
+        "baseColor": [
+          0.38,
+          0.76,
+          0.85,
+          0.38
+        ],
+        "metallic": 0.05,
+        "roughness": 0.12,
+        "emissive": [
+          0,
+          0,
+          0
+        ]
+      }
+    },
+    "glow": {
+      "Arcade": {
+        "baseColor": [
+          0.96,
+          0.56,
+          0.09,
+          1
+        ],
+        "metallic": 0,
+        "roughness": 0.4,
+        "emissive": [
+          0.9,
+          0.32,
+          0.04
+        ]
+      },
+      "Candy": {
+        "baseColor": [
+          0.96,
+          0.56,
+          0.09,
+          1
+        ],
+        "metallic": 0,
+        "roughness": 0.4,
+        "emissive": [
+          0.9,
+          0.32,
+          0.04
+        ]
+      },
+      "Classic": {
+        "baseColor": [
+          0.96,
+          0.56,
+          0.09,
+          1
+        ],
+        "metallic": 0,
+        "roughness": 0.4,
+        "emissive": [
+          0.9,
+          0.32,
+          0.04
+        ]
+      }
+    },
+    "gold": {
+      "Arcade": {
+        "baseColor": [
+          0.91,
+          0.58,
+          0.17,
+          1
+        ],
+        "metallic": 0.68,
+        "roughness": 0.32,
+        "emissive": [
+          0,
+          0,
+          0
+        ]
+      },
+      "Candy": {
+        "baseColor": [
+          0.91,
+          0.58,
+          0.17,
+          1
+        ],
+        "metallic": 0.68,
+        "roughness": 0.32,
+        "emissive": [
+          0,
+          0,
+          0
+        ]
+      },
+      "Classic": {
+        "baseColor": [
+          0.91,
+          0.58,
+          0.17,
+          1
+        ],
+        "metallic": 0.68,
+        "roughness": 0.32,
+        "emissive": [
+          0,
+          0,
+          0
+        ]
+      }
+    },
+    "green": {
+      "Arcade": {
+        "baseColor": [
+          0.37,
+          0.18,
+          0.65,
+          1
+        ],
+        "metallic": 0,
+        "roughness": 0.48,
+        "emissive": [
+          0,
+          0,
+          0
+        ]
+      },
+      "Candy": {
+        "baseColor": [
+          0.46,
+          0.77,
+          0.62,
+          1
+        ],
+        "metallic": 0,
+        "roughness": 0.45,
+        "emissive": [
+          0,
+          0,
+          0
+        ]
+      },
+      "Classic": {
+        "baseColor": [
+          0.26,
+          0.53,
+          0.19,
+          1
+        ],
+        "metallic": 0,
+        "roughness": 0.77,
+        "emissive": [
+          0,
+          0,
+          0
+        ]
+      }
+    },
+    "ivory": {
+      "Arcade": {
+        "baseColor": [
+          0.94,
+          0.76,
+          0.28,
+          1
+        ],
+        "metallic": 0,
+        "roughness": 0.4,
+        "emissive": [
+          0,
+          0,
+          0
+        ]
+      },
+      "Candy": {
+        "baseColor": [
+          0.94,
+          0.88,
+          0.72,
+          1
+        ],
+        "metallic": 0,
+        "roughness": 0.48,
+        "emissive": [
+          0,
+          0,
+          0
+        ]
+      },
+      "Classic": {
+        "baseColor": [
+          0.94,
+          0.88,
+          0.72,
+          1
+        ],
+        "metallic": 0,
+        "roughness": 0.48,
+        "emissive": [
+          0,
+          0,
+          0
+        ]
+      }
+    },
+    "leaf": {
+      "Arcade": {
+        "baseColor": [
+          0.16,
+          0.43,
+          0.12,
+          1
+        ],
+        "metallic": 0,
+        "roughness": 0.69,
+        "emissive": [
+          0,
+          0,
+          0
+        ]
+      },
+      "Candy": {
+        "baseColor": [
+          0.16,
+          0.43,
+          0.12,
+          1
+        ],
+        "metallic": 0,
+        "roughness": 0.69,
+        "emissive": [
+          0,
+          0,
+          0
+        ]
+      },
+      "Classic": {
+        "baseColor": [
+          0.16,
+          0.43,
+          0.12,
+          1
+        ],
+        "metallic": 0,
+        "roughness": 0.69,
+        "emissive": [
+          0,
+          0,
+          0
+        ]
+      }
+    },
+    "metal": {
+      "Arcade": {
+        "baseColor": [
+          0.43,
+          0.3,
+          0.69,
+          1
+        ],
+        "metallic": 0.68,
+        "roughness": 0.33,
+        "emissive": [
+          0,
+          0,
+          0
+        ]
+      },
+      "Candy": {
+        "baseColor": [
+          0.56,
+          0.74,
+          0.78,
+          1
+        ],
+        "metallic": 0.5,
+        "roughness": 0.3,
+        "emissive": [
+          0,
+          0,
+          0
+        ]
+      },
+      "Classic": {
+        "baseColor": [
+          0.37,
+          0.46,
+          0.53,
+          1
+        ],
+        "metallic": 0.68,
+        "roughness": 0.32,
+        "emissive": [
+          0,
+          0,
+          0
+        ]
+      }
+    },
+    "pink": {
+      "Arcade": {
+        "baseColor": [
+          0.97,
+          0.4,
+          0.53,
+          1
+        ],
+        "metallic": 0,
+        "roughness": 0.4,
+        "emissive": [
+          0,
+          0,
+          0
+        ]
+      },
+      "Candy": {
+        "baseColor": [
+          0.97,
+          0.4,
+          0.53,
+          1
+        ],
+        "metallic": 0,
+        "roughness": 0.4,
+        "emissive": [
+          0,
+          0,
+          0
+        ]
+      },
+      "Classic": {
+        "baseColor": [
+          0.97,
+          0.4,
+          0.53,
+          1
+        ],
+        "metallic": 0,
+        "roughness": 0.4,
+        "emissive": [
+          0,
+          0,
+          0
+        ]
+      }
+    },
+    "red": {
+      "Arcade": {
+        "baseColor": [
+          0.65,
+          0.22,
+          0.78,
+          1
+        ],
+        "metallic": 0,
+        "roughness": 0.4,
+        "emissive": [
+          0,
+          0,
+          0
+        ]
+      },
+      "Candy": {
+        "baseColor": [
+          1,
+          0.44,
+          0.61,
+          1
+        ],
+        "metallic": 0,
+        "roughness": 0.43,
+        "emissive": [
+          0,
+          0,
+          0
+        ]
+      },
+      "Classic": {
+        "baseColor": [
+          0.87,
+          0.095,
+          0.055,
+          1
+        ],
+        "metallic": 0,
+        "roughness": 0.54,
+        "emissive": [
+          0,
+          0,
+          0
+        ]
+      }
+    },
+    "soap": {
+      "Arcade": {
+        "baseColor": [
+          1,
+          0.77,
+          0.66,
+          1
+        ],
+        "metallic": 0,
+        "roughness": 0.23,
+        "emissive": [
+          0,
+          0,
+          0
+        ]
+      },
+      "Candy": {
+        "baseColor": [
+          1,
+          0.77,
+          0.66,
+          1
+        ],
+        "metallic": 0,
+        "roughness": 0.23,
+        "emissive": [
+          0,
+          0,
+          0
+        ]
+      },
+      "Classic": {
+        "baseColor": [
+          1,
+          0.77,
+          0.66,
+          1
+        ],
+        "metallic": 0,
+        "roughness": 0.23,
+        "emissive": [
+          0,
+          0,
+          0
+        ]
+      }
+    },
+    "wall": {
+      "Classic": {
+        "baseColor": [
+          0.76,
+          0.78,
+          0.61,
+          1
+        ],
+        "metallic": 0,
+        "roughness": 0.94,
+        "emissive": [
+          0,
+          0,
+          0
+        ]
+      }
+    },
+    "wall_blue": {
+      "Classic": {
+        "baseColor": [
+          0.27,
+          0.53,
+          0.63,
+          1
+        ],
+        "metallic": 0,
+        "roughness": 0.91,
+        "emissive": [
+          0,
+          0,
+          0
+        ]
+      }
+    },
+    "water": {
+      "Arcade": {
+        "baseColor": [
+          0.12,
+          0.64,
+          0.91,
+          0.72
+        ],
+        "metallic": 0,
+        "roughness": 0.18,
+        "emissive": [
+          0,
+          0,
+          0
+        ]
+      },
+      "Candy": {
+        "baseColor": [
+          0.12,
+          0.64,
+          0.91,
+          0.72
+        ],
+        "metallic": 0,
+        "roughness": 0.18,
+        "emissive": [
+          0,
+          0,
+          0
+        ]
+      },
+      "Classic": {
+        "baseColor": [
+          0.12,
+          0.64,
+          0.91,
+          0.72
+        ],
+        "metallic": 0,
+        "roughness": 0.18,
+        "emissive": [
+          0,
+          0,
+          0
+        ]
+      }
+    },
+    "white": {
+      "Arcade": {
+        "baseColor": [
+          1,
+          1,
+          1,
+          1
+        ],
+        "metallic": 0,
+        "roughness": 0.65,
+        "emissive": [
+          0,
+          0,
+          0
+        ]
+      },
+      "Candy": {
+        "baseColor": [
+          1,
+          1,
+          1,
+          1
+        ],
+        "metallic": 0,
+        "roughness": 0.65,
+        "emissive": [
+          0,
+          0,
+          0
+        ]
+      },
+      "Classic": {
+        "baseColor": [
+          1,
+          1,
+          1,
+          1
+        ],
+        "metallic": 0,
+        "roughness": 0.65,
+        "emissive": [
+          0,
+          0,
+          0
+        ]
+      }
+    },
+    "wood": {
+      "Arcade": {
+        "baseColor": [
+          0.37,
+          0.19,
+          0.64,
+          1
+        ],
+        "metallic": 0.12,
+        "roughness": 0.4,
+        "emissive": [
+          0,
+          0,
+          0
+        ]
+      },
+      "Candy": {
+        "baseColor": [
+          0.28,
+          0.7,
+          0.66,
+          1
+        ],
+        "metallic": 0,
+        "roughness": 0.38,
+        "emissive": [
+          0,
+          0,
+          0
+        ]
+      },
+      "Classic": {
+        "baseColor": [
+          0.66,
+          0.34,
+          0.105,
+          1
+        ],
+        "metallic": 0,
+        "roughness": 0.62,
+        "emissive": [
+          0,
+          0,
+          0
+        ]
+      }
+    },
+    "wood_dark": {
+      "Arcade": {
+        "baseColor": [
+          0.16,
+          0.095,
+          0.3,
+          1
+        ],
+        "metallic": 0.1,
+        "roughness": 0.45,
+        "emissive": [
+          0,
+          0,
+          0
+        ]
+      },
+      "Candy": {
+        "baseColor": [
+          0.085,
+          0.36,
+          0.35,
+          1
+        ],
+        "metallic": 0,
+        "roughness": 0.4,
+        "emissive": [
+          0,
+          0,
+          0
+        ]
+      },
+      "Classic": {
+        "baseColor": [
+          0.29,
+          0.12,
+          0.055,
+          1
+        ],
+        "metallic": 0,
+        "roughness": 0.68,
+        "emissive": [
+          0,
+          0,
+          0
+        ]
+      }
+    },
+    "wood_light": {
+      "Arcade": {
+        "baseColor": [
+          0.8,
+          0.4,
+          0.9,
+          1
+        ],
+        "metallic": 0.1,
+        "roughness": 0.4,
+        "emissive": [
+          0,
+          0,
+          0
+        ]
+      },
+      "Candy": {
+        "baseColor": [
+          0.98,
+          0.74,
+          0.29,
+          1
+        ],
+        "metallic": 0,
+        "roughness": 0.42,
+        "emissive": [
+          0,
+          0,
+          0
+        ]
+      },
+      "Classic": {
+        "baseColor": [
+          0.9,
+          0.6,
+          0.27,
+          1
+        ],
+        "metallic": 0,
+        "roughness": 0.62,
+        "emissive": [
+          0,
+          0,
+          0
+        ]
+      }
+    }
+  },
+  "avatar": {
+    "path": "art/avatar.glb",
+    "size": [
+      0.745005,
+      1.153021,
+      0.564942
+    ],
+    "boundsMin": [
+      -0.372502,
+      0.002,
+      -0.255
+    ],
+    "boundsMax": [
+      0.372502,
+      1.15502,
+      0.309942
+    ],
+    "triangles": 63110,
+    "bytes": 7130212,
+    "sha256": "17296d4b3a6359a22f758a20dac7476c8513ca38e23f0ef2c3662dbd8e3c3e2c",
+    "animations": [
+      "Block_Plate",
+      "Carry_TwoHand",
+      "Celebrate",
+      "Drink_Consumable",
+      "Hit_Reaction",
+      "Hold_OneHand",
+      "Idle",
+      "Inspect_OneHand",
+      "Jump_Preview",
+      "Pickup",
+      "Place",
+      "Present_Item",
+      "Run_InPlace",
+      "Swing_OneHand",
+      "Throw_OneHand",
+      "Thrust_OneHand",
+      "Walk_InPlace"
+    ],
+    "meshes": [
+      "SK_Badge_T",
+      "SK_Cap",
+      "SK_Head",
+      "SK_Hood",
+      "SK_Joggers",
+      "SK_Mittens",
+      "SK_Crewneck",
+      "SK_Boots",
+      "SK_Glasses",
+      "SK_Hoodie",
+      "SK_Satchel"
+    ],
+    "bones": [
+      "root",
+      "pelvis",
+      "spine",
+      "chest",
+      "neck",
+      "head",
+      "clavicle_L",
+      "upper_arm_L",
+      "forearm_L",
+      "hand_L",
+      "grip_L",
+      "clavicle_R",
+      "upper_arm_R",
+      "forearm_R",
+      "hand_R",
+      "grip_R",
+      "thigh_L",
+      "shin_L",
+      "foot_L",
+      "thigh_R",
+      "shin_R",
+      "foot_R"
+    ],
+    "defaultTriangles": 31696,
+    "mobilePath": "art/avatar-mobile.glb",
+    "mobileTriangles": 30848,
+    "mobileDefaultTriangles": 17660,
+    "mobileBytes": 5736680,
+    "mobileSha256": "786cf1dbea1a5ab27c38f193ce08d09f0a99178af5acd1aba8d471e27a0bfabf"
+  }
+}

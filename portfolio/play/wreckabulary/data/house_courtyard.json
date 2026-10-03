@@ -1,0 +1,515 @@
+{
+ "name": "Garden Courtyard",
+ "notes": "An enlarged 32 by 32 metre house around a 12 metre open garden, with wide doorways and two crossing paths. All indoor rooms remain connected around the outside and through the garden.",
+ "extraction": "LivingRoom",
+ "extractionAt": [
+  -11,
+  -7
+ ],
+ "rooms": [
+  {
+   "name": "Garden",
+   "bounds": [
+    -6,
+    -6,
+    6,
+    6
+   ]
+  },
+  {
+   "name": "Bedroom",
+   "bounds": [
+    -16,
+    6,
+    6,
+    16
+   ]
+  },
+  {
+   "name": "Kitchen",
+   "bounds": [
+    6,
+    -6,
+    16,
+    16
+   ]
+  },
+  {
+   "name": "Study",
+   "bounds": [
+    -6,
+    -16,
+    16,
+    -6
+   ]
+  },
+  {
+   "name": "LivingRoom",
+   "bounds": [
+    -16,
+    -16,
+    -6,
+    6
+   ]
+  }
+ ],
+ "doors": [
+  {
+   "between": [
+    "Bedroom",
+    "Garden"
+   ],
+   "at": [
+    0,
+    6
+   ],
+   "width": 2.4
+  },
+  {
+   "between": [
+    "Kitchen",
+    "Garden"
+   ],
+   "at": [
+    6,
+    -2
+   ],
+   "width": 2.4
+  },
+  {
+   "between": [
+    "Study",
+    "Garden"
+   ],
+   "at": [
+    0,
+    -6
+   ],
+   "width": 2.4
+  },
+  {
+   "between": [
+    "LivingRoom",
+    "Garden"
+   ],
+   "at": [
+    -6,
+    0
+   ],
+   "width": 2.4
+  },
+  {
+   "between": [
+    "Bedroom",
+    "Kitchen"
+   ],
+   "at": [
+    6,
+    11
+   ],
+   "width": 2.4
+  },
+  {
+   "between": [
+    "Kitchen",
+    "Study"
+   ],
+   "at": [
+    11,
+    -6
+   ],
+   "width": 2.4
+  },
+  {
+   "between": [
+    "Study",
+    "LivingRoom"
+   ],
+   "at": [
+    -6,
+    -11
+   ],
+   "width": 2.4
+  },
+  {
+   "between": [
+    "LivingRoom",
+    "Bedroom"
+   ],
+   "at": [
+    -11,
+    6
+   ],
+   "width": 2.4
+  }
+ ],
+ "spawns": [
+  {
+   "room": "Bedroom",
+   "at": [
+    -12,
+    10
+   ],
+   "yaw": 90
+  },
+  {
+   "room": "Kitchen",
+   "at": [
+    10,
+    12
+   ],
+   "yaw": 180
+  },
+  {
+   "room": "Study",
+   "at": [
+    12,
+    -10
+   ],
+   "yaw": 270
+  },
+  {
+   "room": "LivingRoom",
+   "at": [
+    -10,
+    -12
+   ],
+   "yaw": 0
+  }
+ ],
+ "furniture": [
+  {
+   "word": "BED",
+   "room": "Bedroom",
+   "at": [
+    -7,
+    13
+   ],
+   "yaw": 0
+  },
+  {
+   "word": "SOFA",
+   "room": "Bedroom",
+   "at": [
+    2,
+    14
+   ],
+   "yaw": 0
+  },
+  {
+   "word": "TABLE",
+   "room": "Bedroom",
+   "at": [
+    -2,
+    9
+   ],
+   "yaw": 0
+  },
+  {
+   "word": "LAMP",
+   "room": "Bedroom",
+   "at": [
+    -14,
+    14
+   ],
+   "yaw": 0
+  },
+  {
+   "word": "CLOCK",
+   "room": "Bedroom",
+   "at": [
+    -4,
+    13
+   ],
+   "yaw": 0
+  },
+  {
+   "word": "CHEST",
+   "room": "Bedroom",
+   "at": [
+    -12,
+    14
+   ],
+   "yaw": 0
+  },
+  {
+   "word": "TABLE",
+   "room": "Kitchen",
+   "at": [
+    10,
+    4
+   ],
+   "yaw": 0
+  },
+  {
+   "word": "FAN",
+   "room": "Kitchen",
+   "at": [
+    14,
+    -3
+   ],
+   "yaw": 0
+  },
+  {
+   "word": "LAMP",
+   "room": "Kitchen",
+   "at": [
+    14,
+    14
+   ],
+   "yaw": 0
+  },
+  {
+   "word": "SODA",
+   "room": "Kitchen",
+   "at": [
+    13,
+    4
+   ],
+   "yaw": 0
+  },
+  {
+   "word": "CABINET",
+   "room": "Kitchen",
+   "at": [
+    14,
+    8
+   ],
+   "yaw": 0
+  },
+  {
+   "word": "STOOL",
+   "room": "Kitchen",
+   "at": [
+    8,
+    14
+   ],
+   "yaw": 0
+  },
+  {
+   "word": "DESK",
+   "room": "Study",
+   "at": [
+    11,
+    -13
+   ],
+   "yaw": 0
+  },
+  {
+   "word": "TABLE",
+   "room": "Study",
+   "at": [
+    4,
+    -10
+   ],
+   "yaw": 0
+  },
+  {
+   "word": "LAMP",
+   "room": "Study",
+   "at": [
+    14,
+    -14
+   ],
+   "yaw": 0
+  },
+  {
+   "word": "BOOK",
+   "room": "Study",
+   "at": [
+    4,
+    -13
+   ],
+   "yaw": 0
+  },
+  {
+   "word": "CHAIR",
+   "room": "Study",
+   "at": [
+    8,
+    -14
+   ],
+   "yaw": 0
+  },
+  {
+   "word": "CABINET",
+   "room": "Study",
+   "at": [
+    -3,
+    -14
+   ],
+   "yaw": 0
+  },
+  {
+   "word": "SOFA",
+   "room": "LivingRoom",
+   "at": [
+    -14,
+    2
+   ],
+   "yaw": 0
+  },
+  {
+   "word": "TABLE",
+   "room": "LivingRoom",
+   "at": [
+    -11,
+    -3
+   ],
+   "yaw": 0
+  },
+  {
+   "word": "LAMP",
+   "room": "LivingRoom",
+   "at": [
+    -14,
+    -14
+   ],
+   "yaw": 0
+  },
+  {
+   "word": "PLANT",
+   "room": "LivingRoom",
+   "at": [
+    -14,
+    -7
+   ],
+   "yaw": 0
+  },
+  {
+   "word": "CHAIR",
+   "room": "LivingRoom",
+   "at": [
+    -8,
+    3
+   ],
+   "yaw": 0
+  },
+  {
+   "word": "CRATE",
+   "room": "LivingRoom",
+   "at": [
+    -8,
+    -14
+   ],
+   "yaw": 0
+  },
+  {
+   "word": "CRATE",
+   "room": "Garden",
+   "at": [
+    -4,
+    3
+   ],
+   "yaw": 0
+  },
+  {
+   "word": "BARREL",
+   "room": "Garden",
+   "at": [
+    -4,
+    -3
+   ],
+   "yaw": 0
+  },
+  {
+   "word": "BOX",
+   "room": "Garden",
+   "at": [
+    4,
+    3
+   ],
+   "yaw": 0
+  },
+  {
+   "word": "SHELF",
+   "room": "Study",
+   "at": [
+    14,
+    -8
+   ],
+   "yaw": 270
+  },
+  {
+   "word": "DESK",
+   "room": "LivingRoom",
+   "at": [
+    -14,
+    -10
+   ],
+   "yaw": 90
+  },
+  {
+   "word": "BOOK",
+   "room": "LivingRoom",
+   "at": [
+    -8,
+    -10
+   ],
+   "yaw": 0
+  }
+ ],
+ "neverClose": [
+  "Garden"
+ ],
+ "clearOutOrders": {
+  "Dibs": [
+   "Kitchen",
+   "Study",
+   "Bedroom",
+   "LivingRoom"
+  ],
+  "Duos": [
+   "Kitchen",
+   "Study",
+   "Bedroom",
+   "LivingRoom"
+  ],
+  "MovingOut": [
+   "Kitchen",
+   "Bedroom",
+   "Study"
+  ]
+ },
+ "movingDay": [
+  {
+   "word": "BED",
+   "room": "Bedroom"
+  },
+  {
+   "word": "TABLE",
+   "room": "Kitchen"
+  },
+  {
+   "word": "SOFA",
+   "room": "LivingRoom"
+  },
+  {
+   "word": "LAMP",
+   "room": "Study"
+  }
+ ],
+ "keepsakes": [
+  {
+   "room": "Kitchen",
+   "at": [
+    13,
+    4
+   ]
+  },
+  {
+   "room": "Bedroom",
+   "at": [
+    -4,
+    13
+   ]
+  },
+  {
+   "room": "Study",
+   "at": [
+    4,
+    -13
+   ]
+  }
+ ]
+}

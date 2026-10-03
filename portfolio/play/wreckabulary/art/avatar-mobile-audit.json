@@ -1,0 +1,142 @@
+{
+  "generator": "Tools/AssetPipeline/export_mobile_avatar.py",
+  "ratio": 0.42,
+  "source_sha256": "17296d4b3a6359a22f758a20dac7476c8513ca38e23f0ef2c3662dbd8e3c3e2c",
+  "output_sha256": "786cf1dbea1a5ab27c38f193ce08d09f0a99178af5acd1aba8d471e27a0bfabf",
+  "before_triangles": 63110,
+  "after_triangles": 30848,
+  "default_before": 31696,
+  "default_after": 17660,
+  "meshes": [
+    {
+      "mesh": "SK_Badge_T",
+      "before": 400,
+      "after": 167,
+      "morph_targets_retained": 0,
+      "default": true
+    },
+    {
+      "mesh": "SK_Boots",
+      "before": 7616,
+      "after": 3198,
+      "morph_targets_retained": 0,
+      "default": true
+    },
+    {
+      "mesh": "SK_Cap",
+      "before": 2340,
+      "after": 981,
+      "morph_targets_retained": 0,
+      "default": false
+    },
+    {
+      "mesh": "SK_Crewneck",
+      "before": 9472,
+      "after": 3977,
+      "morph_targets_retained": 0,
+      "default": true
+    },
+    {
+      "mesh": "SK_Glasses",
+      "before": 786,
+      "after": 329,
+      "morph_targets_retained": 0,
+      "default": false
+    },
+    {
+      "mesh": "SK_Head",
+      "before": 7504,
+      "after": 7504,
+      "morph_targets_retained": 2,
+      "default": true
+    },
+    {
+      "mesh": "SK_Hood",
+      "before": 16944,
+      "after": 7115,
+      "morph_targets_retained": 0,
+      "default": false
+    },
+    {
+      "mesh": "SK_Hoodie",
+      "before": 9880,
+      "after": 4149,
+      "morph_targets_retained": 0,
+      "default": false
+    },
+    {
+      "mesh": "SK_Joggers",
+      "before": 2240,
+      "after": 940,
+      "morph_targets_retained": 0,
+      "default": true
+    },
+    {
+      "mesh": "SK_Mittens",
+      "before": 4464,
+      "after": 1874,
+      "morph_targets_retained": 0,
+      "default": true
+    },
+    {
+      "mesh": "SK_Satchel",
+      "before": 1464,
+      "after": 614,
+      "morph_targets_retained": 0,
+      "default": false
+    }
+  ],
+  "clips": [
+    "Block_Plate",
+    "Carry_TwoHand",
+    "Celebrate",
+    "Drink_Consumable",
+    "Hit_Reaction",
+    "Hold_OneHand",
+    "Idle",
+    "Inspect_OneHand",
+    "Jump_Preview",
+    "Pickup",
+    "Place",
+    "Present_Item",
+    "Run_InPlace",
+    "Swing_OneHand",
+    "Throw_OneHand",
+    "Thrust_OneHand",
+    "Walk_InPlace"
+  ],
+  "bones": [
+    "chest",
+    "clavicle_L",
+    "clavicle_R",
+    "foot_L",
+    "foot_R",
+    "forearm_L",
+    "forearm_R",
+    "grip_L",
+    "grip_R",
+    "hand_L",
+    "hand_R",
+    "head",
+    "neck",
+    "pelvis",
+    "root",
+    "shin_L",
+    "shin_R",
+    "spine",
+    "thigh_L",
+    "thigh_R",
+    "upper_arm_L",
+    "upper_arm_R"
+  ],
+  "material_validation": {
+    "materials": 14,
+    "unchanged_images_checked": 28
+  },
+  "animation_preservation": {
+    "clips_copied_without_resampling": 17,
+    "channels_copied": 1122,
+    "maximum_rest_basis_roundtrip_delta": 5.960464477539063e-08,
+    "timing_and_interpolation": "original accessor bytes and interpolation preserved"
+  }
+}

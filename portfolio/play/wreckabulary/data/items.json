@@ -1,0 +1,1324 @@
+{
+ "schema": 1,
+ "note": "Item catalogue. Only enabled items can be crafted. Asset facts come from the Vault v2 pack; check them with Tools/DataTools/seed_items.py --check.",
+ "items": [
+  {
+   "id": "BALL",
+   "category": "Combat",
+   "tier": "Core",
+   "enabled": true,
+   "consumable": false,
+   "model": "Items/BALL",
+   "heldScale": 0.9809,
+   "grip": [
+    0.0,
+    0.1835,
+    0.0
+   ],
+   "size": [
+    0.367,
+    0.367,
+    0.367
+   ],
+   "skins": [
+    "Classic",
+    "Candy",
+    "Arcade"
+   ],
+   "family": "Thrown",
+   "hands": 1,
+   "durability": 30,
+   "thrown": {
+    "damage": 12,
+    "speed": 16,
+    "lob": false,
+    "recoverable": true,
+    "knockback": 4,
+    "breakPower": 1
+   },
+   "notes": "Recoverable thrown projectile: it lands as an item anyone can pick up."
+  },
+  {
+   "id": "BAT",
+   "category": "Combat",
+   "tier": "Core",
+   "enabled": true,
+   "consumable": false,
+   "model": "Items/BAT",
+   "heldScale": 0.5894,
+   "grip": [
+    0,
+    0.17,
+    0.0
+   ],
+   "size": [
+    0.172,
+    1.018,
+    0.172
+   ],
+   "skins": [
+    "Classic",
+    "Candy",
+    "Arcade"
+   ],
+   "family": "MeleeSwing",
+   "hands": 1,
+   "durability": 20,
+   "melee": {
+    "damage": 14,
+    "reach": 1.6,
+    "arc": 100,
+    "windup": 0.18,
+    "active": 0.1,
+    "recovery": 0.3,
+    "knockback": 7,
+    "breakPower": 2,
+    "hitStun": 0.3
+   },
+   "notes": "Fast close-range swings and knockback."
+  },
+  {
+   "id": "BED",
+   "category": "Furniture",
+   "tier": "Core",
+   "enabled": true,
+   "consumable": false,
+   "model": "Items/BED",
+   "heldScale": 0.2278,
+   "grip": [
+    0.0,
+    0.409,
+    0.0
+   ],
+   "size": [
+    1.035,
+    0.818,
+    1.58
+   ],
+   "skins": [
+    "Classic",
+    "Candy",
+    "Arcade"
+   ],
+   "family": "DeployPad",
+   "hands": 2,
+   "durability": 80,
+   "deploy": {
+    "effect": "JumpPad",
+    "place": 0.9,
+    "strength": 11,
+    "footprint": [
+     1.035,
+     1.58
+    ]
+   },
+   "legacyWords": [
+    "SPRING"
+   ],
+   "notes": "Deployable jump pad. The mattress is above step height, so the launch trigger sits on its sides as well as its top."
+  },
+  {
+   "id": "BLADE",
+   "category": "Combat",
+   "tier": "Core",
+   "enabled": true,
+   "consumable": false,
+   "model": "Items/BLADE",
+   "heldScale": 0.6928,
+   "grip": [
+    0,
+    0.146,
+    0.0
+   ],
+   "size": [
+    0.33,
+    0.866,
+    0.092
+   ],
+   "skins": [
+    "Classic",
+    "Candy",
+    "Arcade"
+   ],
+   "family": "MeleeSwing",
+   "hands": 1,
+   "durability": 16,
+   "melee": {
+    "damage": 24,
+    "reach": 1.4,
+    "arc": 70,
+    "windup": 0.28,
+    "active": 0.08,
+    "recovery": 0.4,
+    "knockback": 3,
+    "breakPower": 2,
+    "hitStun": 0.25
+   },
+   "notes": "Damage-focused melee."
+  },
+  {
+   "id": "BOMB",
+   "category": "Consumables",
+   "tier": "Core",
+   "enabled": true,
+   "consumable": true,
+   "model": "Items/BOMB",
+   "heldScale": 0.763,
+   "grip": [
+    0.0,
+    0.2359,
+    0.0
+   ],
+   "size": [
+    0.344,
+    0.4718,
+    0.344
+   ],
+   "skins": [
+    "Classic",
+    "Candy",
+    "Arcade"
+   ],
+   "family": "Thrown",
+   "hands": 1,
+   "durability": 0,
+   "thrown": {
+    "damage": 45,
+    "edgeDamage": 15,
+    "radius": 3,
+    "fuse": 2.5,
+    "speed": 11,
+    "lob": true,
+    "knockback": 9,
+    "breakPower": 4
+   },
+   "legacyWords": [
+    "CANNON"
+   ],
+   "notes": "Clearly telegraphed delayed explosion: a growing ring and beeps during the 2.5 s fuse. Spends its letters."
+  },
+  {
+   "id": "FOAM",
+   "category": "Consumables",
+   "tier": "Core",
+   "enabled": true,
+   "consumable": true,
+   "model": "Items/FOAM",
+   "heldScale": 0.9664,
+   "grip": [
+    0.0,
+    0.1862,
+    0.0023
+   ],
+   "size": [
+    0.1909,
+    0.3725,
+    0.1955
+   ],
+   "skins": [
+    "Classic",
+    "Candy",
+    "Arcade"
+   ],
+   "family": "Buff",
+   "hands": 1,
+   "durability": 0,
+   "use": {
+    "effect": "Bubble",
+    "amount": 35,
+    "seconds": 10,
+    "channel": 0.4
+   },
+   "legacyWords": [
+    "ARMOR"
+   ],
+   "notes": "Temporary protection that refreshes rather than stacks. Spends its letters."
+  },
+  {
+   "id": "LAMP",
+   "category": "Utilities",
+   "tier": "Core",
+   "enabled": true,
+   "consumable": false,
+   "model": "Items/LAMP",
+   "heldScale": 0.4031,
+   "grip": [
+    0,
+    0.35,
+    0.0
+   ],
+   "size": [
+    0.536,
+    0.893,
+    0.536
+   ],
+   "skins": [
+    "Classic",
+    "Candy",
+    "Arcade"
+   ],
+   "family": "MeleeThrust",
+   "hands": 1,
+   "durability": 18,
+   "melee": {
+    "damage": 16,
+    "reach": 2.3,
+    "arc": 25,
+    "windup": 0.3,
+    "active": 0.1,
+    "recovery": 0.35,
+    "knockback": 4,
+    "breakPower": 1.5,
+    "hitStun": 0.2
+   },
+   "notes": "Longer-reaching thrusts."
+  },
+  {
+   "id": "MAT",
+   "category": "Utilities",
+   "tier": "Core",
+   "enabled": true,
+   "consumable": false,
+   "model": "Items/MAT",
+   "heldScale": 0.3103,
+   "grip": [
+    0.0,
+    0.0255,
+    0.0
+   ],
+   "size": [
+    1.16,
+    0.051,
+    0.65
+   ],
+   "skins": [
+    "Classic",
+    "Candy",
+    "Arcade"
+   ],
+   "family": "DeploySpeed",
+   "hands": 2,
+   "durability": 40,
+   "deploy": {
+    "effect": "SpeedStrip",
+    "place": 0.5,
+    "strength": 1.6,
+    "footprint": [
+     1.16,
+     0.65
+    ]
+   },
+   "legacyWords": [
+    "SKATES"
+   ],
+   "notes": "Directional speed strip: 1.6x speed along its arrow for 1.5 s after leaving it."
+  },
+  {
+   "id": "PLATE",
+   "category": "Combat",
+   "tier": "Core",
+   "enabled": true,
+   "consumable": false,
+   "model": "Items/PLATE",
+   "heldScale": 0.6667,
+   "grip": [
+    0.0,
+    0.0365,
+    0.0
+   ],
+   "size": [
+    0.54,
+    0.073,
+    0.54
+   ],
+   "skins": [
+    "Classic",
+    "Candy",
+    "Arcade"
+   ],
+   "family": "Shield",
+   "hands": 1,
+   "durability": 60,
+   "shield": {
+    "frontArc": 120,
+    "reduction": 1.0,
+    "moveSpeed": 0.7,
+    "raise": 0.12
+   },
+   "notes": "Blocks from the front only. Blocked damage wears it down."
+  },
+  {
+   "id": "SOAP",
+   "category": "Consumables",
+   "tier": "Core",
+   "enabled": true,
+   "consumable": true,
+   "model": "Items/SOAP",
+   "heldScale": 1.0,
+   "grip": [
+    0.0,
+    0.0742,
+    0.0
+   ],
+   "size": [
+    0.32,
+    0.1485,
+    0.21
+   ],
+   "skins": [
+    "Classic",
+    "Candy",
+    "Arcade"
+   ],
+   "family": "DeployZone",
+   "hands": 1,
+   "durability": 0,
+   "deploy": {
+    "effect": "SlipZone",
+    "place": 0.4,
+    "radius": 2.5,
+    "lifetime": 8,
+    "footprint": [
+     0.32,
+     0.21
+    ]
+   },
+   "legacyWords": [
+    "FLOOD"
+   ],
+   "notes": "Temporary slippery area. Spends its letters."
+  },
+  {
+   "id": "SOFA",
+   "category": "Furniture",
+   "tier": "Core",
+   "enabled": true,
+   "consumable": false,
+   "model": "Items/SOFA",
+   "heldScale": 0.2368,
+   "grip": [
+    0.0,
+    0.465,
+    0.0165
+   ],
+   "size": [
+    1.52,
+    0.93,
+    0.813
+   ],
+   "skins": [
+    "Classic",
+    "Candy",
+    "Arcade"
+   ],
+   "family": "DeployCover",
+   "hands": 2,
+   "durability": 180,
+   "deploy": {
+    "effect": "Cover",
+    "place": 1.2,
+    "footprint": [
+     1.52,
+     0.813
+    ]
+   },
+   "notes": "Wider, heavier cover."
+  },
+  {
+   "id": "TABLE",
+   "category": "Furniture",
+   "tier": "Core",
+   "enabled": true,
+   "consumable": false,
+   "model": "Items/TABLE",
+   "heldScale": 0.3,
+   "grip": [
+    0.0,
+    0.36,
+    0.0
+   ],
+   "size": [
+    1.2,
+    0.72,
+    0.691
+   ],
+   "skins": [
+    "Classic",
+    "Candy",
+    "Arcade"
+   ],
+   "family": "DeployCover",
+   "hands": 2,
+   "durability": 120,
+   "deploy": {
+    "effect": "Cover",
+    "place": 0.8,
+    "footprint": [
+     1.2,
+     0.691
+    ]
+   },
+   "melee": {
+    "damage": 22,
+    "reach": 1.5,
+    "arc": 110,
+    "windup": 0.45,
+    "active": 0.12,
+    "recovery": 0.55,
+    "knockback": 8,
+    "breakPower": 3,
+    "hitStun": 0.35
+   },
+   "legacyWords": [
+    "WALL"
+   ],
+   "notes": "Deployable cover and a slow handheld strike."
+  },
+  {
+   "id": "APPLE",
+   "category": "Consumables",
+   "tier": "Expanded",
+   "enabled": false,
+   "consumable": true,
+   "model": "Items/APPLE",
+   "heldScale": 1.0,
+   "grip": [
+    0.0,
+    0.1354,
+    0.0
+   ],
+   "size": [
+    0.24,
+    0.2709,
+    0.23
+   ],
+   "skins": [
+    "Classic",
+    "Candy",
+    "Arcade"
+   ],
+   "family": "Heal",
+   "hands": 1,
+   "notes": "Modelled; behaviour not built yet, so it is disabled. Breaks into letters as original furniture."
+  },
+  {
+   "id": "ARROW",
+   "category": "Combat",
+   "tier": "Expanded",
+   "enabled": false,
+   "consumable": false,
+   "model": "Items/ARROW",
+   "heldScale": 0.5414,
+   "grip": [
+    0,
+    0.305,
+    0.0
+   ],
+   "size": [
+    0.11,
+    0.665,
+    0.0906
+   ],
+   "skins": [
+    "Classic",
+    "Candy",
+    "Arcade"
+   ],
+   "family": "Thrown",
+   "hands": 1,
+   "notes": "Modelled; behaviour not built yet, so it is disabled. Breaks into letters as original furniture."
+  },
+  {
+   "id": "BARREL",
+   "category": "Furniture",
+   "tier": "Expanded",
+   "enabled": false,
+   "consumable": false,
+   "model": "Items/BARREL",
+   "heldScale": 0.6,
+   "grip": [
+    0.0,
+    0.3,
+    0.0
+   ],
+   "size": [
+    0.558,
+    0.6,
+    0.558
+   ],
+   "skins": [
+    "Classic",
+    "Candy",
+    "Arcade"
+   ],
+   "family": "Thrown",
+   "hands": 2,
+   "notes": "Modelled; behaviour not built yet, so it is disabled. Breaks into letters as original furniture."
+  },
+  {
+   "id": "BOOK",
+   "category": "Utilities",
+   "tier": "Expanded",
+   "enabled": false,
+   "consumable": false,
+   "model": "Items/BOOK",
+   "heldScale": 1.0,
+   "grip": [
+    0.0072,
+    0.065,
+    0.0
+   ],
+   "size": [
+    0.3395,
+    0.13,
+    0.255
+   ],
+   "skins": [
+    "Classic",
+    "Candy",
+    "Arcade"
+   ],
+   "family": "Utility",
+   "hands": 1,
+   "notes": "Modelled; behaviour not built yet, so it is disabled. Breaks into letters as original furniture."
+  },
+  {
+   "id": "BOW",
+   "category": "Combat",
+   "tier": "Expanded",
+   "enabled": false,
+   "consumable": false,
+   "model": "Items/BOW",
+   "heldScale": 0.8007,
+   "grip": [
+    -0.19,
+    0.3747,
+    0.0
+   ],
+   "size": [
+    0.24,
+    0.7493,
+    0.058
+   ],
+   "skins": [
+    "Classic",
+    "Candy",
+    "Arcade"
+   ],
+   "family": "Ranged",
+   "hands": 1,
+   "notes": "Modelled; behaviour not built yet, so it is disabled. Breaks into letters as original furniture."
+  },
+  {
+   "id": "BOX",
+   "category": "Furniture",
+   "tier": "Expanded",
+   "enabled": false,
+   "consumable": false,
+   "model": "Items/BOX",
+   "heldScale": 0.5806,
+   "grip": [
+    0.0,
+    0.2587,
+    0.0008
+   ],
+   "size": [
+    0.62,
+    0.5175,
+    0.4975
+   ],
+   "skins": [
+    "Classic",
+    "Candy",
+    "Arcade"
+   ],
+   "family": "Utility",
+   "hands": 2,
+   "notes": "Modelled; behaviour not built yet, so it is disabled. Breaks into letters as original furniture."
+  },
+  {
+   "id": "BROOM",
+   "category": "Combat",
+   "tier": "Expanded",
+   "enabled": false,
+   "consumable": false,
+   "model": "Items/BROOM",
+   "heldScale": 0.5876,
+   "grip": [
+    0,
+    0.6212,
+    0.0
+   ],
+   "size": [
+    0.3,
+    1.0212,
+    0.095
+   ],
+   "skins": [
+    "Classic",
+    "Candy",
+    "Arcade"
+   ],
+   "family": "MeleeSwing",
+   "hands": 1,
+   "notes": "Modelled; behaviour not built yet, so it is disabled. Breaks into letters as original furniture."
+  },
+  {
+   "id": "CABINET",
+   "category": "Furniture",
+   "tier": "Expanded",
+   "enabled": false,
+   "consumable": false,
+   "model": "Items/CABINET",
+   "heldScale": 0.3172,
+   "grip": [
+    0.0,
+    0.5675,
+    0.043
+   ],
+   "size": [
+    0.99,
+    1.135,
+    0.536
+   ],
+   "skins": [
+    "Classic",
+    "Candy",
+    "Arcade"
+   ],
+   "family": "DeployCover",
+   "hands": 2,
+   "notes": "Modelled; behaviour not built yet, so it is disabled. Breaks into letters as original furniture."
+  },
+  {
+   "id": "CAKE",
+   "category": "Consumables",
+   "tier": "Expanded",
+   "enabled": false,
+   "consumable": true,
+   "model": "Items/CAKE",
+   "heldScale": 0.72,
+   "grip": [
+    0.0,
+    0.2082,
+    0.0
+   ],
+   "size": [
+    0.5,
+    0.4165,
+    0.5
+   ],
+   "skins": [
+    "Classic",
+    "Candy",
+    "Arcade"
+   ],
+   "family": "Heal",
+   "hands": 1,
+   "notes": "Modelled; behaviour not built yet, so it is disabled. Breaks into letters as original furniture."
+  },
+  {
+   "id": "CHAIR",
+   "category": "Furniture",
+   "tier": "Expanded",
+   "enabled": false,
+   "consumable": false,
+   "model": "Items/CHAIR",
+   "heldScale": 0.4009,
+   "grip": [
+    0.0,
+    0.449,
+    0.0
+   ],
+   "size": [
+    0.5,
+    0.898,
+    0.4827
+   ],
+   "skins": [
+    "Classic",
+    "Candy",
+    "Arcade"
+   ],
+   "family": "DeployPad",
+   "hands": 2,
+   "notes": "Modelled; behaviour not built yet, so it is disabled. Breaks into letters as original furniture."
+  },
+  {
+   "id": "CHEST",
+   "category": "Furniture",
+   "tier": "Expanded",
+   "enabled": false,
+   "consumable": false,
+   "model": "Items/CHEST",
+   "heldScale": 0.4615,
+   "grip": [
+    0.0,
+    0.2838,
+    0.0285
+   ],
+   "size": [
+    0.78,
+    0.5675,
+    0.547
+   ],
+   "skins": [
+    "Classic",
+    "Candy",
+    "Arcade"
+   ],
+   "family": "Utility",
+   "hands": 2,
+   "notes": "Modelled; behaviour not built yet, so it is disabled. Breaks into letters as original furniture."
+  },
+  {
+   "id": "CLOCK",
+   "category": "Utilities",
+   "tier": "Expanded",
+   "enabled": false,
+   "consumable": false,
+   "model": "Items/CLOCK",
+   "heldScale": 0.75,
+   "grip": [
+    0.0,
+    0.24,
+    0.031
+   ],
+   "size": [
+    0.48,
+    0.48,
+    0.122
+   ],
+   "skins": [
+    "Classic",
+    "Candy",
+    "Arcade"
+   ],
+   "family": "DeployZone",
+   "hands": 1,
+   "notes": "Modelled; behaviour not built yet, so it is disabled. Breaks into letters as original furniture."
+  },
+  {
+   "id": "CRATE",
+   "category": "Furniture",
+   "tier": "Expanded",
+   "enabled": false,
+   "consumable": false,
+   "model": "Items/CRATE",
+   "heldScale": 0.5902,
+   "grip": [
+    0.0,
+    0.241,
+    0.0
+   ],
+   "size": [
+    0.61,
+    0.482,
+    0.578
+   ],
+   "skins": [
+    "Classic",
+    "Candy",
+    "Arcade"
+   ],
+   "family": "DeployCover",
+   "hands": 2,
+   "notes": "Modelled; behaviour not built yet, so it is disabled. Breaks into letters as original furniture."
+  },
+  {
+   "id": "DESK",
+   "category": "Furniture",
+   "tier": "Expanded",
+   "enabled": false,
+   "consumable": false,
+   "model": "Items/DESK",
+   "heldScale": 0.2687,
+   "grip": [
+    0.0,
+    0.39,
+    0.0133
+   ],
+   "size": [
+    1.34,
+    0.78,
+    0.6775
+   ],
+   "skins": [
+    "Classic",
+    "Candy",
+    "Arcade"
+   ],
+   "family": "DeployCover",
+   "hands": 2,
+   "notes": "Modelled; behaviour not built yet, so it is disabled. Breaks into letters as original furniture."
+  },
+  {
+   "id": "FAN",
+   "category": "Utilities",
+   "tier": "Expanded",
+   "enabled": false,
+   "consumable": false,
+   "model": "Items/FAN",
+   "heldScale": 0.4385,
+   "grip": [
+    0.0,
+    0.4105,
+    0.0
+   ],
+   "size": [
+    0.522,
+    0.821,
+    0.25
+   ],
+   "skins": [
+    "Classic",
+    "Candy",
+    "Arcade"
+   ],
+   "family": "DeployZone",
+   "hands": 1,
+   "notes": "Modelled; behaviour not built yet, so it is disabled. Breaks into letters as original furniture."
+  },
+  {
+   "id": "HAMMER",
+   "category": "Combat",
+   "tier": "Expanded",
+   "enabled": false,
+   "consumable": false,
+   "model": "Items/HAMMER",
+   "heldScale": 0.5669,
+   "grip": [
+    0,
+    0.13,
+    0.0
+   ],
+   "size": [
+    0.345,
+    0.635,
+    0.175
+   ],
+   "skins": [
+    "Classic",
+    "Candy",
+    "Arcade"
+   ],
+   "family": "MeleeSwing",
+   "hands": 1,
+   "notes": "Modelled; behaviour not built yet, so it is disabled. Breaks into letters as original furniture."
+  },
+  {
+   "id": "MUG",
+   "category": "Utilities",
+   "tier": "Expanded",
+   "enabled": false,
+   "consumable": false,
+   "model": "Items/MUG",
+   "heldScale": 1.0,
+   "grip": [
+    -0.051,
+    0.1375,
+    0.0005
+   ],
+   "size": [
+    0.352,
+    0.275,
+    0.251
+   ],
+   "skins": [
+    "Classic",
+    "Candy",
+    "Arcade"
+   ],
+   "family": "Heal",
+   "hands": 1,
+   "notes": "Modelled; behaviour not built yet, so it is disabled. Breaks into letters as original furniture."
+  },
+  {
+   "id": "PAN",
+   "category": "Combat",
+   "tier": "Expanded",
+   "enabled": false,
+   "consumable": false,
+   "model": "Items/PAN",
+   "heldScale": 0.4579,
+   "grip": [
+    -0.43,
+    0.1,
+    0.0
+   ],
+   "size": [
+    0.7862,
+    0.1544,
+    0.46
+   ],
+   "skins": [
+    "Classic",
+    "Candy",
+    "Arcade"
+   ],
+   "family": "MeleeSwing",
+   "hands": 1,
+   "notes": "Modelled; behaviour not built yet, so it is disabled. Breaks into letters as original furniture."
+  },
+  {
+   "id": "PIE",
+   "category": "Consumables",
+   "tier": "Expanded",
+   "enabled": false,
+   "consumable": true,
+   "model": "Items/PIE",
+   "heldScale": 0.72,
+   "grip": [
+    0.0,
+    0.091,
+    0.0
+   ],
+   "size": [
+    0.5,
+    0.182,
+    0.5
+   ],
+   "skins": [
+    "Classic",
+    "Candy",
+    "Arcade"
+   ],
+   "family": "Thrown",
+   "hands": 1,
+   "notes": "Modelled; behaviour not built yet, so it is disabled. Breaks into letters as original furniture."
+  },
+  {
+   "id": "PLANT",
+   "category": "Utilities",
+   "tier": "Expanded",
+   "enabled": false,
+   "consumable": false,
+   "model": "Items/PLANT",
+   "heldScale": 0.4571,
+   "grip": [
+    -0.0002,
+    0.3938,
+    0.003
+   ],
+   "size": [
+    0.3404,
+    0.7876,
+    0.3459
+   ],
+   "skins": [
+    "Classic",
+    "Candy",
+    "Arcade"
+   ],
+   "family": "DeployCover",
+   "hands": 1,
+   "notes": "Modelled; behaviour not built yet, so it is disabled. Breaks into letters as original furniture."
+  },
+  {
+   "id": "POT",
+   "category": "Utilities",
+   "tier": "Expanded",
+   "enabled": false,
+   "consumable": false,
+   "model": "Items/POT",
+   "heldScale": 0.5042,
+   "grip": [
+    0.0,
+    0.1285,
+    0.0
+   ],
+   "size": [
+    0.714,
+    0.257,
+    0.46
+   ],
+   "skins": [
+    "Classic",
+    "Candy",
+    "Arcade"
+   ],
+   "family": "Thrown",
+   "hands": 1,
+   "notes": "Modelled; behaviour not built yet, so it is disabled. Breaks into letters as original furniture."
+  },
+  {
+   "id": "SHELF",
+   "category": "Furniture",
+   "tier": "Expanded",
+   "enabled": false,
+   "consumable": false,
+   "model": "Items/SHELF",
+   "heldScale": 0.2812,
+   "grip": [
+    0.0,
+    0.64,
+    0.0
+   ],
+   "size": [
+    0.99,
+    1.28,
+    0.32
+   ],
+   "skins": [
+    "Classic",
+    "Candy",
+    "Arcade"
+   ],
+   "family": "DeployCover",
+   "hands": 2,
+   "notes": "Modelled; behaviour not built yet, so it is disabled. Breaks into letters as original furniture."
+  },
+  {
+   "id": "SHIELD",
+   "category": "Combat",
+   "tier": "Expanded",
+   "enabled": false,
+   "consumable": false,
+   "model": "Items/SHIELD",
+   "heldScale": 0.6316,
+   "grip": [
+    0,
+    0.29,
+    -0.11
+   ],
+   "size": [
+    0.46,
+    0.57,
+    0.1877
+   ],
+   "skins": [
+    "Classic",
+    "Candy",
+    "Arcade"
+   ],
+   "family": "Shield",
+   "hands": 1,
+   "notes": "Modelled; behaviour not built yet, so it is disabled. Breaks into letters as original furniture."
+  },
+  {
+   "id": "SODA",
+   "category": "Consumables",
+   "tier": "Expanded",
+   "enabled": false,
+   "consumable": true,
+   "model": "Items/SODA",
+   "heldScale": 1.0,
+   "grip": [
+    0.0,
+    0.151,
+    0.0011
+   ],
+   "size": [
+    0.1818,
+    0.302,
+    0.1839
+   ],
+   "skins": [
+    "Classic",
+    "Candy",
+    "Arcade"
+   ],
+   "family": "Buff",
+   "hands": 1,
+   "notes": "Modelled; behaviour not built yet, so it is disabled. Breaks into letters as original furniture."
+  },
+  {
+   "id": "SPEAR",
+   "category": "Combat",
+   "tier": "Expanded",
+   "enabled": false,
+   "consumable": false,
+   "model": "Items/SPEAR",
+   "heldScale": 0.4858,
+   "grip": [
+    0,
+    0.465,
+    0.0
+   ],
+   "size": [
+    0.17,
+    1.235,
+    0.068
+   ],
+   "skins": [
+    "Classic",
+    "Candy",
+    "Arcade"
+   ],
+   "family": "MeleeThrust",
+   "hands": 1,
+   "notes": "Modelled; behaviour not built yet, so it is disabled. Breaks into letters as original furniture."
+  },
+  {
+   "id": "STOOL",
+   "category": "Furniture",
+   "tier": "Expanded",
+   "enabled": false,
+   "consumable": false,
+   "model": "Items/STOOL",
+   "heldScale": 0.6923,
+   "grip": [
+    0.0,
+    0.233,
+    0.0
+   ],
+   "size": [
+    0.52,
+    0.466,
+    0.52
+   ],
+   "skins": [
+    "Classic",
+    "Candy",
+    "Arcade"
+   ],
+   "family": "DeployPad",
+   "hands": 2,
+   "notes": "Modelled; behaviour not built yet, so it is disabled. Breaks into letters as original furniture."
+  },
+  {
+   "id": "VASE",
+   "category": "Utilities",
+   "tier": "Expanded",
+   "enabled": false,
+   "consumable": false,
+   "model": "Items/VASE",
+   "heldScale": 0.7317,
+   "grip": [
+    0.0,
+    0.246,
+    0.0
+   ],
+   "size": [
+    0.33,
+    0.492,
+    0.33
+   ],
+   "skins": [
+    "Classic",
+    "Candy",
+    "Arcade"
+   ],
+   "family": "Thrown",
+   "hands": 1,
+   "notes": "Modelled; behaviour not built yet, so it is disabled. Breaks into letters as original furniture."
+  },
+  {
+   "id": "WATER",
+   "category": "Consumables",
+   "tier": "Expanded",
+   "enabled": false,
+   "consumable": true,
+   "model": "Items/WATER",
+   "heldScale": 0.878,
+   "grip": [
+    0.0,
+    0.205,
+    0.0012
+   ],
+   "size": [
+    0.176,
+    0.41,
+    0.1785
+   ],
+   "skins": [
+    "Classic",
+    "Candy",
+    "Arcade"
+   ],
+   "family": "Heal",
+   "hands": 1,
+   "notes": "Modelled; behaviour not built yet, so it is disabled. Breaks into letters as original furniture."
+  },
+  {
+   "id": "AXE",
+   "category": "Legacy",
+   "tier": "Legacy",
+   "enabled": false,
+   "consumable": false,
+   "model": null,
+   "notes": "Fast and weak (team word). No model yet, so it is disabled."
+  },
+  {
+   "id": "BEES",
+   "category": "Legacy",
+   "tier": "Legacy",
+   "enabled": false,
+   "consumable": false,
+   "model": null,
+   "notes": "Swarm chases the nearest player (team word). No model yet, so it is disabled."
+  },
+  {
+   "id": "DUCK",
+   "category": "Legacy",
+   "tier": "Legacy",
+   "enabled": false,
+   "consumable": false,
+   "model": null,
+   "notes": "Decoy (team word). No model yet, so it is disabled."
+  },
+  {
+   "id": "MAGNET",
+   "category": "Legacy",
+   "tier": "Legacy",
+   "enabled": false,
+   "consumable": false,
+   "model": null,
+   "notes": "Pulls loose letters (team word). No model yet, so it is disabled."
+  },
+  {
+   "id": "QUAKE",
+   "category": "Legacy",
+   "tier": "Legacy",
+   "enabled": false,
+   "consumable": false,
+   "model": null,
+   "notes": "Legendary: shakes the whole room (team word, hidden). No model yet, so it is disabled."
+  },
+  {
+   "id": "ROPE",
+   "category": "Legacy",
+   "tier": "Legacy",
+   "enabled": false,
+   "consumable": false,
+   "model": null,
+   "notes": "Grapple (team word). No model yet, so it is disabled."
+  },
+  {
+   "id": "SWORD",
+   "category": "Legacy",
+   "tier": "Legacy",
+   "enabled": false,
+   "consumable": false,
+   "model": null,
+   "notes": "Team word. No model yet, so it is disabled."
+  },
+  {
+   "id": "UMBRELLA",
+   "category": "Legacy",
+   "tier": "Legacy",
+   "enabled": false,
+   "consumable": false,
+   "model": null,
+   "notes": "Long and powerful block (team word, hidden). No model yet, so it is disabled."
+  },
+  {
+   "id": "WINGS",
+   "category": "Legacy",
+   "tier": "Legacy",
+   "enabled": false,
+   "consumable": false,
+   "model": null,
+   "notes": "Short glide (team word). No model yet, so it is disabled."
+  },
+  {
+   "id": "ZAP",
+   "category": "Legacy",
+   "tier": "Legacy",
+   "enabled": false,
+   "consumable": false,
+   "model": null,
+   "notes": "Legendary: stuns nearby players (team word, hidden). No model yet, so it is disabled."
+  }
+ ]
+}

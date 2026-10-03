@@ -1,0 +1,78 @@
+{
+ "notes": "Game rules per mode. 'defaults' applies to every mode; each block under 'modes' overrides only what it lists. Times are in seconds, distances in metres, health in HP. Cosmetics never appear here. See docs/PLAN.md section 2.",
+ "defaults": {
+  "maxHealth": 100,
+  "spawnProtection": 2,
+  "maxLetters": 18,
+  "maxCarried": 2,
+  "maxDeployed": 2,
+  "starterLetters": "",
+  "lettersDroppedPerHit": 0,
+  "furnitureToughness": [1, 0.6],
+  "craftBase": 0.6,
+  "craftPerLetter": 0.12,
+  "craftMoveSpeed": 0.4,
+  "hitStunMax": 0.35,
+  "staggerImmunity": 1,
+  "dodgeSeconds": 0.35,
+  "dodgeInvulnerable": 0.15,
+  "dodgeDistance": 4,
+  "dodgeCooldown": 1.5,
+  "jumpHeight": 1.1,
+  "unarmed": {"damage": 8, "reach": 1.1, "arc": 90, "windup": 0.12, "active": 0.08, "recovery": 0.25, "knockback": 3, "breakPower": 1, "hitStun": 0.15},
+  "teamSize": 1,
+  "friendlyFire": true,
+  "downed": false,
+  "bleedOut": [20, 12, 6],
+  "reviveSeconds": 3,
+  "reviveHealth": 30,
+  "reviveRange": 1.8,
+  "roundsToWin": 3,
+  "respawn": -1,
+  "reconnectGrace": 60,
+  "roundTimeLimit": 150,
+  "clearOut": {"enabled": false, "firstAt": 45, "interval": 25, "warn": 10, "fill": 6, "damagePerSecond": 8, "damageGrowth": 2}
+ },
+ "modes": {
+  "Hub": {
+   "notes": "The lobby house: ready up, choose a mode, try outfits. Knockouts come straight back.",
+   "respawn": 2,
+   "roundsToWin": 1,
+   "roundTimeLimit": 0
+  },
+  "Tutorial": {
+   "notes": "Local only. Seven steps against a training dummy; nothing ends the round early.",
+   "respawn": 2,
+   "roundsToWin": 1,
+   "roundTimeLimit": 0
+  },
+  "Dibs": {
+   "notes": "Free-for-all. Last player standing takes the round; first to 3 rounds wins. The Movers close one outer room every 25 s from 45 s; the playroom never closes.",
+   "clearOut": {"enabled": true}
+  },
+  "Duos": {
+   "notes": "2v2. Last team standing. At 0 HP you are downed and a teammate can revive you.",
+   "teamSize": 2,
+   "friendlyFire": false,
+   "downed": true,
+   "clearOut": {"enabled": true}
+  },
+  "MovingOut": {
+   "notes": "Co-op escape for 2-4 players on one team: find 3 keepsakes and reach the van in the living room before the Movers pack the house. Rooms close away from the van.",
+   "teamSize": 4,
+   "friendlyFire": false,
+   "downed": true,
+   "roundsToWin": 1,
+   "roundTimeLimit": 240,
+   "clearOut": {"enabled": true, "firstAt": 60, "interval": 40, "warn": 12, "fill": 8, "damagePerSecond": 6, "damageGrowth": 2}
+  },
+  "MovingDay": {
+   "notes": "Co-op placement: put the checklist furniture in the right rooms before time runs out. Placed checklist items don't count towards maxDeployed.",
+   "teamSize": 4,
+   "friendlyFire": false,
+   "respawn": 3,
+   "roundsToWin": 1,
+   "roundTimeLimit": 240
+  }
+ }
+}

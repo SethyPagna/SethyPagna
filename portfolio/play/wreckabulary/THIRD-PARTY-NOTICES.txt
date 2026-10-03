@@ -1,0 +1,41 @@
+Wreckabulary browser edition — third-party notices and asset credits
+
+Project source: https://github.com/SethyPagna/wreckabulary
+Team project: https://github.com/cchayadap/wreckabulary
+This standalone Three.js edition shares the project's rules, recipes, maps and
+wardrobe data. It is a separate browser implementation of the game.
+
+SOFTWARE
+
+Three.js 0.180.0, including its GLTFLoader, RoundedBoxGeometry, SkeletonUtils
+and RoomEnvironment addons.
+Copyright 2010-2025 three.js authors. MIT licence.
+Full notice: licenses/THREE-LICENSE.txt
+Source: https://github.com/mrdoob/three.js/tree/r180
+
+Vite 7.1.12 generated modulepreload helper.
+Copyright (c) 2019-present, VoidZero Inc. and Vite contributors. MIT licence.
+Full core notice: licenses/VITE-LICENSE.txt
+Source: https://github.com/vitejs/vite/tree/v7.1.12
+
+ASSET CREDITS
+
+Props, letter tiles, house modules and VFX meshes were procedurally authored for
+the Wreckabulary project from its supplied design direction. The avatar and
+wearables retain the user-delivered Wreckabulary source models; converted GLBs
+and the reduced browser avatar preserve their recorded geometry/animation lineage.
+These project deliverables are not described as CC0 or exclusively copyrighted.
+
+The letter-mesh glyph outlines derive from DejaVu Sans Bold. The source pack
+uses those outlines to author mesh geometry; no font binary is bundled.
+Bitstream Vera base: Copyright (c) 2003 by Bitstream, Inc.
+DejaVu changes are in the public domain. The complete font-project licence also
+retains its Arev and math notices without implying those fonts are used here.
+Full notice: licenses/DEJAVU-LICENSE.txt
+Source and licence: https://dejavu-fonts.github.io/License.html
+
+The action-button illustrations were generated for this project with the native
+image-generation tool on 1 October 2026. Item thumbnails and supplied-model
+showcase images are renders of the actual project meshes.
+Source provenance: https://github.com/SethyPagna/wreckabulary/blob/main/docs/art/provenance.md
+Source conversion pipeline: https://github.com/SethyPagna/wreckabulary/tree/main/Tools/AssetPipeline

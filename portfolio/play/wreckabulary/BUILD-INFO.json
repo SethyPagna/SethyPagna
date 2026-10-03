@@ -1,0 +1,7 @@
+{
+  "project": "Wreckabulary",
+  "edition": "Standalone Three.js browser game with Creative Workshop",
+  "sourceRepository": "https://github.com/SethyPagna/wreckabulary",
+  "sourceCommit": "11f72937beaf19e9eab4b3b53634bec7849b729f",
+  "hosting": "Cloudflare Workers with static assets"
+}

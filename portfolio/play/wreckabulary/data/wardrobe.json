@@ -1,0 +1,102 @@
+{
+ "notes": "The shared avatar's wardrobe (brief section 3): cosmetic only, never stats. Each piece switches on one skinned mesh in Avatar.fbx and tints one material with the slot's colourway. rgb values are sRGB 0-1. The rib material (cuffs, hems) is tinted 25% darker than fabric_main by the wardrobe code. The head, eyes and base body are always on.",
+ "slots": ["Top", "Bottoms", "Gloves", "Footwear", "Headwear", "Face", "Back", "Badge"],
+ "requiredSlots": ["Top", "Bottoms", "Gloves", "Footwear"],
+ "pieces": [
+  {"id": "Crewneck", "slot": "Top", "mesh": "SK_Crewneck", "tint": "fabric_main"},
+  {"id": "Hoodie", "slot": "Top", "mesh": "SK_Hoodie", "tint": "fabric_main"},
+  {"id": "Joggers", "slot": "Bottoms", "mesh": "SK_Joggers", "tint": "joggers_color"},
+  {"id": "Mittens", "slot": "Gloves", "mesh": "SK_Mittens", "tint": "gloves_color"},
+  {"id": "Boots", "slot": "Footwear", "mesh": "SK_Boots", "tint": "boots_color"},
+  {"id": "Cap", "slot": "Headwear", "mesh": "SK_Cap", "tint": "headwear_color"},
+  {
+   "id": "Hood",
+   "slot": "Headwear",
+   "mesh": "SK_Hood",
+   "tint": "fabric_main",
+   "colourFrom": "Top",
+   "requires": ["Hoodie"]
+  },
+  {"id": "Glasses", "slot": "Face", "mesh": "SK_Glasses", "tint": "glasses_frame"},
+  {"id": "Satchel", "slot": "Back", "mesh": "SK_Satchel", "tint": "satchel_canvas"},
+  {"id": "TBadge", "slot": "Badge", "mesh": "SK_Badge_T"}
+ ],
+ "palettes": {
+  "Top": [
+   {"id": "pool", "name": "Pool Teal", "rgb": [0.341, 0.694, 0.735]},
+   {"id": "tomato", "name": "Tomato", "rgb": [0.91, 0.329, 0.247]},
+   {"id": "tangerine", "name": "Tangerine", "rgb": [0.969, 0.58, 0.227]},
+   {"id": "sunflower", "name": "Sunflower", "rgb": [0.976, 0.788, 0.247]},
+   {"id": "mint", "name": "Mint", "rgb": [0.549, 0.851, 0.659]},
+   {"id": "sky", "name": "Sky", "rgb": [0.447, 0.678, 0.949]},
+   {"id": "periwinkle", "name": "Periwinkle", "rgb": [0.604, 0.604, 0.918]},
+   {"id": "grape", "name": "Grape", "rgb": [0.549, 0.353, 0.702]},
+   {"id": "bubblegum", "name": "Bubblegum", "rgb": [0.961, 0.549, 0.722]},
+   {"id": "oat", "name": "Oat", "rgb": [0.902, 0.851, 0.741]},
+   {"id": "charcoal", "name": "Charcoal", "rgb": [0.251, 0.263, 0.29]}
+  ],
+  "Bottoms": [
+   {"id": "navy", "name": "Night Navy", "rgb": [0.366, 0.417, 0.485]},
+   {"id": "denim", "name": "Denim", "rgb": [0.31, 0.435, 0.639]},
+   {"id": "khaki", "name": "Khaki", "rgb": [0.761, 0.682, 0.51]},
+   {"id": "olive", "name": "Olive", "rgb": [0.431, 0.478, 0.271]},
+   {"id": "plum", "name": "Plum", "rgb": [0.42, 0.227, 0.369]},
+   {"id": "brick", "name": "Brick", "rgb": [0.659, 0.282, 0.227]},
+   {"id": "forest", "name": "Forest", "rgb": [0.184, 0.42, 0.31]},
+   {"id": "cream", "name": "Cream", "rgb": [0.929, 0.89, 0.8]},
+   {"id": "charcoal", "name": "Charcoal", "rgb": [0.251, 0.263, 0.29]}
+  ],
+  "Gloves": [
+   {"id": "putty", "name": "Putty", "rgb": [0.865, 0.87, 0.827]},
+   {"id": "tomato", "name": "Tomato", "rgb": [0.91, 0.329, 0.247]},
+   {"id": "sunflower", "name": "Sunflower", "rgb": [0.976, 0.788, 0.247]},
+   {"id": "mint", "name": "Mint", "rgb": [0.549, 0.851, 0.659]},
+   {"id": "sky", "name": "Sky", "rgb": [0.447, 0.678, 0.949]},
+   {"id": "bubblegum", "name": "Bubblegum", "rgb": [0.961, 0.549, 0.722]},
+   {"id": "charcoal", "name": "Charcoal", "rgb": [0.251, 0.263, 0.29]}
+  ],
+  "Footwear": [
+   {"id": "classic", "name": "Classic", "rgb": [1.0, 1.0, 1.0]},
+   {"id": "tan", "name": "Tan", "rgb": [0.851, 0.651, 0.42]},
+   {"id": "cherry", "name": "Cherry", "rgb": [0.878, 0.322, 0.353]},
+   {"id": "forest", "name": "Forest", "rgb": [0.373, 0.639, 0.478]},
+   {"id": "navy", "name": "Navy", "rgb": [0.424, 0.51, 0.722]},
+   {"id": "mustard", "name": "Mustard", "rgb": [0.89, 0.725, 0.278]}
+  ],
+  "Headwear": [
+   {"id": "harbour", "name": "Harbour Blue", "rgb": [0.313, 0.547, 0.65]},
+   {"id": "tomato", "name": "Tomato", "rgb": [0.91, 0.329, 0.247]},
+   {"id": "sunflower", "name": "Sunflower", "rgb": [0.976, 0.788, 0.247]},
+   {"id": "mint", "name": "Mint", "rgb": [0.549, 0.851, 0.659]},
+   {"id": "grape", "name": "Grape", "rgb": [0.549, 0.353, 0.702]},
+   {"id": "oat", "name": "Oat", "rgb": [0.902, 0.851, 0.741]},
+   {"id": "charcoal", "name": "Charcoal", "rgb": [0.251, 0.263, 0.29]}
+  ],
+  "Face": [
+   {"id": "classic", "name": "Classic", "rgb": [1.0, 1.0, 1.0]},
+   {"id": "tortoise", "name": "Tortoiseshell", "rgb": [0.659, 0.439, 0.247]},
+   {"id": "cherry", "name": "Cherry", "rgb": [0.878, 0.322, 0.353]},
+   {"id": "sky", "name": "Sky", "rgb": [0.447, 0.678, 0.949]},
+   {"id": "gold", "name": "Gold", "rgb": [0.91, 0.757, 0.353]}
+  ],
+  "Back": [
+   {"id": "canvas", "name": "Canvas", "rgb": [0.722, 0.575, 0.41]},
+   {"id": "olive", "name": "Olive", "rgb": [0.431, 0.478, 0.271]},
+   {"id": "navy", "name": "Navy", "rgb": [0.208, 0.275, 0.431]},
+   {"id": "mustard", "name": "Mustard", "rgb": [0.851, 0.651, 0.227]},
+   {"id": "brick", "name": "Brick", "rgb": [0.659, 0.282, 0.227]}
+  ]
+ },
+ "default": {
+  "pieces": {"Top": "Crewneck", "Bottoms": "Joggers", "Gloves": "Mittens", "Footwear": "Boots", "Badge": "TBadge"},
+  "colours": {
+   "Top": "pool",
+   "Bottoms": "navy",
+   "Gloves": "putty",
+   "Footwear": "classic",
+   "Headwear": "harbour",
+   "Face": "classic",
+   "Back": "canvas"
+  }
+ }
+}
