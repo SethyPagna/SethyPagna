@@ -1,0 +1,26 @@
+{
+  "creator": "UNG Sethy Pagna (James)",
+  "assistance": "Codex; existing historical credits preserved",
+  "repository": "https://github.com/SethyPagna/cargo-twin",
+  "sourceCommit": "10e4151bfa8b0cb20135c1b3126514c144559c67",
+  "sourceRef": "codex/cargo-twin-csv-roundtrip-20261003",
+  "baseCommit": "49117837f2504dd4682b642678341576c0e2c7bd",
+  "scope": "Protected CSV cargo ID round-trip correction; names and formula neutralization unchanged",
+  "intendedUse": "Personal non-commercial demo; illustrative planning only, not operational load approval",
+  "build": "204 tests / 12 files; strict TypeScript and Vite build; 16 static outputs",
+  "browser": "14 local built-origin workflow checks; public-origin verification still required",
+  "noticePaths": [
+    "CREDITS.md",
+    "THIRD-PARTY-NOTICES.md",
+    "licenses/@fontsource-variable__inter/LICENSE",
+    "licenses/@fontsource__jetbrains-mono/LICENSE",
+    "licenses/@types__react/LICENSE",
+    "licenses/cannon-es/LICENSE",
+    "licenses/csstype/LICENSE",
+    "licenses/react-dom/LICENSE",
+    "licenses/react/LICENSE",
+    "licenses/scheduler/LICENSE",
+    "licenses/three/LICENSE",
+    "licenses/zustand/LICENSE"
+  ]
+}

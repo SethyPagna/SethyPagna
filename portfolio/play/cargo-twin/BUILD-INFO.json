@@ -1,25 +1,157 @@
 {
-  "project": "Cargo Twin",
-  "version": "3.0.0",
-  "sourceRepository": "https://github.com/SethyPagna/cargo-twin",
-  "sourceCommit": "f7c91908b50d2ccc248ee0dd410d08a80014075c",
+  "sourceCommit": "10e4151bfa8b0cb20135c1b3126514c144559c67",
+  "artifactManifestSHA256": "3625b9879e5838b2effb3e2db1bddbf4d90806709b80762d51981df669d02a33",
   "files": {
-    "index.html": "2b5fa6ee8351ced89d89d49377a621dab365d420f552707e132328765e5a11a3",
-    "THIRD-PARTY-NOTICES.txt": "23494f01d35e64c0cbf70c94539edeaf1c345019a80c3634ee03776eea722ebc",
-    "assets/app-DZS-e9_R.css": "e218f6f847dda5a7e4022da6fbd458e09dcfb5cc73db6b2f4253e505b85b215a",
-    "assets/App-Jj1aC7rX.js": "9a0e98e1dd31b4ae64c2027eec1b666f025a2ec938f31a6ad1ce29a681aaf713",
-    "assets/engine.worker-ChWZk6Qy.js": "46ce12c6edb41a52f92400956e1224f4a973a58c7a67028fa518f49eef092c14",
-    "assets/index-BpDp8qZc.js": "3e476c4d8dee55f1557eef49009cf6b55ed482b8655a94a54ca0799138a64d38",
-    "assets/index-CSvIoSTn.css": "f699cb8ff5a4b9cda61c581a18f4321afb619b2e067a7fb39d6e1ff1824a408f",
-    "assets/inter-latin-wght-normal-Dx4kXJAl.woff2": "3100e775e8616cd2611beecfa23a4263d7037586789b43f035236a2e6fbd4c62",
-    "assets/jetbrains-mono-latin-400-normal-V6pRDFza.woff2": "14425ba9c695763c1547f48a206b7aa60350a33ae23de09f0407877f3fcd89eb",
-    "assets/jetbrains-mono-latin-600-normal-C8RAYTDA.woff2": "400c6bfda18d5d14acad1c15d6dcb9f8e13c015e7286317e0b9a482539bef147",
-    "assets/packing.worker-Br1qmdb-.js": "13f9204a91b339c3d99d9bbdd6ae5774c78592391c348ce15fd34d4c7592eb11",
-    "assets/physics-BG8CKx0_.js": "2bcc65dc6175acbc9ba8931ba8ab7ed1c5a87ee8915a36f10d3d530801176176",
-    "assets/physics.worker-jzpxMkW5.js": "cd327b0f30937ed17a3c1b50267424562a98b970e7618fe04b9f18c9d95611d1",
-    "assets/react-CR5VJ85Q.js": "b19a9fcdb691b2158d837ef44b93412f755c06ec395363af87850a92252826b4",
-    "assets/rolldown-runtime-hePW80VL.js": "580ad8c58061a4dde99bde0a56905e382f0568516ee2f5b84dbfb52085709021",
-    "assets/stability-D7EBHipe.js": "591a0f867810b23d469d3d92e441de2d55fb1cea337079e5ec73548d61232fe7",
-    "assets/three-BPPEB0Cc.js": "fab8d0379dfe6efc3c66c2c40e7d0eeff5776e2accdf954906f5f1aab83b84ac"
-  }
+    "CREDITS.md": {
+      "path": "CREDITS.md",
+      "bytes": 1348,
+      "sha256": "10475538d8f062f66cdf93934cc340775bf2287b3c6858dde5bed18e461cdc29"
+    },
+    "RELEASE-PROVENANCE.json": {
+      "path": "RELEASE-PROVENANCE.json",
+      "bytes": 1182,
+      "sha256": "718d8db688cb5fd944307e56bae8dc2664efecc9ddcb516c0dcfce631106001f"
+    },
+    "THIRD-PARTY-NOTICES.md": {
+      "path": "THIRD-PARTY-NOTICES.md",
+      "bytes": 1271,
+      "sha256": "5195aeac02e3a3174b18ab98a14fe6fd278d259920508889362258d70b5d81cd"
+    },
+    "assets/App-BhNcmEM2.js": {
+      "path": "assets/App-BhNcmEM2.js",
+      "bytes": 200188,
+      "sha256": "782bac8ead38eaf0f6557b318f90dac1ab7ab7ebd4227f8c9b3f0e65d9a7c30d"
+    },
+    "assets/app-DZS-e9_R.css": {
+      "path": "assets/app-DZS-e9_R.css",
+      "bytes": 23070,
+      "sha256": "e218f6f847dda5a7e4022da6fbd458e09dcfb5cc73db6b2f4253e505b85b215a"
+    },
+    "assets/engine.worker-ChWZk6Qy.js": {
+      "path": "assets/engine.worker-ChWZk6Qy.js",
+      "bytes": 38863,
+      "sha256": "46ce12c6edb41a52f92400956e1224f4a973a58c7a67028fa518f49eef092c14"
+    },
+    "assets/index-BYYlRhxn.js": {
+      "path": "assets/index-BYYlRhxn.js",
+      "bytes": 136476,
+      "sha256": "ec2c8c478c5b81ccd661e1654786b03c0ffc4fcb9bc849dae0d628dd38da79cf"
+    },
+    "assets/index-LevCIGNJ.css": {
+      "path": "assets/index-LevCIGNJ.css",
+      "bytes": 76367,
+      "sha256": "1b9a05bf333c1f497f6b429b33e9bbb492b3c1c83acb587515b4d35e77568da6"
+    },
+    "assets/inter-latin-wght-normal-Dx4kXJAl.woff2": {
+      "path": "assets/inter-latin-wght-normal-Dx4kXJAl.woff2",
+      "bytes": 48256,
+      "sha256": "3100e775e8616cd2611beecfa23a4263d7037586789b43f035236a2e6fbd4c62"
+    },
+    "assets/jetbrains-mono-latin-400-normal-V6pRDFza.woff2": {
+      "path": "assets/jetbrains-mono-latin-400-normal-V6pRDFza.woff2",
+      "bytes": 21168,
+      "sha256": "14425ba9c695763c1547f48a206b7aa60350a33ae23de09f0407877f3fcd89eb"
+    },
+    "assets/jetbrains-mono-latin-600-normal-C8RAYTDA.woff2": {
+      "path": "assets/jetbrains-mono-latin-600-normal-C8RAYTDA.woff2",
+      "bytes": 21860,
+      "sha256": "400c6bfda18d5d14acad1c15d6dcb9f8e13c015e7286317e0b9a482539bef147"
+    },
+    "assets/packing.worker-Br1qmdb-.js": {
+      "path": "assets/packing.worker-Br1qmdb-.js",
+      "bytes": 11641,
+      "sha256": "13f9204a91b339c3d99d9bbdd6ae5774c78592391c348ce15fd34d4c7592eb11"
+    },
+    "assets/physics-BG8CKx0_.js": {
+      "path": "assets/physics-BG8CKx0_.js",
+      "bytes": 82740,
+      "sha256": "2bcc65dc6175acbc9ba8931ba8ab7ed1c5a87ee8915a36f10d3d530801176176"
+    },
+    "assets/physics.worker-jzpxMkW5.js": {
+      "path": "assets/physics.worker-jzpxMkW5.js",
+      "bytes": 94305,
+      "sha256": "cd327b0f30937ed17a3c1b50267424562a98b970e7618fe04b9f18c9d95611d1"
+    },
+    "assets/react-CR5VJ85Q.js": {
+      "path": "assets/react-CR5VJ85Q.js",
+      "bytes": 218840,
+      "sha256": "b19a9fcdb691b2158d837ef44b93412f755c06ec395363af87850a92252826b4"
+    },
+    "assets/rolldown-runtime-hePW80VL.js": {
+      "path": "assets/rolldown-runtime-hePW80VL.js",
+      "bytes": 716,
+      "sha256": "580ad8c58061a4dde99bde0a56905e382f0568516ee2f5b84dbfb52085709021"
+    },
+    "assets/stability-DlXpVadg.js": {
+      "path": "assets/stability-DlXpVadg.js",
+      "bytes": 5164,
+      "sha256": "d6788f10a23861bf347640e7b55187d1574f8ba538ae00b10b30c0a259c99e1f"
+    },
+    "assets/three-DEx7Gcjn.js": {
+      "path": "assets/three-DEx7Gcjn.js",
+      "bytes": 612948,
+      "sha256": "23dcf136534d2aad20777631a04641d99a6b0b832dc73476892e343f0a3f06c3"
+    },
+    "index.html": {
+      "path": "index.html",
+      "bytes": 1381,
+      "sha256": "11577c4dc9f1def22a259acce5f3b9a39fed2dee4c7ca90fa2e35db57c61a982"
+    },
+    "licenses/@fontsource-variable__inter/LICENSE": {
+      "path": "licenses/@fontsource-variable__inter/LICENSE",
+      "bytes": 4477,
+      "sha256": "3b0a5fca3d17942cde889069889dedbbbd075e9b599968c82a95f4d944e9b345"
+    },
+    "licenses/@fontsource__jetbrains-mono/LICENSE": {
+      "path": "licenses/@fontsource__jetbrains-mono/LICENSE",
+      "bytes": 4524,
+      "sha256": "403581b69dac5cff4079205e01c6b467e56af449ecbd7247693ddb1baafa005b"
+    },
+    "licenses/@types__react/LICENSE": {
+      "path": "licenses/@types__react/LICENSE",
+      "bytes": 1141,
+      "sha256": "c2cfccb812fe482101a8f04597dfc5a9991a6b2748266c47ac91b6a5aae15383"
+    },
+    "licenses/cannon-es/LICENSE": {
+      "path": "licenses/cannon-es/LICENSE",
+      "bytes": 1125,
+      "sha256": "4714d0272f50cb21fe46fe29333c7c600d3c85b5ebd2a80f4db07e8cfccbf5b2"
+    },
+    "licenses/csstype/LICENSE": {
+      "path": "licenses/csstype/LICENSE",
+      "bytes": 1062,
+      "sha256": "11d55bd4541c75ee7879547ac49089c489163dae49551389713c3d026cab383e"
+    },
+    "licenses/react-dom/LICENSE": {
+      "path": "licenses/react-dom/LICENSE",
+      "bytes": 1088,
+      "sha256": "da6d3703ed11cbe42bd212c725957c98da23cbff1998c05fa4b3d976d1a58e93"
+    },
+    "licenses/react/LICENSE": {
+      "path": "licenses/react/LICENSE",
+      "bytes": 1088,
+      "sha256": "da6d3703ed11cbe42bd212c725957c98da23cbff1998c05fa4b3d976d1a58e93"
+    },
+    "licenses/scheduler/LICENSE": {
+      "path": "licenses/scheduler/LICENSE",
+      "bytes": 1088,
+      "sha256": "da6d3703ed11cbe42bd212c725957c98da23cbff1998c05fa4b3d976d1a58e93"
+    },
+    "licenses/three/LICENSE": {
+      "path": "licenses/three/LICENSE",
+      "bytes": 1081,
+      "sha256": "8b378ebe60e2fe500158cb0ac71cb5e8b7d92953c2abcc63a0eb90499653b5bc"
+    },
+    "licenses/zustand/LICENSE": {
+      "path": "licenses/zustand/LICENSE",
+      "bytes": 1070,
+      "sha256": "c1e6e266563517467b1bf874817d23e426f3149252bd7d42758cd697514b8417"
+    }
+  },
+  "copiedFiles": 29,
+  "copiedBytes": 1615528,
+  "twoReadsMatched": true,
+  "browserVerification": "14 prior exact-export local checks; new hosted check pending",
+  "project": "Cargo Twin v4",
+  "portfolioUpdateDate": "2026-10-03"
 }
