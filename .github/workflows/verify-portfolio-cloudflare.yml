@@ -1,0 +1,50 @@
+name: Verify portfolio Cloudflare release
+
+on:
+  workflow_dispatch:
+    inputs:
+      expected_source_sha:
+        description: Exact pushed main commit deployed to sethy-pagna.pages.dev (40 lowercase hex characters)
+        type: string
+        required: true
+
+permissions:
+  contents: read
+
+concurrency:
+  group: verify-portfolio-cloudflare
+  cancel-in-progress: false
+
+jobs:
+  verify:
+    if: github.repository == 'SethyPagna/SethyPagna'
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    steps:
+      - name: Check out current main for verifier and independent committed release
+        uses: actions/checkout@v7
+        with:
+          ref: main
+          persist-credentials: false
+          fetch-depth: 1
+
+      - uses: actions/setup-python@v7
+        with:
+          python-version: '3.13'
+
+      - name: Compare every served artifact twice against the exact main commit
+        env:
+          EXPECTED_SOURCE_SHA: ${{ inputs.expected_source_sha }}
+        run: >-
+          python -B scripts/verify_cloudflare.py
+          --expected-source-sha "$EXPECTED_SOURCE_SHA"
+          --report "$RUNNER_TEMP/cloudflare-proof.json"
+
+      - name: Preserve success or failure proof
+        if: always()
+        uses: actions/upload-artifact@v7
+        with:
+          name: portfolio-cloudflare-proof-${{ github.run_id }}-${{ github.run_attempt }}
+          path: ${{ runner.temp }}/cloudflare-proof.json
+          if-no-files-found: error
+          retention-days: 30
