@@ -1,12 +1,9 @@
 Fonts used by this site
 
-All five font families are licensed under the SIL Open Font License, Version 1.1.
+All three font families are licensed under the SIL Open Font License, Version 1.1.
 The files here are Latin, Khmer or Chinese subsets converted to WOFF2 for the web.
 
-  unbounded.woff2      Unbounded      Copyright 2022 The Unbounded Project Authors (https://github.com/googlefonts/unbounded)
   sora.woff2           Sora           Copyright 2019 The Sora Project Authors (https://github.com/sora-xor/sora-font)
-  chakra-600.woff2,
-  chakra-700.woff2     Chakra Petch   Copyright 2018 The Chakra Petch Project Authors (https://github.com/m4rc1e/Chakra-Petch)
   khmer.woff2          Kantumruy Pro  Copyright 2022 The Kantumruy Project Authors (https://github.com/sovichet/kantumruy-pro)
   han.woff2            Noto Sans SC   (c) 2014-2021 Adobe (http://www.adobe.com/), with Reserved Font Name 'Source'.
                                       Subset of the characters this site uses (tools/fonts.py).
