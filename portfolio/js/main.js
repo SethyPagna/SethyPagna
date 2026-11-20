@@ -5,6 +5,7 @@ const $ = (sel, root = document) => root.querySelector(sel);
 const $$ = (sel, root = document) => [...root.querySelectorAll(sel)];
 const reduced = matchMedia('(prefers-reduced-motion: reduce)').matches;
 const coarse = matchMedia('(pointer: coarse)').matches;
+const roomy = () => matchMedia('(min-width: 721px) and (min-height: 600px)').matches; // room to show a build's controls under it
 const byId = Object.fromEntries(PROJECTS.map(p => [p.id, p]));
 const buildOf = Object.fromEntries(ARCADE.map(g => [g.project, g]));
 const shotsOf = id => SHOTS[id] || [];
@@ -406,12 +407,12 @@ function playHTML(p, g) {
       <h2 id="pw-title" tabindex="-1">${esc(g.name)}</h2><span class="spacer"></span>
       <button class="btn sm plain" type="button" data-restart aria-label="Restart">${icon('reload', 16)}<span class="label">Restart</span></button>
       ${fullscreen}
-      <a class="btn sm plain" href="${g.src}" target="_blank" rel="noopener" aria-label="Open in new tab">${icon('out', 16)}<span class="label">Open in new tab</span></a>
+      <a class="btn sm plain new-tab" href="${g.src}" target="_blank" rel="noopener" aria-label="Open in new tab">${icon('out', 16)}<span class="label">Open in new tab</span></a>
       <button class="btn sm" type="button" data-close aria-label="Close">${icon('close', 16)}<span class="label">Close</span></button>
     </div>
     <div class="player">
       <div class="frame"></div>
-      <p class="controls"><b>Controls</b>${esc(g.controls)}</p>
+      <details class="controls"${roomy() ? ' open' : ''}><summary>Controls</summary><p>${esc(g.controls)}</p></details>
     </div>`;
 }
 
