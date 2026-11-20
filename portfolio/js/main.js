@@ -328,7 +328,7 @@ const zoom = $('#zoom');
 const search = $('#search');
 // Hold the page still behind an open window, without the layout jumping when its scrollbar goes.
 function lockPage() {
-  const open = pw.open || search.open;
+  const open = pw.open || search.open || zoom.open;
   if (open && !root.classList.contains('modal-open')) root.style.setProperty('--scroll-gap', `${innerWidth - root.clientWidth}px`);
   root.classList.toggle('modal-open', open);
 }
@@ -517,15 +517,28 @@ pw.addEventListener('click', e => {
   if (thumb) return showShot(Number(thumb.dataset.shot));
   if (e.target.closest('.gallery-zoom')) {
     const s = shotsOf(view.id)[view.shot];
-    const z = $('img', zoom);
-    z.src = s.src; z.alt = s.caption;
-    zoom.showModal();
-    return;
+    return showZoom(s.src, s.caption, 'Enlarged screenshot');
   }
   if (e.target.closest('[data-restart]')) return loadBuild(buildOf[view.id]);
   if (e.target.closest('[data-fullscreen]')) $('.frame', pw).requestFullscreen?.().catch(() => {});
 });
 zoom.addEventListener('click', () => zoom.close());
+zoom.addEventListener('close', lockPage);
+
+// One enlarged view for screenshots and for the photo of me (`portrait` styles it as a large round-cornered square).
+function showZoom(src, alt, label, portrait = false) {
+  const z = $('img', zoom);
+  z.src = src; z.alt = alt;
+  zoom.classList.toggle('portrait', portrait);
+  zoom.setAttribute('aria-label', label);
+  setMenu(false);
+  zoom.showModal();
+  lockPage();
+}
+// the photo beside the greeting and the one in About open the photo itself, not the top of the page
+document.addEventListener('click', e => {
+  if (e.target.closest('[data-photo]')) showZoom('img/pagna.webp', 'Portrait of Sethy Pagna Ung', 'Photo of Sethy Pagna Ung', true);
+});
 
 function route({ initial = false } = {}) {
   const target = targetOf(location.hash);
