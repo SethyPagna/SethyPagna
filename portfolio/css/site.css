@@ -161,10 +161,18 @@ kbd {
 .topbar { position: sticky; top: 0; z-index: 40; background: color-mix(in srgb, var(--bg) 88%, transparent); backdrop-filter: saturate(1.4) blur(12px); border-bottom: 1px solid transparent; transition: border-color .2s; }
 .topbar.scrolled { border-bottom-color: var(--line); }
 .topbar-in { display: flex; align-items: center; gap: 24px; min-height: calc(var(--topbar) - 1px); } /* the bar's bottom border makes up the rest */
-.brand { display: inline-flex; align-items: center; gap: 10px; min-width: 0; min-height: 40px; color: var(--ink-2); text-decoration: none; font-weight: 600; font-size: .9375rem; line-height: 1.25; }
-.brand:hover { color: var(--ink); }
-.brand-photo { flex: none; width: 36px; height: 36px; border-radius: 50%; object-fit: cover; box-shadow: 0 0 0 1px var(--line-strong); }
+.brand { display: inline-flex; align-items: center; gap: 6px; min-width: 0; }
+.brand-link { display: inline-flex; align-items: center; min-width: 0; min-height: 40px; color: var(--ink-2); text-decoration: none; font-weight: 600; font-size: .9375rem; line-height: 1.25; }
+.brand-link:hover { color: var(--ink); }
 .brand-hello { min-width: 0; padding-block: 4px; }
+/* a photo that opens the photo: the top bar's and the one in About */
+.photo-btn { flex: none; display: grid; place-items: center; padding: 0; border: 0; border-radius: 50%; background: none; cursor: zoom-in; }
+.photo-btn img { transition: box-shadow .15s, transform .15s var(--ease); }
+.photo-btn:hover img { box-shadow: 0 0 0 2px var(--accent); }
+.photo-btn:active img { transform: scale(.96); }
+.photo-btn:focus-visible { outline-offset: 3px; border-radius: 50%; }
+.brand-photo-btn { width: 40px; height: 40px; }
+.brand-photo { width: 36px; height: 36px; border-radius: 50%; object-fit: cover; box-shadow: 0 0 0 1px var(--line-strong); }
 .nav { display: flex; gap: 4px; margin-left: auto; }
 .nav a { padding: 8px 14px; border-radius: var(--radius-sm); color: var(--ink-2); font-weight: 550; font-size: .9375rem; text-decoration: none; }
 .nav a:hover { background: var(--tint); color: var(--ink); }
@@ -457,6 +465,7 @@ dialog::backdrop { background: var(--backdrop); }
 .zoom img { max-width: 100%; max-height: 100%; object-fit: contain; border-radius: 8px; cursor: zoom-out; }
 .zoom-close { position: fixed; top: 16px; right: 16px; background: #fff; color: #15171C; width: 44px; height: 44px; border-radius: 50%; }
 .zoom-close:hover { background: #ECEAE4; }
+.zoom.portrait img { width: min(420px, 86vw, 76dvh); height: auto; aspect-ratio: 1; border-radius: 20px; box-shadow: 0 24px 60px rgb(0 0 0 / .45); }
 
 .search { width: min(620px, 100vw - 32px); max-height: min(560px, 100dvh - 120px); margin-top: 12vh; padding: 0; border: 1px solid var(--line); border-radius: 16px; background: var(--surface); box-shadow: var(--shadow-2); overflow: hidden; }
 .search[open] { display: flex; flex-direction: column; }
@@ -555,8 +564,7 @@ dialog::backdrop { background: var(--backdrop); }
   .facts > div:nth-child(3) { border-left: 0; }
   .facts dd { margin-top: 0; }
 }
-.brand-short { display: none; } /* a spoken name for when only the photo shows */
-@media (max-width: 359px) { .brand-hello { display: none; } .brand-short { display: inline; } } /* just the photo on the narrowest phones */
+@media (max-width: 359px) { .brand-link { display: none; } } /* just the photo on the narrowest phones; Back to top is in the footer */
 @media (max-width: 370px) {
   .pw-bar { gap: 4px; padding-inline: 8px; }
   .pw-bar .new-tab { display: none; } /* the details view links to the standalone build too */

@@ -16,7 +16,9 @@
   <meta name="twitter:card" content="summary_large_image">
   <meta name="theme-color" content="#FAF9F6">
   <meta name="color-scheme" content="light dark">
-  <link rel="icon" href="img/favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="img/favicon-32.png" sizes="32x32" type="image/png">
+  <link rel="icon" href="img/favicon-192.png" sizes="192x192" type="image/png">
+  <link rel="apple-touch-icon" href="img/apple-touch-icon.png">
   <link rel="preload" href="fonts/sora.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="modulepreload" href="js/data.js">
   <link rel="modulepreload" href="js/shots.js">
@@ -61,10 +63,10 @@
 
   <header class="topbar" id="topbar">
     <div class="wrap topbar-in">
-      <a class="brand" href="#top">
-        <img class="brand-photo" src="img/pagna.webp" width="36" height="36" alt="">
-        <span class="brand-hello"><span class="hello-langs"><span lang="km" class="km">សួស្តី</span> · <span lang="zh" class="zh">你好</span> · </span>Hello, I’m Pagna</span><span class="visually-hidden"><span class="brand-short">Pagna</span>, back to top</span>
-      </a>
+      <div class="brand">
+        <button class="photo-btn brand-photo-btn" type="button" data-photo aria-haspopup="dialog" aria-label="Show Pagna’s photo"><img class="brand-photo" src="img/pagna.webp" width="36" height="36" alt=""></button>
+        <a class="brand-link" href="#top"><span class="brand-hello"><span class="hello-langs"><span lang="km" class="km">សួស្តី</span> · <span lang="zh" class="zh">你好</span> · </span>Hello, I’m Pagna</span><span class="visually-hidden">, back to top</span></a>
+      </div>
       <nav class="nav" id="nav" aria-label="Sections">
         <a href="#projects">Work</a>
         <a href="#arcade">Play</a>
@@ -163,7 +165,7 @@
           </div>
           <aside class="id-card" aria-label="At a glance">
             <div class="id-head">
-              <img src="img/pagna.webp" width="300" height="300" alt="Portrait of Sethy Pagna Ung" loading="lazy">
+              <button class="photo-btn" type="button" data-photo aria-haspopup="dialog" aria-label="Enlarge photo of Sethy Pagna Ung"><img src="img/pagna.webp" width="300" height="300" alt="" loading="lazy"></button>
               <div><b>Sethy Pagna Ung</b><span>Call me Pagna, or James</span></div>
             </div>
             <dl>
