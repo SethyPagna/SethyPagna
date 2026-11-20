@@ -1,771 +1,639 @@
-import { PROJECTS, CATEGORIES, COURSE, ARCADE, FLIGHTS, TOOLBOX, TOOL_USES, MILESTONES, PROFILE } from './data.js';
+import { PROJECTS, FILTERS, COURSE, ARCADE, TOOLBOX, TOOL_USES, MILESTONES, PROFILE } from './data.js';
 import { SHOTS } from './shots.js';
-import { mountSkyline } from './skyline.js';
-import { flapRow } from './flap.js';
-import { createProjectWindow } from './project-window.js';
 
 const $ = (sel, root = document) => root.querySelector(sel);
 const $$ = (sel, root = document) => [...root.querySelectorAll(sel)];
 const reduced = matchMedia('(prefers-reduced-motion: reduce)').matches;
+const coarse = matchMedia('(pointer: coarse)').matches;
 const byId = Object.fromEntries(PROJECTS.map(p => [p.id, p]));
+const buildOf = Object.fromEntries(ARCADE.map(g => [g.project, g]));
 const shotsOf = id => SHOTS[id] || [];
-const color = name => `var(--${name})`;
 const esc = s => String(s).replace(/[&<>"']/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
-const icon = (name, size = 16) => `<svg width="${size}" height="${size}" aria-hidden="true"><use href="#i-${name}"/></svg>`;
+const icon = (name, size = 18) => `<svg width="${size}" height="${size}" aria-hidden="true"><use href="#i-${name}"/></svg>`;
+const newTab = '<span class="visually-hidden"> (opens in a new tab)</span>';
 
 function toast(text) {
   const el = $('#toast');
   el.textContent = text;
   el.classList.add('show');
   clearTimeout(toast.t);
-  toast.t = setTimeout(() => el.classList.remove('show'), 2200);
+  toast.t = setTimeout(() => el.classList.remove('show'), 2400);
 }
+
+// ------------------------------------------------------------ top bar: theme, menu, current section
+
+const root = document.documentElement;
+const themeBtn = $('#theme-btn');
+function syncTheme() {
+  const dark = root.dataset.theme === 'dark';
+  themeBtn.setAttribute('aria-pressed', String(dark));
+  themeBtn.setAttribute('aria-label', dark ? 'Switch to light theme' : 'Switch to dark theme');
+  $('meta[name="theme-color"]').content = dark ? '#121318' : '#FAF9F6';
+}
+function toggleTheme() {
+  const dark = root.dataset.theme !== 'dark';
+  if (dark) root.dataset.theme = 'dark'; else delete root.dataset.theme;
+  try { localStorage.setItem('theme', dark ? 'dark' : 'light'); } catch { /* private mode: the choice lasts for this visit */ }
+  syncTheme();
+}
+themeBtn.addEventListener('click', toggleTheme);
+syncTheme();
+
+const topbar = $('#topbar');
+const menuBtn = $('#menu-btn');
+function setMenu(open) {
+  topbar.classList.toggle('open', open);
+  menuBtn.setAttribute('aria-expanded', String(open));
+}
+menuBtn.addEventListener('click', () => setMenu(!topbar.classList.contains('open')));
+$$('#nav a').forEach(a => a.addEventListener('click', () => setMenu(false)));
+document.addEventListener('pointerdown', e => { if (!topbar.contains(e.target)) setMenu(false); });
+addEventListener('scroll', () => topbar.classList.toggle('scrolled', scrollY > 8), { passive: true });
+
+const navLinks = Object.fromEntries($$('#nav a').map(a => [a.hash.slice(1), a]));
+const spy = new IntersectionObserver(entries => {
+  entries.forEach(e => {
+    if (!e.isIntersecting) return;
+    Object.values(navLinks).forEach(a => a.removeAttribute('aria-current'));
+    navLinks[e.target.id]?.setAttribute('aria-current', 'true');
+  });
+}, { rootMargin: '-45% 0px -50% 0px' });
+$$('main > section').forEach(s => spy.observe(s));
 
 // ------------------------------------------------------------ hero
 
-const sky = mountSkyline($('#sky'), { reduced });
-// touch screens: swap mouse and keyboard hints for tap ones (CSS hides the key hints via .touch)
-const coarse = matchMedia('(pointer: coarse)').matches;
-if (coarse) {
-  document.documentElement.classList.add('touch');
-  $('.hero-hint').textContent = 'Tap the sky for fireworks';
-  $('#projects .sec-title .alt').textContent = 'Tap Explore project or Show details';
-  $('#copy-email small').textContent = 'Email · tap to copy';
-}
-$('#sky').addEventListener('click', e => {
-  const r = e.currentTarget.getBoundingClientRect();
-  sky.launch(e.clientX - r.left, e.clientY - r.top);
-});
+$('#fact-count').textContent = `${PROJECTS.length} projects, ${ARCADE.length} playable`;
 
-function cycleGreeting() {
-  const spans = $$('.greet span');
-  let i = 0;
-  const step = () => {
-    spans.forEach((s, k) => { s.classList.toggle('lit', k === i); s.classList.toggle('dim', k !== i); });
-    i = (i + 1) % spans.length;
-  };
-  if (reduced) return;
-  step();
-  setInterval(step, 1600);
-  const name = $('#name');
-  setInterval(() => { name.classList.remove('glitch'); void name.offsetWidth; name.classList.add('glitch'); }, 5200);
-}
-cycleGreeting();
+// ------------------------------------------------------------ work
 
-// ------------------------------------------------------------ chrome: top bar, clock, nav
-
-const topbar = $('#topbar');
-let lastY = 0;
-addEventListener('scroll', () => {
-  const y = scrollY;
-  topbar.classList.toggle('solid', y > innerHeight * .6);
-  topbar.classList.toggle('hide', y > lastY && y > innerHeight && !topbar.classList.contains('open'));
-  lastY = y;
-}, { passive: true });
-
-function tickClock() {
-  const t = new Intl.DateTimeFormat('en-GB', { timeZone: 'Asia/Hong_Kong', hour: '2-digit', minute: '2-digit' }).format(new Date());
-  $('#clock').textContent = t;
-}
-tickClock();
-setInterval(tickClock, 20000);
-
-$('#menu-btn').addEventListener('click', () => {
-  const open = topbar.classList.toggle('open');
-  $('#menu-btn').setAttribute('aria-expanded', open);
-});
-function closeMenu() { topbar.classList.remove('open'); $('#menu-btn').setAttribute('aria-expanded', 'false'); }
-$$('#nav a').forEach(a => a.addEventListener('click', closeMenu));
-document.addEventListener('pointerdown', e => { if (topbar.classList.contains('open') && !topbar.contains(e.target)) closeMenu(); });
-
-const navLinks = Object.fromEntries($$('#nav a').map(a => [a.hash.slice(1), a]));
-const sectionSpy = new IntersectionObserver(entries => {
-  entries.forEach(e => {
-    if (!e.isIntersecting) return;
-    Object.values(navLinks).forEach(a => a.classList.remove('on'));
-    navLinks[e.target.id]?.classList.add('on');
-  });
-}, { rootMargin: '-45% 0px -50% 0px' });
-$$('main > section').forEach(s => sectionSpy.observe(s));
-
-const revealer = new IntersectionObserver(entries => {
-  entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in'); revealer.unobserve(e.target); } });
-}, { rootMargin: '0px 0px -8% 0px' });
-const watchReveals = root => $$('.reveal:not(.in)', root).forEach(el => revealer.observe(el));
-
-// ------------------------------------------------------------ about
-
-$('#facts').innerHTML = [
-  [String(PROJECTS.length), 'projects to explore', 'volt'],
-  [String(ARCADE.length), 'projects to try in the page', 'cyan'],
-  ['3', 'languages: Khmer, English, Mandarin', 'magenta'],
-  ['1', 'app in daily use by a real shop', 'acid'],
-].map(([n, t, c]) => `<div class="fact" style="--c:${color(c)}"><b>${n}</b><span>${t}</span></div>`).join('');
-
-// ------------------------------------------------------------ departures board
-
-function renderBoard() {
-  const rows = FLIGHTS.map(id => byId[id]);
-  $('#board-rows').innerHTML = rows.map((p, r) => `
-    <tr tabindex="0" data-open="${p.id}" aria-label="${esc(p.name)}: ${esc(p.route)}. ${esc(p.status.label)}">
-      <td class="flight"><span class="flaps" data-flap="${p.code} ${p.no}" data-width="6"></span></td>
-      <td class="dest"><span class="flaps" data-flap="${esc(p.name.replace(' + ', '+').replace(/[^A-Za-z0-9+ ]/g, ' '))}" data-width="14"></span></td>
-      <td class="route-cell">${esc(p.route)}</td>
-      <td class="gate">${esc(p.gate)}</td>
-      <td class="status"><span class="tag" style="--c:${color(p.status.color)}">${esc(p.status.label)}</span></td>
-    </tr>`).join('');
-  $$('#board-rows .flaps').forEach(el => { el.textContent = el.dataset.flap; });
-  let started = false;
-  new IntersectionObserver(([e], obs) => {
-    if (!e.isIntersecting || started) return;
-    started = true; obs.disconnect();
-    $$('#board-rows tr').forEach((tr, r) => {
-      $$('.flaps', tr).forEach(el => flapRow(el, el.dataset.flap, { width: +el.dataset.width, delay: r * 120, reduced }));
-    });
-  }, { threshold: .25 }).observe($('.board'));
-  $$('#board-rows tr').forEach(tr => {
-    tr.addEventListener('click', () => openDossier(tr.dataset.open));
-    tr.addEventListener('keydown', e => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); openDossier(tr.dataset.open); } });
-  });
-  const ticker = `Product direction + AI pair-programming with Claude and Codex + review and testing  ///  Private projects are described at a high level  ///  ${ARCADE.length} projects playable in the arcade  ///  `;
-  $('#ticker').innerHTML = `<span>${ticker}</span><span>${ticker}</span>`;
-}
-
-// ------------------------------------------------------------ project cards
-
-function domainFor(p) {
-  const live = p.links.find(l => l.kind === 'live');
-  if (live) return new URL(live.href, location.href).host;
-  if (p.play) return `arcade · playable build`;
-  if (p.availability) return p.availability;
-  if (p.private) return 'private build · local';
-  return 'github.com/SethyPagna';
-}
+const matches = (p, f) => f === 'all' || (f === 'play' ? Boolean(p.play) : p.cats.includes(f));
 
 function cardHTML(p) {
-  const cover = shotsOf(p.id).find(s => s.kind !== 'phone');
-  const image = cover
-    ? `<img src="${cover.src}" alt="${esc(`${p.name}: ${cover.caption}`)}" class="on" loading="lazy" width="${cover.w}" height="${cover.h}">`
-    : `<span class="noshot">${esc(p.name)}</span>`;
-  const actions = p.links.map(l => l.kind === 'play'
-    ? `<a class="btn sm" href="${l.href}">${icon('play')}${esc(l.label)}</a>`
-    : `<a class="btn sm ghost" href="${l.href}" target="_blank" rel="noopener">${esc(l.label)}${icon(l.kind === 'code' ? 'code' : 'out')}</a>`).join('');
+  const cover = shotsOf(p.id).find(s => s.kind !== 'phone') || shotsOf(p.id)[0];
   return `
-  <article class="card reveal" style="--c:${color(p.color)}" data-cats="${p.cats.join(' ')}" data-id="${p.id}">
-    <div class="shot">
-      <span class="slides" data-count="1">${image}</span>
-    </div>
-    <div class="shot-bar"><span>${esc(domainFor(p))}</span><span class="tag" style="--c:${color(p.status.color)}">${esc(p.status.label)}</span></div>
+  <li class="card${p.game ? ' game' : ''}" data-id="${p.id}">
+    <div class="card-shot">${cover ? `<img src="${cover.sm}" alt="" loading="lazy" width="${cover.w}" height="${cover.h}">` : ''}</div>
     <div class="card-body">
-      <div class="card-kicker"><span>${p.no} //</span>${esc(p.kicker)}</div>
-      <h3 id="card-name-${p.id}">${esc(p.name)}</h3>
-      <p class="tagline">${esc(p.tagline)}</p>
-      <div class="card-actions">
-        <button class="btn sm" type="button" data-open="${p.id}" aria-haspopup="dialog" style="--c:${color(p.color)}">Explore project ${icon('right')}</button>
-        <button class="btn sm ghost card-details-toggle" type="button" aria-controls="card-details-${p.id}" aria-expanded="false" aria-label="Show ${esc(p.name)} details">Show details</button>
-      </div>
-      <div class="card-detail-slot">
-        <p class="summary">${esc(p.summary)}</p>
-        <div class="card-details" id="card-details-${p.id}" role="region" aria-labelledby="card-name-${p.id}" hidden>
-          <div class="card-secondary">${actions}</div>
-          <p class="summary">${esc(p.summary)}</p>
-          <div class="stack">${p.stack.slice(0, 5).map(s => `<span class="chip">${esc(s)}</span>`).join('')}</div>
-          ${p.note ? `<p class="card-note">${esc(p.note)}</p>` : ''}
-        </div>
+      <span class="card-kicker">${esc(p.kicker)}</span>
+      <h3><a href="#project/${p.id}">${esc(p.name)}</a></h3>
+      <p>${esc(p.brief)}</p>
+      <div class="card-foot">
+        <span class="badge ${p.badge.tone}">${esc(p.badge.label)}</span>
+        ${p.play ? `<span class="badge play">${icon('play', 12)}Playable here</span>` : ''}
+        <span class="card-more" aria-hidden="true">Details ${icon('arrow', 16)}</span>
       </div>
     </div>
-  </article>`;
+  </li>`;
 }
 
-function renderProjects() {
-  const apps = PROJECTS.filter(p => !p.game);
-  $('#cards-featured').innerHTML = apps.filter(p => p.featured).map(cardHTML).join('');
-  $('#cards-more').innerHTML = apps.filter(p => !p.featured).map(cardHTML).join('');
-  const cats = CATEGORIES.filter(c => c.id !== 'games');
-  $('#filters').innerHTML = cats.map((c, i) => {
-    const n = c.id === 'all' ? apps.length : apps.filter(p => p.cats.includes(c.id)).length;
-    return `<button type="button" data-filter="${c.id}" aria-pressed="${i === 0}">${c.label}<span class="count">${n}</span></button>`;
-  }).join('') + `<a class="filter-link" href="#games">Games ${icon('right', 12)}</a>`;
-  $$('#filters button').forEach(b => b.addEventListener('click', () => {
-    $$('#filters button').forEach(x => x.setAttribute('aria-pressed', String(x === b)));
-    const f = b.dataset.filter;
-    $$('.card').forEach(card => { card.hidden = f !== 'all' && !card.dataset.cats.split(' ').includes(f); });
-    // "More projects" only reads right under a visible featured row
-    $('#projects .subhead').hidden = !$$('#cards-featured .card').some(c => !c.hidden);
-    $('#course').closest('details').open = f === 'team';
-  }));
-  $('#course').innerHTML = COURSE.map(c => `<li>${c.href ? `<a href="${c.href}" target="_blank" rel="noopener">${esc(c.name)} ${icon('out', 12)}</a>` : `<b>${esc(c.name)}</b>`}<span>${esc(c.what)}</span></li>`).join('');
-  $('#course-count').textContent = COURSE.length;
-  bindCards($('#projects'));
-}
-
-function bindCardDetails(card) {
-  const panel = $('.card-details', card);
-  const toggle = $('.card-details-toggle', card);
-  const defaultSummary = $('.card-detail-slot > .summary', card);
-  const hoverPointer = matchMedia('(hover: hover) and (pointer: fine)');
-  let hovering = false;
-  let focused = false;
-  let pinned = false;
-  let dismissed = false;
-  let pointerWasOpen = null;
-
-  const showDetails = () => {
-    const open = pinned || (!dismissed && (hovering || focused));
-    panel.hidden = !open;
-    defaultSummary.hidden = open;
-    toggle.setAttribute('aria-expanded', String(open));
-    toggle.textContent = open ? 'Hide details' : 'Show details';
-    toggle.setAttribute('aria-label', `${open ? 'Hide' : 'Show'} ${byId[card.dataset.id].name} details`);
-  };
-  card.addEventListener('pointerenter', e => {
-    if (e.pointerType === 'touch' || !hoverPointer.matches) return;
-    hovering = true;
-    dismissed = false;
-    showDetails();
+function setFilter(f) {
+  if (!FILTERS.some(x => x.id === f)) f = 'all';
+  $$('#filters button').forEach(b => b.setAttribute('aria-pressed', String(b.dataset.filter === f)));
+  let shown = 0;
+  $$('#cards .card').forEach(card => {
+    const on = matches(byId[card.dataset.id], f);
+    card.hidden = !on;
+    shown += on;
   });
-  card.addEventListener('pointerleave', () => {
-    hovering = false;
-    if (!card.contains(document.activeElement)) dismissed = false;
-    showDetails();
-  });
-  card.addEventListener('focusin', e => {
-    if (!card.contains(e.relatedTarget)) dismissed = false;
-    focused = true;
-    showDetails();
-  });
-  card.addEventListener('focusout', e => {
-    if (card.contains(e.relatedTarget)) return;
-    focused = false;
-    pinned = false;
-    dismissed = false;
-    showDetails();
-  });
-  toggle.addEventListener('pointerdown', () => { pointerWasOpen = !panel.hidden; });
-  toggle.addEventListener('pointercancel', () => { pointerWasOpen = null; });
-  toggle.addEventListener('click', e => {
-    const wasOpen = e.detail > 0 && pointerWasOpen !== null ? pointerWasOpen : !panel.hidden;
-    pointerWasOpen = null;
-    pinned = !wasOpen;
-    dismissed = wasOpen;
-    showDetails();
-  });
-  card.addEventListener('keydown', e => {
-    if (e.key !== 'Escape' || panel.hidden) return;
-    e.preventDefault();
-    pinned = false;
-    dismissed = true;
-    if (panel.contains(document.activeElement)) toggle.focus();
-    showDetails();
-  });
+  $('#filter-status').textContent = `Showing ${shown} ${shown === 1 ? 'project' : 'projects'}.`;
 }
 
-function bindCards(root) {
-  $$('[data-open]', root).forEach(el => el.addEventListener('click', e => { e.preventDefault(); openDossier(el.dataset.open); }));
-  $$('.card', root).forEach(bindCardDetails);
-  $$('.lab-card', root).forEach(card => {
-    const imgs = $$('.slides img', card);
-    const dots = $$('.dots i', card);
-    if (imgs.length < 2) return;
-    let i = 0, timer = 0;
-    const show = k => { i = k; imgs.forEach((im, j) => im.classList.toggle('on', j === k)); dots.forEach((d, j) => d.classList.toggle('on', j === k)); };
-    const start = () => { if (reduced || timer) return; timer = setInterval(() => show((i + 1) % imgs.length), 1300); show((i + 1) % imgs.length); };
-    const stop = () => { clearInterval(timer); timer = 0; show(0); };
-    card.addEventListener('pointerenter', start);
-    card.addEventListener('pointerleave', stop);
-    card.addEventListener('focusin', start);
-    card.addEventListener('focusout', stop);
-  });
+function renderWork() {
+  $('#cards').innerHTML = PROJECTS.map(cardHTML).join('');
+  $('#filters').innerHTML = FILTERS.map(f =>
+    `<button type="button" data-filter="${f.id}" aria-pressed="${f.id === 'all'}">${esc(f.label)}<span class="count">${PROJECTS.filter(p => matches(p, f.id)).length}</span></button>`).join('');
+  $$('#filters button').forEach(b => b.addEventListener('click', () => setFilter(b.dataset.filter)));
+  $('#course').innerHTML = COURSE.map(c => `<li>${c.href
+    ? `<a href="${c.href}" target="_blank" rel="noopener">${esc(c.name)}${newTab}</a>`
+    : `<b>${esc(c.name)}</b>`}<span>${esc(c.what)}</span></li>`).join('');
+  $('#course-count').textContent = `(${COURSE.length})`;
 }
 
-// ------------------------------------------------------------ game dev lab
+// ------------------------------------------------------------ play
 
-function renderLab() {
-  const games = PROJECTS.filter(p => p.game);
-  $('#lab').innerHTML = games.map(p => {
-    const shots = shotsOf(p.id);
-    const hero = shots[0];
-    const strip = shots.slice(1, 5);
-    const plays = p.links.filter(l => l.kind === 'play');
-    const others = p.links.filter(l => l.kind !== 'play');
-    return `
-    <article class="lab-card reveal" style="--c:${color(p.color)}">
-      <button type="button" class="lab-hero project-cover" data-open="${p.id}" aria-label="Open ${esc(p.name)} full screen" aria-haspopup="dialog">
-        ${hero ? `<img src="${hero.src}" alt="${esc(hero.caption)}" loading="lazy" width="${hero.w}" height="${hero.h}">` : ''}
-        <span class="hud"></span>
-        <span class="tag solid engine" style="--c:${color(p.color)}">${esc(p.stack[0])}</span>
-        ${hero ? `<span class="lab-cap">${esc(hero.caption)}</span>` : ''}
-      </button>
-      <div class="lab-strip">${strip.map((s, k) => `<button type="button" data-zoom="${p.id}:${k + 1}" aria-label="Enlarge: ${esc(s.caption)}"><img src="${s.sm}" alt="" loading="lazy"></button>`).join('')}</div>
-      <div class="lab-body">
-        <div class="card-kicker"><span>${p.no} //</span>${esc(p.kicker)}<span class="tag" style="--c:${color(p.status.color)}">${esc(p.status.label)}</span></div>
-        <h3><button class="open" type="button" data-open="${p.id}" aria-haspopup="dialog">${esc(p.name)}</button></h3>
-        <p class="tagline">${esc(p.tagline)}</p>
-        <p>${esc(p.summary)}</p>
-        <ul>${p.features.slice(0, 3).map(f => `<li>${esc(f)}</li>`).join('')}</ul>
-        <div class="card-actions">
-          ${plays.map(l => `<a class="btn sm" href="${l.href}" style="--c:${color(p.color)}">${icon('play')}${esc(l.label)}</a>`).join('')}
-          <button class="btn sm ghost" type="button" data-open="${p.id}" style="--c:${color(p.color)}">Explore project ${icon('right')}</button>
-          ${others.map(l => `<a class="btn sm ghost" href="${l.href}" target="_blank" rel="noopener" style="--c:var(--muted)">${esc(l.label)}${icon('code')}</a>`).join('')}
-        </div>
-      </div>
-    </article>`;
-  }).join('');
-  $$('[data-zoom]', $('#lab')).forEach(b => b.addEventListener('click', () => {
-    const [id, k] = b.dataset.zoom.split(':');
-    const s = shotsOf(id)[+k];
-    openLightbox(s.src, s.caption);
-  }));
-  bindCards($('#lab'));
-}
-
-// ------------------------------------------------------------ dossier
-
-const overlay = $('#dossier-overlay');
-const dossier = $('#dossier');
-let current = null, lastFocus = null, returnHash = '#projects';
-const projectWindow = createProjectWindow({ overlay, window: dossier, dock: $('#project-dock'), onClose: () => closeDossier() });
-
-function focusableControls(scope) {
-  return $$('button, a[href], input, select, textarea, iframe, [tabindex="0"]', scope)
-    .filter(el => !el.disabled && el.tabIndex >= 0 && el.getClientRects().length && !el.closest('[hidden], [aria-hidden="true"]'));
-}
-
-function linkButton(l, p) {
-  if (l.kind === 'play') return `<button class="btn" type="button" data-play="${l.href.slice('#arcade/'.length)}" style="--c:${color(p.color)}">${icon('play')}${esc(l.label)}</button>`;
-  return `<a class="btn ${l.kind === 'code' ? 'ghost' : ''}" href="${l.href}" target="_blank" rel="noopener" style="--c:${l.kind === 'code' ? 'var(--muted)' : color(p.color)}">${esc(l.label)}${icon(l.kind === 'code' ? 'code' : 'out')}</a>`;
-}
-
-function openDossier(id, { push = true, stage = 'shots', restart = false } = {}) {
-  const p = byId[id];
-  if (!p) return;
-  if (current === id && dossier.childElementCount && !restart) {
-    projectWindow.restore();
-    if (stage === 'live') $('[data-stage="live"]', dossier)?.click();
-    return;
-  }
-  if (!current || !projectWindow.isVisible()) {
-    lastFocus = document.activeElement;
-    const origin = lastFocus?.closest('#projects, #games, #arcade');
-    returnHash = origin ? `#${origin.id}` : location.hash.startsWith('#arcade') ? '#arcade' : '#projects';
-  }
-  current = id;
-  dossier.classList.remove('windowed', 'playing');
-  const shots = shotsOf(id);
-  const order = PROJECTS.map(x => x.id);
-  const idx = order.indexOf(id);
-  const prev = byId[order[(idx - 1 + order.length) % order.length]];
-  const next = byId[order[(idx + 1) % order.length]];
-  const cab = ARCADE.find(a => a.project === id);
-  const cabUrl = cab && (cab.src || cab.live);
-  dossier.style.setProperty('--c', color(p.color));
-  dossier.innerHTML = `
-    <header class="dossier-head">
-      <span class="code">${p.code} ${p.no}</span><h2 id="dossier-title">${esc(p.name)}</h2><span class="spacer"></span>
-      <button class="icon-btn" type="button" data-nav="${prev.id}" aria-label="Previous project: ${esc(prev.name)}">${icon('left', 18)}</button>
-      <button class="icon-btn" type="button" data-nav="${next.id}" aria-label="Next project: ${esc(next.name)}">${icon('right', 18)}</button>
-      <button class="icon-btn window-control" type="button" data-minimize aria-label="Minimize project" title="Minimize">−</button>
-      <button class="icon-btn window-control" type="button" data-size aria-label="Restore window size" title="Restore window size">▣</button>
-      <button class="icon-btn" type="button" data-close aria-label="Close project" title="Close · Esc">${icon('close', 18)}</button>
-    </header>
-    <div class="dossier-grid">
-      <div class="stage">
-        <div class="stage-tabs">
-          <button class="btn sm" type="button" data-stage="shots" aria-pressed="true">Overview & screens</button>
-          ${cab ? `<button class="btn sm ghost" type="button" data-stage="live" aria-pressed="false">${icon('play')}${p.game ? 'Play' : 'Try project'}</button>
-          <a class="btn sm ghost" id="open-full" href="${cabUrl}" target="_blank" rel="noopener" style="--c:var(--muted)" hidden>Open separately${icon('out')}</a>` : ''}
-          <span class="spacer"></span>
-          ${p.private ? '<span class="tag" style="--c:var(--dim)">Private source</span>' : ''}
-        </div>
-        <div class="stage-main" id="stage-main"><div id="shots-view"></div><div id="live-view" hidden></div></div>
-        <div class="thumbs" id="thumbs">${shots.map((s, k) => `<button type="button" data-shot="${k}" aria-label="${esc(s.caption)}" aria-current="${k === 0}"><img src="${s.sm}" alt="" loading="lazy"></button>`).join('')}</div>
-        <p class="caption" id="caption"></p>
-      </div>
-      <div class="info">
-        <div>
-          <span class="tag" style="--c:${color(p.status.color)}">${esc(p.status.label)}</span>
-          <h2 class="big-title">${esc(p.name)}</h2>
-          <p class="tagline">${esc(p.tagline)}</p>
-        </div>
-        <p>${esc(p.about)}</p>
-        ${p.links.length ? `<div class="links">${p.links.map(l => linkButton(l, p)).join('')}</div>` : '<p class="note">Private repository: no public link yet. Screens are from local builds.</p>'}
-        <div><h3>What's in it</h3><ul class="features">${p.features.map(f => `<li>${esc(f)}</li>`).join('')}</ul></div>
-        <div><h3>Built with</h3><div class="stack">${p.stack.map(s => `<span class="chip" style="--c:${color(p.color)}">${esc(s)}</span>`).join('')}</div></div>
-        <div class="meta-grid">
-          <div><small>Type</small><b>${esc(p.kicker)}</b></div>
-          <div><small>Year</small><b>${esc(p.year)}</b></div>
-        </div>
-        ${p.note ? `<p class="note">${esc(p.note)}${p.credit ? ` <a href="${p.credit.href}" target="_blank" rel="noopener">${esc(p.credit.label)} ↗</a>` : ''}</p>` : ''}
-      </div>
-    </div>
-    <nav class="dossier-nav">
-      <button class="btn sm ghost" type="button" data-nav="${prev.id}" style="--c:var(--muted)">${icon('left')}${esc(prev.name)}</button>
-      <button class="btn sm ghost" type="button" data-nav="${next.id}" style="--c:var(--muted)">${esc(next.name)}${icon('right')}</button>
-    </nav>
-    <footer class="window-help" id="window-help"><span>Minimize to keep this window. Restore from the bar below.</span><span><kbd>Esc</kbd> exits · release the mouse first while aiming</span></footer>`;
-  const shotsView = $('#shots-view', dossier);
-  const liveView = $('#live-view', dossier);
-  const showShot = k => {
-    const s = shots[k];
-    if (!s) { shotsView.innerHTML = `<div class="noshot">${esc(p.name)}</div>`; return; }
-    shotsView.innerHTML = `<img src="${s.src}" alt="${esc(s.caption)}" class="${s.kind}">`;
-    $('img', shotsView).addEventListener('click', () => openLightbox(s.src, s.caption));
-    $('#caption', dossier).textContent = `${k + 1} / ${shots.length} · ${s.caption}`;
-    $$('#thumbs button', dossier).forEach((b, j) => b.setAttribute('aria-current', String(j === k)));
-  };
-  // Screens / Play here tabs; the controls go in the caption so nothing sits on top of the running app
-  const setStage = stage => {
-    $$('[data-stage]', dossier).forEach(x => { const on = x.dataset.stage === stage; x.setAttribute('aria-pressed', String(on)); x.classList.toggle('ghost', !on); });
-    const live = stage === 'live';
-    shotsView.hidden = live;
-    liveView.hidden = !live;
-    dossier.classList.toggle('playing', live);
-    $('#thumbs', dossier).hidden = live;
-    if (cab) $('#open-full', dossier).hidden = !live;
-    if (!live) return showShot(0);
-    $('#caption', dossier).textContent = `${cab.controls}. Minimize or switch to Overview to keep your session; close ends it.`;
-    if (liveView.childElementCount) return;
-    const load = () => {
-      liveView.innerHTML = `<div class="frame-wrap"><iframe src="${cabUrl}" title="${esc(cab.title)}" allow="fullscreen; gamepad; autoplay; clipboard-write" allowfullscreen></iframe><div class="booting" role="status">Loading ${esc(cab.title)}…</div></div>`;
-      const frame = $('iframe', liveView);
-      frame.addEventListener('load', () => {
-        $('.booting', liveView)?.remove();
-        // Bundled apps are same-origin: keep the window's exit key available inside them.
-        try {
-          frame.contentDocument.addEventListener('keydown', event => {
-            if (event.key === 'Escape') {
-              event.preventDefault();
-              event.stopImmediatePropagation();
-              closeDossier();
-              return;
-            }
-            // Games reserve Tab for their own menus; apps use it for focus navigation.
-            if (event.key !== 'Tab' || p.game) return;
-            const doc = frame.contentDocument;
-            const controls = focusableControls(doc);
-            if (event.shiftKey && doc.activeElement === controls[0]) {
-              event.preventDefault();
-              $('#open-full', dossier).focus();
-            } else if (!event.shiftKey && doc.activeElement === controls[controls.length - 1]) {
-              event.preventDefault();
-              focusableControls(dossier)[0]?.focus();
-            }
-          }, true);
-        } catch { /* External apps retain their own keyboard controls. */ }
-      });
-    };
-    if (cab.desktop && coarse) {
-      liveView.innerHTML = `<div class="desk-only"><p>${esc(cab.title)} needs a keyboard and mouse. Open this page on a computer to play it.</p>
-        <button class="btn sm ghost" type="button" style="--c:var(--muted)">Load anyway${cab.size ? ` · ${esc(cab.size)}` : ''}</button></div>`;
-      $('button', liveView).addEventListener('click', load);
-      $('#caption', dossier).textContent = 'Desktop only.';
-    } else load();
-  };
-  showShot(0);
-  $$('#thumbs button', dossier).forEach(b => b.addEventListener('click', () => { setStage('shots'); showShot(+b.dataset.shot); }));
-  $$('[data-stage]', dossier).forEach(b => b.addEventListener('click', () => setStage(b.dataset.stage)));
-  $$('[data-nav]', dossier).forEach(b => b.addEventListener('click', () => openDossier(b.dataset.nav)));
-  $('[data-minimize]', dossier).addEventListener('click', () => projectWindow.minimize());
-  $('[data-size]', dossier).addEventListener('click', event => projectWindow.toggleSize(event.currentTarget));
-  $$('[data-close]', overlay).forEach(b => b.addEventListener('click', closeDossier));
-  $$('[data-play]', dossier).forEach(b => b.addEventListener('click', () => selectGame(b.dataset.play)));
-  projectWindow.show(p.name);
-  dossier.scrollTop = 0;
-  dossier.focus();
-  if (stage === 'live' && cab) setStage('live');
-  if (push) history.replaceState(null, '', `#project/${id}`);
-}
-
-function closeDossier({ restore = true } = {}) {
-  if (!current) return;
-  current = null;
-  projectWindow.close();
-  dossier.innerHTML = '';
-  if (/^#(project|arcade)\//.test(location.hash)) history.replaceState(null, '', returnHash);
-  if (restore) lastFocus?.focus?.();
-}
-
-overlay.addEventListener('keydown', e => {
-  if (e.key === 'Tab') {
-    const focusables = focusableControls(dossier);
-    const first = focusables[0], last = focusables[focusables.length - 1];
-    if (e.shiftKey && (document.activeElement === first || document.activeElement === dossier)) {
-      e.preventDefault();
-      if (last?.tagName === 'IFRAME') {
-        try { focusableControls(last.contentDocument).at(-1)?.focus(); }
-        catch { last.focus(); }
-      } else last?.focus();
-    }
-    else if (!e.shiftKey && (document.activeElement === last || document.activeElement === dossier)) { e.preventDefault(); first.focus(); }
-  }
-});
-
-// ------------------------------------------------------------ lightbox
-
-const lightbox = $('#lightbox');
-function openLightbox(src, alt) {
-  const img = $('img', lightbox);
-  img.src = src; img.alt = alt || '';
-  lightbox.hidden = false; lightbox.classList.add('open');
-}
-lightbox.addEventListener('click', () => { lightbox.classList.remove('open'); lightbox.hidden = true; });
-
-// ------------------------------------------------------------ arcade
-
-let cabinet = null;
-// a cabinet's picture: the shot whose caption starts with g.cover, else the project's first screen
+// a build's picture: the screenshot whose caption starts with g.cover, else the project's first screen
 function coverOf(g) {
   const shots = shotsOf(g.project);
   return (g.cover && shots.find(s => s.caption.startsWith(g.cover))) || shots.find(s => s.kind === 'screen') || shots[0];
 }
 
-function renderArcade() {
-  const list = $('#game-list');
-  list.insertAdjacentHTML('beforeend', ARCADE.map(g => {
-    const p = byId[g.project];
+function renderPlay() {
+  $('#tiles').innerHTML = ARCADE.map(g => {
     const cover = coverOf(g);
-    return `<button type="button" data-game="${g.id}" aria-pressed="false" style="--c:${color(p.color)}">
-      <span class="thumb" style="background-image:url('${cover?.sm || ''}')"></span>
-      <span><span class="kind">${esc(g.kind)}</span><b>${esc(g.title)}</b><span>${esc(g.blurb.split('.')[0])}.</span></span></button>`;
-  }).join(''));
-  $$('[data-game]', list).forEach(b => b.addEventListener('click', () => selectGame(b.dataset.game)));
-  selectGame(ARCADE[0].id, { scroll: false, start: false });
-}
-
-function gameCover(g) {
-  const p = byId[g.project];
-  const bg = coverOf(g)?.src || '';
-  const size = g.size ? ` · ${esc(g.size)}` : '';
-  // desktop-only games on a touch screen: say so plainly, and only load them on request
-  const start = blockedOnTouch(g)
-    ? `<p class="warn">Desktop only: it needs a keyboard and mouse. Open this page on a computer to play.</p>
-       <button class="btn sm ghost" type="button" id="start-game" style="--c:var(--muted)">Load anyway${size}</button>`
-    : `<button class="btn" type="button" id="start-game" style="--c:${color(p.color)}">${icon('play')}Press start${size}</button>`;
-  return `<div class="screen-cover" style="background-image:url('${bg}')"><div>
-    <span class="tag solid" style="--c:${color(p.color)}">${esc(g.kind)}</span>
-    <h3>${esc(g.title)}</h3>
-    <p>${esc(g.blurb)}</p>
-    ${start}
-    <p class="insert">INSERT COIN</p>
-  </div></div>`;
-}
-const blockedOnTouch = g => g.desktop && coarse;
-
-// Cabinets that were merged into another, so old #arcade/<id> links still land somewhere.
-const CABINET_ALIASES = { 'worlds-within': 'living-kingdom', 'first-hearth': 'living-kingdom' };
-
-function selectGame(id, { scroll = true, start = true } = {}) {
-  id = CABINET_ALIASES[id] || id;
-  const g = ARCADE.find(x => x.id === id);
-  if (!g) return;
-  cabinet = g;
-  const p = byId[g.project];
-  $$('[data-game]').forEach(b => b.setAttribute('aria-pressed', String(b.dataset.game === id)));
-  const screen = $('#screen');
-  screen.style.aspectRatio = g.aspect;
-  screen.innerHTML = gameCover(g);
-  const url = g.src || g.live;
-  $('#screen-tools').innerHTML = `
-    <small>${esc(g.controls)}</small><span class="spacer"></span>
-    <button class="btn sm ghost" type="button" id="game-reload" style="--c:var(--muted)">${icon('reload')}Restart</button>
-    <button class="btn sm ghost" type="button" id="game-full" style="--c:var(--cyan)">${icon('expand')}Launch full screen</button>
-    <a class="btn sm ghost" href="${url}" target="_blank" rel="noopener" style="--c:var(--volt)">New tab${icon('out')}</a>
-    <button class="btn sm ghost" type="button" data-open="${p.id}" style="--c:${color(p.color)}">About ${esc(p.name)}</button>`;
-  // on a touch screen a desktop-only game loads only from its own "Load anyway" button
-  $('#start-game').addEventListener('click', () => startGame(g));
-  $('#game-reload').addEventListener('click', () => startGame(g, { restart: true }));
-  $('#game-full').addEventListener('click', () => startGame(g));
-  $('[data-open]', $('#screen-tools')).addEventListener('click', () => openDossier(p.id));
-  if (scroll) $('#arcade').scrollIntoView({ behavior: reduced ? 'auto' : 'smooth' });
-  if (start) startGame(g);
-}
-
-function startGame(g, { restart = false } = {}) {
-  openDossier(g.project, { stage: 'live', restart });
-}
-
-// ------------------------------------------------------------ build loop
-
-const LOOP = [
-  { n: '01', t: 'Direct', d: 'Decide what to build: requirements, UX details and priorities.', c: 'magenta' },
-  { n: '02', t: 'Build with AI', d: 'Pair-program with Claude and Codex to implement and debug.', c: 'violet' },
-  { n: '03', t: 'Review & test', d: 'Check behaviour, run the tests and catch regressions early.', c: 'cyan' },
-  { n: '04', t: 'Understand', d: 'Study the code and architecture until I can own it.', c: 'acid' },
-];
-function renderLoop() {
-  const R = 150, cx = 200, cy = 200;
-  const arcs = LOOP.map((s, i) => {
-    const a0 = (i / 4) * Math.PI * 2 - Math.PI / 2 + .08, a1 = ((i + 1) / 4) * Math.PI * 2 - Math.PI / 2 - .08;
-    const p = a => [cx + R * Math.cos(a), cy + R * Math.sin(a)];
-    const [x0, y0] = p(a0), [x1, y1] = p(a1), [lx, ly] = [cx + (R + 34) * Math.cos((a0 + a1) / 2), cy + (R + 34) * Math.sin((a0 + a1) / 2)];
-    return `<g class="arc" data-step="${i}" style="--c:${color(s.c)}"><path d="M${x0} ${y0}A${R} ${R} 0 0 1 ${x1} ${y1}" fill="none" stroke="currentColor" stroke-width="10"/>
-      <text x="${lx}" y="${ly}" text-anchor="middle" dominant-baseline="middle">${s.n}</text></g>`;
+    const meta = [g.needs, g.size && (/MB$/.test(g.size) ? `${g.size} download` : g.size)].filter(Boolean).join(' · ');
+    return `
+    <li class="tile">
+      <div class="tile-shot">${cover ? `<img src="${cover.sm}" alt="" loading="lazy" width="${cover.w}" height="${cover.h}">` : ''}<span class="tile-type">${esc(g.type)}</span></div>
+      <div class="tile-body">
+        <h3>${esc(g.name)}</h3>
+        <p>${esc(g.blurb)}</p>
+        ${meta ? `<span class="tile-meta">${esc(meta)}</span>` : ''}
+        <div class="tile-actions">
+          <a class="btn primary sm" href="#arcade/${g.id}">${icon('play', 16)}Play<span class="visually-hidden"> ${esc(g.name)}</span></a>
+          <a class="btn sm plain" href="#project/${g.project}">Details<span class="visually-hidden"> about ${esc(g.name)}</span></a>
+        </div>
+      </div>
+    </li>`;
   }).join('');
-  $('#wheel').innerHTML = `<svg viewBox="0 0 400 400" role="img" aria-label="A four-step loop: direct, build with AI, review and test, understand, repeat">
-    <circle cx="200" cy="200" r="150" fill="none" stroke="var(--line)" stroke-width="10"/>${arcs}
-    <circle class="runner" r="7" fill="var(--volt)"/></svg>
-    <div class="center"><div><b>LEVEL UP</b><span>EVERY FEATURE</span><span>EVERY FIX</span></div></div>`;
-  $('#steps').innerHTML = LOOP.map((s, i) => `<button type="button" class="step" data-step="${i}" style="--c:${color(s.c)}"><span class="n">${s.n}</span><span><b>${s.t}</b><span>${s.d}</span></span></button>`).join('');
-  let k = 0, timer = 0;
-  const runner = $('.runner');
-  const set = i => {
-    k = i;
-    $$('.step').forEach((el, j) => el.classList.toggle('on', j === i));
-    $$('#wheel .arc').forEach((el, j) => el.classList.toggle('on', j === i));
-    const a = ((i + .5) / 4) * Math.PI * 2 - Math.PI / 2;
-    runner.setAttribute('cx', 200 + 150 * Math.cos(a)); runner.setAttribute('cy', 200 + 150 * Math.sin(a));
-  };
-  set(0);
-  const auto = () => { if (!reduced) timer = setInterval(() => set((k + 1) % 4), 2600); };
-  $$('.step').forEach(el => el.addEventListener('click', () => { clearInterval(timer); set(+el.dataset.step); }));
-  new IntersectionObserver(([e]) => { clearInterval(timer); if (e.isIntersecting) auto(); }).observe($('#wheel'));
 }
 
-// ------------------------------------------------------------ toolbox
+// ------------------------------------------------------------ about: steps, skills, journey
 
-function renderTools() {
-  $('#tools').innerHTML = TOOLBOX.map(row => `<div class="tool-row" style="--row-c:${color(row.color)};--c:${color(row.color)}"><h3>${esc(row.title.toUpperCase())}</h3>
-    <div class="chips">${row.items.map(t => `<button type="button" class="chip" aria-pressed="false" data-tool="${esc(t)}">${esc(t)}</button>`).join('')}</div></div>`).join('');
-  $$('[data-tool]').forEach(b => b.addEventListener('click', () => {
+const STEPS = [
+  ['Direct', 'Decide what to build: requirements, UX details and priorities.'],
+  ['Build with AI', 'Pair-program with Claude and Codex to implement and debug.'],
+  ['Review and test', 'Check behaviour, run the tests and catch regressions early.'],
+  ['Understand', 'Study the code and architecture until I can own it.'],
+];
+
+function renderAbout() {
+  $('#steps').innerHTML = STEPS.map(([t, d]) => `<li><b>${t}</b><span>${d}</span></li>`).join('');
+
+  $('#tools').innerHTML = TOOLBOX.map(row => `<div class="tool-row"><h4>${esc(row.title)}</h4>
+    <div>${row.items.map(t => `<button type="button" class="tool" aria-pressed="false" data-tool="${esc(t)}">${esc(t)}</button>`).join('')}</div></div>`).join('');
+  const result = $('#tool-result');
+  $$('.tool').forEach(b => b.addEventListener('click', () => {
     const on = b.getAttribute('aria-pressed') !== 'true';
-    $$('[data-tool]').forEach(x => x.setAttribute('aria-pressed', 'false'));
+    $$('.tool').forEach(x => x.setAttribute('aria-pressed', 'false'));
     b.setAttribute('aria-pressed', String(on));
-    const uses = (TOOL_USES[b.dataset.tool] || []).map(id => byId[id]).filter(Boolean);
-    const hint = $('#tool-hint');
-    if (!on) { hint.textContent = 'Tap a tool to see which projects use it.'; return; }
-    hint.innerHTML = uses.length
-      ? `<b>${esc(b.dataset.tool)}</b> shows up in: ${uses.map(p => `<a href="#project/${p.id}" data-open="${p.id}">${esc(p.name)}${p.id === 'ai-summary' && ['Supabase', 'OpenRouter'].includes(b.dataset.tool) ? ' v1 (earlier version)' : ''}</a>`).join(' · ')}`
-      : `<b>${esc(b.dataset.tool)}</b>: part of my everyday workflow.`;
-    $$('[data-open]', hint).forEach(a => a.addEventListener('click', e => { e.preventDefault(); openDossier(a.dataset.open); }));
+    result.hidden = !on;
+    if (!on) return;
+    const tool = b.dataset.tool;
+    const uses = (TOOL_USES[tool] || []).map(id => byId[id]).filter(Boolean);
+    const earlier = p => p.id === 'ai-summary' && ['Supabase', 'OpenRouter'].includes(tool) ? ' (earlier version)' : '';
+    result.innerHTML = uses.length
+      ? `<b>${esc(tool)}</b> is used in ${uses.length} ${uses.length === 1 ? 'project' : 'projects'}: ${uses.map(p => `<a href="#project/${p.id}">${esc(p.name)}</a>${earlier(p)}`).join(', ')}.`
+      : `<b>${esc(tool)}</b> is part of my everyday workflow rather than one project.`;
+  }));
+
+  $('#timeline').innerHTML = MILESTONES.map(m => `
+    <li class="${m.now ? 'now' : m.future ? 'future' : ''}">
+      <span class="when">${esc(m.date)}</span>
+      <div><b>${esc(m.title)}${m.now ? '<span class="here">Now</span>' : ''}</b><span>${esc(m.sub)}</span></div>
+    </li>`).join('');
+
+}
+
+// ------------------------------------------------------------ GitHub activity
+// scripts/stats.py publishes the numbers every day; the page draws them in its own style.
+// If the numbers can't be read, the ready-made pictures from the same script are shown instead.
+
+const ACTIVITY = 'https://raw.githubusercontent.com/SethyPagna/SethyPagna/output';
+// each language keeps its own colour, whatever its rank that day
+const LANGUAGE_SLOT = { TypeScript: 1, JavaScript: 2, Python: 3, 'C++': 4, C: 5, Java: 6, 'C#': 7, SQL: 8 };
+const nf = new Intl.NumberFormat('en');
+const dayOf = iso => new Date(`${iso}T00:00:00Z`);
+const fmtDate = (iso, opts) => new Intl.DateTimeFormat('en-GB', { timeZone: 'UTC', ...opts }).format(dayOf(iso));
+
+function activityPictures() {
+  const body = $('#activity-body');
+  body.innerHTML = `<div class="activity-pictures">
+    <img src="${ACTIVITY}/stats.svg" width="1200" height="290" loading="lazy" alt="GitHub activity for the last 12 months: contributions, active days, streaks and top languages.">
+    <img src="${ACTIVITY}/skyline.svg" width="1200" height="420" loading="lazy" alt="Contribution chart: the last 12 months of GitHub contributions, one bar per week.">
+  </div>`;
+  $$('img', body).forEach(img => img.addEventListener('error', () => {
+    const p = document.createElement('p');
+    p.className = 'fallback';
+    p.innerHTML = `This chart is being redrawn. See <a href="${PROFILE.github}" target="_blank" rel="noopener">my GitHub profile${newTab}</a> for now.`;
+    img.replaceWith(p);
   }));
 }
 
-// ------------------------------------------------------------ timeline
+function activityChart(d) {
+  const weeks = d.weeks;
+  const max = Math.max(1, ...weeks.map(w => w.count));
+  // a round number at or above the busiest week, so the two gridlines read cleanly
+  const unit = 10 ** Math.floor(Math.log10(max));
+  const top = [1, 1.2, 1.6, 2, 2.4, 3, 4, 5, 6, 8, 10].map(k => Math.max(2, k * unit)).find(v => v >= max);
+  const peak = weeks.reduce((best, w, i) => (w.count > weeks[best].count ? i : best), 0);
+  const weekLabel = w => `Week of ${fmtDate(w.start, { day: 'numeric', month: 'short', year: 'numeric' })}: ${nf.format(w.count)} ${w.count === 1 ? 'contribution' : 'contributions'}`;
+  let month = '', months = 0;
+  const bars = weeks.map((w, i) => {
+    const m = fmtDate(w.start, { month: 'short' });
+    // a label where each month starts; narrow screens keep every third one
+    const tick = m !== month && i > 0 && i < weeks.length - 2 ? `<span class="tick${months++ % 3 ? ' minor' : ''}">${m}</span>` : '';
+    month = m;
+    return `<span class="bar${w.count ? '' : ' zero'}" data-i="${i}" style="--h:${(w.count / top * 100).toFixed(2)}%">${i === peak ? `<b>${nf.format(w.count)}</b>` : ''}${tick}</span>`;
+  }).join('');
 
-function renderTimeline() {
-  $('#timeline').innerHTML = `<ol>${MILESTONES.map(m => `
-    <li class="${m.now ? 'now' : ''} ${m.future ? 'future' : ''}" style="--c:${color(m.color)}">
-      <span class="dot"></span>
-      <div class="txt"><small>${m.date}</small><b>${esc(m.title)}</b><span>${esc(m.sub)}</span>${m.now ? '<br><span class="tag solid here" style="--c:var(--magenta)">You are here</span>' : ''}</div>
-    </li>`).join('')}</ol>`;
-  const tl = $('#timeline');
-  const now = $('.now', tl);
-  new IntersectionObserver(([e], obs) => { if (e.isIntersecting) { tl.scrollTo({ left: now.offsetLeft - tl.clientWidth / 2, behavior: reduced ? 'auto' : 'smooth' }); obs.disconnect(); } }).observe(tl);
-}
-
-// ------------------------------------------------------------ activity & contact
-
-$$('.activity img').forEach(img => img.addEventListener('error', () => {
-  img.replaceWith(Object.assign(document.createElement('p'), { className: 'fallback', textContent: 'GitHub activity is rebuilding. See github.com/SethyPagna.' }));
-}));
-
-$('#copy-email').addEventListener('click', async () => {
-  try { await navigator.clipboard.writeText(PROFILE.email); toast('EMAIL COPIED ✓'); }
-  catch { location.href = `mailto:${PROFILE.email}`; }
-});
-
-// ------------------------------------------------------------ command palette
-
-const palette = $('#palette');
-const input = $('#palette-input');
-const listEl = $('#palette-list');
-let items = [], sel = 0, paletteFocus = null;
-
-function paletteItems() {
-  const sections = $$('#nav a').map(a => ({ label: `Go to ${a.textContent}`, k: 'section', c: 'dim', run: () => {
-    closeDossier({ restore: false });
-    history.replaceState(null, '', a.hash);
-    $(a.hash).scrollIntoView({ behavior: reduced ? 'auto' : 'smooth' });
-    a.focus();
-  } }));
-  const projects = PROJECTS.map(p => ({ label: `${p.name}: ${p.tagline}`, search: [p.kicker, ...p.cats, ...p.stack].join(' '), k: 'project', c: p.color, run: () => openDossier(p.id) }));
-  const games = ARCADE.map(g => ({ label: `Play ${g.title}`, search: g.kind, k: 'arcade', c: byId[g.project].color, run: () => selectGame(g.id, { start: true }) }));
-  const actions = [
-    { label: 'Copy email address', k: 'action', c: 'volt', run: () => $('#copy-email').click() },
-    { label: 'Open GitHub profile', k: 'link', c: 'magenta', run: () => open(PROFILE.github, '_blank', 'noopener') },
-    { label: 'Open LinkedIn', k: 'link', c: 'cyan', run: () => open(PROFILE.linkedin, '_blank', 'noopener') },
-    { label: 'Launch fireworks over the harbour', k: 'fun', c: 'acid', run: () => { scrollTo({ top: 0, behavior: 'smooth' }); celebrate(); } },
-    { label: 'Toggle glitch mode', k: 'fun', c: 'violet', run: () => document.body.classList.toggle('glitch-mode') },
+  const stats = [
+    ['Active days', nf.format(d.activeDays)],
+    ['Current streak', `${nf.format(d.currentStreak)} ${d.currentStreak === 1 ? 'day' : 'days'}`],
+    ['Longest streak', `${nf.format(d.longestStreak)} ${d.longestStreak === 1 ? 'day' : 'days'}`],
+    ['Busiest day', nf.format(d.bestDay)],
   ];
-  return [...projects, ...games, ...sections, ...actions];
-}
+  const langs = (d.languages || []).filter(l => l.share > 0);
+  let spare = 0;
+  const free = [1, 2, 3, 4, 5, 6, 7, 8].filter(n => !langs.some(l => LANGUAGE_SLOT[l.name] === n));
+  const colour = l => l.name === 'Other' ? 'var(--series-other)' : `var(--series-${LANGUAGE_SLOT[l.name] || free[spare++ % free.length]})`;
+  const tinted = langs.map(l => ({ ...l, c: colour(l), pct: `${(l.share * 100).toFixed(l.share < .1 ? 1 : 0)}%` }));
 
-function renderPalette() {
-  const q = input.value.trim().toLowerCase();
-  // every word must start a word somewhere (so "chess" finds "chess-family" but not "retail" for "ai");
-  // one- and two-letter words must match a whole word, so "ai" doesn't find "air"
-  const escapeRe = w => w.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
-  const words = q ? q.split(/\s+/).map(w => new RegExp('(^|[^a-z0-9])' + escapeRe(w) + (w.length < 3 ? '($|[^a-z0-9])' : ''))) : [];
-  items = paletteItems().filter(it => {
-    const hay = `${it.label} ${it.search || ''} ${it.k}`.toLowerCase();
-    return words.every(r => r.test(hay));
+  const body = $('#activity-body');
+  body.innerHTML = `
+  <div class="act">
+    <div class="act-top">
+      <p class="act-total"><b>${nf.format(d.total)}</b><span>contributions in the last 12 months</span></p>
+      <dl class="act-stats">${stats.map(([k, v]) => `<div><dt>${k}</dt><dd>${v}</dd></div>`).join('')}</dl>
+    </div>
+    <div class="act-chart">
+      <h4 id="chart-title">Contributions per week</h4>
+      <div class="plot" tabindex="0" role="group" aria-labelledby="chart-title" aria-describedby="chart-help">
+        <div class="grid" aria-hidden="true"><span><i>${nf.format(top)}</i></span><span><i>${nf.format(top / 2)}</i></span><span><i>0</i></span></div>
+        <div class="bars" aria-hidden="true">${bars}</div>
+        <div class="tip" hidden></div>
+      </div>
+      <p class="visually-hidden" id="chart-help">Bar chart of ${weeks.length} weeks. The busiest was the ${weekLabel(weeks[peak]).replace('Week', 'week')}. Use the left and right arrow keys to read each week.</p>
+      <p class="visually-hidden" role="status" aria-live="polite" id="chart-live"></p>
+      <details class="act-table"><summary>Show the weekly numbers as a table</summary>
+        <div tabindex="0" role="region" aria-label="Weekly numbers"><table><thead><tr><th scope="col">Week starting</th><th scope="col">Contributions</th></tr></thead>
+        <tbody>${weeks.map(w => `<tr><td>${fmtDate(w.start, { day: 'numeric', month: 'short', year: 'numeric' })}</td><td>${nf.format(w.count)}</td></tr>`).join('')}</tbody></table></div>
+      </details>
+    </div>
+    ${tinted.length ? `<div class="act-langs">
+      <h4>Languages in my public repositories</h4>
+      <div class="lang-bar" role="img" aria-label="${esc(tinted.map(l => `${l.name} ${l.pct}`).join(', '))}">${tinted.map(l => `<span style="flex-grow:${l.share};background:${l.c}"></span>`).join('')}</div>
+      <ul class="lang-legend">${tinted.map(l => `<li><i style="background:${l.c}"></i>${esc(l.name)} <span>${l.pct}</span></li>`).join('')}</ul>
+    </div>` : ''}
+    <p class="act-foot">${nf.format(d.publicRepos)} public repositories · updated ${fmtDate(d.updated, { day: 'numeric', month: 'short', year: 'numeric' })} · <a href="${PROFILE.github}" target="_blank" rel="noopener">View my GitHub profile${newTab}</a></p>
+  </div>`;
+
+  // one tooltip for pointer and keyboard: it names the week under the pointer, or the one the arrow keys reached
+  const plot = $('.plot', body), tip = $('.tip', body), barEls = $$('.bar', body);
+  let at = -1;
+  const show = (i, announce) => {
+    barEls[at]?.classList.remove('on');
+    at = i;
+    if (i < 0) { tip.hidden = true; return; }
+    const bar = barEls[i];
+    bar.classList.add('on');
+    tip.textContent = weekLabel(weeks[i]);
+    tip.hidden = false;
+    const box = plot.getBoundingClientRect(), b = bar.getBoundingClientRect();
+    const half = tip.offsetWidth / 2;
+    tip.style.left = `${Math.max(half, Math.min(box.width - half, b.left - box.left + b.width / 2))}px`;
+    if (announce) $('#chart-live', body).textContent = tip.textContent;
+  };
+  plot.addEventListener('pointermove', e => {
+    const box = $('.bars', plot).getBoundingClientRect();
+    const i = Math.floor((e.clientX - box.left) / box.width * weeks.length);
+    show(i >= 0 && i < weeks.length ? i : -1);
   });
-  sel = Math.min(sel, Math.max(0, items.length - 1));
-  listEl.innerHTML = items.length
-    ? items.slice(0, 40).map((it, i) => `<li role="option" id="pal-${i}" aria-selected="${i === sel}" data-i="${i}" style="--c:${color(it.c)}"><i></i>${esc(it.label)}<span class="k">${it.k}</span></li>`).join('')
-    : '<li class="empty">No match. Try “chess”, “play” or “AI”.</li>';
-  input.setAttribute('aria-activedescendant', items.length ? `pal-${sel}` : '');
-  $$('li[data-i]', listEl).forEach(li => {
-    li.addEventListener('click', () => runItem(+li.dataset.i));
-    li.addEventListener('pointermove', () => { if (sel !== +li.dataset.i) { sel = +li.dataset.i; renderPalette(); } });
+  plot.addEventListener('pointerleave', () => show(-1));
+  plot.addEventListener('blur', () => show(-1));
+  plot.addEventListener('keydown', e => {
+    const step = { ArrowLeft: -1, ArrowRight: 1 }[e.key];
+    if (e.key === 'Home' || e.key === 'End' || step) e.preventDefault(); else return;
+    const i = e.key === 'Home' ? 0 : e.key === 'End' ? weeks.length - 1 : at < 0 ? (step > 0 ? 0 : weeks.length - 1) : at + step;
+    show(Math.max(0, Math.min(weeks.length - 1, i)), true);
   });
-  $(`#pal-${sel}`)?.scrollIntoView({ block: 'nearest' });
-}
-function runItem(i) { const it = items[i]; if (!it) return; closePalette(); it.run(); }
-function openPalette() { paletteFocus = document.activeElement; palette.hidden = false; palette.classList.add('open'); input.value = ''; sel = 0; renderPalette(); input.focus(); }
-function closePalette() { palette.classList.remove('open'); palette.hidden = true; paletteFocus?.focus?.(); }
-$('#open-palette').addEventListener('click', openPalette);
-palette.addEventListener('click', e => { if (e.target === palette) closePalette(); });
-input.addEventListener('input', () => { sel = 0; renderPalette(); });
-input.addEventListener('keydown', e => {
-  if (e.key === 'ArrowDown') { e.preventDefault(); sel = Math.min(items.length - 1, sel + 1); renderPalette(); }
-  else if (e.key === 'ArrowUp') { e.preventDefault(); sel = Math.max(0, sel - 1); renderPalette(); }
-  else if (e.key === 'Enter') { e.preventDefault(); runItem(sel); }
-});
-if (!/Mac|iPhone|iPad/.test(navigator.platform)) $$('kbd').forEach(k => { if (k.textContent === '⌘K') k.textContent = 'Ctrl K'; });
-
-// ------------------------------------------------------------ keys, easter eggs, routing
-
-function celebrate() {
-  const c = $('#sky').getBoundingClientRect();
-  for (let i = 0; i < 6; i++) setTimeout(() => sky.launch(c.width * (.15 + Math.random() * .7), c.height * (.12 + Math.random() * .3)), i * 260);
 }
 
-const KONAMI = ['ArrowUp', 'ArrowUp', 'ArrowDown', 'ArrowDown', 'ArrowLeft', 'ArrowRight', 'ArrowLeft', 'ArrowRight', 'b', 'a'];
-let konami = 0;
-addEventListener('keydown', e => {
-  const typing = /INPUT|TEXTAREA/.test(document.activeElement?.tagName);
-  if ((e.key === 'k' && (e.metaKey || e.ctrlKey)) || (e.key === '/' && !typing && !current)) { e.preventDefault(); palette.hidden ? openPalette() : closePalette(); return; }
-  if (e.key === 'Escape') {
-    if (!palette.hidden) return closePalette();
-    if (topbar.classList.contains('open')) { closeMenu(); $('#menu-btn').focus(); return; }
-    if (!lightbox.hidden) { lightbox.click(); return; }
-    if (current && projectWindow.isVisible()) return closeDossier();
+async function renderActivity() {
+  try {
+    const res = await fetch(`${ACTIVITY}/stats.json`, { signal: AbortSignal.timeout(6000) });
+    if (!res.ok) throw new Error(res.status);
+    const d = await res.json();
+    if (!Array.isArray(d.weeks) || !d.weeks.length || !Number.isFinite(d.total)) throw new Error('unexpected data');
+    activityChart(d);
+  } catch {
+    activityPictures();
   }
-  if (current && projectWindow.isVisible() && !dossier.classList.contains('playing') && !typing && (e.key === 'ArrowLeft' || e.key === 'ArrowRight')) {
-    const order = PROJECTS.map(x => x.id), i = order.indexOf(current);
-    openDossier(order[(i + (e.key === 'ArrowLeft' ? -1 : 1) + order.length) % order.length]);
+}
+// drawn straight away into space the stylesheet reserves, so nothing below it moves while someone is reading or jumping to a section
+renderActivity();
+
+// ------------------------------------------------------------ contact
+
+const copyBtn = $('#copy-email');
+copyBtn.addEventListener('click', async () => {
+  try {
+    await navigator.clipboard.writeText(PROFILE.email);
+    $('span', copyBtn).textContent = 'Copied';
+    $('use', copyBtn).setAttribute('href', '#i-check');
+    toast('Email address copied');
+    clearTimeout(copyBtn.t);
+    copyBtn.t = setTimeout(() => { $('span', copyBtn).textContent = 'Copy address'; $('use', copyBtn).setAttribute('href', '#i-copy'); }, 2400);
+  } catch {
+    location.href = `mailto:${PROFILE.email}`;
+  }
+});
+
+// ------------------------------------------------------------ project window
+// One <dialog> shows a project's details, or runs its build. The address is the state:
+// #project/<id> is the details view, #arcade/<build id> is the running build.
+
+const pw = $('#project-window');
+const zoom = $('#zoom');
+const search = $('#search');
+// Hold the page still behind an open window, without the layout jumping when its scrollbar goes.
+function lockPage() {
+  const open = pw.open || search.open;
+  if (open && !root.classList.contains('modal-open')) root.style.setProperty('--scroll-gap', `${innerWidth - root.clientWidth}px`);
+  root.classList.toggle('modal-open', open);
+}
+
+let view = null;        // { id, mode: 'details' | 'play', shot }
+let cameByLink = false; // opening added a history entry, so closing can go back over it
+let leaving = false;    // Back is on its way; a second Close click has nothing left to do
+
+// builds that were merged into another, so old #arcade/<id> links still land somewhere
+const BUILD_ALIASES = { 'worlds-within': 'living-kingdom', 'first-hearth': 'living-kingdom' };
+
+function targetOf(hash) {
+  const [kind, raw] = decodeURIComponent(hash.replace(/^#/, '')).split('/');
+  if (kind === 'project' && byId[raw]) return { id: raw, mode: 'details' };
+  if (kind === 'arcade' && raw) {
+    const g = ARCADE.find(x => x.id === (BUILD_ALIASES[raw] || raw));
+    if (g) return { id: g.project, mode: 'play' };
+  }
+  return null;
+}
+
+function linkHTML(l) {
+  if (l.kind === 'play') return `<a class="btn primary" href="${l.href}" data-swap>${icon('play')}${esc(l.label)}</a>`;
+  return `<a class="btn" href="${l.href}" target="_blank" rel="noopener">${esc(l.label)}${icon(l.kind === 'code' ? 'code' : 'out', 16)}${newTab}</a>`;
+}
+
+function detailsHTML(p) {
+  const shots = shotsOf(p.id);
+  const i = PROJECTS.indexOf(p);
+  const prev = PROJECTS[(i - 1 + PROJECTS.length) % PROJECTS.length];
+  const next = PROJECTS[(i + 1) % PROJECTS.length];
+  const many = shots.length > 1;
+  return `
+    <div class="pw-bar">
+      <h2 id="pw-title" tabindex="-1">${esc(p.name)}</h2><span class="spacer"></span>
+      <button class="btn sm" type="button" data-close>Close ${icon('close', 16)}</button>
+    </div>
+    <div class="pw-body">
+      <div class="pw-grid">
+        <div class="gallery">
+          <div class="gallery-main">
+            ${shots.length ? `<button class="gallery-zoom" type="button" aria-label="Enlarge screenshot"><img alt=""></button>` : `<div class="no-shots">No screenshots yet</div>`}
+            ${many ? `<button class="icon-btn gallery-step prev" type="button" data-step="-1" aria-label="Previous screenshot">${icon('left', 20)}</button>
+            <button class="icon-btn gallery-step next" type="button" data-step="1" aria-label="Next screenshot">${icon('right', 20)}</button>` : ''}
+          </div>
+          <p class="gallery-caption" aria-live="polite"><b></b><span></span></p>
+          ${many ? `<div class="thumbs" role="group" aria-label="Screenshots">${shots.map((s, k) => `<button type="button" data-shot="${k}" aria-label="Screenshot ${k + 1}: ${esc(s.caption)}"><img src="${s.sm}" alt="" loading="lazy"></button>`).join('')}</div>` : ''}
+        </div>
+        <div class="info">
+          <div class="info-top">
+            <div class="info-meta"><span class="badge ${p.badge.tone}">${esc(p.badge.label)}</span><span>${esc(p.kicker)} · ${esc(p.year)}</span></div>
+            <p class="tagline">${esc(p.tagline)}</p>
+            <p class="about-text">${esc(p.about)}</p>
+          </div>
+          ${p.links.length
+            ? `<div class="info-actions">${p.links.map(linkHTML).join('')}</div>`
+            : '<p class="note">There is no public link yet. The screenshots come from local builds.</p>'}
+          <div><h3>What it does</h3><ul class="features">${p.features.map(f => `<li>${esc(f)}</li>`).join('')}</ul></div>
+          <div><h3>Built with</h3><div class="stack">${p.stack.map(s => `<span class="chip">${esc(s)}</span>`).join('')}</div></div>
+          ${p.note ? `<p class="good-to-know"><b>Status: ${esc(p.status)}</b>${esc(p.note)}${p.credit ? ` <a href="${p.credit.href}" target="_blank" rel="noopener">${esc(p.credit.label)}${newTab}</a>` : ''}</p>` : ''}
+        </div>
+      </div>
+      <nav class="pw-next" aria-label="Other projects">
+        <a href="#project/${prev.id}" data-swap><small>${icon('back', 14)} Previous project</small><b>${esc(prev.name)}</b></a>
+        <a href="#project/${next.id}" data-swap><small>Next project ${icon('arrow', 14)}</small><b>${esc(next.name)}</b></a>
+      </nav>
+    </div>`;
+}
+
+function playHTML(p, g) {
+  const fullscreen = document.fullscreenEnabled
+    ? `<button class="btn sm plain" type="button" data-fullscreen aria-label="Full screen">${icon('expand', 16)}<span class="label">Full screen</span></button>` : '';
+  return `
+    <div class="pw-bar">
+      <a class="btn sm" href="#project/${p.id}" data-swap aria-label="Back to ${esc(p.name)} details">${icon('back', 16)}<span class="label">Details</span></a>
+      <h2 id="pw-title" tabindex="-1">${esc(g.name)}</h2><span class="spacer"></span>
+      <button class="btn sm plain" type="button" data-restart aria-label="Restart">${icon('reload', 16)}<span class="label">Restart</span></button>
+      ${fullscreen}
+      <a class="btn sm plain" href="${g.src}" target="_blank" rel="noopener" aria-label="Open in new tab">${icon('out', 16)}<span class="label">Open in new tab</span></a>
+      <button class="btn sm" type="button" data-close aria-label="Close">${icon('close', 16)}<span class="label">Close</span></button>
+    </div>
+    <div class="player">
+      <div class="frame"></div>
+      <p class="controls"><b>Controls</b>${esc(g.controls)}</p>
+    </div>`;
+}
+
+function showShot(k) {
+  const shots = shotsOf(view.id);
+  if (!shots.length) return;
+  view.shot = (k + shots.length) % shots.length;
+  const s = shots[view.shot];
+  const img = $('.gallery-zoom img', pw);
+  img.src = s.src;
+  img.alt = s.caption;
+  $('.gallery-caption b', pw).textContent = shots.length > 1 ? `${view.shot + 1} / ${shots.length}` : '';
+  $('.gallery-caption span', pw).textContent = s.caption;
+  $$('.thumbs button', pw).forEach((b, j) => {
+    b.setAttribute('aria-current', String(j === view.shot));
+    if (j === view.shot) b.scrollIntoView({ block: 'nearest', inline: 'nearest' });
+  });
+  if (zoom.open) { const z = $('img', zoom); z.src = s.src; z.alt = s.caption; }
+}
+
+function loadBuild(g) {
+  const frame = $('.frame', pw);
+  const size = /MB$/.test(g.size || '') ? ` (${g.size})` : '';
+  frame.innerHTML = `<iframe src="${g.src}" title="${esc(g.title)}" allow="fullscreen; gamepad; autoplay; clipboard-write" allowfullscreen></iframe>
+    <div class="loading" role="status">Loading ${esc(g.name)}${size}…</div>`;
+  $('iframe', frame).addEventListener('load', () => $('.loading', frame)?.remove());
+}
+
+function showProject({ id, mode }) {
+  const p = byId[id];
+  const g = buildOf[id];
+  if (mode === 'play' && !g) mode = 'details';
+  if (view?.id === id && view.mode === mode && pw.open) return;
+  view = { id, mode, shot: 0 };
+  pw.classList.toggle('playing', mode === 'play');
+  if (mode === 'play') {
+    pw.innerHTML = playHTML(p, g);
+    if (g.desktop && coarse) {
+      // desktop-only builds on a touch screen: say so plainly, and only download on request
+      $('.frame', pw).innerHTML = `<div class="ask"><h3>${esc(g.name)} needs a keyboard and mouse</h3>
+        <p>Open this page on a computer to play it. You can still load it here, but the controls will not work on a touch screen.</p>
+        <button class="btn" type="button" data-restart>Load anyway${/MB$/.test(g.size || '') ? ` (${esc(g.size)})` : ''}</button></div>`;
+    } else loadBuild(g);
+  } else {
+    pw.innerHTML = detailsHTML(p);
+    showShot(0);
+  }
+  if (!pw.open) {
+    pw.showModal();
+    lockPage();
+  }
+  $('.pw-body', pw)?.scrollTo(0, 0);
+  $('#pw-title', pw).focus({ preventScroll: true });
+}
+
+function hideProject() {
+  if (document.fullscreenElement) document.exitFullscreen().catch(() => {});
+  if (zoom.open) zoom.close();
+  if (pw.open) pw.close();
+  pw.innerHTML = ''; // also stops a running build
+  pw.classList.remove('playing');
+  lockPage();
+  view = null;
+  leaving = false;
+}
+
+function closeProject() {
+  if (!view || leaving) return;
+  if (cameByLink) {
+    // step back over the entry that opening added; the hashchange that follows closes the window
+    cameByLink = false; leaving = true; history.back();
+    setTimeout(() => { if (leaving && view) { leaving = false; closeProject(); } }, 800); // Back went nowhere: close directly
     return;
   }
-  konami = e.key === KONAMI[konami] ? konami + 1 : (e.key === KONAMI[0] ? 1 : 0);
-  if (konami === KONAMI.length) { konami = 0; document.body.classList.toggle('glitch-mode'); celebrate(); toast('+30 LIVES · GLITCH MODE'); }
+  // opened straight from a shared link: settle on the section the project belongs to
+  const section = view.mode === 'play' ? '#arcade' : '#projects';
+  history.replaceState(null, '', section);
+  hideProject();
+  $(section).scrollIntoView({ behavior: 'instant' });
+}
+
+pw.addEventListener('cancel', e => { e.preventDefault(); closeProject(); });
+pw.addEventListener('close', () => { if (view) closeProject(); }); // closed by the browser itself: keep the address in step
+// A click counts as "outside" only if it also started outside, so dragging to select text never closes a window.
+let pressedOutside = false;
+for (const d of [pw, search]) d.addEventListener('pointerdown', e => { pressedOutside = e.target === d; });
+pw.addEventListener('click', e => {
+  if (e.target === pw) { if (pressedOutside) closeProject(); return; } // the dimmed area around the window
+  const swap = e.target.closest('a[data-swap]');
+  if (swap) {
+    // moving between views inside the window replaces the address, so Back still closes it
+    e.preventDefault();
+    history.replaceState(null, '', swap.getAttribute('href'));
+    const target = targetOf(location.hash);
+    if (target) showProject(target);
+    return;
+  }
+  if (e.target.closest('[data-close]')) return closeProject();
+  const step = e.target.closest('[data-step]');
+  if (step) return showShot(view.shot + Number(step.dataset.step));
+  const thumb = e.target.closest('[data-shot]');
+  if (thumb) return showShot(Number(thumb.dataset.shot));
+  if (e.target.closest('.gallery-zoom')) {
+    const s = shotsOf(view.id)[view.shot];
+    const z = $('img', zoom);
+    z.src = s.src; z.alt = s.caption;
+    zoom.showModal();
+    return;
+  }
+  if (e.target.closest('[data-restart]')) return loadBuild(buildOf[view.id]);
+  if (e.target.closest('[data-fullscreen]')) $('.frame', pw).requestFullscreen?.().catch(() => {});
+});
+zoom.addEventListener('click', () => zoom.close());
+
+function route({ initial = false } = {}) {
+  const target = targetOf(location.hash);
+  if (target) {
+    if (!pw.open) cameByLink = !initial;
+    showProject(target);
+    return;
+  }
+  if (view) hideProject();
+  // section names from the earlier layout
+  const old = { games: 'projects', departures: 'projects' }[location.hash.slice(1)];
+  if (old) {
+    if (location.hash === '#games') setFilter('games');
+    history.replaceState(null, '', `#${old}`);
+    $(`#${old}`).scrollIntoView({ behavior: 'instant' });
+  }
+}
+addEventListener('hashchange', () => route());
+// a link to the project that is already in the address (after a reload, say) changes nothing, so open it by hand
+document.addEventListener('click', e => {
+  const a = e.target.closest('a[href^="#project/"], a[href^="#arcade/"]');
+  if (a && !pw.open && a.getAttribute('href') === location.hash) { e.preventDefault(); route(); }
 });
 
-function route() {
-  const h = decodeURIComponent(location.hash.slice(1));
-  if (h.startsWith('project/')) openDossier(h.split('/')[1], { push: false });
-  else if (h.startsWith('arcade/')) selectGame(h.split('/')[1]);
+// ------------------------------------------------------------ search
+
+const input = $('#search-input');
+const listEl = $('#search-list');
+let items = [], sel = 0;
+
+// From search: with a window already open, swap it in place (as the window's own links do) so Close and Back still close it.
+const go = hash => {
+  if (pw.open) history.replaceState(null, '', hash);
+  if (location.hash === hash) route(); else location.hash = hash;
+};
+function searchItems() {
+  return [
+    ...PROJECTS.map(p => ({ title: p.name, text: p.brief, more: [p.kicker, p.tagline, ...p.cats, ...p.stack].join(' '), kind: 'Project', run: () => go(`#project/${p.id}`) })),
+    ...ARCADE.map(g => ({ title: `Play ${g.name}`, text: g.type, more: 'game arcade', kind: 'Play', run: () => go(`#arcade/${g.id}`) })),
+    ...$$('#nav a').map(a => ({ title: a.textContent, text: 'Go to this section', more: 'section', kind: 'Section', run: () => { if (view) hideProject(); history.replaceState(null, '', a.hash); $(a.hash).scrollIntoView({ behavior: reduced ? 'auto' : 'smooth' }); } })),
+    { title: 'Copy email address', text: PROFILE.email, more: 'contact mail', kind: 'Action', run: () => copyBtn.click() },
+    { title: 'Open LinkedIn', text: 'Opens in a new tab', more: 'contact', kind: 'Link', run: () => open(PROFILE.linkedin, '_blank', 'noopener') },
+    { title: 'Open GitHub', text: 'Opens in a new tab', more: 'contact code source', kind: 'Link', run: () => open(PROFILE.github, '_blank', 'noopener') },
+    { title: 'Switch light or dark theme', text: 'Changes the colours of this page', more: 'mode appearance', kind: 'Action', run: toggleTheme },
+  ];
 }
-addEventListener('hashchange', route);
 
-// ------------------------------------------------------------ boot
+function renderSearch() {
+  // every word typed must start a word in the item; one- and two-letter words must match a whole word, so "ai" doesn't find "air"
+  const escapeRe = w => w.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+  const words = input.value.trim().toLowerCase().split(/\s+/).filter(Boolean)
+    .map(w => new RegExp('(^|[^a-z0-9])' + escapeRe(w) + (w.length < 3 ? '($|[^a-z0-9])' : '')));
+  const hit = text => words.every(r => r.test(text.toLowerCase()));
+  items = searchItems().filter(it => hit(`${it.title} ${it.text} ${it.more} ${it.kind}`));
+  // a match in the name comes before a match in the description
+  if (words.length) items = [...items.filter(it => hit(it.title)), ...items.filter(it => !hit(it.title))];
+  sel = Math.min(sel, Math.max(0, items.length - 1));
+  listEl.innerHTML = items.length
+    ? items.map((it, i) => `<li role="option" id="hit-${i}" aria-selected="${i === sel}" data-i="${i}"><b>${esc(it.title)}</b><span>${esc(it.text)}</span><span class="kind">${it.kind}</span></li>`).join('')
+    : '<li class="empty" role="option" aria-disabled="true" aria-selected="false">Nothing matches. Try “chess”, “shop” or “AI”.</li>';
+  input.setAttribute('aria-activedescendant', items.length ? `hit-${sel}` : '');
+  $(`#hit-${sel}`)?.scrollIntoView({ block: 'nearest' });
+}
+function moveSel(i) {
+  if (!items.length) return;
+  $(`#hit-${sel}`)?.setAttribute('aria-selected', 'false');
+  sel = Math.max(0, Math.min(items.length - 1, i));
+  const li = $(`#hit-${sel}`);
+  li.setAttribute('aria-selected', 'true');
+  li.scrollIntoView({ block: 'nearest' });
+  input.setAttribute('aria-activedescendant', li.id);
+}
+function runItem(i) { const it = items[i]; if (!it) return; search.close(); it.run(); }
+function openSearch() { if (search.open) return; setMenu(false); input.value = ''; sel = 0; renderSearch(); search.showModal(); lockPage(); input.focus(); }
 
-renderBoard();
-renderProjects();
-renderLab();
-renderArcade();
-renderLoop();
-renderTools();
-renderTimeline();
-watchReveals(document);
-route();
+$('#open-search').addEventListener('click', openSearch);
+search.addEventListener('close', lockPage);
+search.addEventListener('click', e => {
+  if (e.target === search) { if (pressedOutside) search.close(); return; }
+  const li = e.target.closest('li[data-i]');
+  if (li) runItem(Number(li.dataset.i));
+});
+listEl.addEventListener('pointermove', e => { const li = e.target.closest('li[data-i]'); if (li && Number(li.dataset.i) !== sel) moveSel(Number(li.dataset.i)); });
+input.addEventListener('input', () => { sel = 0; renderSearch(); });
+input.addEventListener('keydown', e => {
+  if (e.key === 'ArrowDown') { e.preventDefault(); moveSel(sel + 1); }
+  else if (e.key === 'ArrowUp') { e.preventDefault(); moveSel(sel - 1); }
+  else if (e.key === 'Enter') { e.preventDefault(); runItem(sel); }
+});
+
+// ------------------------------------------------------------ keys
+
+addEventListener('keydown', e => {
+  const typing = /INPUT|TEXTAREA|SELECT/.test(document.activeElement?.tagName) || document.activeElement?.isContentEditable;
+  if ((e.key.toLowerCase() === 'k' && (e.metaKey || e.ctrlKey)) || (e.key === '/' && !typing && !view)) {
+    e.preventDefault();
+    search.open ? search.close() : openSearch();
+    return;
+  }
+  if (e.key === 'Escape' && topbar.classList.contains('open')) { setMenu(false); menuBtn.focus(); return; }
+  if (view?.mode === 'details' && !search.open && !typing && (e.key === 'ArrowLeft' || e.key === 'ArrowRight')) {
+    e.preventDefault();
+    showShot(view.shot + (e.key === 'ArrowLeft' ? -1 : 1));
+  }
+});
+
+// ------------------------------------------------------------ start
+
+renderWork();
+renderPlay();
+renderAbout();
+route({ initial: true });

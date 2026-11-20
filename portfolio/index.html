@@ -7,20 +7,24 @@
   <meta name="description" content="Pagna (Sethy Pagna UNG): Computer Science at PolyU. Retail software, learning apps, local AI tools and Unreal Engine prototypes, with screenshots and games you can play in the page. Open to internships.">
   <link rel="canonical" href="https://sethy-pagna.pages.dev/">
   <meta property="og:title" content="Sethy Pagna UNG · Software, AI & Games">
-  <meta property="og:description" content="A neon terminal from Angkor Wat to Hong Kong: 14 projects, real screenshots and six builds you can play in the page.">
+  <meta property="og:description" content="14 projects with real screenshots, and six of them you can play in the page. Computer Science at PolyU, open to internships.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://sethy-pagna.pages.dev/">
   <meta property="og:image" content="https://sethy-pagna.pages.dev/img/og.jpg">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="theme-color" content="#08031A">
+  <meta name="theme-color" content="#FAF9F6">
+  <meta name="color-scheme" content="light dark">
   <link rel="icon" href="img/favicon.svg" type="image/svg+xml">
-  <link rel="preload" href="fonts/unbounded.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="fonts/sora.woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="preload" href="fonts/chakra-700.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="modulepreload" href="js/data.js">
+  <link rel="modulepreload" href="js/shots.js">
+  <script>
+    // Apply a saved theme before the first paint. Light is the default.
+    try { if (localStorage.getItem('theme') === 'dark') document.documentElement.dataset.theme = 'dark'; } catch {}
+  </script>
   <link rel="stylesheet" href="css/site.css">
-  <link rel="stylesheet" href="css/project-window.css">
   <script type="module" src="js/main.js"></script>
   <script type="application/ld+json">
   {"@context":"https://schema.org","@type":"Person","name":"Sethy Pagna UNG","alternateName":["Pagna","James"],
@@ -30,261 +34,222 @@
   </script>
 </head>
 <body>
-  <svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
     <symbol id="i-github" viewBox="0 0 16 16"><path fill="currentColor" d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0016 8c0-4.42-3.58-8-8-8z"/></symbol>
     <symbol id="i-linkedin" viewBox="0 0 24 24"><path fill="currentColor" d="M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.34V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.06 2.06 0 110-4.13 2.06 2.06 0 010 4.13zM7.12 20.45H3.56V9h3.56v11.45zM22.22 0H1.77C.79 0 0 .77 0 1.73v20.54C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.73V1.73C24 .77 23.2 0 22.22 0z"/></symbol>
-    <symbol id="i-mail" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="5" width="18" height="14"/><path d="M3 6l9 7 9-7"/></g></symbol>
-    <symbol id="i-out" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2.4" d="M7 17L17 7M9 7h8v8"/></symbol>
-    <symbol id="i-play" viewBox="0 0 24 24"><path fill="currentColor" d="M7 4.5v15l12.5-7.5z"/></symbol>
-    <symbol id="i-close" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2.4" d="M6 6l12 12M18 6L6 18"/></symbol>
-    <symbol id="i-left" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2.4" d="M15 5l-7 7 7 7"/></symbol>
-    <symbol id="i-right" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2.4" d="M9 5l7 7-7 7"/></symbol>
-    <symbol id="i-expand" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2.2" d="M4 9V4h5M20 9V4h-5M4 15v5h5M20 15v5h-5"/></symbol>
-    <symbol id="i-copy" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2"><rect x="8" y="8" width="12" height="12"/><path d="M16 8V4H4v12h4"/></g></symbol>
-    <symbol id="i-code" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2.4" d="M8 6l-6 6 6 6M16 6l6 6-6 6"/></symbol>
-    <symbol id="i-reload" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2.2" d="M20 11a8 8 0 10-2.3 5.7M20 4v7h-7"/></symbol>
-    <symbol id="i-search" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2.4"><circle cx="10.5" cy="10.5" r="6.5"/><path d="M15.5 15.5L21 21"/></g></symbol>
-    <symbol id="i-plane" viewBox="-12 -10 26 20"><path fill="currentColor" d="M13 0L4 -2.2L-1 -9H-4L-1.5 -2.2H-7L-9 -5H-11L-10 0L-11 5H-9L-7 2.2H-1.5L-4 9H-1L4 2.2Z"/></symbol>
-    <symbol id="i-menu" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2.4" d="M4 7h16M4 12h16M4 17h16"/></symbol>
+    <symbol id="i-mail" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2.5"/><path d="M3.5 7.5l8.5 6 8.5-6"/></g></symbol>
+    <symbol id="i-out" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M8 16L17 7M9.5 7H17v7.5"/></symbol>
+    <symbol id="i-play" viewBox="0 0 24 24"><path fill="currentColor" d="M8 5.3v13.4c0 .8.9 1.3 1.6.9l10.6-6.7c.6-.4.6-1.4 0-1.8L9.6 4.4C8.9 4 8 4.5 8 5.3z"/></symbol>
+    <symbol id="i-close" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" d="M6 6l12 12M18 6L6 18"/></symbol>
+    <symbol id="i-left" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M14.5 6l-6 6 6 6"/></symbol>
+    <symbol id="i-right" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M9.5 6l6 6-6 6"/></symbol>
+    <symbol id="i-arrow" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M5 12h14M13 6l6 6-6 6"/></symbol>
+    <symbol id="i-back" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M19 12H5M11 6l-6 6 6 6"/></symbol>
+    <symbol id="i-expand" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M4 9V4h5M20 9V4h-5M4 15v5h5M20 15v5h-5"/></symbol>
+    <symbol id="i-copy" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="8" y="8" width="12" height="12" rx="2.5"/><path d="M16 8V6.5A2.5 2.5 0 0013.5 4h-7A2.5 2.5 0 004 6.5v7A2.5 2.5 0 006.5 16H8"/></g></symbol>
+    <symbol id="i-check" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" d="M5 12.5l4.5 4.5L19 7.5"/></symbol>
+    <symbol id="i-code" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M8.5 7l-5 5 5 5M15.5 7l5 5-5 5"/></symbol>
+    <symbol id="i-reload" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M20 11a8 8 0 10-2.3 5.7M20 4.5V11h-6.5"/></symbol>
+    <symbol id="i-search" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="10.5" cy="10.5" r="6.5"/><path d="M15.5 15.5L20.5 20.5"/></g></symbol>
+    <symbol id="i-menu" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" d="M4 7h16M4 12h16M4 17h16"/></symbol>
+    <symbol id="i-sun" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="4"/><path d="M12 2.5v2M12 19.5v2M2.5 12h2M19.5 12h2M5.3 5.3l1.4 1.4M17.3 17.3l1.4 1.4M5.3 18.7l1.4-1.4M17.3 6.7l1.4-1.4"/></g></symbol>
+    <symbol id="i-moon" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M20 14.5A8 8 0 019.5 4a8 8 0 1010.5 10.5z"/></symbol>
+    <symbol id="i-zoom" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="10.5" cy="10.5" r="6.5"/><path d="M15.5 15.5L20.5 20.5M10.5 8v5M8 10.5h5"/></g></symbol>
   </svg>
 
   <a class="skip" href="#main">Skip to content</a>
 
   <header class="topbar" id="topbar">
-    <a class="brand" href="#top" aria-label="Pagna Air, back to top">
-      <span class="brand-mark" aria-hidden="true">P</span>
-      <span>PAGNA AIR<small>TERMINAL KH → HK</small></span>
-    </a>
-    <nav class="nav" id="nav" aria-label="Sections">
-      <a href="#about">About</a>
-      <a href="#departures">Now</a>
-      <a href="#projects">Projects</a>
-      <a href="#games">Games</a>
-      <a href="#arcade">Arcade</a>
-      <a href="#build">Build</a>
-      <a href="#road">Road</a>
-      <a href="#contact">Contact</a>
-    </nav>
-    <span class="clock" aria-label="Local time in Hong Kong">HKG <b id="clock">--:--</b></span>
-    <button class="kbtn" id="open-palette" type="button" aria-label="Search the site"><svg width="14" height="14"><use href="#i-search"/></svg><span class="kb-label">Search</span> <kbd>⌘K</kbd></button>
-    <button class="kbtn menu-btn" id="menu-btn" type="button" aria-expanded="false" aria-controls="nav"><svg width="16" height="16"><use href="#i-menu"/></svg>Menu</button>
+    <div class="wrap topbar-in">
+      <a class="brand" href="#top">
+        <span class="brand-mark" aria-hidden="true">P</span>
+        <span class="brand-name">Sethy Pagna Ung</span><span class="visually-hidden">, back to top</span>
+      </a>
+      <nav class="nav" id="nav" aria-label="Sections">
+        <a href="#projects">Work</a>
+        <a href="#arcade">Play</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+      </nav>
+      <div class="topbar-tools">
+        <button class="tool-btn search-btn" id="open-search" type="button" aria-label="Search projects" aria-keyshortcuts="/ Control+K">
+          <svg width="18" height="18" aria-hidden="true"><use href="#i-search"/></svg><span class="search-label">Search</span><kbd class="key-hint">/</kbd>
+        </button>
+        <button class="tool-btn" id="theme-btn" type="button" aria-label="Switch to dark theme" aria-pressed="false" title="Switch theme">
+          <svg class="icon-moon" width="18" height="18" aria-hidden="true"><use href="#i-moon"/></svg><svg class="icon-sun" width="18" height="18" aria-hidden="true"><use href="#i-sun"/></svg>
+        </button>
+        <button class="tool-btn menu-btn" id="menu-btn" type="button" aria-expanded="false" aria-controls="nav" aria-label="Menu">
+          <svg width="20" height="20" aria-hidden="true"><use href="#i-menu"/></svg>
+        </button>
+      </div>
+    </div>
   </header>
 
-  <section class="hero" id="top" aria-label="Introduction">
-    <canvas id="sky" aria-hidden="true"></canvas>
-    <div class="hero-copy">
-      <p class="greet" aria-label="Hello in Khmer, Chinese and English">
-        <span class="km" lang="km">សួស្តី</span><i></i><span class="zh" lang="zh">你好</span><i></i><span class="en">HELLO</span>
-      </p>
-      <h1 class="name" id="name"><span class="line">Sethy Pagna</span><span class="line">Ung</span></h1>
-      <p class="subline"><span>Computer Science @ PolyU</span><b aria-hidden="true">◆</b><em>Full-stack &amp; AI apps</em><b aria-hidden="true">◆</b><span>Unreal Engine prototypes</span></p>
-      <div class="hero-cta">
-        <a class="btn" href="#projects">View projects <svg><use href="#i-right"/></svg></a>
-        <a class="btn ghost" style="--c:var(--cyan)" href="#arcade"><svg><use href="#i-play"/></svg>Play in the arcade</a>
-      </div>
-      <p class="open-to"><span class="tag solid pulse" style="--c:var(--acid)">Open to internships</span> software · AI applications · game development</p>
-    </div>
-    <p class="coords kh">ANGKOR WAT · 13.41°N 103.87°E</p>
-    <p class="coords hk">22.30°N 114.18°E · HUNG HOM</p>
-    <p class="hero-hint">Click the sky for fireworks</p>
-  </section>
-
   <main id="main">
-    <!-- 01 about -->
-    <section class="section" id="about" aria-labelledby="about-title">
-      <div class="wrap">
-        <div class="sec-head reveal" style="--c:var(--magenta)"><span class="sec-num">01</span><div class="sec-title"><h2 id="about-title">About me</h2><span class="rule"></span><span class="alt"><span class="km" lang="km">អំពីខ្ញុំ</span> · <span class="zh" lang="zh">關於我</span></span></div></div>
-
-        <article class="pass reveal" id="pass" aria-label="Boarding pass">
-          <div class="pass-main">
-            <div class="pass-band"><svg width="30" height="24"><use href="#i-plane"/></svg><b>BOARDING PASS</b><span class="zh" lang="zh">登機證</span><span>PAGNA AIR</span></div>
-            <div class="pass-body">
-              <div class="route">
-                <div class="airport from"><small>FROM</small><b>KH</b><span>CAMBODIA · HOME</span></div>
-                <div class="flightpath" aria-hidden="true">
-                  <svg viewBox="0 0 300 70" preserveAspectRatio="none"><path d="M10 60 Q150 -20 290 60" fill="none" stroke="#FCEE0A" stroke-width="2" stroke-dasharray="3 7" vector-effect="non-scaling-stroke"/></svg>
-                  <svg class="pass-plane" width="30" height="24"><use href="#i-plane"/></svg>
-                  <span class="via">VIA MY · CN · AU</span>
-                </div>
-                <div class="airport to"><small>TO</small><b>HK</b><span>HONG KONG · NOW</span></div>
-              </div>
-              <div class="fields">
-                <div class="field"><small>Passenger</small><b>UNG / Sethy Pagna</b><span>call me Pagna (or James)</span></div>
-                <div class="field"><small>Class</small><b>Computer Science</b><span>The Hong Kong Polytechnic University</span></div>
-                <div class="field"><small>Seat</small><b>Full-stack</b><span>AI apps · games</span></div>
-                <div class="field"><small>Languages</small><b><span class="km" lang="km">ខ្មែរ</span> · EN · <span class="zh" lang="zh">中文</span></b><span>Khmer · English · Mandarin</span></div>
-                <div class="field"><small>Arrival</small><b>Jul 2027 · graduation</b><span>expected</span></div>
-                <div class="field"><small>Baggage</small><b>TS · PY · UE5</b><span>React · Cloudflare</span></div>
-              </div>
-            </div>
+    <section class="hero" id="top" aria-labelledby="hero-name">
+      <div class="wrap hero-in">
+        <div class="hero-copy">
+          <p class="hello">
+            <img src="img/pagna.webp" width="56" height="56" alt="">
+            <span><span lang="km" class="km">សួស្តី</span> · <span lang="zh" class="zh">你好</span> · Hello, I’m Pagna</span>
+          </p>
+          <h1 id="hero-name">Sethy Pagna Ung</h1>
+          <p class="hero-lede">I build software for everyday <mark>work, learning and play</mark>: a shop’s point of sale in daily use, study tools, and games you can try on this page.</p>
+          <div class="hero-cta">
+            <a class="btn primary" href="#projects">See my work <svg width="18" height="18" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+            <a class="btn" href="#arcade"><svg width="18" height="18" aria-hidden="true"><use href="#i-play"/></svg>Play a game</a>
           </div>
-          <div class="pass-stub">
-            <div class="pass-band"><span>NEXT STOP</span></div>
-            <div class="stub-body">
-              <div class="photo"><img src="img/pagna.webp" width="300" height="300" alt="Portrait of Sethy Pagna UNG" loading="lazy"></div>
-              <small class="stub-label">DESTINATION</small>
-              <h3>Internship</h3>
-              <ul>
-                <li style="--c:var(--magenta)">Software development</li>
-                <li style="--c:var(--violet)">AI applications</li>
-                <li style="--c:var(--cyan)">Game development</li>
-              </ul>
-              <span class="tag solid" style="--c:var(--acid)">Now boarding</span>
-              <div class="barcode" aria-hidden="true"></div>
-              <p class="pass-code">SP-2027 · HKG · GATE 2027</p>
-            </div>
-          </div>
-        </article>
-
-        <div class="about-copy">
-          <div class="reveal">
-            <p>I'm <strong>Pagna</strong> (Sethy Pagna UNG, or James), a Computer Science student at The Hong Kong Polytechnic University, with graduation expected in July 2027. I build software for everyday work, learning and play, with a particular interest in useful AI tools and in software for Cambodia.</p>
-            <p>Some of it is in real use: <strong>Business OS</strong> runs a cosmetics shop's tills and storefront in Khmer and English. Some of it you can play right here, from a Sandline match against bots to Living Kingdom's floating Origin and the Stonebrook valley.</p>
-            <p>I grew up in Cambodia and have studied in Malaysia, China, Australia and Hong Kong. Off the keyboard: basketball, football, badminton, swimming and table tennis.</p>
-          </div>
-          <div class="fact-list reveal" id="facts"></div>
+          <p class="hero-status"><span class="dot" aria-hidden="true"></span>Open to internships in software, AI and game development</p>
         </div>
+        <!-- Written out here, not drawn by script, so the browser can fetch the first picture straight away. -->
+        <div class="collage" role="group" aria-label="Three featured projects">
+          <a href="#project/business-os" aria-label="Business OS: open project">
+            <picture><source media="(max-width: 860px)" srcset="img/shots/business-os/01-sm.webp"><img src="img/shots/business-os/01.webp" alt="" width="1440" height="900" fetchpriority="high"></picture>
+            <span>Business OS</span>
+          </a>
+          <a href="#project/allchess" aria-label="AllChess: open project">
+            <img src="img/shots/allchess/01-sm.webp" alt="" width="1280" height="575">
+            <span>AllChess</span>
+          </a>
+          <a href="#project/living-kingdom" aria-label="Living Kingdom: open project">
+            <img src="img/shots/living-kingdom/02-sm.webp" alt="" width="1440" height="900">
+            <span>Living Kingdom</span>
+          </a>
+        </div>
+      </div>
+      <div class="wrap">
+        <dl class="facts" id="facts">
+          <div><dt>Studying</dt><dd>Computer Science at PolyU, Hong Kong</dd></div>
+          <div><dt>Graduating</dt><dd>July 2027 (expected)</dd></div>
+          <div><dt>Speaks</dt><dd>Khmer, English and Mandarin</dd></div>
+          <div><dt>On this page</dt><dd><span id="fact-count">14 projects, 6 playable</span></dd></div>
+        </dl>
       </div>
     </section>
 
-    <!-- 02 now building -->
-    <section class="section" id="departures" aria-labelledby="dep-title">
-      <div class="wrap">
-        <div class="sec-head reveal" style="--c:var(--acid)"><span class="sec-num">02</span><div class="sec-title"><h2 id="dep-title">Now building</h2><span class="rule"></span><span class="alt">Reviewed · <span id="dep-date">1 Oct 2026</span></span></div></div>
-        <div class="board reveal">
-          <div class="board-head">
-            <h3><svg width="34" height="26"><use href="#i-plane"/></svg>Departures <span class="alt zh" lang="zh">出發</span> <span class="alt km" lang="km">ចេញដំណើរ</span></h3>
-            <div class="meta"><span>Select a flight for details</span><span class="tag solid" style="--c:var(--acid)">Now building</span></div>
-          </div>
-          <table class="board-table">
-            <thead><tr><th>Flight</th><th>Destination</th><th>Route</th><th>Gate</th><th>Status</th></tr></thead>
-            <tbody id="board-rows"></tbody>
-          </table>
-          <div class="ticker" aria-hidden="true"><div class="ticker-track" id="ticker"></div></div>
-        </div>
-      </div>
-    </section>
-
-    <!-- 03 projects -->
     <section class="section" id="projects" aria-labelledby="projects-title">
       <div class="wrap">
-        <div class="sec-head reveal" style="--c:var(--volt)"><span class="sec-num">03</span><div class="sec-title"><h2 id="projects-title">Projects</h2><span class="rule"></span><span class="alt">Hover a card to preview</span></div></div>
-        <p class="lede reveal">Software for a shop, a study session or a creative idea. <strong>Open a project</strong> for its purpose, screenshots and current links. Use the window controls to minimize, restore or close it.</p>
-        <div class="filters reveal" id="filters" role="group" aria-label="Filter projects"></div>
-        <div class="cards two" id="cards-featured"></div>
-        <h3 class="subhead reveal">More projects</h3>
-        <div class="cards three" id="cards-more"></div>
-        <details class="course reveal">
-          <summary>Course projects <span class="count" id="course-count"></span></summary>
+        <header class="sec-head">
+          <h2 id="projects-title">Work</h2>
+          <p>Software for a shop, a study session or a creative idea. Select a project to see screenshots, what it does and where to try it.</p>
+        </header>
+        <div class="filters" id="filters" role="group" aria-label="Filter projects"></div>
+        <p class="visually-hidden" id="filter-status" role="status" aria-live="polite"></p>
+        <ul class="cards" id="cards"></ul>
+        <details class="course">
+          <summary>University course projects <span class="count" id="course-count"></span></summary>
           <ul id="course"></ul>
         </details>
+        <noscript><p class="note">This page lists its projects with JavaScript. Without it, see <a href="https://github.com/SethyPagna">github.com/SethyPagna</a>.</p></noscript>
       </div>
     </section>
 
-    <!-- 04 games -->
-    <section class="section" id="games" aria-labelledby="games-title">
+    <section class="section tinted" id="arcade" aria-labelledby="arcade-title">
       <div class="wrap">
-        <div class="sec-head reveal" style="--c:var(--lime)"><span class="sec-num">04</span><div class="sec-title"><h2 id="games-title">Game dev lab</h2><span class="rule"></span><span class="alt">UE5 · Unity · WebGL</span></div></div>
-        <p class="lede reveal">Two Unreal Engine 5 prototypes and a game with Unity team origins. Each now has a <strong>browser edition you can play below</strong>, with its own release state.</p>
-        <div class="lab" id="lab"></div>
+        <header class="sec-head">
+          <h2 id="arcade-title">Play in your browser</h2>
+          <p>Six of these projects run right here, with nothing to install. Press Play and the game or app opens over this page.</p>
+        </header>
+        <ul class="tiles" id="tiles"></ul>
       </div>
     </section>
 
-    <!-- 05 arcade -->
-    <section class="section" id="arcade" aria-labelledby="arcade-title">
+    <section class="section" id="about" aria-labelledby="about-title">
       <div class="wrap">
-        <div class="sec-head reveal" style="--c:var(--cyan)"><span class="sec-num">05</span><div class="sec-title"><h2 id="arcade-title">Arcade</h2><span class="rule"></span><span class="alt">Insert coin</span></div></div>
-        <p class="lede reveal">Try six games and apps <strong>inside this page</strong>. Select a project to launch it full screen. Minimize keeps your session; <kbd>Esc</kbd> or Close returns here.</p>
-        <div class="arcade reveal">
-          <div class="cabinet">
-            <div class="screen" id="screen"></div>
-            <div class="screen-tools" id="screen-tools"></div>
+        <header class="sec-head">
+          <h2 id="about-title">About me</h2>
+        </header>
+        <div class="about">
+          <div class="about-copy">
+            <p>I’m <strong>Pagna</strong> (Sethy Pagna Ung, or James), a Computer Science student at The Hong Kong Polytechnic University, with graduation expected in July 2027. I build software for everyday work, learning and play, with a particular interest in useful AI tools and in software for Cambodia.</p>
+            <p>Some of it is in real use: <a href="#project/business-os">Business OS</a> runs a cosmetics shop’s tills and storefront in Khmer and English. Some of it you can play right here, from a <a href="#arcade/sandline">Sandline</a> match against bots to <a href="#arcade/living-kingdom">Living Kingdom</a>’s floating island and valley.</p>
+            <p>I grew up in Cambodia and have studied in Malaysia, China, Australia and Hong Kong. Off the keyboard: basketball, football, badminton, swimming and table tennis.</p>
           </div>
-          <div class="game-list" id="game-list" role="group" aria-label="Choose an arcade project"><h3>SELECT PROJECT</h3></div>
+          <aside class="id-card" aria-label="At a glance">
+            <div class="id-head">
+              <img src="img/pagna.webp" width="300" height="300" alt="Portrait of Sethy Pagna Ung" loading="lazy">
+              <div><b>Sethy Pagna Ung</b><span>Call me Pagna, or James</span></div>
+            </div>
+            <dl>
+              <div><dt>Studying</dt><dd>Computer Science, PolyU</dd></div>
+              <div><dt>Based in</dt><dd>Hong Kong</dd></div>
+              <div><dt>From</dt><dd>Cambodia</dd></div>
+              <div><dt>Languages</dt><dd><span lang="km" class="km">ខ្មែរ</span> · English · <span lang="zh" class="zh">中文</span></dd></div>
+              <div><dt>Looking for</dt><dd>An internship in software, AI or games</dd></div>
+            </dl>
+          </aside>
         </div>
-      </div>
-    </section>
 
-    <!-- 06 how I build -->
-    <section class="section" id="build" aria-labelledby="build-title">
-      <div class="wrap">
-        <div class="sec-head reveal" style="--c:var(--cyan)"><span class="sec-num">06</span><div class="sec-title"><h2 id="build-title">How I build</h2><span class="rule"></span><span class="alt">The level-up loop</span></div></div>
-        <div class="loop">
-          <div class="loop-wheel reveal" id="wheel"></div>
-          <div class="reveal">
-            <div class="loop-steps" id="steps"></div>
-            <p class="honest"><strong>Being open about it:</strong> I set the product direction, requirements and feedback, and I use Claude and Codex for much of the implementation, debugging and testing. I review and test what they produce, and I keep studying the code and architecture until I can own it. Each loop's experience becomes reusable skills, so the workflow keeps improving too.</p>
+        <div class="block" id="build">
+          <h3>How I work</h3>
+          <ol class="steps" id="steps"></ol>
+          <p class="callout"><strong>Being open about it:</strong> I set the product direction, requirements and feedback, and I use Claude and Codex for much of the implementation, debugging and testing. I review and test what they produce, and I keep studying the code and architecture until I can own it.</p>
+        </div>
+
+        <div class="split">
+          <div class="block" id="toolbox">
+            <h3>Skills</h3>
+            <p class="block-hint">Select a skill to see which projects use it.</p>
+            <div class="tools" id="tools"></div>
+            <p class="tool-result" id="tool-result" role="status" aria-live="polite" hidden></p>
+          </div>
+          <div class="block" id="road">
+            <h3>Journey</h3>
+            <ol class="timeline" id="timeline"></ol>
           </div>
         </div>
-      </div>
-    </section>
 
-    <!-- 07 toolbox -->
-    <section class="section" id="toolbox" aria-labelledby="toolbox-title">
-      <div class="wrap">
-        <div class="sec-head reveal" style="--c:var(--blue)"><span class="sec-num">07</span><div class="sec-title"><h2 id="toolbox-title">Toolbox</h2><span class="rule"></span><span class="alt">Tap a tool</span></div></div>
-        <div class="tools reveal" id="tools"></div>
-        <p class="tool-hint" id="tool-hint" aria-live="polite">Tap a tool to see which projects use it.</p>
-      </div>
-    </section>
-
-    <!-- 08 road -->
-    <section class="section" id="road" aria-labelledby="road-title">
-      <div class="wrap">
-        <div class="sec-head reveal" style="--c:var(--magenta)"><span class="sec-num">08</span><div class="sec-title"><h2 id="road-title">The road so far</h2><span class="rule"></span><span class="alt">2023 → 2027</span></div></div>
-        <div class="timeline reveal" id="timeline" tabindex="0" aria-label="Timeline, scrolls sideways"></div>
-      </div>
-    </section>
-
-    <!-- 09 activity -->
-    <section class="section" id="activity" aria-labelledby="activity-title">
-      <div class="wrap">
-        <div class="sec-head reveal" style="--c:var(--acid)"><span class="sec-num">09</span><div class="sec-title"><h2 id="activity-title">Activity</h2><span class="rule"></span><span class="alt">Updated daily</span></div></div>
-        <div class="activity reveal">
-          <img src="https://raw.githubusercontent.com/SethyPagna/SethyPagna/output/stats.svg" width="1200" height="300" loading="lazy" alt="GitHub activity for the last 12 months: contributions, active days, streaks and top languages.">
-          <img src="https://raw.githubusercontent.com/SethyPagna/SethyPagna/output/skyline.svg" width="1200" height="420" loading="lazy" alt="Contribution city: the last 12 months of GitHub contributions drawn as a skyline, one tower per week.">
+        <div class="block" id="activity">
+          <h3>GitHub activity</h3>
+          <p class="block-hint">My public GitHub contributions over the last 12 months, updated every day.</p>
+          <div id="activity-body"></div>
+          <noscript><p class="note">See <a href="https://github.com/SethyPagna">my GitHub profile</a> for recent activity.</p></noscript>
         </div>
       </div>
     </section>
 
-    <!-- 10 contact -->
     <section class="section contact" id="contact" aria-labelledby="contact-title">
       <div class="wrap">
-        <div class="neon-sign reveal">
-          <h2 id="contact-title">Let's build<br><span class="flick">something</span> useful</h2>
-          <p>Open to internships · software · AI · games</p>
+        <h2 id="contact-title">Let’s build something useful</h2>
+        <p class="contact-lede">I’m looking for an internship in software, AI or game development. Email is the quickest way to reach me.</p>
+        <div class="contact-main">
+          <a class="btn primary lg" id="email-link" href="mailto:ungsethypagna@gmail.com"><svg width="20" height="20" aria-hidden="true"><use href="#i-mail"/></svg>ungsethypagna@gmail.com</a>
+          <button class="btn lg" type="button" id="copy-email"><svg width="20" height="20" aria-hidden="true"><use href="#i-copy"/></svg><span>Copy address</span></button>
         </div>
-        <div class="contact-cards reveal">
-          <button class="contact-card" type="button" id="copy-email" style="--c:var(--volt)"><svg><use href="#i-mail"/></svg><span><small>Email · click to copy</small><b>ungsethypagna@gmail.com</b></span></button>
-          <a class="contact-card" href="https://www.linkedin.com/in/sethy-pagna-ung-833ab8283/" target="_blank" rel="noopener" style="--c:var(--cyan)"><svg><use href="#i-linkedin"/></svg><span><small>LinkedIn</small><b>Sethy Pagna UNG</b></span></a>
-          <a class="contact-card" href="https://github.com/SethyPagna" target="_blank" rel="noopener" style="--c:var(--magenta)"><svg><use href="#i-github"/></svg><span><small>GitHub</small><b>@SethyPagna</b></span></a>
+        <div class="contact-links">
+          <a href="https://www.linkedin.com/in/sethy-pagna-ung-833ab8283/" target="_blank" rel="noopener"><svg width="18" height="18" aria-hidden="true"><use href="#i-linkedin"/></svg>LinkedIn<span class="visually-hidden"> (opens in a new tab)</span></a>
+          <a href="https://github.com/SethyPagna" target="_blank" rel="noopener"><svg width="18" height="18" aria-hidden="true"><use href="#i-github"/></svg>GitHub<span class="visually-hidden"> (opens in a new tab)</span></a>
         </div>
-        <p class="thanks"><span class="km" lang="km">អរគុណ</span><span class="zh" lang="zh">多謝</span><span class="en">THANKS FOR VISITING</span></p>
+        <p class="thanks"><span lang="km" class="km">អរគុណ</span> · <span lang="zh" class="zh">多謝</span> · Thanks for visiting</p>
       </div>
     </section>
   </main>
 
   <footer class="foot">
-    <span>© 2026 Sethy Pagna UNG · Pagna Air terminal, drawn in code</span>
-    <span><span class="kb-hint">Press <kbd>⌘K</kbd> to search · </span><a href="#top">Back to top ↑</a></span>
+    <div class="wrap foot-in">
+      <span>© 2026 Sethy Pagna Ung</span>
+      <a href="#top">Back to top ↑</a>
+    </div>
   </footer>
 
-  <div class="overlay" id="dossier-overlay" hidden>
-    <div class="overlay-bg" data-close></div>
-    <article class="dossier" id="dossier" role="dialog" aria-modal="true" aria-labelledby="dossier-title" aria-describedby="window-help" tabindex="-1"></article>
-  </div>
-  <aside class="project-dock" id="project-dock" aria-label="Minimized project" hidden>
-    <button type="button" id="restore-project"><span id="dock-title"></span><span>Restore ↑</span></button>
-    <button type="button" id="close-minimized" aria-label="Close minimized project">✕</button>
-  </aside>
-  <div class="lightbox" id="lightbox" hidden><img alt=""></div>
-  <div class="palette" id="palette" hidden>
-    <div class="palette-box" role="dialog" aria-modal="true" aria-label="Search">
-      <label class="palette-input"><span>&gt;_</span><input id="palette-input" type="text" placeholder="Jump to a project, game or section…" autocomplete="off" spellcheck="false" role="combobox" aria-expanded="true" aria-controls="palette-list"></label>
-      <ul id="palette-list" role="listbox"></ul>
-    </div>
-  </div>
+  <!-- One window for every project: details first, and the running build for the playable ones. -->
+  <dialog class="pw" id="project-window" aria-labelledby="pw-title"></dialog>
+
+  <dialog class="zoom" id="zoom" aria-label="Enlarged screenshot">
+    <button class="icon-btn zoom-close" type="button" aria-label="Close enlarged screenshot"><svg width="20" height="20" aria-hidden="true"><use href="#i-close"/></svg></button>
+    <img alt="">
+  </dialog>
+
+  <dialog class="search" id="search" aria-label="Search">
+    <label class="search-input">
+      <svg width="20" height="20" aria-hidden="true"><use href="#i-search"/></svg>
+      <span class="visually-hidden">Search projects, games and sections</span>
+      <input id="search-input" type="text" placeholder="Search projects, games and sections" autocomplete="off" spellcheck="false" role="combobox" aria-expanded="true" aria-controls="search-list" aria-autocomplete="list">
+      <kbd>Esc</kbd>
+    </label>
+    <ul id="search-list" role="listbox" aria-label="Results"></ul>
+  </dialog>
+
   <div class="toast" id="toast" role="status" aria-live="polite"></div>
-  <noscript><style>.reveal{opacity:1;transform:none}</style></noscript>
 </body>
 </html>

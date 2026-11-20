@@ -6,7 +6,7 @@ Every picture on the profile is an SVG drawn by code in this folder. No design t
 |---|---|---|
 | `build_assets.py` | Everything in `assets/*.svg`: the hero skyline, section banners, boarding pass, departures board, project and side-quest cards, build loop, toolbox, timeline, buttons and footer | By hand, whenever the content changes |
 | `shots.py` | `assets/shots/*.jpg`: the cropped screenshots that `build_assets.py` embeds in the cards | By hand, when a screenshot changes |
-| `stats.py` | `stats.svg` (contributions, streaks, top languages) and `skyline.svg` (the contribution calendar as a city, one tower per week) | Daily in `.github/workflows/profile-assets.yml`, which publishes both to the `output` branch |
+| `stats.py` | `stats.svg` (contributions, streaks, top languages), `skyline.svg` (the contribution calendar as a city, one tower per week) and `stats.json` (the same numbers, which the portfolio draws in its own style) | Daily in `.github/workflows/profile-assets.yml`, which publishes all three to the `output` branch |
 | `outline.py` | Nothing on its own: the shared text engine that turns lettering into vector outlines | Imported by the two builders above |
 
 ## Type

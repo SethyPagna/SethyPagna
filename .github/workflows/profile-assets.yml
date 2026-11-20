@@ -1,5 +1,6 @@
-# Rebuilds the live profile graphics (activity card + contribution skyline) and publishes them to the
-# `output` branch, which README.md reads through raw.githubusercontent.com.
+# Rebuilds the live profile graphics (activity card + contribution skyline) and their numbers (stats.json),
+# and publishes them to the `output` branch. README.md shows the pictures and the portfolio draws the numbers,
+# both through raw.githubusercontent.com.
 name: Profile assets
 
 on:

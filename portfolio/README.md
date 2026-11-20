@@ -1,24 +1,28 @@
-# Pagna Air Â· portfolio
+# Sethy Pagna Ung · portfolio
 
-The personal site of **Sethy Pagna UNG (Pagna)**: a neon night-city terminal that flies from Angkor Wat to Hong Kong, with project screenshots, current links, and six builds you can play inside the page.
+The personal site of **Sethy Pagna UNG (Pagna)**: a light, plain-language page with project screenshots, current links, and six builds you can play inside the page. A dark theme sits behind the button in the header.
 
 Production address: **https://sethy-pagna.pages.dev**. Cloudflare Pages uses this GitHub profile repository. Its public-only staging step verifies copied bytes against committed source and excludes development tools, logs and private files. Vercel Git deployments are disabled.
 
 ## What's on the page
 
+The header has four links: Work, Play, About and Contact.
+
 | Section | What it does |
 |---|---|
-| Hero | Canvas skyline (Angkor Wat â†’ Hong Kong harbour) with rain, reflections, a KHâ†’HK flight and fireworks when you click the sky |
-| About | A boarding pass: passenger photo, studies, languages, next stop |
-| Now building | Split-flap departures board; each row opens its project window |
-| Projects | Screenshot, title and Explore buttons open full-screen project windows with purpose, gallery, features and current links |
-| Game dev lab | Living Kingdom and Sandline (UE5), and Wreckabulary (Unity team origin with a separate Three.js edition) |
-| Arcade | Wreckabulary with Creative Workshop, Sandline, Living Kingdom, AllChess, Cargo Twin v4 and AI Summary v2 |
-| Build Â· Toolbox Â· Road Â· Activity Â· Contact | The AI-assisted build loop, tools cross-linked to projects, a timeline, the daily GitHub activity cards and contact links |
+| Hero | Name, one sentence about the work, two buttons, and three featured screenshots that open their projects |
+| Work | All 14 projects in one grid, with filters (All, Apps, AI tools, Games, Playable here). A card opens the project window |
+| Play in your browser | Wreckabulary, Sandline, Living Kingdom, Cargo Twin, AllChess and AI Summary. Play opens the build over the page |
+| About | Short bio and facts, the four-step way of working, skills cross-linked to projects, a timeline and the daily GitHub activity chart |
+| Contact | Email (open or copy), LinkedIn and GitHub |
 
-Project windows open across the viewport. Minimize keeps the running iframe and provides a restore bar; Overview also preserves its session. Close or Escape ends the session and returns focus to the opener. The size button switches between full-screen and inset windows. An aiming game may require releasing pointer lock before Escape exits. Selecting another project ends the previous session. Restart creates a fresh iframe.
+**The project window** is one dialog with two views. *Details* has the screenshot gallery, what the project does, its links and the stack. *Play* runs the build in a frame with Details, Restart, Full screen, New tab and Close. Close, Escape, the browser's Back button or a click outside all close it and return to where you were. Leaving the Play view ends that session. Escape pressed inside a running game belongs to the game.
 
-Extras: <kbd>Ctrl</kbd>/<kbd>âŒ˜</kbd>+<kbd>K</kbd> (or <kbd>/</kbd>) opens a command palette, deep links such as `#project/allchess` or `#arcade/sandline` work, and the Konami code does something.
+**Addresses.** `#project/<id>` opens a project's details and `#arcade/<id>` starts a build, so both can be shared. Older links such as `#games` still land in the right place.
+
+**Search.** <kbd>/</kbd> or <kbd>Ctrl</kbd>/<kbd>⌘</kbd>+<kbd>K</kbd> opens a search over projects, games, sections and a few actions.
+
+**GitHub activity.** `scripts/stats.py` publishes `stats.json` to the `output` branch every day, next to the two SVG pictures the profile README uses. The page draws its own chart from those numbers; if they cannot be read it shows the pictures instead.
 
 ## Structure
 
@@ -26,19 +30,17 @@ It's a static site: plain HTML, CSS and ES modules, with no build step.
 
 ```
 index.html          page skeleton and copy
-css/site.css        styles (palette and shapes follow the GitHub profile artwork)
-js/data.js          everything said about the projects, arcade cabinets, toolbox and timeline
+css/site.css        styles: colour and type tokens for both themes, then one block per section
+js/data.js          everything said about the projects, playable builds, skills and timeline
 js/shots.js         generated list of screenshots per project
-js/main.js          rendering and interactions
-js/project-window.js fullscreen, minimize/restore and background focus controls
-css/project-window.css window sizing and responsive controls
-js/skyline.js       the hero scene
-js/flap.js          split-flap text
-fonts/              Unbounded, Sora, Chakra Petch, Kantumruy Pro (Khmer), Noto Sans SC subset (all SIL OFL)
+js/main.js          rendering, the project window, search and the activity chart
+fonts/              Sora, Kantumruy Pro (Khmer), Noto Sans SC subset (all SIL OFL)
 img/shots/<id>/     WebP screenshots, NN.webp (1600 px) and NN-sm.webp (720 px)
 play/               self-hosted playable builds (see below)
-tools/              images.py (screenshots â†’ WebP + js/shots.js) and fonts.py (Chinese subset)
+tools/              images.py (screenshots → WebP + js/shots.js) and fonts.py (Chinese subset)
 ```
+
+To change what a card says, edit the project in `js/data.js`: `brief` is the one sentence on the card, `badge` is its status label, and the rest fills the project window.
 
 ## Run it locally
 
@@ -105,4 +107,4 @@ Update the arcade only from completed exports with repeatable byte verification.
 - UrCut is built on [OpenCut classic](https://github.com/OpenCut-app/opencut-classic) (MIT).
 - JARVIS is built on [Hermes Agent](https://github.com/NousResearch/hermes-agent) by Nous Research (MIT).
 - Cargo Twin originated as the team's Cathay Cargo Twin hackathon project; its current studio and aircraft workspace retain that attribution. Wreckabulary is a team project.
-- Fonts: [Unbounded](https://github.com/googlefonts/unbounded), [Sora](https://github.com/sora-xor/sora-font), [Chakra Petch](https://github.com/cadsondemak/Chakra-Petch), [Kantumruy Pro](https://github.com/google/fonts/tree/main/ofl/kantumruypro) and [Noto Sans SC](https://github.com/google/fonts/tree/main/ofl/notosanssc), all under the SIL Open Font License.
+- Fonts: [Sora](https://github.com/sora-xor/sora-font), [Kantumruy Pro](https://github.com/google/fonts/tree/main/ofl/kantumruypro) and [Noto Sans SC](https://github.com/google/fonts/tree/main/ofl/notosanssc), all under the SIL Open Font License.

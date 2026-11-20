@@ -1,5 +1,6 @@
 #!/usr/bin/env python3
-"""Draw the live activity graphics (dist/stats.svg, dist/skyline.svg) from public GitHub data.
+"""Draw the live activity graphics (dist/stats.svg, dist/skyline.svg) from public GitHub data, and
+write the same numbers to dist/stats.json so the portfolio can draw them in its own style.
 
     GITHUB_TOKEN=... python scripts/stats.py [output-dir] [login]
 
@@ -91,6 +92,25 @@ def languages(user: dict, top: int = 6) -> list[tuple[str, float]]:
     shares = [(name, score / total) for name, score in ranked[:top]]
     rest = 1 - sum(share for _, share in shares)
     return shares + ([("Other", rest)] if rest > 0.005 else [])
+
+
+def summary(user: dict, today: date) -> dict:
+    """The numbers behind both graphics, for pages that draw their own chart (portfolio/js/main.js)."""
+    calendar = user["contributionsCollection"]["contributionCalendar"]
+    weeks = weeks_of(user)
+    days = [day for week in weeks for day in week]
+    current, longest = streaks(days)
+    return {
+        "updated": today.isoformat(),
+        "total": calendar["totalContributions"],
+        "activeDays": sum(1 for _, count in days if count),
+        "currentStreak": current,
+        "longestStreak": longest,
+        "bestDay": max((count for _, count in days), default=0),
+        "publicRepos": user["repositories"]["totalCount"],
+        "weeks": [{"start": week[0][0].isoformat(), "count": sum(count for _, count in week)} for week in weeks if week],
+        "languages": [{"name": name, "share": round(share, 4)} for name, share in languages(user)],
+    }
 
 
 def chamfer(x, y, w, h, cut=14) -> str:
@@ -294,6 +314,9 @@ def main() -> None:
     for name, svg in (("stats.svg", render_stats(user, today)), ("skyline.svg", render_skyline(user, today))):
         (out_dir / name).write_text(svg, encoding="utf-8", newline="\n")
         print(f"wrote {out_dir / name} ({len(svg) // 1024} KB)")
+    data = json.dumps(summary(user, today), separators=(",", ":")) + "\n"
+    (out_dir / "stats.json").write_text(data, encoding="utf-8", newline="\n")
+    print(f"wrote {out_dir / 'stats.json'} ({len(data)} bytes)")
 
 
 if __name__ == "__main__":
